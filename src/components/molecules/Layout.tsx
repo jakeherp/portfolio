@@ -30,7 +30,6 @@ const Style = createGlobalStyle`
       transition: 0.5s;
       &:hover {
         line-height: 0.5;
-        border-bottom: 5px solid #e94e1b;
       }
     }
 `

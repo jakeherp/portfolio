@@ -18,9 +18,10 @@ const Head = styled.header`
 
 const Navigation = styled.nav`
   display: flex;
-  height: 2.7rem;
   flex-direction: row;
   justify-content: center;
+  height: 1em;
+  line-height: 1;
 
   button {
     background: transparent;
@@ -31,9 +32,12 @@ const Navigation = styled.nav`
 
 const Menu = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  margin: 0;
 
   li {
-    display: inline-block;
     margin: 0 0.5rem;
 
     a {
@@ -54,6 +58,9 @@ const Menu = styled.ul`
         }
       }
     }
+    svg {
+      margin-left: 1rem;
+    }
   }
 `
 
@@ -61,7 +68,9 @@ const Header = () => {
   return (
     <Head>
       <h1>
-        &lt;Jacob Herper <Highlight>/</Highlight>&gt;
+        <Link to="/">
+          &lt;Jacob Herper <Highlight>/</Highlight>&gt;
+        </Link>
       </h1>
       <Navigation>
         <Menu>
@@ -77,8 +86,10 @@ const Header = () => {
           <li>
             <Link to="/contact/">Contact</Link>
           </li>
+          <li>
+            <ToggleMode />
+          </li>
         </Menu>
-        <ToggleMode />
       </Navigation>
     </Head>
   )
