@@ -1,0 +1,20 @@
+{
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint:latest",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "prettier": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "import-name": false,
+    "no-boolean-literal-compare": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": [true, "slick-carousel"],
+    "variable-name": [true, "ban-keywords", "allow-leading-underscore"]
+  }
+}
