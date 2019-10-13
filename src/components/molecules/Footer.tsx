@@ -7,6 +7,10 @@ const Foot = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media print {
+    display: none;
+  }
 `
 
 const Footer = () => {

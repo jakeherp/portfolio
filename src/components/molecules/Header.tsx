@@ -15,6 +15,10 @@ const Head = styled.header`
     margin: 0;
     line-height: 1;
   }
+
+  @media print {
+    display: none;
+  }
 `
 
 const Navigation = styled.nav`
