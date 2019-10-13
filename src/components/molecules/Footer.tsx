@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Menu from "../atoms/Menu"
 
 const Foot = styled.footer`
   padding: 0 3%;
@@ -20,7 +21,25 @@ const Footer = () => {
         </a>
         .
       </div>
-      <div>Social Links ...</div>
+      <nav>
+        <Menu>
+          <li>
+            <a href="https://github.com/jakeherp" target="_blank">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/jacobherper/" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/jakeherp" target="_blank">
+              Twitter
+            </a>
+          </li>
+        </Menu>
+      </nav>
     </Foot>
   )
 }
