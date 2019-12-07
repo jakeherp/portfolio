@@ -42,37 +42,57 @@ const IndexPage = () => {
         </Section>
         <Section>
           <Title>Skills</Title>
-          {technologies.map((item, index) => (
-            <Badge key={`technologies-${index + 1}`} className="--technologies">
-              {item}
-            </Badge>
-          ))}
-          {frameworks.map((item, index) => (
-            <Badge key={`frameworks-${index + 1}`} className="--frameworks">
-              {item}
-            </Badge>
-          ))}
-          {databases.map((item, index) => (
-            <Badge key={`databases-${index + 1}`} className="--databases">
-              {item}
-            </Badge>
-          ))}
-          {cms.map((item, index) => (
-            <Badge key={`cms-${index + 1}`} className="--cms">
-              {item}
-            </Badge>
-          ))}
-          {various.map((item, index) => (
-            <Badge key={`skills-${index + 1}`}>{item}</Badge>
-          ))}
-          {design.map((item, index) => (
-            <Badge key={`design-${index + 1}`} className="--design">
-              {item}
-            </Badge>
-          ))}
+          <WithSidebar>
+            <main>
+              {technologies.map((item, index) => (
+                <Badge
+                  key={`technologies-${index + 1}`}
+                  className="--technologies"
+                >
+                  {item}
+                </Badge>
+              ))}
+              {frameworks.map((item, index) => (
+                <Badge key={`frameworks-${index + 1}`} className="--frameworks">
+                  {item}
+                </Badge>
+              ))}
+              {databases.map((item, index) => (
+                <Badge key={`databases-${index + 1}`} className="--databases">
+                  {item}
+                </Badge>
+              ))}
+              {cms.map((item, index) => (
+                <Badge key={`cms-${index + 1}`} className="--cms">
+                  {item}
+                </Badge>
+              ))}
+              {various.map((item, index) => (
+                <Badge key={`skills-${index + 1}`}>{item}</Badge>
+              ))}
+              {design.map((item, index) => (
+                <Badge key={`design-${index + 1}`} className="--design">
+                  {item}
+                </Badge>
+              ))}
+            </main>
+            <aside>
+              <h2>Soft skills</h2>
+              {/* {softSkills.join(", ")} */}
+              {softSkills.map((item, index) => (
+                <Badge key={`softskill-${index + 1}`} className="--softskill">
+                  {item}
+                </Badge>
+              ))}
 
-          <h2>Soft skills</h2>
-          {softSkills.join(", ")}
+              <h2>Languages</h2>
+              {languages.map((language, index) => (
+                <li key={`language-${index}`}>
+                  {language.language} ({language.proficiency})
+                </li>
+              ))}
+            </aside>
+          </WithSidebar>
         </Section>
         <Section>
           <Title>Work Experience</Title>
@@ -113,6 +133,29 @@ const Section = styled.section`
   @media print {
     border-bottom: 1pt solid #000;
     line-height: 1;
+  }
+`
+
+const WithSidebar = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  main {
+    min-width: 280px;
+  }
+
+  aside {
+    min-width: 280px;
+
+    h2:first-of-type {
+      margin: 0 0.5rem 0 0;
+      display: inline-block;
+      font-size: 1em;
+      &:after {
+        content: ": ";
+      }
+    }
   }
 `
 
