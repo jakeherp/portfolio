@@ -2,7 +2,10 @@ export const jobs = [
   {
     id: 6,
     title: "Senior Front-End Engineer",
-    company: "Dennis Publishing",
+    company: {
+      name: "Dennis Publishing",
+      url: "https://www.dennis.co.uk/",
+    },
     place: "London, UK",
     from: "10/2019",
     to: "present",
@@ -13,7 +16,10 @@ export const jobs = [
   {
     id: 5,
     title: "Front-End Developer",
-    company: "Raconteur Media",
+    company: {
+      name: "Raconteur Media",
+      url: "https://www.raconteur.net/",
+    },
     place: "London, UK",
     from: "01/2019",
     to: "10/2019",
@@ -26,7 +32,10 @@ export const jobs = [
   {
     id: 4,
     title: "Lead Front-End Developer",
-    company: "The Specialist Works",
+    company: {
+      name: "The Specialist Works",
+      url: "https://www.thespecialistworks.com/",
+    },
     place: "London, UK",
     from: "12/2017",
     to: "01/2019",
@@ -39,7 +48,10 @@ export const jobs = [
   {
     id: 3,
     title: "Founder & Full Stack Developer",
-    company: "Creativ Agency",
+    company: {
+      name: "Creativ Agency",
+      url: "https://creativ.agency/",
+    },
     place: "London, UK",
     from: "01/2009",
     to: "present",
@@ -52,7 +64,10 @@ export const jobs = [
   {
     id: 2,
     title: "Co-Founder and CTO",
-    company: "Immovato GmbH",
+    company: {
+      name: "Immovato GmbH",
+      url: "https://www.immovato.de/",
+    },
     place: "Wiesbaden, Germany",
     from: "04/2014",
     to: "12/2017",
@@ -65,7 +80,10 @@ export const jobs = [
   {
     id: 1,
     title: "Creative Director",
-    company: "ASA GmbH",
+    company: {
+      name: "ASA GmbH",
+      url: "https://www.asa-europe.com/",
+    },
     place: "Mainz, Germany",
     from: "09/2012",
     to: "10/2014",

@@ -9,24 +9,37 @@ const Listing = styled.article`
 
   h1 {
     margin: 0 0 0.5rem;
-
-    small {
-      font-weight: normal;
-    }
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
   }
 `
 
-const Job = ({ children, title, company, place, from, to }: any) => {
+const Job = ({
+  children,
+  title,
+  company: { name: companyName, url: companyUrl },
+  place,
+  from,
+  to,
+}: any) => {
   return (
     <Listing>
-      <h1>
-        {title} at {company} -{" "}
-        <small>
-          {from} to {to}
-        </small>
-      </h1>
+      <h1>{title}</h1>
+      <h2>
+        <strong>
+          <a href={companyUrl} target="_blank">
+            {companyName}
+          </a>
+        </strong>{" "}
+        (in {place})
+      </h2>
       {children}
-      <small>{place}</small>
+      <small>
+        {from} to {to}
+      </small>
     </Listing>
   )
 }
