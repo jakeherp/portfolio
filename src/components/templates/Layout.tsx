@@ -3,8 +3,8 @@ import { ThemeProvider, createGlobalStyle } from "styled-components"
 import style from "styled-theming"
 
 import useTheme from "../../hooks/useTheme"
-import Header from "../molecules/Header"
-import Footer from "../molecules/Footer"
+import Header from "../organisms/Header"
+import Footer from "../organisms/Footer"
 
 const getBackground = style("mode", {
   light: "#d6deeb",
