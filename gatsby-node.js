@@ -1,7 +1,44 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const portfolioItem = path.resolve(
+    `./src/components/templates/PortfolioItem.tsx`
+  )
+  return graphql(
+    `
+      {
+        allContentfulItem(sort: { fields: sortOrder, order: ASC }) {
+          edges {
+            node {
+              slug
+              title
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const posts = result.data.allContentfulItem.edges
+
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      createPage({
+        path: post.node.slug,
+        component: portfolioItem,
+        context: {
+          slug: post.node.slug,
+          previous,
+          next,
+        },
+      })
+    })
+  })
+}
