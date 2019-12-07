@@ -70,6 +70,9 @@ const IndexPage = () => {
               {item}
             </Badge>
           ))}
+
+          <h2>Soft skills</h2>
+          {softSkills.join(", ")}
         </Section>
         <Section>
           <Title>Work Experience</Title>
