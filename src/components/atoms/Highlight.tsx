@@ -1,12 +1,24 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Accent = styled.span`
   color: #e94e1b;
 `
 
-const Highlight = ({ children }: any) => {
+interface IProps {
+  children: React.ReactNode
+}
+
+const Highlight = ({ children }: IProps) => {
   return <Accent>{children}</Accent>
+}
+
+Highlight.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 }
 
 export default Highlight

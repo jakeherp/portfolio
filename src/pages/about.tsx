@@ -107,8 +107,8 @@ const IndexPage = () => {
                 to={job.to}
               >
                 <List>
-                  {job.tasks.map(task => (
-                    <li>{task}</li>
+                  {job.tasks.map((task, index) => (
+                    <li key={`task-${index}`}>{task}</li>
                   ))}
                 </List>
               </Job>

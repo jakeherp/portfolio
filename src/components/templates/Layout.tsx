@@ -34,7 +34,11 @@ const Style = createGlobalStyle`
     }
 `
 
-const Layout = ({ children }: any) => {
+interface IProps {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: IProps) => {
   const theme = useTheme()
 
   return (

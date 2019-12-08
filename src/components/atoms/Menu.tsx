@@ -1,6 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
+interface IProps {
+  children: React.ReactNode
+}
+
+const Menu = ({ children }: IProps) => {
+  return <Navigation>{children}</Navigation>
+}
+
 const Navigation = styled.ul`
   list-style: none;
   display: flex;
@@ -34,9 +42,5 @@ const Navigation = styled.ul`
     }
   }
 `
-
-const Menu = ({ children }: any) => {
-  return <Navigation>{children}</Navigation>
-}
 
 export default Menu

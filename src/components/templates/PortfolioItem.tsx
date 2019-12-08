@@ -6,7 +6,35 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "./Layout"
 import SEO from "../molecules/Seo"
 
-const PortfolioItem = ({ data, pageContext }: any) => {
+interface IProps {
+  data: {
+    contentfulItem: {
+      title: string
+      description: string
+      featured_image: {
+        fluid: any
+      }
+      type: string
+      content: {
+        json: any
+      }
+      technologies: string[]
+      url: string
+    }
+  }
+  pageContext: {
+    previous: {
+      slug: string
+      title: string
+    }
+    next: {
+      slug: string
+      title: string
+    }
+  }
+}
+
+const PortfolioItem = ({ data, pageContext }: IProps) => {
   const post = data.contentfulItem
   // const siteTitle = this.props.data.site.siteMetadata.title;
   const { previous, next } = pageContext

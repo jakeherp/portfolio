@@ -12,12 +12,12 @@ import { useStaticQuery, graphql } from "gatsby"
 
 interface IProps {
   description?: string
-  lang?: string
+  lang: string
   meta?: any
   title: string
 }
 
-function SEO({ description, lang, meta, title }: IProps) {
+function Seo({ description, lang, meta, title }: IProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -79,17 +79,17 @@ function SEO({ description, lang, meta, title }: IProps) {
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default Seo

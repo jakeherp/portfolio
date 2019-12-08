@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -7,8 +8,19 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `
 
-const Container = ({ children }: any) => {
+interface IProps {
+  children: React.ReactNode
+}
+
+const Container = ({ children }: IProps) => {
   return <Wrapper>{children}</Wrapper>
+}
+
+Container.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 }
 
 export default Container
