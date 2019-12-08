@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<article
+  className="sc-bdVaJa gbxWYR"
+>
+  <h1>
+    Web Developer
+  </h1>
+  <h2>
+    <strong>
+      <a
+        href="test.com"
+        target="_blank"
+      >
+        My Company
+      </a>
+    </strong>
+     
+    (in 
+    London
+    )
+  </h2>
+  List of tasks
+  <small>
+    Jan 2010
+     to 
+    present
+  </small>
+</article>
+`;

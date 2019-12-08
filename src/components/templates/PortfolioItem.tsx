@@ -26,11 +26,11 @@ interface IProps {
     previous: {
       slug: string
       title: string
-    }
+    } | null
     next: {
       slug: string
       title: string
-    }
+    } | null
   }
 }
 

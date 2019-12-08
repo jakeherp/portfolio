@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header
+    className="sc-htpNat kXGpEh"
+  >
+    <h1>
+      <a
+        href="/"
+      >
+        &lt;Jacob Herper 
+        <span
+          className="sc-bdVaJa hRbWxG"
+        >
+          /
+        </span>
+        &gt;
+      </a>
+    </h1>
+    <nav
+      className="sc-bxivhb eZRqAs"
+    >
+      <ul
+        className="sc-bwzfXH hOZBFj"
+      >
+        <li>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about/"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/portfolio/"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contact/"
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <
+            aria-label="Dark Mode"
+            onClick={[Function]}
+            role="button"
+          />
+        </li>
+      </ul>
+    </nav>
+  </header>,
+  <div />,
+  <footer
+    className="sc-ifAKCX gFkpAL"
+  >
+    <div>
+      © 2019 Jacob Herper
+      <br />
+      Proudly built with
+       
+      <a
+        href="https://gatsbyjs.org/"
+        target="_blank"
+      >
+        Gatsby
+      </a>
+      .
+    </div>
+    <nav>
+      <ul
+        className="sc-bwzfXH hOZBFj"
+      >
+        <li>
+          <a
+            href="https://github.com/jakeherp"
+            target="_blank"
+          >
+            Github
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jacobherper/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/jakeherp"
+            target="_blank"
+          >
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>,
+]
+`;
