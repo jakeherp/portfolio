@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { getTextColor } from "../templates/Layout"
 
 interface IProps {
   name: string
@@ -29,11 +30,12 @@ const Filter = ({ name, setFilter, currentFilter }: IProps) => {
 const Button = styled.button`
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${getTextColor};
   margin-bottom: 1rem;
+  opacity: 0.5;
   &.active {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+    opacity: 1;
+    border-bottom: 2px solid ${getTextColor};
   }
 `
 

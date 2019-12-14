@@ -1,7 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-import Layout from "../components/templates/Layout"
+import Layout, {
+  getBackground,
+  getTextColor,
+} from "../components/templates/Layout"
 import SEO from "../components/molecules/Seo"
 import Container from "../components/atoms/Container"
 import Job from "../components/molecules/Job"
@@ -233,6 +236,7 @@ const Button = styled.button`
   border: none;
   display: block;
   margin: 0 auto;
+  color: ${getTextColor};
 
   @media print {
     display: none;

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { getTextColor } from "../templates/Layout"
 
 interface IProps {
   children: React.ReactNode
@@ -42,7 +43,7 @@ const Job = ({
 }
 
 const Listing = styled.article`
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid ${getTextColor};
   padding-bottom: 2rem;
   margin-bottom: 1rem;
   break-inside: avoid;

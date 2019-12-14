@@ -6,12 +6,12 @@ import useTheme from "../../hooks/useTheme"
 import Header from "../organisms/Header"
 import Footer from "../organisms/Footer"
 
-const getBackground = style("mode", {
+export const getBackground = style("mode", {
   light: "#d6deeb",
   dark: "#011627",
 })
 
-const getTextColor = style("mode", {
+export const getTextColor = style("mode", {
   light: "#011627",
   dark: "#d6deeb",
 })
