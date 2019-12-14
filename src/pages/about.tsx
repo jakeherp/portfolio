@@ -5,26 +5,21 @@ import Layout from "../components/templates/Layout"
 import SEO from "../components/molecules/Seo"
 import Container from "../components/atoms/Container"
 import Job from "../components/molecules/Job"
+import Filter from "../components/atoms/Filter"
 
 import { jobs } from "../data/jobs"
 import { skills } from "../data/skills"
 
 const IndexPage = () => {
   const [loadedJobs, loadMore] = useState(false)
+  const [filter, setFilter] = useState<string>("")
 
   const initialJobs = jobs.slice(0, 2)
   const displayJobs = loadedJobs ? jobs : initialJobs
 
-  const {
-    technologies,
-    frameworks,
-    databases,
-    cms,
-    various,
-    design,
-    softSkills,
-    languages,
-  } = skills
+  const { softSkills } = skills
+
+  const skillCategories = Object.keys(skills)
 
   return (
     <Layout>
@@ -42,39 +37,29 @@ const IndexPage = () => {
         </Section>
         <Section>
           <Title>Skills</Title>
+          {skillCategories.map(skill => (
+            <Filter
+              key={skill}
+              name={skill}
+              setFilter={setFilter}
+              currentFilter={filter}
+            />
+          ))}
           <WithSidebar>
             <main>
-              {technologies.map((item, index) => (
-                <Badge
-                  key={`technologies-${index + 1}`}
-                  className="--technologies"
-                >
-                  {item}
-                </Badge>
-              ))}
-              {frameworks.map((item, index) => (
-                <Badge key={`frameworks-${index + 1}`} className="--frameworks">
-                  {item}
-                </Badge>
-              ))}
-              {databases.map((item, index) => (
-                <Badge key={`databases-${index + 1}`} className="--databases">
-                  {item}
-                </Badge>
-              ))}
-              {cms.map((item, index) => (
-                <Badge key={`cms-${index + 1}`} className="--cms">
-                  {item}
-                </Badge>
-              ))}
-              {various.map((item, index) => (
-                <Badge key={`skills-${index + 1}`}>{item}</Badge>
-              ))}
-              {design.map((item, index) => (
-                <Badge key={`design-${index + 1}`} className="--design">
-                  {item}
-                </Badge>
-              ))}
+              {skillCategories.map(category => {
+                if (filter === category || filter === "") {
+                  const cat = skills[category]
+                  return cat.map((ability: string, index: number) => (
+                    <Badge
+                      key={`${category}-${index + 1}`}
+                      className={`--${category}`}
+                    >
+                      {ability}
+                    </Badge>
+                  ))
+                }
+              })}
             </main>
             <aside>
               <h2>Soft skills</h2>
@@ -85,12 +70,12 @@ const IndexPage = () => {
                 </Badge>
               ))}
 
-              <h2>Languages</h2>
+              {/* <h2>Languages</h2>
               {languages.map((language, index) => (
                 <li key={`language-${index}`}>
                   {language.language} ({language.proficiency})
                 </li>
-              ))}
+              ))} */}
             </aside>
           </WithSidebar>
         </Section>
@@ -236,12 +221,12 @@ const List = styled.ul`
   list-style: square;
 `
 
-const PrintOnly = styled.div`
-  display: none;
-  @media print {
-    display: unset;
-  }
-`
+// const PrintOnly = styled.div`
+//   display: none;
+//   @media print {
+//     display: unset;
+//   }
+// `
 
 const Button = styled.button`
   background: transparent;

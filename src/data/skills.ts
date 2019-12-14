@@ -30,26 +30,26 @@ export const skills = {
     "Team player",
     "Always on time",
   ],
-  languages: [
-    {
-      language: "English",
-      proficiency: "Bi-Lingual",
-    },
-    {
-      language: "German",
-      proficiency: "Bi-Lingual",
-    },
-    {
-      language: "Spanish",
-      proficiency: "Intermediate",
-    },
-    {
-      language: "Italian",
-      proficiency: "Basic",
-    },
-    {
-      language: "Russian",
-      proficiency: "Basic",
-    },
-  ],
+  // languages: [
+  //   {
+  //     language: "English",
+  //     proficiency: "Bi-Lingual",
+  //   },
+  //   {
+  //     language: "German",
+  //     proficiency: "Bi-Lingual",
+  //   },
+  //   {
+  //     language: "Spanish",
+  //     proficiency: "Intermediate",
+  //   },
+  //   {
+  //     language: "Italian",
+  //     proficiency: "Basic",
+  //   },
+  //   {
+  //     language: "Russian",
+  //     proficiency: "Basic",
+  //   },
+  // ],
 }
