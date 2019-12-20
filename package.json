@@ -29,7 +29,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.1.67",
     "gatsby-source-filesystem": "^2.1.40",
-    "gatsby-transformer-sharp": "^2.3.7",
+    "gatsby-transformer-sharp": "^2.3.9",
     "local-storage-fallback": "^4.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
