@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -61,7 +61,7 @@ module.exports = {
       options: {
         typekit: {
           id: `gfc7wqc`,
-          families: ["brandon-grotesque"],
+          families: ['brandon-grotesque'],
         },
       },
     },
