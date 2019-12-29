@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 
 import Layout, {
-  getBackground,
   getTextColor,
 } from "../components/templates/Layout"
 import SEO from "../components/molecules/Seo"
@@ -20,10 +19,7 @@ const IndexPage = () => {
   const initialJobs = jobs.slice(0, 2)
   const displayJobs = loadedJobs ? jobs : initialJobs
 
-  const { softSkills } = skills
-
   const skillCategories = Object.keys(skills)
-
   return (
     <Layout>
       <SEO title="About" />
@@ -40,14 +36,17 @@ const IndexPage = () => {
         </Section>
         <Section>
           <Title>Skills</Title>
-          {skillCategories.map(skill => (
-            <Filter
-              key={skill}
-              name={skill}
-              setFilter={setFilter}
-              currentFilter={filter}
-            />
-          ))}
+          <ScreenOnly>
+            Filter:
+            {skillCategories.map(skill => (
+              <Filter
+                key={skill}
+                name={skill}
+                setFilter={setFilter}
+                currentFilter={filter}
+              />
+            ))}
+          </ScreenOnly>
           <WithSidebar>
             <main>
               {skillCategories.map(category => {
@@ -67,7 +66,15 @@ const IndexPage = () => {
             <aside>
               <h2>Soft skills</h2>
               {/* {softSkills.join(", ")} */}
-              {softSkills.map((item, index) => (
+              {[
+                "Strong communication",
+                "Leadership",
+                "Problem solving",
+                "Creative thinking",
+                "Flexible and adaptive",
+                "Team player",
+                "Always on time",
+              ].map((item, index) => (
                 <Badge key={`softskill-${index + 1}`} className="--softskill">
                   {item}
                 </Badge>
@@ -105,8 +112,8 @@ const IndexPage = () => {
           {!loadedJobs ? (
             <Button onClick={() => loadMore(true)}>Show more</Button>
           ) : (
-            <Button onClick={() => loadMore(false)}>Show less</Button>
-          )}
+              <Button onClick={() => loadMore(false)}>Show less</Button>
+            )}
         </Section>
       </Container>
     </Layout>
@@ -230,6 +237,12 @@ const List = styled.ul`
 //     display: unset;
 //   }
 // `
+
+const ScreenOnly = styled.div`
+  @media print {
+    display: none;
+  }
+`
 
 const Button = styled.button`
   background: transparent;

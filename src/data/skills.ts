@@ -1,4 +1,8 @@
-export const skills = {
+interface ISkills {
+  [category: string]: string[]
+}
+
+export const skills: ISkills = {
   technologies: [
     "HTML5",
     "CSS",
@@ -21,15 +25,15 @@ export const skills = {
     "Zeplin",
     "Figma",
   ],
-  softSkills: [
-    "Strong communication",
-    "Leadership",
-    "Problem solving",
-    "Creative thinking",
-    "Flexible and adaptive",
-    "Team player",
-    "Always on time",
-  ],
+  // softSkills: [
+  //   "Strong communication",
+  //   "Leadership",
+  //   "Problem solving",
+  //   "Creative thinking",
+  //   "Flexible and adaptive",
+  //   "Team player",
+  //   "Always on time",
+  // ],
   // languages: [
   //   {
   //     language: "English",
