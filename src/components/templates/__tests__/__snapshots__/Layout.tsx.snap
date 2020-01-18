@@ -19,7 +19,7 @@ Array [
       </a>
     </h1>
     <nav
-      className="sc-bxivhb eZRqAs"
+      className="sc-bxivhb vLWiy"
     >
       <ul
         className="sc-bwzfXH hOZBFj"
@@ -60,6 +60,19 @@ Array [
           />
         </li>
       </ul>
+      <button
+        className="sc-EHOje ejfJNY"
+        onClick={[Function]}
+        open={
+          Object {
+            "isOpen": false,
+          }
+        }
+      >
+        <div />
+        <div />
+        <div />
+      </button>
     </nav>
   </header>,
   <div />,
