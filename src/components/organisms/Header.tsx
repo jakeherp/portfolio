@@ -6,7 +6,6 @@ import styled from "styled-components"
 import NavigationContext from "../../context/navigation.context"
 import Highlight from "../atoms/Highlight"
 import Menu from "../atoms/Menu"
-import Burger from "../atoms/BurgerIcon"
 
 const Header = () => {
   const MenuToggle = useContext(NavigationContext)
@@ -36,7 +35,6 @@ const Header = () => {
             <ToggleMode />
           </li>
         </Menu>
-        <Burger toggle={MenuToggle} />
       </Navigation>
     </Head>
   )
