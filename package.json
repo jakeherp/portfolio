@@ -28,7 +28,7 @@
     "gatsby-plugin-tslint": "^0.0.2",
     "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-source-contentful": "^2.1.73",
+    "gatsby-source-contentful": "^2.1.76",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-sharp": "^2.3.12",
     "local-storage-fallback": "^4.1.1",
