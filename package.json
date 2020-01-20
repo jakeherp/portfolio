@@ -15,7 +15,7 @@
     "enzyme-to-json": "^3.4.3",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.37",
-    "gatsby-plugin-manifest": "^2.2.34",
+    "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-netlify": "^2.1.30",
     "gatsby-plugin-nprogress": "^2.1.17",
     "gatsby-plugin-offline": "^3.0.30",
