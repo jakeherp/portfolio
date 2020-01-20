@@ -13,7 +13,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
-    "gatsby": "^2.18.17",
+    "gatsby": "^2.18.21",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-netlify": "^2.1.30",
