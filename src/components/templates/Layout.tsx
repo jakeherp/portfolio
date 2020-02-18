@@ -67,6 +67,7 @@ const Layout = ({ children, location }: IProps) => {
     <ThemeProvider theme={theme}>
       <>
         <Style />
+        <Header />
         <AnimatePresence>
           <motion.main
             key={location?.pathname}
@@ -75,11 +76,10 @@ const Layout = ({ children, location }: IProps) => {
             animate="enter"
             exit="exit"
           >
-            <Header />
             {children}
-            <Footer />
           </motion.main>
         </AnimatePresence>
+        <Footer />
       </>
     </ThemeProvider>
   );
