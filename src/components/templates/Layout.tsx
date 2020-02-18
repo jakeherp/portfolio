@@ -1,23 +1,23 @@
-import React from "react"
-import { ThemeProvider, createGlobalStyle } from "styled-components"
-import { motion, AnimatePresence } from 'framer-motion'
-import style from "styled-theming"
+import React from 'react';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
+import style from 'styled-theming';
 
-import useTheme from "../../hooks/useTheme"
-import Header from "../organisms/Header"
-import Footer from "../organisms/Footer"
+import useTheme from '../../hooks/useTheme';
+import Header from '../organisms/Header';
+import Footer from '../organisms/Footer';
 
-export const getBackground = style("mode", {
-  light: "#d6deeb",
-  dark: "#011627",
-})
+export const getBackground = style('mode', {
+  light: '#d6deeb',
+  dark: '#011627',
+});
 
-export const getTextColor = style("mode", {
-  light: "#011627",
-  dark: "#d6deeb",
-})
+export const getTextColor = style('mode', {
+  light: '#011627',
+  dark: '#d6deeb',
+});
 
-const duration = 0.5
+const duration = 0.5;
 
 const variants = {
   initial: {
@@ -26,17 +26,16 @@ const variants = {
   enter: {
     opacity: 1,
     transition: {
-      duration: duration,
+      duration,
       delay: duration,
       when: 'beforeChildren',
     },
   },
   exit: {
     opacity: 0,
-    transition: { duration: duration },
+    transition: { duration },
   },
-}
-
+};
 
 const Style = createGlobalStyle`
     body {
@@ -54,36 +53,36 @@ const Style = createGlobalStyle`
         line-height: 0.5;
       }
     }
-`
+`;
 
 interface IProps {
-  children: React.ReactNode
-  location: any
+  children: React.ReactNode;
+  location: any;
 }
 
 const Layout = ({ children, location }: IProps) => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
       <>
+        <Style />
         <AnimatePresence>
-          <Style />
-          <Header />
           <motion.main
-            key={location.pathname}
+            key={location?.pathname}
             variants={variants}
             initial="initial"
             animate="enter"
             exit="exit"
           >
+            <Header />
             {children}
+            <Footer />
           </motion.main>
-          <Footer />
         </AnimatePresence>
       </>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

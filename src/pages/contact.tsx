@@ -1,11 +1,10 @@
-import React from "react"
-import { useForm } from 'react-hook-form'
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 import ErrorMessage from '../helpers/formErrors';
 
-import Layout from "../components/templates/Layout"
-import Container from "../components/atoms/Container"
-import SEO from "../components/molecules/Seo"
+import Container from '../components/atoms/Container';
+import SEO from '../components/molecules/Seo';
 
 const Contact = () => {
   const {
@@ -14,7 +13,7 @@ const Contact = () => {
     errors,
     setError,
     clearError,
-    formState: { isSubmitting }
+    formState: { isSubmitting },
   } = useForm();
 
   const onSubmit = (data: any) => {
@@ -22,11 +21,14 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <>
       <SEO title="Contact" />
       <Container>
         <h1>Contact</h1>
-        <p>Wanna talk? Send me an email through the form below or get in touch through my social media.</p>
+        <p>
+          Wanna talk? Send me an email through the form below or get in touch
+          through my social media.
+        </p>
 
         <form className="App" onSubmit={handleSubmit(onSubmit)}>
           <h1>Sign Up</h1>
@@ -35,7 +37,10 @@ const Contact = () => {
           <ErrorMessage error={errors.firstName} />
 
           <label>Last Name:</label>
-          <input name="lastName" ref={register({ required: true, minLength: 2 })} />
+          <input
+            name="lastName"
+            ref={register({ required: true, minLength: 2 })}
+          />
           <ErrorMessage error={errors.firstName} />
 
           <label>Email</label>
@@ -59,8 +64,8 @@ const Contact = () => {
           <input disabled={isSubmitting} type="submit" />
         </form>
       </Container>
-    </Layout>
+    </>
   );
-}
+};
 
-export default Contact
+export default Contact;

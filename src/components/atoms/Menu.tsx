@@ -1,13 +1,11 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 interface IProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const Menu = ({ children }: IProps) => {
-  return <Navigation>{children}</Navigation>
-}
+const Menu = ({ children }: IProps) => <Navigation>{children}</Navigation>;
 
 const Navigation = styled.ul`
   list-style: none;
@@ -22,7 +20,7 @@ const Navigation = styled.ul`
     a {
       padding: 0px 0.25rem;
       &::after {
-        content: "";
+        content: '';
         display: block;
         height: 10px;
         width: 0%;
@@ -41,6 +39,6 @@ const Navigation = styled.ul`
       margin-left: 1rem;
     }
   }
-`
+`;
 
-export default Menu
+export default Menu;

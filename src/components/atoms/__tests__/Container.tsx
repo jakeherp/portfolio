@@ -1,15 +1,15 @@
-import React from "react"
-import renderer from "react-test-renderer"
+import React from 'react';
+import renderer from 'react-test-renderer';
 
-import Container from "../Container"
+import Container from '../Container';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderer
     .create(
       <Container>
         <div />
       </Container>
     )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

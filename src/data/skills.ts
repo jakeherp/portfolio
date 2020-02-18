@@ -1,29 +1,29 @@
 interface ISkills {
-  [category: string]: string[]
+  [category: string]: string[];
 }
 
 export const skills: ISkills = {
   technologies: [
-    "HTML5",
-    "CSS",
-    "Sass",
-    "JavaScript",
-    "TypeScript",
-    "GraphQL",
-    "ES6",
-    "PHP",
+    'HTML5',
+    'CSS',
+    'Sass',
+    'JavaScript',
+    'TypeScript',
+    'GraphQL',
+    'ES6',
+    'PHP',
   ],
-  frameworks: ["React", "Vue.js", "Gatsby", "Next.js", "Svelte"],
-  databases: ["MySQL", "MongoDB", "Firebase"],
-  cms: ["WordPress", "Drupal", "Contentful", "Sanity.io"],
-  various: ["SEO", "Scrum", "Jira"],
+  frameworks: ['React', 'Vue.js', 'Gatsby', 'Next.js', 'Svelte'],
+  databases: ['MySQL', 'MongoDB', 'Firebase'],
+  cms: ['WordPress', 'Drupal', 'Contentful', 'Sanity.io'],
+  various: ['SEO', 'Scrum', 'Jira'],
   design: [
-    "Adobe Illustrator",
-    "Adobe InDesign",
-    "Adobe Photoshop",
-    "Sketch",
-    "Zeplin",
-    "Figma",
+    'Adobe Illustrator',
+    'Adobe InDesign',
+    'Adobe Photoshop',
+    'Sketch',
+    'Zeplin',
+    'Figma',
   ],
   // softSkills: [
   //   "Strong communication",
@@ -56,4 +56,4 @@ export const skills: ISkills = {
   //     proficiency: "Basic",
   //   },
   // ],
-}
+};

@@ -1,18 +1,18 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import { getTextColor } from "../templates/Layout"
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { getTextColor } from '../templates/Layout';
 
 interface IProps {
-  children: React.ReactNode
-  title: string
+  children: React.ReactNode;
+  title: string;
   company: {
-    name: string
-    url: string
-  }
-  place: string
-  from: string
-  to: string
+    name: string;
+    url: string;
+  };
+  place: string;
+  from: string;
+  to: string;
 }
 
 const Job = ({
@@ -22,25 +22,23 @@ const Job = ({
   place,
   from,
   to,
-}: IProps) => {
-  return (
-    <Listing>
-      <h1>{title}</h1>
-      <h2>
-        <strong>
-          <a href={companyUrl} target="_blank">
-            {companyName}
-          </a>
-        </strong>{" "}
-        (in {place})
-      </h2>
-      {children}
-      <small>
-        {from} to {to}
-      </small>
-    </Listing>
-  )
-}
+}: IProps) => (
+  <Listing>
+    <h1>{title}</h1>
+    <h2>
+      <strong>
+        <a href={companyUrl} target="_blank">
+          {companyName}
+        </a>
+      </strong>{' '}
+      (in {place})
+    </h2>
+    {children}
+    <small>
+      {from} to {to}
+    </small>
+  </Listing>
+);
 
 const Listing = styled.article`
   border-bottom: 1px solid ${getTextColor};
@@ -56,7 +54,7 @@ const Listing = styled.article`
     font-size: 1rem;
     margin: 0 0 0.5rem;
   }
-`
+`;
 
 Job.propTypes = {
   children: PropTypes.oneOfType([
@@ -71,6 +69,6 @@ Job.propTypes = {
   place: PropTypes.string.isRequired,
   from: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
-}
+};
 
-export default Job
+export default Job;

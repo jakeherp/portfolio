@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import Menu from "../atoms/Menu"
+import React from 'react';
+import styled from 'styled-components';
+import Menu from '../atoms/Menu';
 
 const Foot = styled.footer`
   padding: 0 3%;
@@ -11,41 +11,39 @@ const Foot = styled.footer`
   @media print {
     display: none;
   }
-`
+`;
 
-const Footer = () => {
-  return (
-    <Foot>
-      <div>
-        &copy; 2019 Jacob Herper
-        <br />
-        Proudly built with{" "}
-        <a href="https://gatsbyjs.org/" target="_blank">
-          Gatsby
-        </a>
-        .
-      </div>
-      <nav>
-        <Menu>
-          <li>
-            <a href="https://github.com/jakeherp" target="_blank">
-              Github
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/jacobherper/" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/jakeherp" target="_blank">
-              Twitter
-            </a>
-          </li>
-        </Menu>
-      </nav>
-    </Foot>
-  )
-}
+const Footer = () => (
+  <Foot>
+    <div>
+      &copy; 2019 Jacob Herper
+      <br />
+      Proudly built with{' '}
+      <a href="https://gatsbyjs.org/" target="_blank">
+        Gatsby
+      </a>
+      .
+    </div>
+    <nav>
+      <Menu>
+        <li>
+          <a href="https://github.com/jakeherp" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jacobherper/" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/jakeherp" target="_blank">
+            Twitter
+          </a>
+        </li>
+      </Menu>
+    </nav>
+  </Foot>
+);
 
-export default Footer
+export default Footer;

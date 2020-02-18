@@ -1,20 +1,20 @@
-import React from "react"
-import renderer from "react-test-renderer"
+import React from 'react';
+import renderer from 'react-test-renderer';
 
-import Job from "../Job"
+import Job from '../Job';
 
 const job = {
-  title: "Web Developer",
+  title: 'Web Developer',
   company: {
-    name: "My Company",
-    url: "test.com",
+    name: 'My Company',
+    url: 'test.com',
   },
-  place: "London",
-  from: "Jan 2010",
-  to: "present",
-}
+  place: 'London',
+  from: 'Jan 2010',
+  to: 'present',
+};
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderer
     .create(
       <Job
@@ -27,6 +27,6 @@ it("renders correctly", () => {
         List of tasks
       </Job>
     )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

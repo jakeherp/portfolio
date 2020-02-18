@@ -1,27 +1,25 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import Layout, {
-  getTextColor,
-} from "../components/templates/Layout"
-import SEO from "../components/molecules/Seo"
-import Container from "../components/atoms/Container"
-import Job from "../components/molecules/Job"
-import Filter from "../components/atoms/Filter"
+import { getTextColor } from '../components/templates/Layout';
+import SEO from '../components/molecules/Seo';
+import Container from '../components/atoms/Container';
+import Job from '../components/molecules/Job';
+import Filter from '../components/atoms/Filter';
 
-import { jobs } from "../data/jobs"
-import { skills } from "../data/skills"
+import { jobs } from '../data/jobs';
+import { skills } from '../data/skills';
 
 const IndexPage = () => {
-  const [loadedJobs, loadMore] = useState(false)
-  const [filter, setFilter] = useState<string>("")
+  const [loadedJobs, loadMore] = useState(false);
+  const [filter, setFilter] = useState<string>('');
 
-  const initialJobs = jobs.slice(0, 2)
-  const displayJobs = loadedJobs ? jobs : initialJobs
+  const initialJobs = jobs.slice(0, 2);
+  const displayJobs = loadedJobs ? jobs : initialJobs;
 
-  const skillCategories = Object.keys(skills)
+  const skillCategories = Object.keys(skills);
   return (
-    <Layout>
+    <>
       <SEO title="About" />
       <Container>
         <Section>
@@ -50,8 +48,8 @@ const IndexPage = () => {
           <WithSidebar>
             <main>
               {skillCategories.map(category => {
-                if (filter === category || filter === "") {
-                  const cat = skills[category]
+                if (filter === category || filter === '') {
+                  const cat = skills[category];
                   return cat.map((ability: string, index: number) => (
                     <Badge
                       key={`${category}-${index + 1}`}
@@ -59,7 +57,7 @@ const IndexPage = () => {
                     >
                       {ability}
                     </Badge>
-                  ))
+                  ));
                 }
               })}
             </main>
@@ -67,13 +65,13 @@ const IndexPage = () => {
               <h2>Soft skills</h2>
               {/* {softSkills.join(", ")} */}
               {[
-                "Strong communication",
-                "Leadership",
-                "Problem solving",
-                "Creative thinking",
-                "Flexible and adaptive",
-                "Team player",
-                "Always on time",
+                'Strong communication',
+                'Leadership',
+                'Problem solving',
+                'Creative thinking',
+                'Flexible and adaptive',
+                'Team player',
+                'Always on time',
               ].map((item, index) => (
                 <Badge key={`softskill-${index + 1}`} className="--softskill">
                   {item}
@@ -116,11 +114,11 @@ const IndexPage = () => {
             )}
         </Section>
       </Container>
-    </Layout>
-  )
-}
+    </>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 const Section = styled.section`
   margin: 2rem 0;
@@ -129,7 +127,7 @@ const Section = styled.section`
     border-bottom: 1pt solid #000;
     line-height: 1;
   }
-`
+`;
 
 const WithSidebar = styled.div`
   display: flex;
@@ -148,11 +146,11 @@ const WithSidebar = styled.div`
       display: inline-block;
       font-size: 1em;
       &:after {
-        content: ": ";
+        content: ': ';
       }
     }
   }
-`
+`;
 
 const Badge = styled.span`
   display: inline-block;
@@ -183,7 +181,7 @@ const Badge = styled.span`
     color: #000;
     border: 1px solid #000;
   }
-`
+`;
 
 const Name = styled.h1`
   font-size: 3rem;
@@ -192,7 +190,7 @@ const Name = styled.h1`
   @media print {
     font-size: 22pt;
   }
-`
+`;
 const JobTitle = styled.h2`
   font-size: 1.75rem;
   margin: 0;
@@ -200,7 +198,7 @@ const JobTitle = styled.h2`
   @media print {
     font-size: 16pt;
   }
-`
+`;
 
 const Text = styled.p`
   font-size: 1.2rem;
@@ -209,7 +207,7 @@ const Text = styled.p`
     margin-top: 5pt;
     font-size: 11pt;
   }
-`
+`;
 
 const Title = styled.h2`
   font-size: 2.5rem;
@@ -217,32 +215,32 @@ const Title = styled.h2`
   @media print {
     font-size: 22pt;
   }
-`
+`;
 
 const Jobs = styled.div`
   @media print {
     column-count: 2;
   }
-`
+`;
 
 const List = styled.ul`
   padding: 0 1rem;
   margin: 0;
   list-style: square;
-`
+`;
 
 // const PrintOnly = styled.div`
 //   display: none;
 //   @media print {
 //     display: unset;
 //   }
-// `
+// `;
 
 const ScreenOnly = styled.div`
   @media print {
     display: none;
   }
-`
+`;
 
 const Button = styled.button`
   background: transparent;
@@ -254,4 +252,4 @@ const Button = styled.button`
   @media print {
     display: none;
   }
-`
+`;

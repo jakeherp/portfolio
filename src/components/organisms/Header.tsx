@@ -1,44 +1,42 @@
-import React, { useContext } from "react"
-import { Link } from "gatsby"
-import ToggleMode from "../atoms/ToggleMode"
-import styled from "styled-components"
+import React, { useContext } from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import ToggleMode from '../atoms/ToggleMode';
 
 // import NavigationContext from "../../context/navigation.context"
-import Highlight from "../atoms/Highlight"
-import Menu from "../atoms/Menu"
+import Highlight from '../atoms/Highlight';
+import Menu from '../atoms/Menu';
 
-const Header = () => {
+const Header = () => (
   // const MenuToggle = useContext(NavigationContext)
 
-  return (
-    <Head>
-      <h1>
-        <Link to="/">
-          &lt;Jacob Herper <Highlight>/</Highlight>&gt;
-        </Link>
-      </h1>
-      <Navigation>
-        <Menu>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about/">About</Link>
-          </li>
-          <li>
-            <Link to="/portfolio/">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/contact/">Contact</Link>
-          </li>
-          <li>
-            <ToggleMode />
-          </li>
-        </Menu>
-      </Navigation>
-    </Head>
-  )
-}
+  <Head>
+    <h1>
+      <Link to="/">
+        &lt;Jacob Herper <Highlight>/</Highlight>&gt;
+      </Link>
+    </h1>
+    <Navigation>
+      <Menu>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about/">About</Link>
+        </li>
+        <li>
+          <Link to="/portfolio/">Portfolio</Link>
+        </li>
+        <li>
+          <Link to="/contact/">Contact</Link>
+        </li>
+        <li>
+          <ToggleMode />
+        </li>
+      </Menu>
+    </Navigation>
+  </Head>
+);
 
 const Head = styled.header`
   padding: 1rem 3%;
@@ -53,7 +51,7 @@ const Head = styled.header`
   @media print {
     display: none;
   }
-`
+`;
 
 const Navigation = styled.nav`
   display: none;
@@ -74,6 +72,6 @@ const Navigation = styled.nav`
       border: none;
     }
   }
-`
+`;
 
-export default Header
+export default Header;

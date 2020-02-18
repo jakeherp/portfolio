@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 export default function useToggle(initialValue = false) {
-  const [value, setValue] = useState(initialValue)
+  const [value, setValue] = useState(initialValue);
 
   return {
     value,
@@ -9,5 +9,5 @@ export default function useToggle(initialValue = false) {
     toggle: () => setValue(!value),
     setTrue: () => setValue(true),
     setFalse: () => setValue(false),
-  }
+  };
 }

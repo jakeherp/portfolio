@@ -1,18 +1,18 @@
-import React, { createContext } from "react"
-import useToggle from "../hooks/useToggle"
+import React, { createContext } from 'react';
+import useToggle from '../hooks/useToggle';
 
 interface IProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const defaults = {
   isOpen: false,
-}
+};
 
-const NavContext = createContext<any>(defaults)
+const NavContext = createContext<any>(defaults);
 
 export const Provider = ({ children }: IProps) => {
-  const isOpen = useToggle(false)
+  const isOpen = useToggle(false);
 
   return (
     <NavContext.Provider
@@ -22,7 +22,7 @@ export const Provider = ({ children }: IProps) => {
     >
       {children}
     </NavContext.Provider>
-  )
-}
+  );
+};
 
-export default NavContext
+export default NavContext;

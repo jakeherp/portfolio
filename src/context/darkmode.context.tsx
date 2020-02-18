@@ -1,26 +1,26 @@
-import React, { createContext, useState } from "react"
+import React, { createContext, useState } from 'react';
 
 interface IProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const defaults = {
   darkMode: false,
   changeMode: () => {},
-}
+};
 
-const DarkModeContext = createContext<any>(defaults)
+const DarkModeContext = createContext<any>(defaults);
 
 export const Provider = ({ children }: IProps) => {
-  const [darkMode, toggleDarkMode] = useState<boolean>(defaults.darkMode)
+  const [darkMode, toggleDarkMode] = useState<boolean>(defaults.darkMode);
 
   const changeMode = (currentMode: boolean) => {
     try {
-      toggleDarkMode(!currentMode)
+      toggleDarkMode(!currentMode);
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
-  }
+  };
 
   return (
     <DarkModeContext.Provider
@@ -32,7 +32,7 @@ export const Provider = ({ children }: IProps) => {
     >
       {children}
     </DarkModeContext.Provider>
-  )
-}
+  );
+};
 
-export default DarkModeContext
+export default DarkModeContext;
