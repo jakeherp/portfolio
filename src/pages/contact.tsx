@@ -17,6 +17,9 @@ const Contact = () => {
     formState: { isSubmitting }
   } = useForm();
 
+  const onSubmit = (data: any) => {
+    alert(JSON.stringify(data));
+  };
 
   return (
     <Layout>
@@ -34,22 +37,6 @@ const Contact = () => {
           <label>Last Name:</label>
           <input name="lastName" ref={register({ required: true, minLength: 2 })} />
           <ErrorMessage error={errors.firstName} />
-
-          <label>Gender</label>
-          <select name="gender" ref={register({ required: true })}>
-            <option value="">Select...</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          <ErrorMessage error={errors.gender} />
-
-          <label>Username</label>
-          <input
-            name="username"
-            onBlur={e => validateUserName(e.target.value)}
-            ref={register({ required: true, validate: validateUserName })}
-          />
-          <ErrorMessage error={errors.username} />
 
           <label>Email</label>
           <input
