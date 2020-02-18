@@ -1,11 +1,11 @@
-const path = require('path')
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   const portfolioItem = path.resolve(
     `./src/components/templates/PortfolioItem.tsx`
-  )
+  );
   return graphql(
     `
       {
@@ -21,14 +21,15 @@ exports.createPages = ({ graphql, actions }) => {
     `
   ).then(result => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
 
-    const posts = result.data.allContentfulItem.edges
+    const posts = result.data.allContentfulItem.edges;
 
     posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+      const previous =
+        index === posts.length - 1 ? null : posts[index + 1].node;
+      const next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
         path: post.node.slug,
@@ -38,7 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
           previous,
           next,
         },
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};

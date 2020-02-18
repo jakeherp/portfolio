@@ -69,6 +69,7 @@
     "comma-dangle": 0,
     "max-len": 0,
     "import/extensions": 0,
+    "import/no-unresolved": 0,
     "no-underscore-dangle": 0,
     "consistent-return": 0,
     "react/display-name": 1,
@@ -88,6 +89,7 @@
         ]
       }
     ],
+    "react/jsx-props-no-spreading": 0,
     "radix": 0,
     "no-shadow": [
       2,
@@ -129,7 +131,8 @@
       }
     ],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "semi": 2
   },
   "plugins": [
     "html",

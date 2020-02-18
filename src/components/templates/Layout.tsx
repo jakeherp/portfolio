@@ -1,5 +1,6 @@
 import React from "react"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
+import { motion, AnimatePresence } from 'framer-motion'
 import style from "styled-theming"
 
 import useTheme from "../../hooks/useTheme"
@@ -15,6 +16,27 @@ export const getTextColor = style("mode", {
   light: "#011627",
   dark: "#d6deeb",
 })
+
+const duration = 0.5
+
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: duration,
+      delay: duration,
+      when: 'beforeChildren',
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: duration },
+  },
+}
+
 
 const Style = createGlobalStyle`
     body {
@@ -36,19 +58,30 @@ const Style = createGlobalStyle`
 
 interface IProps {
   children: React.ReactNode
+  location: any
 }
 
-const Layout = ({ children }: IProps) => {
+const Layout = ({ children, location }: IProps) => {
   const theme = useTheme()
 
   return (
     <ThemeProvider theme={theme}>
-      <React.Fragment>
-        <Style />
-        <Header />
-        {children}
-        <Footer />
-      </React.Fragment>
+      <>
+        <AnimatePresence>
+          <Style />
+          <Header />
+          <motion.main
+            key={location.pathname}
+            variants={variants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+          >
+            {children}
+          </motion.main>
+          <Footer />
+        </AnimatePresence>
+      </>
     </ThemeProvider>
   )
 }
