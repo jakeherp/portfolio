@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import ToggleMode from "../atoms/ToggleMode"
 import styled from "styled-components"
 
-import NavigationContext from "../../context/navigation.context"
+// import NavigationContext from "../../context/navigation.context"
 import Highlight from "../atoms/Highlight"
 import Menu from "../atoms/Menu"
 
 const Header = () => {
-  const MenuToggle = useContext(NavigationContext)
+  // const MenuToggle = useContext(NavigationContext)
 
   return (
     <Head>
