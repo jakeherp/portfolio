@@ -1,9 +1,13 @@
 {
   "name": "herper-io",
-  "private": true,
   "description": "A redesign of my portfolio website.",
+  "displayName": "Herper.io",
   "version": "2.0.0",
-  "author": "Jacob Herper <jacob@herper.io>",
+  "author": {
+    "name": "Jacob Herper",
+    "email": "jacob@herper.io",
+    "url": "https://herper.io/"
+  },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.1.0",
@@ -81,7 +85,10 @@
     "typescript": "^3.7.5"
   },
   "keywords": [
-    "gatsby"
+    "portfolio",
+    "web developer",
+    "front-end",
+    "software engineer"
   ],
   "license": "MIT",
   "scripts": {
@@ -90,7 +97,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest"
+    "test": "jest",
+    "test:lint": "eslint ./ --fix"
   },
   "repository": {
     "type": "git",
