@@ -98,7 +98,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "test:lint": "eslint ./ --fix"
+    "test:lint": "eslint ./ --fix && prettier --single-quote --trailing-comma es5 --write 'src /**/*.tsx'"
   },
   "repository": {
     "type": "git",

@@ -110,8 +110,8 @@ const IndexPage = () => {
           {!loadedJobs ? (
             <Button onClick={() => loadMore(true)}>Show more</Button>
           ) : (
-              <Button onClick={() => loadMore(false)}>Show less</Button>
-            )}
+            <Button onClick={() => loadMore(false)}>Show less</Button>
+          )}
         </Section>
       </Container>
     </>
