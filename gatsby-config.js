@@ -7,6 +7,7 @@ module.exports = {
     title: `Herper.io`,
     description: `A redesign of my personal portfolio website.`,
     author: `Jacob Herper <jacob@herper.io>`,
+    siteUrl: process.env.SITE_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
