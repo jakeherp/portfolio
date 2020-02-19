@@ -1,47 +1,84 @@
-import React, { useContext } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'gatsby';
+import { motion, useCycle } from 'framer-motion';
 import styled from 'styled-components';
-import ToggleMode from '../atoms/ToggleMode';
+
+import { useDimensions } from '../../hooks/useDimensions';
+import { MenuToggle } from '../atoms/MenuToggle';
+import { Navigation as Nav } from '../molecules/Navigation';
 
 // import NavigationContext from "../../context/navigation.context"
 import Highlight from '../atoms/Highlight';
-import Menu from '../atoms/Menu';
+import ToggleMode from '../atoms/ToggleMode';
 
-const Header = () => (
+const sidebar = {
+  open: (height = 1080) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: 'spring',
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: 'circle(30px at 40px 40px)',
+    transition: {
+      delay: 0.5,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
+const Header = () => {
   // const MenuToggle = useContext(NavigationContext)
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
 
-  <Head>
-    <h1>
-      <Link to="/">
-        &lt;Jacob Herper <Highlight>/</Highlight>&gt;
-      </Link>
-    </h1>
-    <Navigation>
-      <Menu>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about/">About</Link>
-        </li>
-        <li>
-          <Link to="/portfolio/">Portfolio</Link>
-        </li>
-        <li>
-          <Link to="/contact/">Contact</Link>
-        </li>
-        <li>
-          <ToggleMode />
-        </li>
-      </Menu>
-    </Navigation>
-  </Head>
-);
+  return (
+    <Head>
+      <Toggler
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        custom={height}
+        ref={containerRef}
+      >
+        <Background className="menu-background" variants={sidebar} />
+        <Nav toggle={() => toggleOpen()} />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </Toggler>
+      <h1>
+        <Link to="/">
+          &lt;Jacob Herper <Highlight>/</Highlight>&gt;
+        </Link>
+      </h1>
+      <ThemeToggle />
+    </Head>
+  );
+};
+
+const Background = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+`;
+
+const Toggler = styled(motion.nav)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+`;
 
 const Head = styled.header`
   padding: 1rem 3%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   h1 {
     margin: 0;
@@ -53,25 +90,9 @@ const Head = styled.header`
   }
 `;
 
-const Navigation = styled.nav`
-  display: none;
-  button {
-    display: block;
-  }
-
-  @media screen and (min-width: 769px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 1em;
-    line-height: 1;
-
-    button {
-      background: transparent;
-      color: inherit;
-      border: none;
-    }
-  }
+const ThemeToggle = styled(ToggleMode)`
+  position: absolute;
+  right: 0;
 `;
 
 export default Header;

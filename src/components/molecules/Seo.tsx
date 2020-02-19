@@ -77,7 +77,7 @@ const SeoHelmet = ({ description, lang, meta, title }: IProps) => {
       ].concat(meta)}
     />
   );
-}
+};
 
 SeoHelmet.defaultProps = {
   lang: `en`,
