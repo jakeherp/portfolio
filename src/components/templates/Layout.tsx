@@ -1,18 +1,18 @@
 import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import style from 'styled-theming';
+import theme from 'styled-theming';
 
 import useTheme from '../../hooks/useTheme';
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
 
-export const getBackground = style('mode', {
+export const getBackground = theme('mode', {
   light: '#d6deeb',
   dark: '#011627',
 });
 
-export const getTextColor = style('mode', {
+export const getTextColor = theme('mode', {
   light: '#011627',
   dark: '#d6deeb',
 });
@@ -49,9 +49,10 @@ const Style = createGlobalStyle`
       color: inherit;
       text-decoration: none;
       transition: 0.5s;
-      &:hover {
-        line-height: 0.5;
-      }
+    }
+
+    .menu-background {
+      background: ${getTextColor};
     }
 `;
 
