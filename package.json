@@ -43,6 +43,7 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^4.9.6",
     "react-lottie": "^1.2.3",
+    "react-particles-js": "^2.7.1",
     "react-typed": "^1.2.0",
     "styled-components": "^5.0.1",
     "styled-theming": "^2.2.0"
@@ -98,7 +99,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "test:lint": "eslint ./ --fix && prettier --single-quote --trailing-comma es5 --write 'src /**/*.tsx'"
+    "test:lint": "eslint ./ --fix && prettier --single-quote --trailing-comma es5 --write 'src/**/*.tsx'"
   },
   "repository": {
     "type": "git",
