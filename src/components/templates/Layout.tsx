@@ -42,6 +42,7 @@ const Style = createGlobalStyle`
         background-color: ${getBackground};
         color: ${getTextColor};
         font-family: "brandon-grotesque", sans-serif;
+        font-size: 1.25rem;
         transition: 0.5s;
     }
 
