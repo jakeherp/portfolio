@@ -3,4 +3,5 @@ declare module "*.svg" {
   export default content
 }
 
-declare module "gatsby-plugin-transition-link/AniLink"
+declare module "react-particles-js"
+declare module "react-hook-form"
