@@ -26,7 +26,7 @@ const variants = {
       duration,
       delay: duration,
       when: 'beforeChildren',
-    }
+    },
   },
   enter: {
     opacity: 1,

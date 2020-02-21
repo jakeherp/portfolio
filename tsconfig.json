@@ -7,7 +7,7 @@
     "jsx": "react",
     "sourceMap": true,
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
