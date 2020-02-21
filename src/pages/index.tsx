@@ -23,7 +23,7 @@ const Headline = styled.h1`
 `;
 
 const Text = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   max-width: 600px;
   margin: 0.5rem 0;
 `;
