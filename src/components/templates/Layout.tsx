@@ -22,6 +22,11 @@ const duration = 0.5;
 const variants = {
   initial: {
     opacity: 0,
+    transition: {
+      duration,
+      delay: duration,
+      when: 'beforeChildren',
+    }
   },
   enter: {
     opacity: 1,
