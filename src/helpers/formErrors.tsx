@@ -6,7 +6,7 @@ interface IProps {
   };
 }
 
-export default function ErrorMessage({ error }: IProps) {
+const ErrorMessage = ({ error }: IProps) => {
   if (error) {
     switch (error.type) {
       case 'required':
@@ -21,4 +21,6 @@ export default function ErrorMessage({ error }: IProps) {
   }
 
   return null;
-}
+};
+
+export default ErrorMessage;

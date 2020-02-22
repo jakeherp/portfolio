@@ -133,7 +133,7 @@ const IndexPage = () => {
         <Container>
           <Headline>
             <Typed
-              loop
+              loop={true}
               typeSpeed={80}
               backSpeed={20}
               strings={[
@@ -142,10 +142,10 @@ const IndexPage = () => {
                 "I'm an <span class='accent'>entrepreneur</span>.",
                 "I'm a <span class='accent'>creative</span> mind.",
               ]}
-              smartBackspace
+              smartBackspace={true}
               backDelay={1000}
               loopCount={0}
-              showCursor
+              showCursor={true}
               cursorChar="|"
               className="typed"
             />

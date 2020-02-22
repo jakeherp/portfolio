@@ -105,7 +105,7 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
       ]}
     />
   );
-}
+};
 
 SeoHelmet.defaultProps = {
   lang: `en`,
