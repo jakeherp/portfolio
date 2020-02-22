@@ -3,81 +3,165 @@
 exports[`renders correctly 1`] = `
 Array [
   <header
-    className="sc-htpNat kXGpEh"
+    className="sc-Axmtr vAmDl"
   >
+    <nav
+      className="sc-AxheI bghuai"
+      style={Object {}}
+    >
+      <div
+        className="sc-AxgMl iuknho menu-background"
+        style={
+          Object {
+            "clipPath": "circle(30px at 40px 40px)",
+          }
+        }
+      />
+      <ul
+        className="sc-AxiKw fxEEKp"
+        style={Object {}}
+      >
+        <li
+          className="sc-AxirZ fwlwcd"
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(50px) translateZ(0)",
+            }
+          }
+        >
+          <a
+            className="sc-fzpans fZtrjm"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="sc-AxirZ fwlwcd"
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(50px) translateZ(0)",
+            }
+          }
+        >
+          <a
+            className="sc-fzplWN cGaUmj"
+            href="/about"
+            onClick={[Function]}
+          >
+            About
+          </a>
+        </li>
+        <li
+          className="sc-AxirZ fwlwcd"
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(50px) translateZ(0)",
+            }
+          }
+        >
+          <a
+            className="sc-fznyAO hQfHIn"
+            href="/portfolio"
+            onClick={[Function]}
+          >
+            Portfolio
+          </a>
+        </li>
+        <li
+          className="sc-AxirZ fwlwcd"
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "translateY(50px) translateZ(0)",
+            }
+          }
+        >
+          <a
+            className="sc-fznKkj dXJDRS"
+            href="/contact"
+            onClick={[Function]}
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+      <button
+        className="sc-AxjAm gbUQZY"
+        onClick={[Function]}
+      >
+        <svg
+          className="sc-fznZeY kzZUHc"
+          height="23"
+          viewBox="0 0 23 23"
+          width="23"
+        >
+          <path
+            d="M 2 2.5 L 20 2.5"
+            fill="transparent"
+            stroke="hsl(0, 0%, 18%)"
+            strokeLinecap="round"
+            strokeWidth="3"
+            style={Object {}}
+          />
+          <path
+            d="M 2 9.423 L 20 9.423"
+            fill="transparent"
+            opacity={1}
+            stroke="hsl(0, 0%, 18%)"
+            strokeLinecap="round"
+            strokeWidth="3"
+            style={Object {}}
+          />
+          <path
+            d="M 2 16.346 L 20 16.346"
+            fill="transparent"
+            stroke="hsl(0, 0%, 18%)"
+            strokeLinecap="round"
+            strokeWidth="3"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+    </nav>
     <h1>
       <a
         href="/"
       >
         &lt;Jacob Herper 
         <span
-          className="sc-bdVaJa hRbWxG"
+          className="sc-AxhCb jVyyBD"
         >
           /
         </span>
         &gt;
       </a>
     </h1>
-    <nav
-      className="sc-bxivhb vLWiy"
+    <div
+      className="sc-AxhUy bZHNWW"
     >
-      <ul
-        className="sc-bwzfXH hOZBFj"
-      >
-        <li>
-          <a
-            href="/"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="/about/"
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="/portfolio/"
-          >
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a
-            href="/contact/"
-          >
-            Contact
-          </a>
-        </li>
-        <li>
-          <
-            aria-label="Dark Mode"
-            onClick={[Function]}
-            role="button"
-          />
-        </li>
-      </ul>
-      <button
-        className="sc-EHOje ejfJNY"
+      <
+        aria-label="Dark Mode"
         onClick={[Function]}
-        open={
-          Object {
-            "isOpen": false,
-          }
-        }
-      >
-        <div />
-        <div />
-        <div />
-      </button>
-    </nav>
+        role="button"
+      />
+    </div>
   </header>,
-  <div />,
+  <main
+    style={
+      Object {
+        "opacity": 0,
+      }
+    }
+  >
+    <div />
+  </main>,
   <footer
-    className="sc-ifAKCX gFkpAL"
+    className="sc-fzoLsD anhFY"
   >
     <div>
       © 2019 Jacob Herper
@@ -94,7 +178,7 @@ Array [
     </div>
     <nav>
       <ul
-        className="sc-bwzfXH hOZBFj"
+        className="sc-fzozJi dZPuzO"
       >
         <li>
           <a
