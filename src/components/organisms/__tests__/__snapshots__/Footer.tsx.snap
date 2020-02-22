@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <footer
-  className="sc-bwzfXH frImrR"
+  className="sc-AxirZ oxMXQ"
 >
   <div>
     © 2019 Jacob Herper
@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
   </div>
   <nav>
     <ul
-      className="sc-bdVaJa jyRfjF"
+      className="sc-AxjAm qarpn"
     >
       <li>
         <a

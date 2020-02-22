@@ -53,7 +53,9 @@ const Contact = () => {
           </Row>
 
           <Row>
-            <button disabled={isSubmitting} type="submit">Send &raquo;</button>
+            <button disabled={isSubmitting} type="submit">
+              Send &raquo;
+            </button>
           </Row>
         </Form>
       </Container>
@@ -81,13 +83,15 @@ const Form = styled.form`
     margin-bottom: 5rem;
   }
 
-  input, textarea, button {
+  input,
+  textarea,
+  button {
     flex-grow: 1;
     border-radius: calc(15px + 0.25rem);
     border: none;
     padding: 0.25rem 1rem;
     font-size: 1.25rem;
-    font-family: "brandon-grotesque", sans-serif;
+    font-family: 'brandon-grotesque', sans-serif;
   }
 `;
 
