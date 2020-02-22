@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Herper.io`,
-    description: `A redesign of my personal portfolio website.`,
+    title: `Jacob Herper`,
+    description: `Front End Software Engineer with a passion for all things digital. I have more than 10 years experience working in web development.`,
     author: `Jacob Herper <jacob@herper.io>`,
     siteUrl: `https://herper.io`,
   },
@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -75,7 +75,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#e94e1b`,
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

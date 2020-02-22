@@ -116,7 +116,18 @@ const IndexPage = () => {
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        keywords={[
+          `web developer`,
+          `front end developer`,
+          `react developer`,
+          `javascript developer`,
+          `jacob herper`,
+          `developer`,
+          `london`,
+        ]}
+      />
       <Background params={params} />
       <Intro>
         <Container>
