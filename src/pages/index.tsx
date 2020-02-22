@@ -127,7 +127,7 @@ const IndexPage = () => {
               backSpeed={20}
               strings={[
                 "I'm <span class='accent'>Jacob</span> Herper.",
-                "I'm a <span class='accent'>web developer</span>.",
+                "I'm a <span class='accent'>software engineer</span>.",
                 "I'm an <span class='accent'>entrepreneur</span>.",
                 "I'm a <span class='accent'>creative</span> mind.",
               ]}
