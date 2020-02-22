@@ -1,31 +1,62 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { graphql, Link } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { Card } from '../components/molecules/Card';
 
 import SEO from '../components/molecules/Seo';
 import Container from '../components/atoms/Container';
 
-const List = props => {
-  const { match, history, data } = props;
-  const posts = data.allContentfulItem.edges;
-
+const List = ({ match, history }) => {
   return (
-    <CardList>
-      {posts.map(({ node }: any) => (
-        <Card
-          key={node.slug}
-          isSelected={match.params.id === node.slug}
-          history={history}
-          {...node}
-        />
-      ))}
-    </CardList>
+    <StaticQuery
+      query={graphql`
+        query PortfolioItemQuery {
+          allContentfulItem(sort: { fields: sortOrder, order: ASC }) {
+            edges {
+              node {
+                title
+                slug
+                client
+                type
+                featured_image {
+                  fluid {
+                    ...GatsbyContentfulFluid
+                    src
+                  }
+                }
+                content {
+                  json
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <CardList>
+          {data.allContentfulItem.edges.map(({ node }: any) => (
+            <Card
+              key={node.slug}
+              isSelected={match.params.id === node.slug}
+              history={history}
+              data={{
+                title: node.title,
+                slug: node.slug,
+                client: node.client,
+                category: node.type,
+                featuredImage: node.featured_image,
+                content: node.content.json,
+              }}
+            />
+          ))}
+        </CardList>
+      )}
+    />
   );
 };
 
-const Portfolio = ({ data }) => (
+const Portfolio = () => (
   <>
     <SEO title="Portfolio" />
     <Container>
@@ -34,7 +65,7 @@ const Portfolio = ({ data }) => (
       </h1>
 
       <Router>
-        <Route path={['/:id', '/']} component={List} />
+        <Route path={['/portfolio/:id', '/portfolio']} component={List} />
       </Router>
 
       <p>
@@ -55,31 +86,9 @@ const CardList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 `;
 
 export default Portfolio;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulItem(sort: { fields: sortOrder, order: ASC }) {
-      edges {
-        node {
-          title
-          slug
-          client
-          type
-          featured_image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;

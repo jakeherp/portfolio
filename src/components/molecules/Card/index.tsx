@@ -1,5 +1,7 @@
 import React, { memo, useRef } from 'react';
 import styled from 'styled-components';
+import { BLOCKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { motion, useMotionValue } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useInvertedBorderRadius } from '../../../hooks/useInvertedBorder';
@@ -12,12 +14,20 @@ import { useWheelScroll } from '../../../hooks/useWheelScroll';
 interface IProps {
   backgroundColor: string;
   category: string;
-  id: string;
-  pointOfInterest: string;
-  isSelected: boolean;
+  data: {
+    category: string;
+    client: string;
+    content: any;
+    featuredImage: any;
+    slug: string;
+    title: string;
+  };
   history: {
     push: (route: string) => void;
   };
+  id: string;
+  isSelected: boolean;
+  pointOfInterest: string;
   title: string;
 }
 
@@ -25,8 +35,14 @@ interface IProps {
 // a swipe-to dismiss action.
 const dismissDistance = 150;
 
+const options: any = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (_node: any, children: any) => <p>{children}</p>,
+  },
+};
+
 export const Card = memo(
-  ({ backgroundColor, category, history, id, isSelected, title }: IProps) => {
+  ({ backgroundColor = '#000', history, isSelected, data }: IProps) => {
     const y = useMotionValue(0);
     const zIndex = useMotionValue(isSelected ? 2 : 0);
 
@@ -73,15 +89,21 @@ export const Card = memo(
             onUpdate={checkZIndex}
           >
             <Image
-              id={id}
+              src={data.featuredImage.fluid.src}
               isSelected={isSelected}
               backgroundColor={backgroundColor}
             />
-            <Title title={title} category={category} isSelected={isSelected} />
-            Content Content Content
+            <Title
+              title={data.title}
+              category={data.category}
+              isSelected={isSelected}
+            />
+            {documentToReactComponents(data.content, options)}
           </Content>
         </div>
-        {!isSelected && <Link to={id} className={`card-open-link`} />}
+        {!isSelected && (
+          <Link to={`/portfolio/${data.slug}`} className={`card-open-link`} />
+        )}
       </StyledCard>
     );
   },
@@ -95,7 +117,7 @@ const Overlay = ({ isSelected }) => (
     transition={{ duration: 0.2 }}
     style={{ pointerEvents: isSelected ? 'auto' : 'none' }}
   >
-    <Link to="/" />
+    <Link to="/portfolio" />
   </StyledOverlay>
 );
 
@@ -105,6 +127,17 @@ const StyledCard = styled.li`
   height: 460px;
   flex: 0 0 40%;
   max-width: 40%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .card-open-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
   &:nth-child(4n + 1),
   &:nth-child(4n + 4) {
@@ -199,9 +232,10 @@ const StyledOverlay = styled(motion.div)`
   will-change: opacity;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 0;
+  right: 0;
   transform: translateX(-50%);
-  width: 100%;
+  width: 100vw;
   max-width: 990px;
 
   a {
