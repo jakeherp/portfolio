@@ -11,6 +11,11 @@ const Foot = styled.footer`
   @media print {
     display: none;
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const Footer = () => (

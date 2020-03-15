@@ -60,7 +60,7 @@ const Header = () => {
 };
 
 const Background = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -68,11 +68,11 @@ const Background = styled(motion.div)`
 `;
 
 const Toggler = styled(motion.nav)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: auto;
 `;
 
 const Head = styled.header`
@@ -83,6 +83,14 @@ const Head = styled.header`
   h1 {
     margin: 0;
     line-height: 1;
+
+    @media screen and (max-width: 375px) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.75rem;
+    }
   }
 
   @media print {
