@@ -73,6 +73,7 @@ const Toggler = styled(motion.nav)`
   left: 0;
   bottom: 0;
   width: auto;
+  z-index: 1;
 `;
 
 const Head = styled.header`
