@@ -36,7 +36,7 @@ const IndexPage = () => {
           <Title>Skills</Title>
           <ScreenOnly>
             Filter:
-            {skillCategories.map(skill => (
+            {skillCategories.map((skill) => (
               <Filter
                 key={skill}
                 name={skill}
@@ -47,7 +47,7 @@ const IndexPage = () => {
           </ScreenOnly>
           <WithSidebar>
             <main>
-              {skillCategories.map(category => {
+              {skillCategories.map((category) => {
                 if (filter === category || filter === '') {
                   const cat = skills[category];
                   return cat.map((ability: string, index: number) => (
@@ -90,7 +90,7 @@ const IndexPage = () => {
         <Section>
           <Title>Work Experience</Title>
           <Jobs>
-            {displayJobs.map(job => (
+            {displayJobs.map((job) => (
               <Job
                 key={job.id}
                 title={job.title}

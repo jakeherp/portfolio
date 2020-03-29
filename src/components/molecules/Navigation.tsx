@@ -14,7 +14,7 @@ const variants = {
 
 export const Navigation = ({ toggle }: { toggle: () => void }) => (
   <Menu variants={variants}>
-    {itemIds.map(item => (
+    {itemIds.map((item) => (
       <MenuItem item={item} key={item.id} toggle={toggle} />
     ))}
   </Menu>

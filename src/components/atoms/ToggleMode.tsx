@@ -7,7 +7,7 @@ import Sun from '../../assets/images/sun.svg';
 const ToggleMode = () => (
   <Wrapper>
     <ThemeConsumer>
-      {theme =>
+      {(theme) =>
         theme.mode === 'dark' ? (
           <Sun
             onClick={() => theme.setTheme({ ...theme, mode: 'light' })}

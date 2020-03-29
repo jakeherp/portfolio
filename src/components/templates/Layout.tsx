@@ -38,23 +38,23 @@ const variants = {
 };
 
 const Style = createGlobalStyle`
-    body {
-        background-color: ${getBackground};
-        color: ${getTextColor};
-        font-family: "brandon-grotesque", sans-serif;
-        font-size: 1.25rem;
-        transition: 0.5s;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+  body {
+      background-color: ${getBackground};
+      color: ${getTextColor};
+      font-family: "brandon-grotesque", sans-serif;
+      font-size: 1.25rem;
       transition: 0.5s;
-    }
+  }
 
-    .menu-background {
-      background: ${getTextColor};
-    }
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .menu-background {
+    background: ${getTextColor};
+  }
 `;
 
 interface IProps {
@@ -63,10 +63,10 @@ interface IProps {
 }
 
 const Layout = ({ children, location }: IProps) => {
-  const theme = useTheme();
+  const colourTheme = useTheme();
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={colourTheme}>
       <>
         <Style />
         <Header />
