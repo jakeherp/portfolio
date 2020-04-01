@@ -72,7 +72,7 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.2.3",
+    "jest": "^25.2.4",
     "jest-styled-components": "^7.0.0",
     "prettier": "^2.0.2",
     "react-test-renderer": "^16.13.1",
