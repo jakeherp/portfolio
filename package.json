@@ -77,7 +77,7 @@
     "prettier": "^2.0.2",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^25.2.1",
-    "tslint": "^6.1.0",
+    "tslint": "^6.1.1",
     "tslint-config-airbnb": "^5.11.2",
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
