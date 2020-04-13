@@ -1,9 +1,6 @@
 module.exports = {
+  ...require('./jest/jest.client'),
   roots: ['<rootDir>'],
-  moduleFileExtensions: ['js', 'ts', 'tsx', 'json'],
-  transform: {
-    '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
-  },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
@@ -22,10 +19,11 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: '',
   },
-  testEnvironment: 'jest-environment-jsdom',
+  transform: {
+    '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
+  },
   testURL: 'http://localhost',
   setupFiles: ['<rootDir>/loadershim.js'],
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   collectCoverageFrom: ['**/src/**/*.+(js|jsx|ts|tsx)'],
   coverageThreshold: {
     global: {
@@ -35,4 +33,5 @@ module.exports = {
       lines: 30,
     },
   },
+  projects: ['./jest/jest.client.js', './jest/jest.lint.js'],
 };
