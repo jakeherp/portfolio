@@ -33,5 +33,9 @@ module.exports = {
       lines: 30,
     },
   },
+  watchPlugins: [
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
   projects: ['./jest/jest.client.js', './jest/jest.lint.js'],
 };
