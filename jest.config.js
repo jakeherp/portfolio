@@ -26,4 +26,13 @@ module.exports = {
   testURL: 'http://localhost',
   setupFiles: ['<rootDir>/loadershim.js'],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  collectCoverageFrom: ['**/src/**/*.+(js|jsx|ts|tsx)'],
+  coverageThreshold: {
+    global: {
+      statements: 25,
+      branches: 25,
+      functions: 30,
+      lines: 30,
+    },
+  },
 };
