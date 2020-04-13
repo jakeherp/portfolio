@@ -3,13 +3,13 @@ import { Link } from 'gatsby';
 import { motion, useCycle } from 'framer-motion';
 import styled from 'styled-components';
 
-import { useDimensions } from '../../hooks/useDimensions';
-import { MenuToggle } from '../atoms/MenuToggle';
-import { Navigation as Nav } from '../molecules/Navigation';
+import { useDimensions } from 'Hooks/useDimensions';
+import { MenuToggle } from 'Atoms/MenuToggle';
+import { Navigation as Nav } from 'Molecules/Navigation';
 
-// import NavigationContext from "../../context/navigation.context"
-import Highlight from '../atoms/Highlight';
-import ToggleMode from '../atoms/ToggleMode';
+// import NavigationContext from "Context/navigation.context"
+import Highlight from 'Atoms/Highlight';
+import ToggleMode from 'Atoms/ToggleMode';
 
 const sidebar = {
   open: (height = 1080) => ({

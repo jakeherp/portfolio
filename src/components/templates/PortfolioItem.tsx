@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import SEO from '../molecules/Seo';
+import SEO from 'Molecules/Seo';
 
 interface IProps {
   data: {

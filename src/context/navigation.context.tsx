@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import useToggle from '../hooks/useToggle';
+import useToggle from 'Hooks/useToggle';
 
 interface IProps {
   children: React.ReactNode;

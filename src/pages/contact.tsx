@@ -2,18 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 
-import ErrorMessage from '../helpers/formErrors';
+import ErrorMessage from 'Helpers/formErrors';
 
-import Container from '../components/atoms/Container';
-import SEO from '../components/molecules/Seo';
+import Container from 'Atoms/Container';
+import SEO from 'Molecules/Seo';
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
     errors,
-    setError,
-    clearError,
+    // setError,
+    // clearError,
     formState: { isSubmitting },
   } = useForm();
 
@@ -33,23 +33,24 @@ const Contact = () => {
 
         <Form className="App" onSubmit={handleSubmit(onSubmit)}>
           <Row>
-            <label>Your Name</label>
-            <input name="name" ref={register({ required: true })} />
+            <label htmlFor="name">Your Name</label>
+            <input id="name" name="name" ref={register({ required: true })} />
           </Row>
           <ErrorMessage error={errors.name} />
 
           <Row>
-            <label>Your Email</label>
+            <label htmlFor="email">Your Email</label>
             <input
               name="email"
+              id="email"
               ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             />
           </Row>
           <ErrorMessage error={errors.email} />
 
           <Row>
-            <label>Your Message</label>
-            <textarea name="message" ref={register} />
+            <label htmlFor="message">Your Message</label>
+            <textarea name="message" ref={register} id="message" />
           </Row>
 
           <Row>

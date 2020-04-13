@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import SEO from '../components/molecules/Seo';
+import SEO from 'Molecules/Seo';
 
 const Portfolio = ({ data }: any) => {
   const posts = data.allContentfulItem.edges;

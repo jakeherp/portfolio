@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Particles from 'react-particles-js';
 import { Link } from 'gatsby';
 
-import SEO from '../components/molecules/Seo';
-import Container from '../components/atoms/Container';
+import SEO from 'Molecules/Seo';
+import Container from 'Atoms/Container';
 
 const IndexPage = () => {
   const params = {
@@ -133,7 +133,7 @@ const IndexPage = () => {
         <Container>
           <Headline>
             <Typed
-              loop={true}
+              loop
               typeSpeed={80}
               backSpeed={20}
               strings={[
@@ -142,10 +142,10 @@ const IndexPage = () => {
                 "I'm an <span class='accent'>entrepreneur</span>.",
                 "I'm a <span class='accent'>creative</span> mind.",
               ]}
-              smartBackspace={true}
+              smartBackspace
               backDelay={1000}
               loopCount={0}
-              showCursor={true}
+              showCursor
               cursorChar="|"
               className="typed"
             />

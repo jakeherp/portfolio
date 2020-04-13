@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { getBackground } from '../templates/Layout';
+import { getBackground } from 'Templates/Layout';
 
 interface IProps {
   item: {

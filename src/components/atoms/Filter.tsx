@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { getTextColor } from '../templates/Layout';
+import { getTextColor } from 'Templates/Layout';
 
 interface IProps {
   name: string;
