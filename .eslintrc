@@ -101,7 +101,7 @@
     "react/jsx-props-no-spreading": 0,
     "radix": 0,
     "no-shadow": [
-      2,
+      1,
       {
         "hoist": "all",
         "allow": [

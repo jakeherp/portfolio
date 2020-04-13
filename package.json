@@ -113,7 +113,7 @@
     "format": "yarn prettier -- --write",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test:lint": "eslint --ignore-path .gitignore . && prettier --ignore-path .gitignore \"**/*.+(tsx|js|json|md)\"",
+    "test:lint": "jest --config jest/jest.lint.js",
     "test:lint:fix": "eslint --ignore-path .gitignore . --fix && prettier --ignore-path .gitignore --write \"**/*.+(tsx|js|json|md)\"",
     "test": "jest",
     "test:watch": "jest --watch",
