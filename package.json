@@ -71,6 +71,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.3.0",
     "jest-styled-components": "^7.0.2",
@@ -99,9 +100,10 @@
     "format": "yarn prettier -- --write",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test:lint": "eslint --ignore-path .gitignore . --fix && prettier --ignore-path .gitignore --write \"**/*.+(tsx|js|json|md)\"",
+    "test:lint": "eslint --ignore-path .gitignore . && prettier --ignore-path .gitignore \"**/*.+(tsx|js|json|md)\"",
+    "test:lint:fix": "eslint --ignore-path .gitignore . --fix && prettier --ignore-path .gitignore --write \"**/*.+(tsx|js|json|md)\"",
     "test": "jest",
-    "validate": "yarn format:check && yarn test:lint && yarn build"
+    "validate": "yarn format:check && yarn test:lint"
   },
   "repository": {
     "type": "git",
