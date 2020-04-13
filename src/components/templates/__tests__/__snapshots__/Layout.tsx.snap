@@ -3,14 +3,14 @@
 exports[`renders correctly 1`] = `
 Array [
   <header
-    className="sc-Axmtr vAmDl"
+    className="sc-Axmtr yMyrU"
   >
     <nav
-      className="sc-AxheI bghuai"
+      className="sc-AxheI lPTfA"
       style={Object {}}
     >
       <div
-        className="sc-AxgMl iuknho menu-background"
+        className="sc-AxgMl gUEkmB menu-background"
         style={
           Object {
             "clipPath": "circle(30px at 40px 40px)",
@@ -161,7 +161,7 @@ Array [
     <div />
   </main>,
   <footer
-    className="sc-fzoLsD anhFY"
+    className="sc-fzoLsD dUnHUd"
   >
     <div>
       © 2019 Jacob Herper
