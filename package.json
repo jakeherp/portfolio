@@ -57,7 +57,7 @@
     "@types/react-helmet": "^5.0.15",
     "@types/react-lottie": "^1.2.3",
     "@types/react-test-renderer": "^16.9.2",
-    "@types/styled-components": "^5.0.1",
+    "@types/styled-components": "^5.1.0",
     "@types/styled-theming": "^2.2.2",
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^0.3.1",
