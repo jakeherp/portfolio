@@ -18,7 +18,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "framer-motion": "^1.10.3",
-    "gatsby": "^2.20.18",
+    "gatsby": "^2.20.22",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-netlify": "^2.2.1",
