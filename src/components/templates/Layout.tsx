@@ -43,6 +43,7 @@ const Style = createGlobalStyle`
       color: ${getTextColor};
       font-family: "brandon-grotesque", sans-serif;
       font-size: 1.25rem;
+      margin: 0;
       transition: 0.5s;
   }
 

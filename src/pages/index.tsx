@@ -120,9 +120,9 @@ const IndexPage = () => {
         title="Home"
         keywords={[
           `web developer`,
-          `front end developer`,
+          `front end engineer`,
           `react developer`,
-          `javascript developer`,
+          `javascript engineer`,
           `jacob herper`,
           `developer`,
           `london`,
@@ -151,7 +151,7 @@ const IndexPage = () => {
             />
           </Headline>
           <Text>
-            As a front end web developer with years of experience I create
+            As a senior front-end engineer with years of experience I create
             amazing websites and web apps to make the internet a better place.{' '}
             <strong>
               <Link to="/contact/">Get in touch</Link>

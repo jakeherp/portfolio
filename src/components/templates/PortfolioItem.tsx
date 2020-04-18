@@ -1,9 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import SEO from 'Molecules/Seo';
+import Container from 'Atoms/Container';
 
 interface IProps {
   data: {
@@ -34,34 +36,32 @@ interface IProps {
 }
 
 const PortfolioItem = ({ data, pageContext }: IProps) => {
-  const post = data.contentfulItem;
-  // const siteTitle = this.props.data.site.siteMetadata.title;
+  const {
+    title,
+    description,
+    featured_image: image,
+    type,
+    content: { json: content },
+    technologies,
+    url,
+  } = data.contentfulItem;
   const { previous, next } = pageContext;
 
   return (
     <>
-      <SEO title={post.title} description={post.description} />
-      <Img
-        fluid={post.featured_image.fluid}
-        alt={post.title}
-        style={{ maxHeight: '400px' }}
-      />
-      <div className="container" style={{ marginTop: '2rem' }}>
-        <h2>{post.title}</h2>
-        <h3>{post.type}</h3>
-        <div>{documentToReactComponents(post.content.json)}</div>
+      <SEO title={title} description={description} />
+      <Image fluid={image.fluid} alt={title} style={{ maxHeight: '400px' }} />
+      <Container>
+        <h2>{title}</h2>
+        <h3>{type}</h3>
+        <div>{documentToReactComponents(content)}</div>
         <p>
-          <strong>Technologies used:</strong> {post.technologies.join(', ')}
+          <strong>Technologies used:</strong> {technologies.join(', ')}
         </p>
-        <a
-          href={post.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button"
-        >
+        <Button href={url} target="_blank" rel="noopener noreferrer">
           Visit project
-        </a>
-        <ul className="pagination">
+        </Button>
+        <Pagination>
           {previous && (
             <li>
               <Link to={`/${previous.slug}/`} rel="prev">
@@ -76,13 +76,53 @@ const PortfolioItem = ({ data, pageContext }: IProps) => {
               </Link>
             </li>
           )}
-        </ul>
-      </div>
+        </Pagination>
+      </Container>
     </>
   );
 };
 
 export default PortfolioItem;
+
+const Image = styled(Img)`
+  margin-top: 2rem;
+`;
+
+const Button = styled.a`
+  background: #fff;
+  border: 2px solid #e94e1b;
+  color: #e94e1b;
+  padding: 0.5rem 2rem;
+  border-radius: 99px;
+  margin: 1rem 0;
+  transition: 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    background: #e94e1b;
+    color: #fff;
+  }
+`;
+
+const Pagination = styled.ul`
+  list-style: none;
+  margin: 3rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  li {
+    a {
+      color: #ccc;
+      text-decoration: none;
+      transition: 0.2s;
+      &:hover {
+        color: #999;
+      }
+    }
+  }
+`;
 
 export const pageQuery = graphql`
   query PortfolioItemBySlug($slug: String!) {
