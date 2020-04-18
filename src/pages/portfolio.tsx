@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
 
+import Container from '../components/atoms/Container';
+import Post from '../components/molecules/Post';
 import SEO from '../components/molecules/Seo';
 
 const Portfolio = ({ data }: any) => {
@@ -10,27 +12,16 @@ const Portfolio = ({ data }: any) => {
   return (
     <>
       <SEO title="Portfolio" />
-      <div className="container" style={{ marginTop: '2rem' }}>
+      <Container>
         <h2>
           Portfolio<span className="accent">.</span>
         </h2>
-        <div className="wrapper">
-          {posts.map(({ node }: any) => {
-            const title = node.title || node.slug;
-            return (
-              <div key={node.slug} className="portfolio-item">
-                <Link to={`/${node.slug}/`}>
-                  <Img fluid={node.featured_image.fluid} />
-                  <div className="overlay">
-                    <h3>{title}</h3>
-                    <small>{node.type}</small>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-        <p style={{ textAlign: `center`, marginTop: `2rem` }}>
+        <Grid>
+          {posts.map(({ node: { title, slug, image, type } }: any) => (
+            <Post data={{ title, slug, image, type }} key={slug} />
+          ))}
+        </Grid>
+        <Centered>
           This is a small selection of the hundreds of projects I worked on.
           <br />
           Want to see more?{' '}
@@ -39,13 +30,28 @@ const Portfolio = ({ data }: any) => {
           </Link>{' '}
           and let me know what you're looking for, so I can send you a more
           comprehensive portfolio.
-        </p>
-      </div>
+        </Centered>
+      </Container>
     </>
   );
 };
 
 export default Portfolio;
+
+const Centered = styled.p`
+  margin-top: 2rem;
+  text-align: center;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 export const pageQuery = graphql`
   query {
@@ -61,7 +67,7 @@ export const pageQuery = graphql`
           slug
           client
           type
-          featured_image {
+          image: featured_image {
             fluid {
               ...GatsbyContentfulFluid
             }
