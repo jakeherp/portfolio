@@ -12,8 +12,8 @@ const Contact = () => {
     register,
     handleSubmit,
     errors,
-    setError,
-    clearError,
+    // setError,
+    // clearError,
     formState: { isSubmitting },
   } = useForm();
 

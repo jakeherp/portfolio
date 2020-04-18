@@ -120,9 +120,9 @@ const IndexPage = () => {
         title="Home"
         keywords={[
           `web developer`,
-          `front end developer`,
+          `front end engineer`,
           `react developer`,
-          `javascript developer`,
+          `javascript engineer`,
           `jacob herper`,
           `developer`,
           `london`,
@@ -133,7 +133,7 @@ const IndexPage = () => {
         <Container>
           <Headline>
             <Typed
-              loop={true}
+              loop
               typeSpeed={80}
               backSpeed={20}
               strings={[
@@ -142,16 +142,16 @@ const IndexPage = () => {
                 "I'm an <span class='accent'>entrepreneur</span>.",
                 "I'm a <span class='accent'>creative</span> mind.",
               ]}
-              smartBackspace={true}
+              smartBackspace
               backDelay={1000}
               loopCount={0}
-              showCursor={true}
+              showCursor
               cursorChar="|"
               className="typed"
             />
           </Headline>
           <Text>
-            As a front end web developer with years of experience I create
+            As a senior front-end engineer with years of experience I create
             amazing websites and web apps to make the internet a better place.{' '}
             <strong>
               <Link to="/contact/">Get in touch</Link>
