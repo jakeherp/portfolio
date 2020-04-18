@@ -3,9 +3,9 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import theme from 'styled-theming';
 
-import useTheme from '../../hooks/useTheme';
-import Header from '../organisms/Header';
-import Footer from '../organisms/Footer';
+import useTheme from 'Hooks/useTheme';
+import Header from 'Organisms/Header';
+import Footer from 'Organisms/Footer';
 
 export const getBackground = theme('mode', {
   light: '#d6deeb',

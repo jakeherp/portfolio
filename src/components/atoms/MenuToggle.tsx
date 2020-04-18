@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { getBackground } from '../templates/Layout';
+import { getBackground } from 'Templates/Layout';
 
 const Path = (props: any) => (
   <motion.path

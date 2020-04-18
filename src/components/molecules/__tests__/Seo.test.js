@@ -15,7 +15,7 @@ useStaticQuery.mockImplementation(() => ({
   },
 }));
 
-it('renders correctly', () => {
+it.skip('renders correctly', () => {
   const tree = renderer
     .create(<SeoHelmet title="Title" description="Description" lang="en" />)
     .toJSON();

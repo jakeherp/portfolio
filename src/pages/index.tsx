@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Particles from 'react-particles-js';
 import { Link } from 'gatsby';
 
-import SEO from '../components/molecules/Seo';
-import Container from '../components/atoms/Container';
+import SEO from 'Molecules/Seo';
+import Container from 'Atoms/Container';
 
 const IndexPage = () => {
   const params = {

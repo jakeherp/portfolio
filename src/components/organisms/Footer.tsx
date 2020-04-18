@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Menu from '../atoms/Menu';
+import Menu from 'Atoms/Menu';
 
 const Foot = styled.footer`
   padding: 0 3%;

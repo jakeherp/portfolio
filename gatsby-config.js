@@ -23,6 +23,26 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src',
+        aliases: {
+          Atoms: './components/atoms',
+          Molecules: './components/molecules',
+          Organisms: './components/organisms',
+          Templates: './components/templates',
+          Context: './context',
+          Data: './data',
+          Helpers: './helpers',
+          Hooks: './hooks',
+          static: {
+            root: './public', // <- will used as this alias' root dir
+            alias: './static', // <- will become ./public/static
+          },
+        },
+      },
+    },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,

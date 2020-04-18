@@ -3,6 +3,8 @@
     "airbnb",
     "prettier",
     "prettier/react",
+    "plugin:import/errors",
+    "plugin:import/warnings",
     "eslint-config-prettier"
   ],
   "parser": "babel-eslint",
@@ -21,6 +23,7 @@
     "jest": true
   },
   "rules": {
+    "global-require": 0,
     "no-debugger": 0,
     "no-alert": 0,
     "no-await-in-loop": 0,
@@ -63,6 +66,7 @@
         "props": false
       }
     ],
+    "no-use-before-define": 0,
     "no-console": 0,
     "import/prefer-default-export": 0,
     "import": 0,
@@ -77,6 +81,7 @@
     "react/display-name": 1,
     "react/no-array-index-key": 0,
     "react/react-in-jsx-scope": 0,
+    "react/jsx-no-target-blank": 1,
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
@@ -88,14 +93,15 @@
       {
         "extensions": [
           ".js",
-          ".jsx"
+          ".jsx",
+          ".tsx"
         ]
       }
     ],
     "react/jsx-props-no-spreading": 0,
     "radix": 0,
     "no-shadow": [
-      2,
+      1,
       {
         "hoist": "all",
         "allow": [
@@ -141,5 +147,10 @@
     "html",
     "prettier",
     "react-hooks"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
 }

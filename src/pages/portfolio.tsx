@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
 
-import Container from '../components/atoms/Container';
-import Post from '../components/molecules/Post';
-import SEO from '../components/molecules/Seo';
+import Container from 'Atoms/Container';
+import Post from 'Molecules/Post';
+import SEO from 'Molecules/Seo';
 
 const Portfolio = ({ data }: any) => {
   const posts = data.allContentfulItem.edges;

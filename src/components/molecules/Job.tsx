@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { getTextColor } from '../templates/Layout';
+import { getTextColor } from 'Templates/Layout';
 
 interface IProps {
   children: React.ReactNode;

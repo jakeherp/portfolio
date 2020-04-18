@@ -49,6 +49,8 @@
     "styled-theming": "^2.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
     "@types/enzyme": "^3.10.5",
     "@types/jest": "^25.2.1",
     "@types/nprogress": "^0.2.0",
@@ -60,10 +62,12 @@
     "@types/styled-components": "^5.1.0",
     "@types/styled-theming": "^2.2.2",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-gatsby": "^0.3.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-plugin-html": "^6.0.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -74,7 +78,9 @@
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.3.0",
+    "jest-runner-eslint": "^0.7.6",
     "jest-styled-components": "^7.0.2",
+    "jest-watch-typeahead": "^0.5.0",
     "lint-staged": "^10.1.5",
     "prettier": "^2.0.4",
     "react-test-renderer": "^16.13.1",
@@ -86,6 +92,11 @@
     "tslint-plugin-prettier": "^2.3.0",
     "tslint-react": "^4.2.0",
     "typescript": "^3.8.3"
+  },
+  "jest-runner-eslint": {
+    "cliOptions": {
+      "ignorePath": "./.gitignore"
+    }
   },
   "keywords": [
     "portfolio",
@@ -102,9 +113,10 @@
     "format": "yarn prettier -- --write",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test:lint": "eslint --ignore-path .gitignore . && prettier --ignore-path .gitignore \"**/*.+(tsx|js|json|md)\"",
+    "test:lint": "jest --config jest/jest.lint.js",
     "test:lint:fix": "eslint --ignore-path .gitignore . --fix && prettier --ignore-path .gitignore --write \"**/*.+(tsx|js|json|md)\"",
     "test": "jest",
+    "test:watch": "jest --watch",
     "validate": "yarn format:check && yarn test:lint"
   },
   "repository": {

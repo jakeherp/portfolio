@@ -4,8 +4,8 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import SEO from '../molecules/Seo';
-import Container from '../atoms/Container';
+import SEO from 'Molecules/Seo';
+import Container from 'Atoms/Container';
 
 interface IProps {
   data: {

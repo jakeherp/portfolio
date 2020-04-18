@@ -11,7 +11,18 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "Atoms/*": ["./src/components/atoms/*"],
+      "Molecules/*": ["./src/components/molecules/*"],
+      "Organisms/*": ["./src/components/organisms/*"],
+      "Templates/*": ["./src/components/templates/*"],
+      "Context/*": ["./src/context/*"],
+      "Data/*": ["./src/data/*"],
+      "Helpers/*": ["./src/helpers/*"],
+      "Hooks/*": ["./src/hooks/*"]
+    }
   },
   "include": ["./src/**/*", "custom.d.ts"]
 }

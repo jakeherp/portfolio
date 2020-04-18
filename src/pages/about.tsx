@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { getTextColor } from '../components/templates/Layout';
-import SEO from '../components/molecules/Seo';
-import Container from '../components/atoms/Container';
-import Job from '../components/molecules/Job';
-import Filter from '../components/atoms/Filter';
+import { getTextColor } from 'Templates/Layout';
+import SEO from 'Molecules/Seo';
+import Container from 'Atoms/Container';
+import Job from 'Molecules/Job';
+import Filter from 'Atoms/Filter';
 
-import { jobs } from '../data/jobs';
-import { skills } from '../data/skills';
+import { jobs } from 'Data/jobs';
+import { skills } from 'Data/skills';
 
 const IndexPage = () => {
   const [loadedJobs, loadMore] = useState(false);
@@ -48,17 +48,16 @@ const IndexPage = () => {
           <WithSidebar>
             <main>
               {skillCategories.map((category) => {
-                if (filter === category || filter === '') {
-                  const cat = skills[category];
-                  return cat.map((ability: string, index: number) => (
-                    <Badge
-                      key={`${category}-${index + 1}`}
-                      className={`--${category}`}
-                    >
-                      {ability}
-                    </Badge>
-                  ));
-                }
+                if (filter !== category || filter !== '') return;
+                const cat = skills[category];
+                return cat.map((ability: string, index: number) => (
+                  <Badge
+                    key={`${category}-${index + 1}`}
+                    className={`--${category}`}
+                  >
+                    {ability}
+                  </Badge>
+                ));
               })}
             </main>
             <aside>
