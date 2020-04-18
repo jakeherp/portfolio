@@ -13,7 +13,7 @@ it('renders correctly', () => {
     .c0 {
       width: 1140px;
       max-width: 94%;
-      margin: 10 auto;
+      margin: 0 auto;
     }
 
     <div
