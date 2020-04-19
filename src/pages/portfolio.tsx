@@ -13,9 +13,7 @@ const Portfolio = ({ data }: any) => {
     <>
       <SEO title="Portfolio" />
       <Container>
-        <h2>
-          Portfolio<span className="accent">.</span>
-        </h2>
+        <h2>Portfolio</h2>
         <Grid>
           {posts.map(({ node: { title, slug, image, type } }: any) => (
             <Post data={{ title, slug, image, type }} key={slug} />
