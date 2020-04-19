@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
 
 import { getTextColor } from 'Templates/Layout';
 import SEO from 'Molecules/Seo';
@@ -17,36 +18,56 @@ const IndexPage = () => {
   const initialJobs = jobs.slice(0, 2);
   const displayJobs = loadedJobs ? jobs : initialJobs;
 
+  const age = (birthday: string) => moment().diff(birthday, 'years');
+
+  console.log('skills', skills);
+
   const skillCategories = Object.keys(skills);
   return (
     <>
       <SEO title="About" />
       <Container>
         <Section>
-          <Name>Jacob Herper</Name>
-          <JobTitle>Senior Front-End Engineer</JobTitle>
+          <Name>Hey, I'm Jacob Herper</Name>
+          <JobTitle>A senior Front-End Engineer from London, UK</JobTitle>
           <Text>
             As a passionate front-end developer, I create amazing websites and
             web apps to make the internet a better place. I am an advocate for
             web performance and accessibility as well as a JAMstack enthusiast
             with experience in serverless technologies.
           </Text>
+          <Text>
+            I am {age('1990-11-06')} years old and have been a web developer for
+            as long as I can think. The technologies I work with are JavaScript,
+            HTML and CSS with a focus on the frameworks React.js, Gatsby,
+            Next.js, Node and Express. I use code not only to do my day-to-day
+            job, but also to solve everyday problems I come across.
+          </Text>
+          <Text>
+            When I am not writing code I love to spend time with my wife and{' '}
+            {age('2018-05-26')} year old daughter at home in London or
+            travelling around the world. We are quite a multi-cultural family
+            with me having grown up in Germany 🇩🇪 and my wife being from Mexico
+            🇲🇽, which is why we raise our daughter trilingual. I myself speak
+            five languages (some better than others). Furthermore I enjoy
+            cooking fresh food when I come home after a long day at the office.
+          </Text>
         </Section>
         <Section>
-          <Title>Skills</Title>
-          <ScreenOnly>
-            Filter:
-            {skillCategories.map((skill) => (
-              <Filter
-                key={skill}
-                name={skill}
-                setFilter={setFilter}
-                currentFilter={filter}
-              />
-            ))}
-          </ScreenOnly>
           <WithSidebar>
             <main>
+              <Title>Skills</Title>
+              <ScreenOnly>
+                Filter:
+                {skillCategories.map((skill) => (
+                  <Filter
+                    key={skill}
+                    name={skill}
+                    setFilter={setFilter}
+                    currentFilter={filter}
+                  />
+                ))}
+              </ScreenOnly>
               {skillCategories.map((category) => {
                 if (filter !== category || filter !== '') return;
                 const cat = skills[category];
@@ -59,8 +80,6 @@ const IndexPage = () => {
                   </Badge>
                 ));
               })}
-            </main>
-            <aside>
               <h2>Soft skills</h2>
               {/* {softSkills.join(", ")} */}
               {[
@@ -76,13 +95,16 @@ const IndexPage = () => {
                   {item}
                 </Badge>
               ))}
-
-              {/* <h2>Languages</h2>
-              {languages.map((language, index) => (
-                <li key={`language-${index}`}>
-                  {language.language} ({language.proficiency})
-                </li>
-              ))} */}
+            </main>
+            <aside>
+              <h2>Languages</h2>
+              <ul>
+                <li>🇬🇧 English (bilingual)</li>
+                <li>🇩🇪 German (bilingual)</li>
+                <li>🇪🇸 Spanish (intermediate)</li>
+                <li>🇮🇹 Italian (basic)</li>
+                <li>🇷🇺 Russian (basic)</li>
+              </ul>
             </aside>
           </WithSidebar>
         </Section>
@@ -134,19 +156,29 @@ const WithSidebar = styled.div`
   flex-wrap: wrap;
 
   main {
+    width: 70%;
     min-width: 280px;
+    flex-grow: 1;
   }
 
   aside {
+    width: 30%;
     min-width: 280px;
 
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
     h2:first-of-type {
-      margin: 0 0.5rem 0 0;
+      margin: 0 0.5rem 1rem 0;
       display: inline-block;
       font-size: 1em;
-      &:after {
-        content: ': ';
-      }
     }
   }
 `;

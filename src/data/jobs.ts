@@ -31,7 +31,7 @@ export const jobs = [
   },
   {
     id: 4,
-    title: 'Lead Front-End Developer',
+    title: 'Front-End Developer',
     company: {
       name: 'The Specialist Works',
       url: 'https://www.thespecialistworks.com/',

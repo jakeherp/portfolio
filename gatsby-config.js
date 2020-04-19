@@ -32,6 +32,7 @@ module.exports = {
           Molecules: './components/molecules',
           Organisms: './components/organisms',
           Templates: './components/templates',
+          Assets: './assets',
           Context: './context',
           Data: './data',
           Helpers: './helpers',

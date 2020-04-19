@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { ThemeConsumer } from 'styled-components';
 
-import Moon from '../../assets/images/moon.svg';
-import Sun from '../../assets/images/sun.svg';
+import Moon from 'Assets/images/moon.svg';
+import Sun from 'Assets/images/sun.svg';
 
 const ToggleMode = () => (
   <Wrapper>

@@ -18,6 +18,7 @@
       "Molecules/*": ["./src/components/molecules/*"],
       "Organisms/*": ["./src/components/organisms/*"],
       "Templates/*": ["./src/components/templates/*"],
+      "Assets/*": ["./src/assets/*"],
       "Context/*": ["./src/context/*"],
       "Data/*": ["./src/data/*"],
       "Helpers/*": ["./src/helpers/*"],

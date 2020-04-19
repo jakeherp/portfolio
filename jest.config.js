@@ -30,6 +30,7 @@ module.exports = {
         '^Molecules(.*)$': '<rootDir>/src/components/molecules$1',
         '^Organisms(.*)$': '<rootDir>/src/components/organisms$1',
         '^Templates(.*)$': '<rootDir>/src/components/templates$1',
+        '^Assets(.*)$': '<rootDir>/src/assets$1',
         '^Context(.*)$': '<rootDir>/src/context$1',
         '^Data(.*)$': '<rootDir>/src/data$1',
         '^Helpers(.*)$': '<rootDir>/src/helpers$1',
@@ -48,6 +49,7 @@ module.exports = {
       displayName: 'lint',
       runner: 'jest-runner-eslint',
       testMatch: ['<rootDir>/**/*.+(js|tsx)'],
+      ignorePattern: ['/**/*.d.ts'],
     },
   ],
 };
