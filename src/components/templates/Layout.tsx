@@ -25,6 +25,7 @@ const variants = {
   },
   enter: {
     opacity: 1,
+    // filter: 'blur(0)',
     transition: {
       duration,
       delay: duration,
@@ -33,6 +34,7 @@ const variants = {
   },
   exit: {
     opacity: 0,
+    // filter: 'blur(1rem)',
     transition: { duration },
   },
 };

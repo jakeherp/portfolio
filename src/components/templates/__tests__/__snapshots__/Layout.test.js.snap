@@ -31,7 +31,7 @@ Array [
           }
         >
           <a
-            className="sc-fzpans fZtrjm"
+            className="sc-fzpans cbPHjJ"
             href="/"
             onClick={[Function]}
           >
@@ -48,7 +48,7 @@ Array [
           }
         >
           <a
-            className="sc-fzplWN cGaUmj"
+            className="sc-fzplWN jJVuEw"
             href="/about"
             onClick={[Function]}
           >
@@ -65,7 +65,7 @@ Array [
           }
         >
           <a
-            className="sc-fznyAO hQfHIn"
+            className="sc-fznyAO cEpLSY"
             href="/portfolio"
             onClick={[Function]}
           >
@@ -82,7 +82,7 @@ Array [
           }
         >
           <a
-            className="sc-fznKkj dXJDRS"
+            className="sc-fznKkj knYDpZ"
             href="/contact"
             onClick={[Function]}
           >
@@ -95,7 +95,7 @@ Array [
         onClick={[Function]}
       >
         <svg
-          className="sc-fznZeY kzZUHc"
+          className="sc-fznZeY UWPfn"
           height="23"
           viewBox="0 0 23 23"
           width="23"
@@ -145,7 +145,7 @@ Array [
       className="sc-AxhUy bZHNWW"
     >
       <
-        aria-label="Dark Mode"
+        aria-label="Light Mode"
         onClick={[Function]}
         role="button"
       />
