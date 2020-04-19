@@ -6,7 +6,24 @@ import Container from 'Atoms/Container';
 import Post from 'Molecules/Post';
 import SEO from 'Molecules/Seo';
 
-const Portfolio = ({ data }: any) => {
+interface IProps {
+  data: {
+    allContentfulItem: {
+      edges: {
+        node: {
+          title: string;
+          slug: string;
+          image: {
+            fluid: any;
+          };
+          type: string;
+        };
+      }[];
+    };
+  };
+}
+
+const Portfolio = ({ data }: IProps) => {
   const posts = data.allContentfulItem.edges;
 
   return (
@@ -15,7 +32,7 @@ const Portfolio = ({ data }: any) => {
       <Container>
         <h2>Portfolio</h2>
         <Grid>
-          {posts.map(({ node: { title, slug, image, type } }: any) => (
+          {posts.map(({ node: { title, slug, image, type } }) => (
             <Post data={{ title, slug, image, type }} key={slug} />
           ))}
         </Grid>

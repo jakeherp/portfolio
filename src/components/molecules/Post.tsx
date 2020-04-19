@@ -3,7 +3,18 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-const Post = ({ data: { title, slug, image, type } }: any) => (
+interface IProps {
+  data: {
+    title: string;
+    slug: string;
+    image: {
+      fluid: any;
+    };
+    type: string;
+  };
+}
+
+const Post = ({ data: { title, slug, image, type } }: IProps) => (
   <Item>
     <Link to={`/${slug}/`}>
       <Img fluid={image.fluid} />

@@ -4,7 +4,7 @@ import { getTextColor } from 'Templates/Layout';
 
 interface IProps {
   name: string;
-  setFilter(name: any): any;
+  setFilter(name: string): void;
   currentFilter: string;
 }
 
