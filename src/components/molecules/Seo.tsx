@@ -33,7 +33,9 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
         lang,
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title} | Front-End Engineer in London » %s`}
+      titleTemplate={`${
+        site.siteMetadata.title
+      } | Front-End Engineer in London${title !== 'Home' ? ' » %s' : ''}`}
       meta={[
         {
           name: `description`,
