@@ -54,9 +54,9 @@ const IndexPage = () => {
           </Text>
         </Section>
         <Section>
+          <Title>Skills</Title>
           <WithSidebar>
             <main>
-              <Title>Skills</Title>
               <ScreenOnly>
                 Filter:
                 {skillCategories.map((skill) => (
@@ -69,8 +69,8 @@ const IndexPage = () => {
                 ))}
               </ScreenOnly>
               {skillCategories.map((category) => {
-                if (filter !== category || filter !== '') return;
                 const cat = skills[category];
+                if (filter !== '' && filter !== category) return;
                 return cat.map((ability: string, index: number) => (
                   <Badge
                     key={`${category}-${index + 1}`}
