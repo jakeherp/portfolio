@@ -98,7 +98,7 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
       script={[
         {
           type: `application/ld+json`,
-          innerHTML: `{"@context":"http://schema.org","@type":"WebSite","name":"herper.io","alternateName":"Jacob Herper","url":"https://herper.io/","description":"Front-End Engineer & Web Developer with a passion for all things digital. I have more than 10 years experience working in software engineering.","image":"https://res.cloudinary.com/jacobherper/image/upload/c_fill,g_north,h_1080,w_1920/v1587315694/herper-io.png"}`,
+          innerHTML: `{"@context":"http://schema.org","@type":"WebSite","name":"herper.io","alternateName":"Jacob Herper","url":"https://herper.io/","description":"Front-End Software Engineer with a focus on JavaScript and React.js. I have more than 10 years experience working in software engineering.","image":"https://res.cloudinary.com/jacobherper/image/upload/c_fill,g_north,h_1080,w_1920/v1587315694/herper-io.png"}`,
         },
         {
           type: `application/ld+json`,
