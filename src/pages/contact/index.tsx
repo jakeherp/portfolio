@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from 'gatsby-link';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 
@@ -7,18 +8,34 @@ import ErrorMessage from 'Helpers/formErrors';
 import Container from 'Atoms/Container';
 import SEO from 'Molecules/Seo';
 
+const encode = (data: any) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 const Contact = () => {
   const {
     register,
-    handleSubmit,
     errors,
     // setError,
     // clearError,
     formState: { isSubmitting },
   } = useForm();
+  
+  const onSubmit = (e: any) => {
+    e.preventDefault();
 
-  const onSubmit = (data: any) => {
-    alert(JSON.stringify(data));
+    fetch('/?no-cache=1', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'Contact form',
+        // ...data,
+      }),
+    })
+      .then(() => navigate('/contact/thanks/'))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -31,10 +48,22 @@ const Contact = () => {
           through my social media profiles.
         </p>
 
-        <Form className="App" onSubmit={handleSubmit(onSubmit)}>
+        <Form
+          onSubmit={onSubmit}
+          action="/contact/thanks/"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="bot-field" />
           <Row>
             <label htmlFor="name">Your Name</label>
-            <input id="name" name="name" ref={register({ required: true })} />
+            <input
+              id="name"
+              name="name"
+              required
+              ref={register({ required: true })}
+            />
           </Row>
           <ErrorMessage error={errors.name} />
 
@@ -43,6 +72,8 @@ const Contact = () => {
             <input
               name="email"
               id="email"
+              required
+              type="email"
               ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             />
           </Row>
@@ -50,7 +81,7 @@ const Contact = () => {
 
           <Row>
             <label htmlFor="message">Your Message</label>
-            <textarea name="message" ref={register} id="message" />
+            <textarea name="message" ref={register} id="message" required />
           </Row>
 
           <Row>

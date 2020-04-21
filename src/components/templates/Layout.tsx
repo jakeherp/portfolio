@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import theme from 'styled-theming';
 
@@ -60,6 +60,17 @@ const Style = createGlobalStyle`
   }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 95vh;
+`;
+
+const Main = styled(motion.main)`
+  /* flex-grow: 1; */
+`;
+
 interface IProps {
   children: React.ReactNode;
   location: any;
@@ -72,19 +83,21 @@ const Layout = ({ children, location }: IProps) => {
     <ThemeProvider theme={colourTheme}>
       <>
         <Style />
-        <Header />
-        <AnimatePresence>
-          <motion.main
-            key={location?.pathname}
-            variants={variants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-          >
-            {children}
-          </motion.main>
-        </AnimatePresence>
-        <Footer />
+        <Wrapper>
+          <Header />
+          <AnimatePresence>
+            <Main
+              key={location?.pathname}
+              variants={variants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+            >
+              {children}
+            </Main>
+          </AnimatePresence>
+          <Footer />
+        </Wrapper>
       </>
     </ThemeProvider>
   );
