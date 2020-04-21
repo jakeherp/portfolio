@@ -26,6 +26,32 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
     `
   );
 
+  let titleTemplate = `${
+    site.siteMetadata.title
+  } | Front-End Engineer in London${title !== 'Home' ? ' » %s' : ''}`;
+
+  switch (title) {
+    case 'Home':
+      titleTemplate = 'Jacob Herper - Senior Front-End Engineer in London';
+      break;
+    case 'About':
+      titleTemplate =
+        'About Jacob Herper - A Senior Front-End Engineer in London';
+      break;
+    case 'Contact':
+      titleTemplate =
+        'Reach out to Jacob Herper - Front-End Engineer in London';
+      break;
+    case 'Portfolio':
+      titleTemplate =
+        'Portfolio - Work samples of Jacob Herper (Front-End Engineer)';
+      break;
+    default:
+      titleTemplate = `${
+        site.siteMetadata.title
+      } | Front-End Engineer in London${title !== 'Home' ? ' » %s' : ''}`;
+  }
+
   const metaDescription = description || site.siteMetadata.description;
   return (
     <Helmet
@@ -33,9 +59,7 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
         lang,
       }}
       title={title}
-      titleTemplate={`${
-        site.siteMetadata.title
-      } | Front-End Engineer in London${title !== 'Home' ? ' » %s' : ''}`}
+      titleTemplate={titleTemplate}
       meta={[
         {
           name: `description`,
@@ -47,7 +71,7 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
         },
         {
           property: `og:title`,
-          content: `Senior Front-End Engineer Jacob Herper in London`,
+          content: titleTemplate,
         },
         {
           property: `og:description`,
@@ -79,7 +103,7 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
         },
         {
           name: `twitter:title`,
-          content: `Senior Front-End Engineer Jacob Herper in London`,
+          content: titleTemplate,
         },
         {
           name: `twitter:description`,
