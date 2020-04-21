@@ -16,7 +16,7 @@ interface IProps {
 
 const Post = ({ data: { title, slug, image, type } }: IProps) => (
   <Item>
-    <Link to={`/${slug}/`}>
+    <Link to={`/portfolio/${slug}/`}>
       <Img fluid={image.fluid} />
       <Overlay>
         <h3>{title}</h3>

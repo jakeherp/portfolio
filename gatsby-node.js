@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
-        path: post.node.slug,
+        path: `portfolio/${post.node.slug}`,
         component: portfolioItem,
         context: {
           slug: post.node.slug,
