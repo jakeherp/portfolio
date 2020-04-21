@@ -52,6 +52,7 @@ const Contact = () => {
           onSubmit={onSubmit}
           action="/contact/thanks/"
           method="post"
+          name="Contact Form"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
