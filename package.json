@@ -44,7 +44,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "react-hook-form": "^5.4.2",
+    "react-hook-form": "^5.5.3",
     "react-lottie": "^1.2.3",
     "react-particles-js": "^3.0.3",
     "react-typed": "^1.2.0",
