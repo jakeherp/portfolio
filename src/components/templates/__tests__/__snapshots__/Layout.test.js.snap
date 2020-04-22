@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<div
+  className="sc-fzpans kFfcnX"
+>
   <header
     className="sc-Axmtr yMyrU"
   >
@@ -19,19 +21,24 @@ Array [
       />
       <ul
         className="sc-AxiKw fxEEKp"
-        style={Object {}}
+        style={
+          Object {
+            "pointerEvents": "none",
+          }
+        }
       >
         <li
           className="sc-AxirZ fwlwcd"
           style={
             Object {
               "opacity": 0,
+              "pointerEvents": "none",
               "transform": "translateY(50px) translateZ(0)",
             }
           }
         >
           <a
-            className="sc-fzpans cbPHjJ"
+            className="sc-fznyAO cEpLSY"
             href="/"
             onClick={[Function]}
           >
@@ -43,12 +50,13 @@ Array [
           style={
             Object {
               "opacity": 0,
+              "pointerEvents": "none",
               "transform": "translateY(50px) translateZ(0)",
             }
           }
         >
           <a
-            className="sc-fzplWN jJVuEw"
+            className="sc-fznKkj knYDpZ"
             href="/about"
             onClick={[Function]}
           >
@@ -60,12 +68,13 @@ Array [
           style={
             Object {
               "opacity": 0,
+              "pointerEvents": "none",
               "transform": "translateY(50px) translateZ(0)",
             }
           }
         >
           <a
-            className="sc-fznyAO cEpLSY"
+            className="sc-fznZeY gnEIbp"
             href="/portfolio"
             onClick={[Function]}
           >
@@ -77,12 +86,13 @@ Array [
           style={
             Object {
               "opacity": 0,
+              "pointerEvents": "none",
               "transform": "translateY(50px) translateZ(0)",
             }
           }
         >
           <a
-            className="sc-fznKkj knYDpZ"
+            className="sc-fzokOt hEZvGK"
             href="/contact"
             onClick={[Function]}
           >
@@ -95,7 +105,7 @@ Array [
         onClick={[Function]}
       >
         <svg
-          className="sc-fznZeY UWPfn"
+          className="sc-fzqBZW fGDUDt"
           height="23"
           viewBox="0 0 23 23"
           width="23"
@@ -150,8 +160,9 @@ Array [
         role="button"
       />
     </div>
-  </header>,
+  </header>
   <main
+    className="sc-fzplWN fFiltQ"
     style={
       Object {
         "opacity": 0,
@@ -159,7 +170,7 @@ Array [
     }
   >
     <div />
-  </main>,
+  </main>
   <footer
     className="sc-fzoLsD dUnHUd"
   >
@@ -206,6 +217,6 @@ Array [
         </li>
       </ul>
     </nav>
-  </footer>,
-]
+  </footer>
+</div>
 `;

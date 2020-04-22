@@ -8,30 +8,28 @@ import ErrorMessage from 'Helpers/formErrors';
 import Container from 'Atoms/Container';
 import SEO from 'Molecules/Seo';
 
-const encode = (data: any) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+const encode = (data: any) =>
+  Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
-};
 
 const Contact = () => {
   const {
     register,
     errors,
+    handleSubmit,
     // setError,
     // clearError,
     formState: { isSubmitting },
   } = useForm();
-  
-  const onSubmit = (e: any) => {
-    e.preventDefault();
 
+  const onSubmit = (data: any) => {
     fetch('/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'Contact form',
-        // ...data,
+        data,
       }),
     })
       .then(() => navigate('/contact/thanks/'))
@@ -49,7 +47,7 @@ const Contact = () => {
         </p>
 
         <Form
-          onSubmit={onSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           action="/contact/thanks/"
           method="post"
           name="Contact Form"
