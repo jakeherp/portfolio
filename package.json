@@ -20,6 +20,7 @@
     "framer-motion": "^1.10.3",
     "gatsby": "^2.20.27",
     "gatsby-image": "^2.3.4",
+    "gatsby-link": "^2.3.4",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-module-resolver": "^1.0.3",
     "gatsby-plugin-netlify": "^2.2.3",
