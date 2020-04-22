@@ -46,7 +46,7 @@
     "react-helmet": "^6.0.0",
     "react-hook-form": "^5.5.3",
     "react-lottie": "^1.2.3",
-    "react-particles-js": "^3.0.3",
+    "react-particles-js": "^3.1.0",
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.0",
     "styled-theming": "^2.2.0"
