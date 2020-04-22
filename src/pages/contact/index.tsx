@@ -18,8 +18,6 @@ const Contact = () => {
     register,
     errors,
     handleSubmit,
-    // setError,
-    // clearError,
     formState: { isSubmitting },
   } = useForm();
 
@@ -28,12 +26,12 @@ const Contact = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'Contact form',
+        'form-name': 'Contact Form',
         ...data,
       }),
     })
       .then(() => navigate('/contact/thanks/'))
-      .catch((error) => alert(error));
+      .catch((err) => console.error(err));
   };
 
   return (
