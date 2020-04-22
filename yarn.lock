@@ -13026,13 +13026,13 @@ react-lottie@^1.2.3:
     babel-runtime "^6.26.0"
     lottie-web "^5.1.3"
 
-react-particles-js@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-3.0.3.tgz#0501357856ce1a8a059b2a91dd4bcd5934959395"
-  integrity sha512-oms3c+VbLe7OZROeQSZZcV0ohlblPQbdD1u+uEpnRuZavGy92yXhm4C714kKcgwWGdoJSDTVmBzRVD0uNzWF5A==
+react-particles-js@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-3.1.0.tgz#00d80ba957111e69bd0247eef343b7ac9a388695"
+  integrity sha512-YZVwXXE8qYav7Hk4Rj+U8I8R8bLKNI6RPQLbruI3e+oHvZ2G7YzLmNdxFC6K3WqQO61YP2lemZSfdK26x9rAYA==
   dependencies:
     lodash "^4.17.11"
-    tsparticles "^1.12.7"
+    tsparticles "^1.12.11"
 
 react-reconciler@^0.24.0:
   version "0.24.0"
@@ -15367,7 +15367,7 @@ tslint@^6.1.1:
     tslib "^1.10.0"
     tsutils "^2.29.0"
 
-tsparticles@^1.12.7:
+tsparticles@^1.12.11:
   version "1.12.11"
   resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.12.11.tgz#4b3756fb377a01cec8cd89b1b8237fbb96aa504f"
   integrity sha512-77eEoc+aFtimGNQJQHwVAsjg8qYaDV0ehIwQSNWbI2b1cTQZrnV4uR2Pk5ic8IdSht4SULkNQmVhvjAoH0nZ4Q==
