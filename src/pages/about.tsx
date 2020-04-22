@@ -11,7 +11,7 @@ import Filter from 'Atoms/Filter';
 import { jobs } from 'Data/jobs';
 import { skills } from 'Data/skills';
 
-const IndexPage = () => {
+const About = () => {
   const [loadedJobs, loadMore] = useState(false);
   const [filter, setFilter] = useState<string>('');
 
@@ -139,7 +139,7 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default About;
 
 const Section = styled.section`
   margin: 2rem 0;

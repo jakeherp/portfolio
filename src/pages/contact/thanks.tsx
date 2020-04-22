@@ -3,7 +3,7 @@ import React from 'react';
 import SEO from 'Molecules/Seo';
 import Container from 'Atoms/Container';
 
-const NotFoundPage = () => (
+const Thanks = () => (
   <>
     <SEO title="Thank you for reaching out" />
     <Container>
@@ -13,4 +13,4 @@ const NotFoundPage = () => (
   </>
 );
 
-export default NotFoundPage;
+export default Thanks;
