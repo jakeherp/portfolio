@@ -29,7 +29,7 @@ const Contact = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'Contact form',
-        data,
+        ...data,
       }),
     })
       .then(() => navigate('/contact/thanks/'))
@@ -64,7 +64,7 @@ const Contact = () => {
               ref={register({ required: true })}
             />
           </Row>
-          <ErrorMessage error={errors.name} />
+          {errors.name && <ErrorMessage error={errors.name} />}
 
           <Row>
             <label htmlFor="email">Your Email</label>
@@ -76,12 +76,18 @@ const Contact = () => {
               ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             />
           </Row>
-          <ErrorMessage error={errors.email} />
+          {errors.email && <ErrorMessage error={errors.email} />}
 
           <Row>
             <label htmlFor="message">Your Message</label>
-            <textarea name="message" ref={register} id="message" required />
+            <textarea
+              name="message"
+              ref={register({ required: true })}
+              id="message"
+              required
+            />
           </Row>
+          {errors.message && <ErrorMessage error={errors.message} />}
 
           <Row>
             <button disabled={isSubmitting} type="submit">
