@@ -3,6 +3,8 @@
   Jacob Herper Portfolio
 </h1>
 
+<img src="https://res.cloudinary.com/jacobherper/image/upload/c_fill,g_north,h_1080,w_1920/v1587315694/herper-io.png" alt="Portfolio Site Screenshot" />
+
 This is the repository for my personal portfolio site [herper.io](https://herper.io/) built with [GatsbyJS](https://www.gatsbyjs.org/), TypeScript, Styled-Components and Contentful.
 This project is a constant work in progress, so if you find any bugs, typos or other errors, please feel free to open an _issue_ or a _pull request_. This project is open source, so please feel free to fork and adapt for your own projects (credit would be appreciated).
 
