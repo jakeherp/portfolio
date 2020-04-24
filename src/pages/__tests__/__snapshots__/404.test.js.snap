@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  width: 1140px;
+  max-width: 94%;
+  margin: 0 auto;
+}
+
+<div
+  class="c0"
+>
+  <h1>
+    This page was not found
+  </h1>
+  <p>
+    I'm sorry for the confusion. Please go back and try again.
+  </p>
+</div>
+`;

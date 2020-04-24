@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  width: 1140px;
+  max-width: 94%;
+  margin: 0 auto;
+}
+
+.c1 label {
+  width: 30%;
+  font-size: 1.5rem;
+}
+
+.c1 input {
+  height: 30px;
+}
+
+.c1 textarea {
+  height: 90px;
+}
+
+.c1 button {
+  background: #e94e1b;
+  color: #fff;
+  margin-bottom: 5rem;
+}
+
+.c1 input,
+.c1 textarea,
+.c1 button {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: calc(15px + 0.25rem);
+  border: none;
+  padding: 0.25rem 1rem;
+  font-size: 1.25rem;
+  font-family: 'brandon-grotesque',sans-serif;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  max-width: 90%;
+  width: 500px;
+  margin: 1.5rem auto 0;
+}
+
+<div
+  class="c0"
+>
+  <h1>
+    Get in touch
+  </h1>
+  <p>
+    Wanna talk? Send me an email through the form below or get in touch through my social media profiles.
+  </p>
+  <form
+    action="/contact/thanks/"
+    class="c1"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    method="post"
+    name="Contact Form"
+  >
+    <input
+      name="bot-field"
+      type="hidden"
+    />
+    <div
+      class="c2"
+    >
+      <label
+        for="name"
+      >
+        Your Name
+      </label>
+      <input
+        id="name"
+        name="name"
+        required=""
+      />
+    </div>
+    <div
+      class="c2"
+    >
+      <label
+        for="email"
+      >
+        Your Email
+      </label>
+      <input
+        id="email"
+        name="email"
+        required=""
+        type="email"
+      />
+    </div>
+    <div
+      class="c2"
+    >
+      <label
+        for="message"
+      >
+        Your Message
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        required=""
+      />
+    </div>
+    <div
+      class="c2"
+    >
+      <button
+        type="submit"
+      >
+        Send »
+      </button>
+    </div>
+  </form>
+</div>
+`;
