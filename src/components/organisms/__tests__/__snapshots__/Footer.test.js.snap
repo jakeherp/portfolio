@@ -13,6 +13,7 @@ exports[`renders correctly 1`] = `
      
     <a
       href="https://gatsbyjs.org/"
+      rel="noopener noreferrer"
       target="_blank"
     >
       Gatsby
@@ -26,6 +27,7 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://github.com/jakeherp"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Github
@@ -34,6 +36,7 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://www.linkedin.com/in/jacobherper/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           LinkedIn
@@ -42,6 +45,7 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://twitter.com/jakeherp"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Twitter

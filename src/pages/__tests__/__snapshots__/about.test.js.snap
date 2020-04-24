@@ -522,6 +522,7 @@ exports[`renders correctly 1`] = `
           <strong>
             <a
               href="https://www.dennis.co.uk/"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Dennis Publishing
@@ -555,6 +556,7 @@ exports[`renders correctly 1`] = `
           <strong>
             <a
               href="https://www.raconteur.net/"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Raconteur Media

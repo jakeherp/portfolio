@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: `https://herper.io`,
   },
   plugins: [
+    `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,13 +48,6 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
-    {
-      resolve: `gatsby-plugin-tslint`,
-      options: {
-        test: /\.ts$|\.tsx$/,
-        exclude: /(node_modules|cache|public)/,
-      },
-    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

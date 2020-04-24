@@ -27,7 +27,7 @@ const Job = ({
     <h1>{title}</h1>
     <h2>
       <strong>
-        <a href={companyUrl} target="_blank">
+        <a href={companyUrl} target="_blank" rel="noopener noreferrer">
           {companyName}
         </a>
       </strong>{' '}

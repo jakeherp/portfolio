@@ -11,6 +11,7 @@ exports[`renders correctly 1`] = `
     <strong>
       <a
         href="test.com"
+        rel="noopener noreferrer"
         target="_blank"
       >
         My Company

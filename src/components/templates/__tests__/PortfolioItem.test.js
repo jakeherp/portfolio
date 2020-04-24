@@ -21,7 +21,7 @@ it.skip('renders correctly', () => {
     },
   };
 
-  const documentToReactComponents = jest.fn();
+  // const documentToReactComponents = jest.fn();
 
   const pageContext = {
     slug: 'slug',

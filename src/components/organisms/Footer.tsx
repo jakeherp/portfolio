@@ -24,7 +24,7 @@ const Footer = () => (
       &copy; {new Date().getFullYear()} Jacob Herper
       <br />
       Proudly built with{' '}
-      <a href="https://gatsbyjs.org/" target="_blank">
+      <a href="https://gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
         Gatsby
       </a>
       .
@@ -32,17 +32,29 @@ const Footer = () => (
     <nav>
       <Menu>
         <li>
-          <a href="https://github.com/jakeherp" target="_blank">
+          <a
+            href="https://github.com/jakeherp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Github
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/jacobherper/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/jacobherper/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/jakeherp" target="_blank">
+          <a
+            href="https://twitter.com/jakeherp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Twitter
           </a>
         </li>

@@ -20,8 +20,6 @@ const About = () => {
 
   const age = (birthday: string) => moment().diff(birthday, 'years');
 
-  console.log('skills', skills);
-
   const skillCategories = Object.keys(skills);
   return (
     <>
