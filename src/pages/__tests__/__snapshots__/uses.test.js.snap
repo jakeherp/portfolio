@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  width: 1140px;
+  max-width: 94%;
+  margin: 0 auto;
+}
+
+.c1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.c2 {
+  padding: 0 1rem;
+  margin: 0;
+  list-style: square;
+}
+
+.c2:last-of-type {
+  margin-bottom: 3rem;
+}
+
+@media print {
+  .c1 {
+    font-size: 22pt;
+  }
+}
+
+<div
+  class="c0"
+>
+  <h1
+    class="c1"
+  >
+    Jacob uses
+  </h1>
+  <p>
+    Welcome to my "Uses" page, that lists some of the hardware and software I use on a daily basis.
+  </p>
+  <h2>
+    Development Tools
+  </h2>
+  <ul
+    class="c2"
+  >
+    <li>
+      <strong>
+        <a
+          href="https://code.visualstudio.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          VS Code
+        </a>
+      </strong>
+       
+      with the
+       
+      <strong>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Night Owl
+        </a>
+      </strong>
+       
+      theme and
+       
+      <strong>
+        <a
+          href="https://www.typography.com/fonts/operator/styles/operatormono"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Operator Mono
+        </a>
+      </strong>
+       
+      font
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.iterm2.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          iTerm 2
+        </a>
+      </strong>
+       
+      Terminal
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.sourcetreeapp.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Sourcetree
+        </a>
+      </strong>
+       
+      for version control beyond the command line
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://insomnia.rest/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Insomnia
+        </a>
+      </strong>
+       
+      to test REST API's
+    </li>
+  </ul>
+  <h2>
+    Design Tools
+  </h2>
+  <ul
+    class="c2"
+  >
+    <li>
+      <strong>
+        <a
+          href="https://www.sketch.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Sketch
+        </a>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.figma.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Figma
+        </a>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://affinity.serif.com/en-gb/photo/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Affinity Photo
+        </a>
+      </strong>
+      ,
+       
+      <strong>
+        <a
+          href="https://affinity.serif.com/en-gb/designer/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Affinity Designer
+        </a>
+      </strong>
+      ,
+       
+      <strong>
+        <a
+          href="https://affinity.serif.com/en-gb/publisher/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Affinity Publisher
+        </a>
+      </strong>
+    </li>
+  </ul>
+  <h2>
+    Productivity
+  </h2>
+  <ul
+    class="c2"
+  >
+    <li>
+      <strong>
+        <a
+          href="https://www.notion.so/?r=008f1f1395694a2594659c43f8d666d8"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Notion
+        </a>
+      </strong>
+       
+      for notes and to-do lists
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.atlassian.com/software/jira"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Jira
+        </a>
+      </strong>
+       
+      for project management
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://slack.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Slack
+        </a>
+      </strong>
+       
+      for communication
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://gsuite.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          G-Suite
+        </a>
+      </strong>
+       
+      for email, calendars and Google Drive
+    </li>
+  </ul>
+  <h2>
+    Various other software
+  </h2>
+  <ul
+    class="c2"
+  >
+    <li>
+      <strong>
+        <a
+          href="https://www.google.com/chrome/canary/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Google Chrome
+        </a>
+      </strong>
+       
+      (Canary) for development
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://1password.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          1Password
+        </a>
+      </strong>
+       
+      as my password manager
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.backblaze.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Backblaze
+        </a>
+      </strong>
+       
+      for constant backups of my machines
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://magnet.crowdcafe.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Magnet
+        </a>
+      </strong>
+       
+      to manage windows
+    </li>
+  </ul>
+  <h2>
+    Hardware
+  </h2>
+  <ul
+    class="c2"
+  >
+    <li>
+      <strong>
+        <a
+          href="https://www.apple.com/macbook-pro/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Macbook Pro 15"
+        </a>
+      </strong>
+       
+      (2.9 GHz i7, 16 GB 2133 MHz LPDDR3)
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.apple.com/uk/shop/product/MLA22B/A/magic-keyboard-british-english"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Apple Magic Keyboard 2
+        </a>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.apple.com/uk/shop/product/MJ2R2Z/A/magic-trackpad-2-silver"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Apple Magic Trackpad 2
+        </a>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.amazon.co.uk/LG-27UK850-Adjustable-DisplayPort-Freesync/dp/B07BJ9PL6H/ref=sr_1_1?dchild=1&keywords=LG+27UK850&qid=1587592902&sr=8-1"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          LG 27UK850
+        </a>
+      </strong>
+       
+      4K monitor
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.amazon.co.uk/Rain-Design-mStand-Laptop-Stand/dp/B01F01DRW6/ref=sr_1_1?dchild=1&keywords=Rain+Design+mstand&qid=1587592918&sr=8-1"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Rain Design mStand
+        </a>
+      </strong>
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.apple.com/uk/iphone-11-pro/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          iPhone 11 Pro
+        </a>
+      </strong>
+       
+      (256 GB)
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.bose.co.uk/en_gb/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_soapstone"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Bose 700
+        </a>
+      </strong>
+       
+      headphones
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://store.google.com/product/nest_wifi"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Nest Wifi
+        </a>
+      </strong>
+       
+      Mesh Network
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://store.google.com/product/google_home"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Google Home
+        </a>
+      </strong>
+       
+      to manage my smart home
+    </li>
+  </ul>
+</div>
+`;
