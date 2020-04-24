@@ -21,7 +21,7 @@ const Foot = styled.footer`
 const Footer = () => (
   <Foot>
     <div>
-      &copy; 2019 Jacob Herper
+      &copy; {new Date().getFullYear()} Jacob Herper
       <br />
       Proudly built with{' '}
       <a href="https://gatsbyjs.org/" target="_blank">

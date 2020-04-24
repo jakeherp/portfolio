@@ -5,7 +5,9 @@ exports[`renders correctly 1`] = `
   className="sc-AxirZ DJfuB"
 >
   <div>
-    © 2019 Jacob Herper
+    © 
+    2020
+     Jacob Herper
     <br />
     Proudly built with
      

@@ -175,7 +175,9 @@ exports[`renders correctly 1`] = `
     className="sc-fzoLsD dUnHUd"
   >
     <div>
-      © 2019 Jacob Herper
+      © 
+      2020
+       Jacob Herper
       <br />
       Proudly built with
        
