@@ -54,36 +54,43 @@ const Contact = () => {
         >
           <input type="hidden" name="bot-field" />
           <Row>
-            <label htmlFor="name">Your Name</label>
-            <input
-              id="name"
-              name="name"
-              required
-              ref={register({ required: true })}
-            />
+            <label htmlFor="name">
+              Your Name
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                ref={register({ required: true })}
+              />
+            </label>
           </Row>
           {errors.name && <ErrorMessage error={errors.name} />}
 
           <Row>
-            <label htmlFor="email">Your Email</label>
-            <input
-              name="email"
-              id="email"
-              required
-              type="email"
-              ref={register({ required: true, pattern: /^\S+@\S+$/i })}
-            />
+            <label htmlFor="email">
+              Your Email
+              <input
+                name="email"
+                id="email"
+                required
+                type="email"
+                ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+              />
+            </label>
           </Row>
           {errors.email && <ErrorMessage error={errors.email} />}
 
           <Row>
-            <label htmlFor="message">Your Message</label>
-            <textarea
-              name="message"
-              ref={register({ required: true })}
-              id="message"
-              required
-            />
+            <label htmlFor="message">
+              Your Message
+              <textarea
+                name="message"
+                ref={register({ required: true })}
+                id="message"
+                required
+              />
+            </label>
           </Row>
           {errors.message && <ErrorMessage error={errors.message} />}
 
@@ -100,19 +107,22 @@ const Contact = () => {
 
 const Form = styled.form`
   label {
-    width: 30%;
+    width: 100%;
     font-size: 1.5rem;
   }
 
   input {
     height: 30px;
+    width: 93%;
   }
 
   textarea {
     height: 90px;
+    width: 93%;
   }
 
   button {
+    width: 100%;
     background: #e94e1b;
     color: #fff;
     margin-bottom: 5rem;
@@ -121,12 +131,12 @@ const Form = styled.form`
   input,
   textarea,
   button {
-    flex-grow: 1;
     border-radius: calc(15px + 0.25rem);
     border: none;
     padding: 0.25rem 1rem;
     font-size: 1.25rem;
     font-family: 'brandon-grotesque', sans-serif;
+    display: block;
   }
 `;
 

@@ -8,19 +8,22 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 label {
-  width: 30%;
+  width: 100%;
   font-size: 1.5rem;
 }
 
 .c1 input {
   height: 30px;
+  width: 93%;
 }
 
 .c1 textarea {
   height: 90px;
+  width: 93%;
 }
 
 .c1 button {
+  width: 100%;
   background: #e94e1b;
   color: #fff;
   margin-bottom: 5rem;
@@ -29,15 +32,12 @@ exports[`renders correctly 1`] = `
 .c1 input,
 .c1 textarea,
 .c1 button {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   border-radius: calc(15px + 0.25rem);
   border: none;
   padding: 0.25rem 1rem;
   font-size: 1.25rem;
   font-family: 'brandon-grotesque',sans-serif;
+  display: block;
 }
 
 .c2 {
@@ -81,12 +81,13 @@ exports[`renders correctly 1`] = `
         for="name"
       >
         Your Name
+        <input
+          id="name"
+          name="name"
+          required=""
+          type="text"
+        />
       </label>
-      <input
-        id="name"
-        name="name"
-        required=""
-      />
     </div>
     <div
       class="c2"
@@ -95,13 +96,13 @@ exports[`renders correctly 1`] = `
         for="email"
       >
         Your Email
+        <input
+          id="email"
+          name="email"
+          required=""
+          type="email"
+        />
       </label>
-      <input
-        id="email"
-        name="email"
-        required=""
-        type="email"
-      />
     </div>
     <div
       class="c2"
@@ -110,12 +111,12 @@ exports[`renders correctly 1`] = `
         for="message"
       >
         Your Message
+        <textarea
+          id="message"
+          name="message"
+          required=""
+        />
       </label>
-      <textarea
-        id="message"
-        name="message"
-        required=""
-      />
     </div>
     <div
       class="c2"

@@ -4,7 +4,11 @@ import { render } from '@testing-library/react';
 import Menu from '../Menu';
 
 test('renders correctly', () => {
-  const { container } = render(<Menu />);
+  const { container } = render(
+    <Menu>
+      <li>Menu Item</li>
+    </Menu>
+  );
   expect(container.firstChild).toMatchInlineSnapshot(`
     .c0 {
       list-style: none;
@@ -52,6 +56,10 @@ test('renders correctly', () => {
 
     <ul
       class="c0"
-    />
+    >
+      <li>
+        Menu Item
+      </li>
+    </ul>
   `);
 });
