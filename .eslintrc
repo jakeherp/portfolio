@@ -80,7 +80,13 @@
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
     "jsx-a11y/accessible-emoji": 0,
-    "jsx-a11y/label-has-associated-control": 1,
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["CustomLabel"],
+      "labelAttributes": ["inputLabel"],
+      "controlComponents": ["CustomInput"],
+      "assert": "both",
+      "depth": 3
+    }],
     "react/require-default-props": 0,
     "react/jsx-filename-extension": [
       1,

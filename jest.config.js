@@ -25,7 +25,7 @@ module.exports = {
       moduleNameMapper: {
         '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
         '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-          '<rootDir>/__mocks__/file-mock.js',
+          '<rootDir>/__mocks__/file-mock.ts',
         '^Atoms(.*)$': '<rootDir>/src/components/atoms$1',
         '^Molecules(.*)$': '<rootDir>/src/components/molecules$1',
         '^Organisms(.*)$': '<rootDir>/src/components/organisms$1',
