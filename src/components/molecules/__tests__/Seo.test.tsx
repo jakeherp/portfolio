@@ -1,7 +1,7 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import * as Gatsby from 'gatsby';
-
+import 'jest-styled-components';
+import { render } from '@testing-library/react';
 import SeoHelmet from '../Seo';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
@@ -15,9 +15,7 @@ useStaticQuery.mockImplementation(() => ({
   },
 }));
 
-it.skip('renders correctly', () => {
-  const tree = renderer
-    .create(<SeoHelmet title="Title" description="Description" lang="en" />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+test('renders correctly', () => {
+  const { container } = render(<SeoHelmet title="Title" />);
+  expect(container.firstChild).toMatchInlineSnapshot(`null`);
 });

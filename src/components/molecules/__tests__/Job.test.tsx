@@ -28,5 +28,34 @@ it('renders correctly', () => {
       </Job>
     )
     .toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    <article
+      className="sc-fznyAO aRlBb"
+    >
+      <h1>
+        Web Developer
+      </h1>
+      <h2>
+        <strong>
+          <a
+            href="test.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            My Company
+          </a>
+        </strong>
+         
+        (in 
+        London
+        )
+      </h2>
+      List of tasks
+      <small>
+        Jan 2010
+         to 
+        present
+      </small>
+    </article>
+  `);
 });
