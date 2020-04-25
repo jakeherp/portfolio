@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import * as Gatsby from 'gatsby';
 import { render } from '@testing-library/react';
 import Contact from '../contact';
+import Thanks from '../contact/thanks';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 useStaticQuery.mockImplementation(() => ({
@@ -18,7 +19,7 @@ useStaticQuery.mockImplementation(() => ({
   },
 }));
 
-test('renders correctly', () => {
+test('renders the contact page correctly', () => {
   const { container } = render(<Contact />);
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -42,4 +43,9 @@ test('inputs are required', () => {
   expect(emailInput).toBeRequired();
   const message = getByLabelText(/your message/i);
   expect(message).toBeRequired();
+});
+
+test('renders the thank you page correctly', () => {
+  const { container } = render(<Thanks />);
+  expect(container.firstChild).toMatchSnapshot();
 });
