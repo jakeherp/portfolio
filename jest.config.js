@@ -38,7 +38,7 @@ module.exports = {
       },
       testEnvironment: 'jest-environment-jsdom',
       setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
-      testPathIgnorePatterns: ['node_modules', '.cache', 'public'],
+      testPathIgnorePatterns: ['node_modules', '.cache', 'public', 'cypress'],
       transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
       globals: {
         __PATH_PREFIX__: '',
@@ -49,6 +49,7 @@ module.exports = {
       displayName: 'lint',
       runner: 'jest-runner-eslint',
       testMatch: ['<rootDir>/**/*.+(js|tsx)'],
+      testPathIgnorePatterns: ['node_modules', '.cache', 'public', 'cypress'],
     },
   ],
 };

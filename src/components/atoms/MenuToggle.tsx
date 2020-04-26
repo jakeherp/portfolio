@@ -21,7 +21,7 @@ export const MenuToggle = ({ toggle }: { toggle: () => void }) => {
   `;
 
   return (
-    <Button onClick={toggle}>
+    <Button onClick={toggle} data-testid="MenuToggle">
       <Svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           variants={{

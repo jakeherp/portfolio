@@ -27,6 +27,7 @@ test('renders correctly', () => {
 
     <button
       class="c0"
+      data-testid="MenuToggle"
     >
       <svg
         class=""
