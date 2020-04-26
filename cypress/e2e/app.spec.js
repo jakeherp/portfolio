@@ -2,7 +2,7 @@
 
 describe('Portfolio app', () => {
   it('renders the application', () => {
-    cy.visit('http://localhost:8000')
+    cy.visit('/')
       .get('.Layout__Wrapper-bNbQqD')
       .children()
       .should('have.length', '3');
