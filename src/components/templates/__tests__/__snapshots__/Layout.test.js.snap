@@ -102,6 +102,7 @@ exports[`renders correctly 1`] = `
       </ul>
       <button
         className="sc-AxjAm gbUQZY"
+        data-testid="MenuToggle"
         onClick={[Function]}
       >
         <svg
