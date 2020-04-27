@@ -103,7 +103,9 @@ test('renders correctly', () => {
         <ul
           class="c1"
         >
-          <li>
+          <li
+            data-testid="github"
+          >
             <a
               href="https://github.com/jakeherp"
               rel="noopener noreferrer"
@@ -112,7 +114,9 @@ test('renders correctly', () => {
               Github
             </a>
           </li>
-          <li>
+          <li
+            data-testid="linkedin"
+          >
             <a
               href="https://www.linkedin.com/in/jacobherper/"
               rel="noopener noreferrer"
@@ -121,7 +125,9 @@ test('renders correctly', () => {
               LinkedIn
             </a>
           </li>
-          <li>
+          <li
+            data-testid="twitter"
+          >
             <a
               href="https://twitter.com/jakeherp"
               rel="noopener noreferrer"

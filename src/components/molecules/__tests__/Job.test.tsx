@@ -48,6 +48,7 @@ test('renders correctly', () => {
 
     <article
       class="c0"
+      data-testid="jobMyCompany"
     >
       <h1>
         Web Developer

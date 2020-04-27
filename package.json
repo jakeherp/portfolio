@@ -11,6 +11,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "babel-jest": "^25.4.0",
+    "camelcase": "^6.0.0",
     "dotenv": "^8.2.0",
     "framer-motion": "^1.10.3",
     "gatsby": "^2.20.29",
