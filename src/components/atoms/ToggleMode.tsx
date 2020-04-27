@@ -13,12 +13,14 @@ const ToggleMode = () => (
             onClick={() => theme.setTheme({ ...theme, mode: 'light' })}
             role="button"
             aria-label="Light Mode"
+            data-testid="lightMode"
           />
         ) : (
           <Moon
             onClick={() => theme.setTheme({ ...theme, mode: 'dark' })}
             role="button"
             aria-label="Dark Mode"
+            data-testid="darkMode"
           />
         )
       }

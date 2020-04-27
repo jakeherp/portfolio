@@ -258,36 +258,42 @@ exports[`renders correctly 1`] = `
           Filter:
           <button
             class="c8"
+            data-testid="filterTechnologies"
             name="technologies"
           >
             technologies
           </button>
           <button
             class="c8"
+            data-testid="filterFrameworks"
             name="frameworks"
           >
             frameworks
           </button>
           <button
             class="c8"
+            data-testid="filterDatabases"
             name="databases"
           >
             databases
           </button>
           <button
             class="c8"
+            data-testid="filterCms"
             name="cms"
           >
             cms
           </button>
           <button
             class="c8"
+            data-testid="filterVarious"
             name="various"
           >
             various
           </button>
           <button
             class="c8"
+            data-testid="filterDesign"
             name="design"
           >
             design
@@ -514,6 +520,7 @@ exports[`renders correctly 1`] = `
     >
       <article
         class="c11"
+        data-testid="jobDennisPublishing"
       >
         <h1>
           Senior Front-End Engineer
@@ -548,6 +555,7 @@ exports[`renders correctly 1`] = `
       </article>
       <article
         class="c11"
+        data-testid="jobRaconteurMedia"
       >
         <h1>
           Front-End Developer

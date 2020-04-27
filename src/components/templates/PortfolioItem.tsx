@@ -52,13 +52,20 @@ const PortfolioItem = ({ data, pageContext }: IProps) => {
       <SEO title={title} description={description} />
       <Image fluid={image.fluid} alt={title} style={{ maxHeight: '400px' }} />
       <Container>
-        <h2>{title}</h2>
-        <h3>{type}</h3>
-        <div>{documentToReactComponents(content)}</div>
-        <p>
+        <h2 data-testid="projectTitle">{title}</h2>
+        <h3 data-testid="projectType">{type}</h3>
+        <div data-testid="projectBody">
+          {documentToReactComponents(content)}
+        </div>
+        <p data-testid="projectTechnologies">
           <strong>Technologies used:</strong> {technologies.join(', ')}
         </p>
-        <Button href={url} target="_blank" rel="noopener noreferrer">
+        <Button
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="projectLink"
+        >
           Visit project
         </Button>
         <Pagination>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import camelCase from 'camelcase';
 import { getTextColor } from 'Templates/Layout';
 
 interface IProps {
@@ -22,6 +23,7 @@ const Filter = ({ name, setFilter, currentFilter }: IProps) => {
       name={name}
       className={currentFilter === name ? 'active' : undefined}
       onClick={clickHandler}
+      data-testid={`filter${camelCase(name, { pascalCase: true })}`}
     >
       {name}
     </Button>
