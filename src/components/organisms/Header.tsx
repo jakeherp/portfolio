@@ -49,12 +49,12 @@ const Header = () => {
         <Nav toggle={() => toggleOpen()} />
         <MenuToggle toggle={() => toggleOpen()} />
       </Toggler>
-      <h1>
+      <h1 data-testid="logo">
         <Link to="/">
           &lt;Jacob Herper <Highlight>/</Highlight>&gt;
         </Link>
       </h1>
-      <ThemeToggle />
+      <ThemeToggle data-testid="themeToggle" />
     </Head>
   );
 };

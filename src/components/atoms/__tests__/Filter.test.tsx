@@ -25,6 +25,7 @@ test('renders correctly', () => {
 
     <button
       class="c0"
+      data-testid="filterFilter1"
       name="Filter 1"
     >
       Filter 1
