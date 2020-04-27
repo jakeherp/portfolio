@@ -30,7 +30,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sentry": "^1.0.1",
-    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-plugin-sitemap": "^2.3.5",
     "gatsby-plugin-styled-components": "^3.2.3",
     "gatsby-plugin-typescript": "^2.3.3",
