@@ -2,17 +2,17 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-fzpans kFfcnX"
+  className="sc-fznyAO kSnhdu"
 >
   <header
-    className="sc-Axmtr yMyrU"
+    className="sc-fzozJi kJsjmA"
   >
     <nav
-      className="sc-AxheI lPTfA"
+      className="sc-AxmLO fXsQHq"
       style={Object {}}
     >
       <div
-        className="sc-AxgMl gUEkmB menu-background"
+        className="sc-Axmtr gmHbPc menu-background"
         style={
           Object {
             "clipPath": "circle(30px at 40px 40px)",
@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
         }
       />
       <ul
-        className="sc-AxiKw fxEEKp"
+        className="sc-AxhUy UEUio"
         style={
           Object {
             "pointerEvents": "none",
@@ -28,7 +28,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <li
-          className="sc-AxirZ fwlwcd"
+          className="sc-AxhCb fZppqZ"
           style={
             Object {
               "opacity": 0,
@@ -38,7 +38,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <a
-            className="sc-fznyAO cEpLSY"
+            className="sc-AxiKw lWkGB"
             href="/"
             onClick={[Function]}
           >
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="sc-AxirZ fwlwcd"
+          className="sc-AxhCb fZppqZ"
           style={
             Object {
               "opacity": 0,
@@ -56,7 +56,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <a
-            className="sc-fznKkj knYDpZ"
+            className="sc-AxiKw lWkGB"
             href="/about"
             onClick={[Function]}
           >
@@ -64,7 +64,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="sc-AxirZ fwlwcd"
+          className="sc-AxhCb fZppqZ"
           style={
             Object {
               "opacity": 0,
@@ -74,7 +74,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <a
-            className="sc-fznZeY gnEIbp"
+            className="sc-AxiKw lWkGB"
             href="/portfolio"
             onClick={[Function]}
           >
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="sc-AxirZ fwlwcd"
+          className="sc-AxhCb fZppqZ"
           style={
             Object {
               "opacity": 0,
@@ -92,7 +92,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <a
-            className="sc-fzokOt hEZvGK"
+            className="sc-AxiKw lWkGB"
             href="/contact"
             onClick={[Function]}
           >
@@ -101,12 +101,12 @@ exports[`renders correctly 1`] = `
         </li>
       </ul>
       <button
-        className="sc-AxjAm gbUQZY"
+        className="sc-AxirZ eplEaP"
         data-testid="MenuToggle"
         onClick={[Function]}
       >
         <svg
-          className="sc-fzqBZW fGDUDt"
+          className="sc-AxjAm ccazzM"
           height="23"
           viewBox="0 0 23 23"
           width="23"
@@ -145,7 +145,7 @@ exports[`renders correctly 1`] = `
       >
         &lt;Jacob Herper 
         <span
-          className="sc-AxhCb jVyyBD"
+          className="sc-AxgMl zUWeM"
         >
           /
         </span>
@@ -153,7 +153,7 @@ exports[`renders correctly 1`] = `
       </a>
     </h1>
     <div
-      className="sc-AxhUy bZHNWW"
+      className="sc-AxheI bXzVqW"
     >
       <
         aria-label="Light Mode"
@@ -163,7 +163,7 @@ exports[`renders correctly 1`] = `
     </div>
   </header>
   <main
-    className="sc-fzplWN fFiltQ"
+    className="sc-fznKkj ccZzqh"
     style={
       Object {
         "opacity": 0,
@@ -173,7 +173,7 @@ exports[`renders correctly 1`] = `
     <div />
   </main>
   <footer
-    className="sc-fzoLsD dUnHUd"
+    className="sc-fzplWN fykJfM"
   >
     <div>
       © 
@@ -193,7 +193,7 @@ exports[`renders correctly 1`] = `
     </div>
     <nav>
       <ul
-        className="sc-fzozJi dZPuzO"
+        className="sc-fzpans kQSOZk"
       >
         <li>
           <a
