@@ -30,8 +30,8 @@ const Footer = () => (
       .
     </div>
     <nav>
-      <Menu>
-        <li>
+      <Menu data-testid="footer-menu">
+        <li data-testid="github">
           <a
             href="https://github.com/jakeherp"
             target="_blank"
@@ -40,7 +40,7 @@ const Footer = () => (
             Github
           </a>
         </li>
-        <li>
+        <li data-testid="linkedin">
           <a
             href="https://www.linkedin.com/in/jacobherper/"
             target="_blank"
@@ -49,7 +49,7 @@ const Footer = () => (
             LinkedIn
           </a>
         </li>
-        <li>
+        <li data-testid="twitter">
           <a
             href="https://twitter.com/jakeherp"
             target="_blank"
