@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import camelCase from 'camelcase';
 import { getTextColor } from 'Templates/Layout';
 
 interface IProps {
@@ -23,7 +24,7 @@ const Job = ({
   from,
   to,
 }: IProps) => (
-  <Listing>
+  <Listing data-testid={`job${camelCase(companyName, { pascalCase: true })}`}>
     <h1>{title}</h1>
     <h2>
       <strong>
