@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { getBackground } from 'Templates/Layout';
+import theme from 'styled-theming';
 
 interface IProps {
   item: {
@@ -12,6 +12,11 @@ interface IProps {
   };
   toggle: () => void;
 }
+
+const getBackground = theme('mode', {
+  light: '#d6deeb',
+  dark: '#011627',
+});
 
 const variants = {
   open: {
@@ -32,23 +37,21 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ item: { title, url }, toggle }: IProps) => {
-  const StyledLink = styled(Link)`
-    color: ${getBackground};
-  `;
+export const MenuItem = ({ item: { title, url }, toggle }: IProps) => (
+  <Item
+    variants={variants}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <StyledLink to={url} onClick={toggle}>
+      {title}
+    </StyledLink>
+  </Item>
+);
 
-  return (
-    <Item
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <StyledLink to={url} onClick={toggle}>
-        {title}
-      </StyledLink>
-    </Item>
-  );
-};
+const StyledLink = styled(Link)`
+  color: ${getBackground};
+`;
 
 const Item = styled(motion.li)`
   margin: 0;

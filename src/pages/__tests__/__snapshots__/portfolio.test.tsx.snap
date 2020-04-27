@@ -68,6 +68,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       class="c2"
+      data-testid="portfolioItemPortfolioItem1"
     >
       <a
         href="/portfolio/portfolio-item-1/"
@@ -113,6 +114,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       class="c2"
+      data-testid="portfolioItemPortfolioItem2"
     >
       <a
         href="/portfolio/portfolio-item-2/"

@@ -56,6 +56,7 @@ test('renders correctly', () => {
 
     <div
       class="c0"
+      data-testid="portfolioItemPostTitle"
     >
       <a
         href="/portfolio/post-slug/"

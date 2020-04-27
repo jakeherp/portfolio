@@ -1,5 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import 'jest-styled-components';
+import { render } from '@testing-library/react';
 
 import Job from '../Job';
 
@@ -14,23 +15,40 @@ const job = {
   to: 'present',
 };
 
-it('renders correctly', () => {
-  const tree = renderer
-    .create(
-      <Job
-        title={job.title}
-        company={job.company}
-        place={job.place}
-        from={job.from}
-        to={job.to}
-      >
-        List of tasks
-      </Job>
-    )
-    .toJSON();
-  expect(tree).toMatchInlineSnapshot(`
+test('renders correctly', () => {
+  const { container } = render(
+    <Job
+      title={job.title}
+      company={job.company}
+      place={job.place}
+      from={job.from}
+      to={job.to}
+    >
+      List of tasks
+    </Job>
+  );
+  expect(container.firstChild).toMatchInlineSnapshot(`
+    .c0 {
+      border-bottom: 1px solid;
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+      -webkit-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .c0 h1 {
+      margin: 0 0 0.5rem;
+    }
+
+    .c0 h2 {
+      font-weight: normal;
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+    }
+
     <article
-      className="sc-fznyAO aRlBb"
+      class="c0"
+      data-testid="jobMyCompany"
     >
       <h1>
         Web Developer

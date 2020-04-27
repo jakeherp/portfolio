@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
+import camelCase from 'camelcase';
 import styled from 'styled-components';
 
 interface IProps {
@@ -15,7 +16,7 @@ interface IProps {
 }
 
 const Post = ({ data: { title, slug, image, type } }: IProps) => (
-  <Item>
+  <Item data-testid={`portfolioItem${camelCase(title, { pascalCase: true })}`}>
     <Link to={`/portfolio/${slug}/`}>
       <Img fluid={image.fluid} />
       <Overlay>
