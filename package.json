@@ -17,7 +17,7 @@
     "gatsby": "^2.21.0",
     "gatsby-image": "^2.3.4",
     "gatsby-link": "^2.3.4",
-    "gatsby-plugin-manifest": "^2.3.6",
+    "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-module-resolver": "^1.0.3",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-nprogress": "^2.2.3",
