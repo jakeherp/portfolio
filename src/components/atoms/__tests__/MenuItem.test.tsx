@@ -32,6 +32,7 @@ test('renders correctly', () => {
 
     <li
       class="c0"
+      data-testid="home"
     >
       <a
         class=""

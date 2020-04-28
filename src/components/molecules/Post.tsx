@@ -45,6 +45,7 @@ const Overlay = styled.div`
   width: 100%;
   transform: translateY(-50%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
   h3 {
     margin: 0;
     color: #fff;
