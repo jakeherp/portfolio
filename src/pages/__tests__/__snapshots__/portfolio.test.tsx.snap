@@ -33,6 +33,7 @@ exports[`renders correctly 1`] = `
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  pointer-events: none;
 }
 
 .c3 h3 {
@@ -60,7 +61,9 @@ exports[`renders correctly 1`] = `
 <div
   class="c0"
 >
-  <h2>
+  <h2
+    data-testid="headline"
+  >
     Portfolio
   </h2>
   <div

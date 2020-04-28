@@ -211,6 +211,7 @@ exports[`renders correctly 1`] = `
   >
     <h1
       class="c2"
+      data-testid="headline"
     >
       Hey, I'm Jacob Herper
     </h1>
@@ -255,49 +256,53 @@ exports[`renders correctly 1`] = `
         <div
           class="c7"
         >
-          Filter:
-          <button
-            class="c8"
-            data-testid="filterTechnologies"
-            name="technologies"
+          <div
+            data-testid="filters"
           >
-            technologies
-          </button>
-          <button
-            class="c8"
-            data-testid="filterFrameworks"
-            name="frameworks"
-          >
-            frameworks
-          </button>
-          <button
-            class="c8"
-            data-testid="filterDatabases"
-            name="databases"
-          >
-            databases
-          </button>
-          <button
-            class="c8"
-            data-testid="filterCms"
-            name="cms"
-          >
-            cms
-          </button>
-          <button
-            class="c8"
-            data-testid="filterVarious"
-            name="various"
-          >
-            various
-          </button>
-          <button
-            class="c8"
-            data-testid="filterDesign"
-            name="design"
-          >
-            design
-          </button>
+            Filter:
+            <button
+              class="c8"
+              data-testid="filterTechnologies"
+              name="technologies"
+            >
+              technologies
+            </button>
+            <button
+              class="c8"
+              data-testid="filterFrameworks"
+              name="frameworks"
+            >
+              frameworks
+            </button>
+            <button
+              class="c8"
+              data-testid="filterDatabases"
+              name="databases"
+            >
+              databases
+            </button>
+            <button
+              class="c8"
+              data-testid="filterCms"
+              name="cms"
+            >
+              cms
+            </button>
+            <button
+              class="c8"
+              data-testid="filterVarious"
+              name="various"
+            >
+              various
+            </button>
+            <button
+              class="c8"
+              data-testid="filterDesign"
+              name="design"
+            >
+              design
+            </button>
+          </div>
         </div>
         <span
           class="c9 --technologies"

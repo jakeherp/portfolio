@@ -37,6 +37,7 @@ test('renders correctly', () => {
     >
       <li
         class="c1"
+        data-testid="home"
       >
         <a
           class=""
@@ -47,6 +48,7 @@ test('renders correctly', () => {
       </li>
       <li
         class="c1"
+        data-testid="about"
       >
         <a
           class=""
@@ -57,6 +59,7 @@ test('renders correctly', () => {
       </li>
       <li
         class="c1"
+        data-testid="portfolio"
       >
         <a
           class=""
@@ -67,6 +70,7 @@ test('renders correctly', () => {
       </li>
       <li
         class="c1"
+        data-testid="contact"
       >
         <a
           class=""

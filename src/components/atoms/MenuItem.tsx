@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import camelCase from 'camelcase';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import theme from 'styled-theming';
@@ -42,6 +43,7 @@ export const MenuItem = ({ item: { title, url }, toggle }: IProps) => (
     variants={variants}
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
+    data-testid={camelCase(title)}
   >
     <StyledLink to={url} onClick={toggle}>
       {title}
