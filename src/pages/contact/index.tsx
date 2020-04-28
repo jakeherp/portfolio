@@ -38,7 +38,7 @@ const Contact = () => {
     <>
       <SEO title="Contact" />
       <Container>
-        <h1>Get in touch</h1>
+        <h1 data-testid="headline">Get in touch</h1>
         <p>
           Wanna talk? Send me an email through the form below or get in touch
           through my social media profiles.
