@@ -12,13 +12,13 @@ describe('Portfolio app', () => {
   it('navigates to about page and back', () => {
     cy.getTestElement('MenuToggle')
       .click()
-      .get('header ul > li:nth-of-type(2) > a')
+      .getTestElement('about', 'a')
       .click()
       .url()
       .should('match', /about/);
 
     // go back to home page
-    cy.get('header h1')
+    cy.getTestElement('logo')
       .click()
       .url()
       .should('include', Cypress.config('baseUrl'));
