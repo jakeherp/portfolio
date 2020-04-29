@@ -9,6 +9,7 @@ cache:
   yarn: true
   directories:
     - node_modules
+    - ~/.npm
     - ~/.cache
 # deploy:
 #   provider: netlify
