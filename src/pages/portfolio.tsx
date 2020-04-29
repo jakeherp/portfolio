@@ -30,7 +30,7 @@ const Portfolio = ({ data }: IProps) => {
     <>
       <SEO title="Portfolio" />
       <Container>
-        <h2>Portfolio</h2>
+        <h2 data-testid="headline">Portfolio</h2>
         <Grid>
           {posts.map(({ node: { title, slug, image, type } }) => (
             <Post data={{ title, slug, image, type }} key={slug} />

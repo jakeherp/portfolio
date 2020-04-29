@@ -26,7 +26,7 @@ const About = () => {
       <SEO title="About" />
       <Container>
         <Section>
-          <Name>Hey, I'm Jacob Herper</Name>
+          <Name data-testid="headline">Hey, I'm Jacob Herper</Name>
           <JobTitle>A senior Front-End Engineer from London, UK</JobTitle>
           <Text>
             As a passionate front-end developer, I create amazing websites and
@@ -56,15 +56,17 @@ const About = () => {
           <WithSidebar>
             <main>
               <ScreenOnly>
-                Filter:
-                {skillCategories.map((skill) => (
-                  <Filter
-                    key={skill}
-                    name={skill}
-                    setFilter={setFilter}
-                    currentFilter={filter}
-                  />
-                ))}
+                <div data-testid="filters">
+                  Filter:
+                  {skillCategories.map((skill) => (
+                    <Filter
+                      key={skill}
+                      name={skill}
+                      setFilter={setFilter}
+                      currentFilter={filter}
+                    />
+                  ))}
+                </div>
               </ScreenOnly>
               {skillCategories.map((category) => {
                 const cat = skills[category];

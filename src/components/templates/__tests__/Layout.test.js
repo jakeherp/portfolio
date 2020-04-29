@@ -242,6 +242,7 @@ it('renders correctly', () => {
           >
             <li
               className="c5"
+              data-testid="home"
               style={
                 Object {
                   "opacity": 0,
@@ -260,6 +261,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c5"
+              data-testid="about"
               style={
                 Object {
                   "opacity": 0,
@@ -278,6 +280,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c5"
+              data-testid="portfolio"
               style={
                 Object {
                   "opacity": 0,
@@ -296,6 +299,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c5"
+              data-testid="contact"
               style={
                 Object {
                   "opacity": 0,

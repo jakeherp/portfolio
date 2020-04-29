@@ -70,14 +70,14 @@ const PortfolioItem = ({ data, pageContext }: IProps) => {
         </Button>
         <Pagination>
           {previous && (
-            <li>
+            <li data-testid="previous">
               <Link to={`/portfolio/${previous.slug}/`} rel="prev">
                 &laquo; {previous.title}
               </Link>
             </li>
           )}
           {next && (
-            <li>
+            <li data-testid="next">
               <Link to={`/portfolio/${next.slug}/`} rel="next">
                 {next.title} &raquo;
               </Link>

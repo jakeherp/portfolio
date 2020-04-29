@@ -56,7 +56,9 @@ exports[`renders the contact page correctly 1`] = `
 <div
   class="c0"
 >
-  <h1>
+  <h1
+    data-testid="headline"
+  >
     Get in touch
   </h1>
   <p>
