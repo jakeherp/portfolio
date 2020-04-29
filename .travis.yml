@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  yarn: true
+  directories:
+    - node_modules
+# deploy:
+#   provider: netlify
+#   site: <app id>
+#   auth: <encrypted auth>
+#   dir: public
+#   on:
+#     branch: master
+before_script:
+  - "yarn global add gatsby"
+  - "yarn install"
+script:
+  - "yarn test"
+  - "yarn test:e2e:ci"
+# after_success:
+#   - "yarn deploy"
