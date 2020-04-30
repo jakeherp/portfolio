@@ -8,7 +8,6 @@ addons:
 cache:
   yarn: true
   directories:
-    - node_modules
     - ~/.npm
     - ~/.cache
 # deploy:
@@ -20,7 +19,7 @@ cache:
 #     branch: master
 before_script:
   - "yarn global add gatsby"
-  - "yarn install"
+  - "yarn install --frozen-lockfile"
 script:
   - "yarn test"
   - "yarn test:e2e:ci"
