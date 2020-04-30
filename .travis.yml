@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 12
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+cache:
+  yarn: true
+  directories:
+    - ~/.npm
+    - ~/.cache
+# deploy:
+#   provider: netlify
+#   site: <app id>
+#   auth: <encrypted auth>
+#   dir: public
+#   on:
+#     branch: master
+before_script:
+  - "yarn global add gatsby"
+  - "yarn install --frozen-lockfile"
+script:
+  - "yarn test"
+  - "yarn test:e2e:ci"
+# after_success:
+#   - "yarn deploy"
