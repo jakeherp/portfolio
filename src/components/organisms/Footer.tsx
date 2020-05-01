@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Menu from 'Atoms/Menu';
 
 const Foot = styled.footer`
-  padding: 0 3%;
+  padding: 0 3% 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
