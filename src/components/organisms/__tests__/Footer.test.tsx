@@ -51,7 +51,7 @@ test('renders correctly', () => {
     }
 
     .c0 {
-      padding: 0 3%;
+      padding: 0 3% 1rem;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;

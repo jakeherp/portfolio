@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c0 {
-  width: 1140px;
-  max-width: 94%;
-  margin: 0 auto;
-}
-
 .c11 {
   border-bottom: 1px solid;
   padding-bottom: 2rem;
@@ -23,6 +17,31 @@ exports[`renders correctly 1`] = `
   font-weight: normal;
   font-size: 1rem;
   margin: 0 0 0.5rem;
+}
+
+.c15 {
+  background: #fff;
+  border: 2px solid #e94e1b;
+  color: #e94e1b;
+  padding: 0.5rem 2rem;
+  border-radius: 99px;
+  margin: 1rem 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15:hover {
+  background: #e94e1b;
+  color: #fff;
+}
+
+.c0 {
+  width: 1140px;
+  max-width: 94%;
+  margin: 0 auto;
 }
 
 .c8 {
@@ -142,6 +161,10 @@ exports[`renders correctly 1`] = `
   border: none;
   display: block;
   margin: 0 auto;
+}
+
+.c14 {
+  text-align: center;
 }
 
 @media print {
@@ -605,6 +628,25 @@ exports[`renders correctly 1`] = `
     >
       Show more
     </button>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c14"
+    >
+      <p
+        class="c4"
+      >
+        Recruiters, you can find my up-to-date CV as a PDF download by clicking the button below.
+      </p>
+      <a
+        class="c15"
+        href="/docs/cv-jacob_herper-2020.pdf"
+      >
+        Download CV
+      </a>
+    </div>
   </section>
 </div>
 `;
