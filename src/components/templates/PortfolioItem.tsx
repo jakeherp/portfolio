@@ -6,6 +6,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import SEO from 'Molecules/Seo';
 import Container from 'Atoms/Container';
+import Button from 'Atoms/Button';
 
 interface IProps {
   data: {
@@ -93,22 +94,6 @@ export default PortfolioItem;
 
 const Image = styled(Img)`
   margin-top: 2rem;
-`;
-
-const Button = styled.a`
-  background: #fff;
-  border: 2px solid #e94e1b;
-  color: #e94e1b;
-  padding: 0.5rem 2rem;
-  border-radius: 99px;
-  margin: 1rem 0;
-  transition: 0.2s;
-  display: inline-block;
-  text-decoration: none;
-  &:hover {
-    background: #e94e1b;
-    color: #fff;
-  }
 `;
 
 const Pagination = styled.ul`
