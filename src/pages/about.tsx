@@ -4,8 +4,9 @@ import moment from 'moment';
 
 import { getTextColor } from 'Templates/Layout';
 import SEO from 'Molecules/Seo';
-import Container from 'Atoms/Container';
 import Job from 'Molecules/Job';
+import Button from 'Atoms/Button';
+import Container from 'Atoms/Container';
 import Filter from 'Atoms/Filter';
 
 import { jobs } from 'Data/jobs';
@@ -129,10 +130,19 @@ const About = () => {
             ))}
           </Jobs>
           {!loadedJobs ? (
-            <Button onClick={() => loadMore(true)}>Show more</Button>
+            <ReadMore onClick={() => loadMore(true)}>Show more</ReadMore>
           ) : (
-            <Button onClick={() => loadMore(false)}>Show less</Button>
+            <ReadMore onClick={() => loadMore(false)}>Show less</ReadMore>
           )}
+        </Section>
+        <Section>
+          <Centre>
+            <Text>
+              Recruiters, you can find my up-to-date CV as a PDF download by
+              clicking the button below.
+            </Text>
+            <Button href="/docs/cv-jacob_herper-2020.pdf">Download CV</Button>
+          </Centre>
         </Section>
       </Container>
     </>
@@ -273,7 +283,7 @@ const ScreenOnly = styled.div`
   }
 `;
 
-const Button = styled.button`
+const ReadMore = styled.button`
   background: transparent;
   border: none;
   display: block;
@@ -283,4 +293,8 @@ const Button = styled.button`
   @media print {
     display: none;
   }
+`;
+
+const Centre = styled.div`
+  text-align: center;
 `;
