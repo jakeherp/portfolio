@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import moment from 'moment';
 
 import { getTextColor } from 'Templates/Layout';
 import SEO from 'Molecules/Seo';
@@ -9,17 +8,18 @@ import Button from 'Atoms/Button';
 import Container from 'Atoms/Container';
 import Filter from 'Atoms/Filter';
 
+import useToggle from 'Hooks/useToggle';
+import { age } from 'Helpers/age';
+
 import { jobs } from 'Data/jobs';
 import { skills } from 'Data/skills';
 
 const About = () => {
-  const [loadedJobs, loadMore] = useState(false);
+  const { toggle: toggleJobs, value: showJobs } = useToggle(false);
   const [filter, setFilter] = useState<string>('');
 
-  const initialJobs = jobs.slice(0, 2);
-  const displayJobs = loadedJobs ? jobs : initialJobs;
-
-  const age = (birthday: string) => moment().diff(birthday, 'years');
+  const truncatedJobs = jobs.slice(0, 2);
+  const displayJobs = showJobs ? jobs : truncatedJobs;
 
   const skillCategories = Object.keys(skills);
   return (
@@ -111,7 +111,7 @@ const About = () => {
         </Section>
         <Section>
           <Title>Work Experience</Title>
-          <Jobs>
+          <Jobs id={`jobs-${showJobs ? 'open' : 'closed'}`}>
             {displayJobs.map((job) => (
               <Job
                 key={job.id}
@@ -129,11 +129,9 @@ const About = () => {
               </Job>
             ))}
           </Jobs>
-          {!loadedJobs ? (
-            <ReadMore onClick={() => loadMore(true)}>Show more</ReadMore>
-          ) : (
-            <ReadMore onClick={() => loadMore(false)}>Show less</ReadMore>
-          )}
+          <ReadMore onClick={() => toggleJobs()}>
+            {!showJobs ? 'Show more' : 'Show less'}
+          </ReadMore>
         </Section>
         <Section>
           <Centre>
@@ -141,7 +139,12 @@ const About = () => {
               Recruiters, you can find my up-to-date CV as a PDF download by
               clicking the button below.
             </Text>
-            <Button href="/docs/cv-jacob_herper-2020.pdf">Download CV</Button>
+            <Button
+              href="/docs/cv-jacob_herper-2020.pdf"
+              download="jacob_herper-cv.pdf"
+            >
+              Download CV
+            </Button>
           </Centre>
         </Section>
       </Container>
