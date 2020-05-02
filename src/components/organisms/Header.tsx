@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import { useDimensions } from 'Hooks/useDimensions';
 import { MenuToggle } from 'Atoms/MenuToggle';
 import { Navigation as Nav } from 'Molecules/Navigation';
+import Logo from 'Atoms/Logo';
 
 // import NavigationContext from "Context/navigation.context"
-import Highlight from 'Atoms/Highlight';
 import ToggleMode from 'Atoms/ToggleMode';
 
 const sidebar = {
@@ -49,11 +49,9 @@ const Header = () => {
         <Nav toggle={() => toggleOpen()} />
         <MenuToggle toggle={() => toggleOpen()} />
       </Toggler>
-      <h1 data-testid="logo">
-        <Link to="/">
-          &lt;Jacob Herper <Highlight>/</Highlight>&gt;
-        </Link>
-      </h1>
+      <Link to="/" data-testid="logo">
+        <Logo />
+      </Link>
       <ThemeToggle data-testid="themeToggle" />
     </Head>
   );
