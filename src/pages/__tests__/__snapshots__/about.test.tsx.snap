@@ -643,6 +643,7 @@ exports[`renders correctly 1`] = `
       </p>
       <a
         class="c15"
+        download="jacob_herper-cv.pdf"
         href="/docs/cv-jacob_herper-2020.pdf"
       >
         Download CV

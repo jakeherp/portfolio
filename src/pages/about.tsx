@@ -139,7 +139,12 @@ const About = () => {
               Recruiters, you can find my up-to-date CV as a PDF download by
               clicking the button below.
             </Text>
-            <Button href="/docs/cv-jacob_herper-2020.pdf">Download CV</Button>
+            <Button
+              href="/docs/cv-jacob_herper-2020.pdf"
+              download="jacob_herper-cv.pdf"
+            >
+              Download CV
+            </Button>
           </Centre>
         </Section>
       </Container>
