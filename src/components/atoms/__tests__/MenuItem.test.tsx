@@ -33,6 +33,7 @@ test('renders correctly', () => {
     <li
       class="c0"
       data-testid="home"
+      style="opacity: 0; pointer-events: none; transform: translateY(50px) translateZ(0);"
     >
       <a
         class=""

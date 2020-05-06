@@ -34,10 +34,12 @@ test('renders correctly', () => {
 
     <ul
       class="c0"
+      style="pointer-events: none;"
     >
       <li
         class="c1"
         data-testid="home"
+        style="opacity: 0; pointer-events: none; transform: translateY(50px) translateZ(0);"
       >
         <a
           class=""
@@ -49,6 +51,7 @@ test('renders correctly', () => {
       <li
         class="c1"
         data-testid="about"
+        style="opacity: 0; pointer-events: none; transform: translateY(50px) translateZ(0);"
       >
         <a
           class=""
@@ -60,6 +63,7 @@ test('renders correctly', () => {
       <li
         class="c1"
         data-testid="portfolio"
+        style="opacity: 0; pointer-events: none; transform: translateY(50px) translateZ(0);"
       >
         <a
           class=""
@@ -71,6 +75,7 @@ test('renders correctly', () => {
       <li
         class="c1"
         data-testid="contact"
+        style="opacity: 0; pointer-events: none; transform: translateY(50px) translateZ(0);"
       >
         <a
           class=""

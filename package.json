@@ -107,7 +107,7 @@
     "build": "gatsby build",
     "check-types": "tsc",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run --record --key 66cc1935-26ea-419b-9306-de2c94a7034d",
     "develop": "gatsby develop",
     "format:check": "yarn prettier --list-different",
     "format": "yarn prettier . --write",
