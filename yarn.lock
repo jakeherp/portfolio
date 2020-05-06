@@ -6245,10 +6245,10 @@ eslint-plugin-react-hooks@^1.7.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
 
-eslint-plugin-react-hooks@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
-  integrity sha512-EjxTHxjLKIBWFgDJdhKKzLh5q+vjTFrqNZX36uIxWS4OfyXe5DawqPj3U5qeJ1ngLwatjzQnmR0Lz0J0YH3kxw==
+eslint-plugin-react-hooks@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.0.tgz#81196b990043cde339e25c6662aeebe32ac52d01"
+  integrity sha512-YKBY+kilK5wrwIdQnCF395Ya6nDro3EAMoe+2xFkmyklyhF16fH83TrQOo9zbZIDxBsXFgBbywta/0JKRNFDkw==
 
 eslint-plugin-react@^7.19.0:
   version "7.19.0"
@@ -7383,12 +7383,12 @@ gatsby-plugin-module-resolver@^1.0.3:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-module-resolver/-/gatsby-plugin-module-resolver-1.0.3.tgz#d98d0b51b5b99aa40db3382f6b5c049ca3018f01"
   integrity sha512-MrE2JhDEiiZB6uLVJ0zpoZmHi36zkgGoNgBr9YQ4r6TUqayiNXU97NBhO87CRJQz8I4MaL6ZrOWjUdoHEXvndg==
 
-gatsby-plugin-netlify@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.3.0.tgz#f28ee6cff49bab3836f46a24efca1af4ddec684a"
-  integrity sha512-6JoKNVG03GDpiVdFneVcPAdubXL3q1e5YqkZKzXbAufhX/SafxUg5fA2BKGcHysOkUjXy4jembgZ1p+p6dPTuA==
+gatsby-plugin-netlify@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.3.2.tgz#19ce2715e747e3aa17d96f4262ddf94a6c6a6356"
+  integrity sha512-6K5p1nAmBaahG9xizm/w3SwTw8TMPjWuRu41ednouv3taH2W+BW7rF5Hu2rDY9rzO9hOv+tQ2e1ipDSiA9TxMA==
   dependencies:
-    "@babel/runtime" "^7.9.2"
+    "@babel/runtime" "^7.9.6"
     fs-extra "^8.1.0"
     kebab-hash "^0.1.2"
     lodash "^4.17.15"
@@ -7620,21 +7620,21 @@ gatsby-source-contentful@^2.3.1:
     lodash "^4.17.15"
     qs "^6.9.3"
 
-gatsby-source-filesystem@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.0.tgz#2c308b7e023b6cb37814156da9b681a3deb7b4c3"
-  integrity sha512-SUJbbl4hYyvudGImU86amxIfqYoYpkITlY0lHV7azeAQj3199ZUqO0hGwbl4MZ5fNwwQEbANEUbsoPkyc/QUZQ==
+gatsby-source-filesystem@^2.3.0, gatsby-source-filesystem@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.1.tgz#a5c76bdfbb13fcbf771b9ecd9b77b6d955586b78"
+  integrity sha512-WZu4QltA8fLRmWJh6C9QXTfg9tKJsio9Pl1HgEY4nY6cuu9DqUH3CAO39+B/fJ9o12Y6AFK5CVmLjdIyEhK4uQ==
   dependencies:
-    "@babel/runtime" "^7.9.2"
+    "@babel/runtime" "^7.9.6"
     better-queue "^3.8.10"
     bluebird "^3.7.2"
     chokidar "3.4.0"
     file-type "^12.4.2"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^1.2.0"
+    gatsby-core-utils "^1.2.1"
     got "^9.6.0"
     md5-file "^3.2.3"
-    mime "^2.4.4"
+    mime "^2.4.5"
     pretty-bytes "^5.3.0"
     progress "^2.0.3"
     read-chunk "^3.2.0"
@@ -13742,13 +13742,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-particles-js@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-3.2.0.tgz#83b208b99d11b6beb1184fdaa46762ebdd98356d"
-  integrity sha512-RjQqRF2GcJdCJD1A1iARUczkuQSOnSjsehSJ9trM71qp9YyCyOKJjGZ74qDIrcdBLKZIHBngzLGevVMQPIPYZw==
+react-particles-js@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-3.2.1.tgz#a331e80519c9e70f448090915def088f72ed6ed3"
+  integrity sha512-sZ6jmwbbHQOtqsChlI7X9iee+iN4C1g9BLch2f9Ck9dvJmAaVT8/kQB1gOQLROFKIFIzQyt34gXzrI7ZNwNspQ==
   dependencies:
     lodash "^4.17.11"
-    tsparticles "^1.13.5"
+    tsparticles "^1.13.6"
 
 react-reconciler@^0.24.0:
   version "0.24.0"
@@ -16094,10 +16094,10 @@ tslib@^1.10.0, tslib@^1.11.1, tslib@^1.6.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
-tsparticles@^1.13.5:
-  version "1.13.5"
-  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.13.5.tgz#c6d7d8862a3bb8b5adea74081ab6553ae92b0e7f"
-  integrity sha512-KqpEpxwddTjV3IHFb6QmywWvD3mswR6t44Zw5ZuEIp7fGS6wXJo6pjn650/gMIwm+JScYynQr6D1aldc5gTpkg==
+tsparticles@^1.13.6:
+  version "1.13.9"
+  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.13.9.tgz#720629be05428e8f98e7bf024e9aca12dd358b3a"
+  integrity sha512-rCG4n82y0Av4vaEYg20MvONkYdOZ0F9UdiQ2kaNaCv5OEFrvfNUbt1wJw4DieKASOzV1gHwB095hP5ac0Caf0Q==
   dependencies:
     pathseg "^1.2.0"
     tslib "^1.11.1"
