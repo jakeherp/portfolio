@@ -32,7 +32,7 @@
     "gatsby-plugin-typescript": "^2.4.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.3.1",
-    "gatsby-source-filesystem": "^2.3.0",
+    "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-sharp": "^2.5.0",
     "local-storage-fallback": "^4.1.1",
     "moment": "2.24.0",
