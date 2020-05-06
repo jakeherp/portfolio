@@ -44,7 +44,8 @@
     "react-particles-js": "^3.2.1",
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.0",
-    "styled-theming": "^2.2.0"
+    "styled-theming": "^2.2.0",
+    "snyk": "^1.319.1"
   },
   "devDependencies": {
     "@testing-library/cypress": "^6.0.0",
@@ -119,7 +120,9 @@
     "test:lint:fix": "eslint --ignore-path .gitignore . --fix && prettier --ignore-path .gitignore --write \"**/*.+(tsx|js|json|md)\"",
     "test:lint": "jest --config jest/jest.lint.js",
     "test:watch": "jest --watch",
-    "validate": "yarn format:check && yarn test:lint"
+    "validate": "yarn format:check && yarn test:lint",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -127,5 +130,6 @@
   },
   "bugs": {
     "url": "https://github.com/jakeherp/portfolio/issues"
-  }
+  },
+  "snyk": true
 }
