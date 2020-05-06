@@ -45,7 +45,10 @@ const itemIds = [
   },
 ];
 
-const Menu = styled(motion.ul)`
+const Menu = styled(motion.ul).attrs(() => ({
+  initial: 'closed',
+  variants,
+}))`
   margin: 0;
   padding: 0;
   padding: 40px;

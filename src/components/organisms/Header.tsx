@@ -57,7 +57,10 @@ const Header = () => {
   );
 };
 
-const Background = styled(motion.div)`
+const Background = styled(motion.div).attrs(() => ({
+  initial: 'closed',
+  sidebar,
+}))`
   position: fixed;
   top: 0;
   left: 0;

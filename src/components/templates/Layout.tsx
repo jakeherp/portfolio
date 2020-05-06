@@ -67,7 +67,10 @@ const Wrapper = styled.div`
   min-height: 95vh;
 `;
 
-const Main = styled(motion.main)`
+const Main = styled(motion.main).attrs(() => ({
+  initial: 'initial',
+  variants,
+}))`
   /* flex-grow: 1; */
 `;
 

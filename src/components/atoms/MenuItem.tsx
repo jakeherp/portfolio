@@ -55,7 +55,10 @@ const StyledLink = styled(Link)`
   color: ${getBackground};
 `;
 
-const Item = styled(motion.li)`
+const Item = styled(motion.li).attrs(() => ({
+  initial: 'closed',
+  variants,
+}))`
   margin: 0;
   padding: 0;
   list-style: none;

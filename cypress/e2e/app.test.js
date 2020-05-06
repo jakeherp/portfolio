@@ -19,7 +19,7 @@ describe('Portfolio app', () => {
 
     // go back to home page
     cy.getTestElement('logo')
-      .click()
+      .click({ force: true })
       .url()
       .should('include', Cypress.config('baseUrl'));
   });
