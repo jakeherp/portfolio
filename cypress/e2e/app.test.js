@@ -13,7 +13,7 @@ describe('Portfolio app', () => {
     cy.getTestElement('MenuToggle')
       .click()
       .getTestElement('about', 'a')
-      .click()
+      .click({ force: true })
       .url()
       .should('match', /about/);
 
