@@ -45,7 +45,7 @@
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.0",
     "styled-theming": "^2.2.0",
-    "snyk": "^1.319.1"
+    "snyk": "^1.319.2"
   },
   "devDependencies": {
     "@testing-library/cypress": "^6.0.0",
