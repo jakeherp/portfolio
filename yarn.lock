@@ -2060,15 +2060,15 @@
     "@testing-library/dom" "^7.0.2"
     "@types/testing-library__cypress" "^5.0.3"
 
-"@testing-library/dom@^7.0.2", "@testing-library/dom@^7.2.2", "@testing-library/dom@^7.5.1":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.5.1.tgz#c3537e2b970576072ea4083e603463843c8a8d2b"
-  integrity sha512-c9iQWyFtdsqaVScIlOdgdG3HXWkYvGzin02nJ4LUnzNXKyxqeqq9KPIAAjnmfrSApbRc8mK1l6esiCeEredfRw==
+"@testing-library/dom@^7.0.2", "@testing-library/dom@^7.2.2", "@testing-library/dom@^7.5.5":
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.5.5.tgz#af79467c5c35ec859e75277cc273ee4245f45b49"
+  integrity sha512-KFVa+RHO6zCLZO9qz+q+6rbbH2g4J5YBVFP5srYm6r5aPJru3148EkedZ2XSnyNjJW/HEm8HQ2didKvxQxMOcg==
   dependencies:
     "@babel/runtime" "^7.9.6"
     aria-query "^4.0.2"
     dom-accessibility-api "^0.4.3"
-    pretty-format "^26.0.1"
+    pretty-format "^25.5.0"
 
 "@testing-library/jest-dom@^5.7.0":
   version "5.7.0"
