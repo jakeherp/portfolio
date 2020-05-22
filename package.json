@@ -62,7 +62,7 @@
     "@types/styled-theming": "^2.2.2",
     "babel-eslint": "^10.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
-    "babel-preset-gatsby": "^0.4.1",
+    "babel-preset-gatsby": "^0.4.7",
     "canvas": "^2.6.1",
     "cypress": "^4.5.0",
     "cypress-axe": "^0.8.1",
