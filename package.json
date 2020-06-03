@@ -43,7 +43,7 @@
     "react-hook-form": "^5.7.2",
     "react-particles-js": "^3.2.1",
     "react-typed": "^1.2.0",
-    "snyk": "^1.334.0",
+    "snyk": "^1.335.0",
     "styled-components": "^5.1.0",
     "styled-theming": "^2.2.0"
   },
@@ -122,7 +122,8 @@
     "test:lint": "jest --config jest/jest.lint.js",
     "test:watch": "jest --watch",
     "validate": "yarn format:check && yarn test:lint",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
