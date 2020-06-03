@@ -20,3 +20,111 @@ patch:
         patched: '2020-05-06T22:04:54.336Z'
     - gatsby > gatsby-plugin-typescript > @babel/preset-typescript > @babel/plugin-transform-typescript > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2020-05-06T22:04:54.336Z'
+    - gatsby > gatsby-admin > formik > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > yup > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/core > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/core > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/resolvers-composition > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/graphql-tag-pluck > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/core > @babel/helpers > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/github-loader > @graphql-tools/graphql-tag-pluck > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > emotion > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/preset-typescript > @babel/plugin-transform-typescript > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/plugin-proposal-object-rest-spread > @babel/plugin-transform-parameters > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/github-loader > @graphql-tools/graphql-tag-pluck > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > theme-ui > @types/theme-ui__components > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > @types/reflexbox > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > reflexbox > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/preset-typescript > @babel/plugin-transform-typescript > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/github-loader > @graphql-tools/graphql-tag-pluck > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-transform-classes > @babel/helper-define-map > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > theme-ui > @theme-ui/theme-provider > @theme-ui/mdx > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > @theme-ui/components > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > reflexbox > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > theme-ui > @types/theme-ui__components > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/preset-typescript > @babel/plugin-transform-typescript > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/github-loader > @graphql-tools/graphql-tag-pluck > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > theme-ui > @theme-ui/theme-provider > @theme-ui/mdx > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > theme-ui > @types/theme-ui__components > @types/theme-ui > @types/theme-ui__components > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > gatsby-plugin-typescript > @babel/preset-typescript > @babel/plugin-transform-typescript > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdx > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > theme-ui > @types/theme-ui__components > @types/theme-ui > @types/theme-ui__components > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > theme-ui > @types/theme-ui__components > @types/theme-ui > @types/theme-ui__components > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-admin > strict-ui > theme-ui > @types/theme-ui__components > @types/theme-ui > @types/theme-ui__components > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
+    - gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-06-03T21:34:32.965Z'
