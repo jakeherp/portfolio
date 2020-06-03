@@ -20,7 +20,9 @@ exports[`renders correctly 1`] = `
 >
   <canvas
     class="tsparticles-canvas-el"
+    height="0"
     style="width: 100%; height: 100%;"
+    width="0"
   />
 </div>
 `;
