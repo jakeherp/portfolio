@@ -39,7 +39,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
+    "react-helmet": "^6.1.0",
     "react-hook-form": "^5.7.2",
     "react-particles-js": "^3.2.1",
     "react-typed": "^1.2.0",
