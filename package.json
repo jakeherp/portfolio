@@ -91,7 +91,7 @@
     "start-server-and-test": "^1.11.0",
     "test-data-bot": "^0.8.0",
     "ts-jest": "^26.1.0",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.5"
   },
   "jest-runner-eslint": {
     "cliOptions": {
