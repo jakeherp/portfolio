@@ -43,7 +43,7 @@
     "react-hook-form": "^5.7.2",
     "react-particles-js": "^3.2.1",
     "react-typed": "^1.2.0",
-    "snyk": "^1.335.0",
+    "snyk": "^1.338.0",
     "styled-components": "^5.1.1",
     "styled-theming": "^2.2.0"
   },
