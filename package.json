@@ -28,7 +28,7 @@
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.10",
     "gatsby-plugin-sitemap": "^2.4.4",
-    "gatsby-plugin-styled-components": "^3.3.3",
+    "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-plugin-typescript": "^2.4.4",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.3.14",
