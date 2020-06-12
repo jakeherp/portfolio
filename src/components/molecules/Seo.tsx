@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
 interface IProps {
   description?: string;
@@ -12,23 +11,9 @@ interface IProps {
 }
 
 const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
-
-  let titleTemplate = `${
-    site.siteMetadata.title
-  } | Front-End Engineer in London${title !== 'Home' ? ' » %s' : ''}`;
+  let titleTemplate = `Jacob Herper | Front-End Engineer in London${
+    title !== 'Home' ? ' » %s' : ''
+  }`;
 
   switch (title) {
     case 'Home':
@@ -47,12 +32,14 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
         'Portfolio - Work samples of Jacob Herper (Front-End Engineer)';
       break;
     default:
-      titleTemplate = `${
-        site.siteMetadata.title
-      } | Front-End Engineer in London${title !== 'Home' ? ' » %s' : ''}`;
+      titleTemplate = `Jacob Herper | Front-End Engineer in London${
+        title !== 'Home' ? ' » %s' : ''
+      }`;
   }
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription =
+    description ||
+    'Front-End Software Engineer with a focus on JavaScript and React.js. I have more than 10 years experience working in software engineering.';
   return (
     <Helmet
       htmlAttributes={{
@@ -95,7 +82,7 @@ const SeoHelmet = ({ description, lang, meta, title, keywords }: IProps) => {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: 'Jacob Herper',
         },
         {
           name: `twitter:image`,
