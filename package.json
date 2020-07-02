@@ -122,7 +122,8 @@
     "test:lint": "jest --config jest/jest.lint.js",
     "test:watch": "jest --watch",
     "validate": "yarn format:check && yarn test:lint",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
