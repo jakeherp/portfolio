@@ -61,7 +61,7 @@ const Uses = () => (
           <strong>
             <Link href="https://insomnia.rest/">Insomnia</Link>
           </strong>{' '}
-          to test REST API's
+          to test REST and GraphQL API's
         </li>
       </List>
 
@@ -163,10 +163,10 @@ const Uses = () => (
         <li>
           <strong>
             <Link href="https://www.apple.com/macbook-pro/">
-              Macbook Pro 15"
+              Macbook Pro 16"
             </Link>
           </strong>{' '}
-          (2.9 GHz i7, 16 GB 2133 MHz LPDDR3)
+          (2.4 GHz i9 CPU, 32 GB Ram, 2TB storage)
         </li>
         <li>
           <strong>
@@ -184,8 +184,8 @@ const Uses = () => (
         </li>
         <li>
           <strong>
-            <Link href="https://www.amazon.co.uk/LG-27UK850-Adjustable-DisplayPort-Freesync/dp/B07BJ9PL6H/ref=sr_1_1?dchild=1&keywords=LG+27UK850&qid=1587592902&sr=8-1">
-              LG 27UK850
+            <Link href="https://www.amazon.co.uk/LG-UltraWide-34WN80C-B-Resolution-Response/dp/B0845MWTS1">
+              LG 34WN80C-B 34" ultra-wide monitor, connected via USB-C
             </Link>
           </strong>{' '}
           4K monitor
@@ -212,6 +212,14 @@ const Uses = () => (
             </Link>
           </strong>{' '}
           headphones
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.apple.com/uk/airpods-pro/">
+              Apple AirPods Pro
+            </Link>
+          </strong>{' '}
+          for on the go
         </li>
         <li>
           <strong>

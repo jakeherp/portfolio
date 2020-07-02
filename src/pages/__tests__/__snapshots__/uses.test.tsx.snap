@@ -119,7 +119,7 @@ exports[`renders correctly 1`] = `
         </a>
       </strong>
        
-      to test REST API's
+      to test REST and GraphQL API's
     </li>
   </ul>
   <h2>
@@ -315,11 +315,11 @@ exports[`renders correctly 1`] = `
           rel="noopener noreferrer"
           target="_blank"
         >
-          Macbook Pro 15"
+          Macbook Pro 16"
         </a>
       </strong>
        
-      (2.9 GHz i7, 16 GB 2133 MHz LPDDR3)
+      (2.4 GHz i9 CPU, 32 GB Ram, 2TB storage)
     </li>
     <li>
       <strong>
@@ -346,11 +346,11 @@ exports[`renders correctly 1`] = `
     <li>
       <strong>
         <a
-          href="https://www.amazon.co.uk/LG-27UK850-Adjustable-DisplayPort-Freesync/dp/B07BJ9PL6H/ref=sr_1_1?dchild=1&keywords=LG+27UK850&qid=1587592902&sr=8-1"
+          href="https://www.amazon.co.uk/LG-UltraWide-34WN80C-B-Resolution-Response/dp/B0845MWTS1"
           rel="noopener noreferrer"
           target="_blank"
         >
-          LG 27UK850
+          LG 34WN80C-B 34" ultra-wide monitor, connected via USB-C
         </a>
       </strong>
        
@@ -392,6 +392,19 @@ exports[`renders correctly 1`] = `
       </strong>
        
       headphones
+    </li>
+    <li>
+      <strong>
+        <a
+          href="https://www.apple.com/uk/airpods-pro/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Apple AirPods Pro
+        </a>
+      </strong>
+       
+      for on the go
     </li>
     <li>
       <strong>
