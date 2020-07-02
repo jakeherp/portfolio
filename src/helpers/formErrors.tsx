@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 interface IProps {
   error: {
@@ -21,6 +22,12 @@ const ErrorMessage = ({ error }: IProps) => {
   }
 
   return null;
+};
+
+ErrorMessage.propTypes = {
+  error: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ErrorMessage;
