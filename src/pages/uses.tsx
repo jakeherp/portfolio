@@ -25,6 +25,87 @@ const Uses = () => (
         software I use on a daily basis.
       </p>
 
+      <h2>Hardware</h2>
+      <List>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B0821M3WQ5?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B0821M3WQ5">
+              Macbook Pro 16"
+            </Link>
+          </strong>{' '}
+          (2.4 GHz i9 CPU, 32 GB Ram, 2TB storage)
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B07BR9ZBZ4?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B07BR9ZBZ4">
+              Apple Magic Keyboard 2
+            </Link>
+          </strong>
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B07NJ2BCC2?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B07NJ2BCC2">
+              Apple Magic Trackpad 2
+            </Link>
+          </strong>
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B0845MWTS1?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B0845MWTS1">
+              LG 34WN80C-B 34" ultra-wide monitor, connected via USB-C
+            </Link>
+          </strong>{' '}
+          4K monitor
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B01F01DRW6?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B01F01DRW6">
+              Rain Design mStand
+            </Link>
+          </strong>
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B07XL8WJK8?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B07XL8WJK8">
+              iPhone 11 Pro
+            </Link>
+          </strong>{' '}
+          (256 GB)
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B07Q9MJKBV?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B07Q9MJKBV">
+              Bose 700
+            </Link>
+          </strong>{' '}
+          headphones
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B07ZPML7NP?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B07ZPML7NP">
+              Apple AirPods Pro
+            </Link>
+          </strong>{' '}
+          for on the go
+        </li>
+        <li>
+          <strong>
+            <Link href="https://www.amazon.co.uk/gp/product/B07YSXZ7QD?ie=UTF8&tag=jakeherp-21&camp=1634&linkCode=xm2&creativeASIN=B07YSXZ7QD">
+              Nest Wifi
+            </Link>
+          </strong>{' '}
+          Mesh Network
+        </li>
+        <li>
+          <strong>
+            <Link href="https://store.google.com/product/google_home">
+              Google Home
+            </Link>
+          </strong>{' '}
+          to manage my smart home
+        </li>
+      </List>
+
       <h2>Development Tools</h2>
       <List>
         <li>
@@ -155,87 +236,6 @@ const Uses = () => (
             <Link href="https://magnet.crowdcafe.com/">Magnet</Link>
           </strong>{' '}
           to manage windows
-        </li>
-      </List>
-
-      <h2>Hardware</h2>
-      <List>
-        <li>
-          <strong>
-            <Link href="https://www.apple.com/macbook-pro/">
-              Macbook Pro 16"
-            </Link>
-          </strong>{' '}
-          (2.4 GHz i9 CPU, 32 GB Ram, 2TB storage)
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.apple.com/uk/shop/product/MLA22B/A/magic-keyboard-british-english">
-              Apple Magic Keyboard 2
-            </Link>
-          </strong>
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.apple.com/uk/shop/product/MJ2R2Z/A/magic-trackpad-2-silver">
-              Apple Magic Trackpad 2
-            </Link>
-          </strong>
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.amazon.co.uk/LG-UltraWide-34WN80C-B-Resolution-Response/dp/B0845MWTS1">
-              LG 34WN80C-B 34" ultra-wide monitor, connected via USB-C
-            </Link>
-          </strong>{' '}
-          4K monitor
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.amazon.co.uk/Rain-Design-mStand-Laptop-Stand/dp/B01F01DRW6/ref=sr_1_1?dchild=1&keywords=Rain+Design+mstand&qid=1587592918&sr=8-1">
-              Rain Design mStand
-            </Link>
-          </strong>
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.apple.com/uk/iphone-11-pro/">
-              iPhone 11 Pro
-            </Link>
-          </strong>{' '}
-          (256 GB)
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.bose.co.uk/en_gb/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_soapstone">
-              Bose 700
-            </Link>
-          </strong>{' '}
-          headphones
-        </li>
-        <li>
-          <strong>
-            <Link href="https://www.apple.com/uk/airpods-pro/">
-              Apple AirPods Pro
-            </Link>
-          </strong>{' '}
-          for on the go
-        </li>
-        <li>
-          <strong>
-            <Link href="https://store.google.com/product/nest_wifi">
-              Nest Wifi
-            </Link>
-          </strong>{' '}
-          Mesh Network
-        </li>
-        <li>
-          <strong>
-            <Link href="https://store.google.com/product/google_home">
-              Google Home
-            </Link>
-          </strong>{' '}
-          to manage my smart home
         </li>
       </List>
     </Container>
