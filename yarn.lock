@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@arcanis/slice-ansi@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@arcanis/slice-ansi/-/slice-ansi-1.0.2.tgz#35331e41a1062e3c53c01ad2ec1555c5c1959d8f"
+  integrity sha512-lDL63z0W/L/WTgqrwVOuNyMAsTv+pvjybd21z9SWdStmQoXT59E/iVWwat3gYjcdTNBf6oHAMoyFm8dtjpXEYw==
+  dependencies:
+    grapheme-splitter "^1.0.4"
+
 "@ardatan/aggregate-error@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@ardatan/aggregate-error/-/aggregate-error-0.0.1.tgz#1403ac5de10d8ca689fc1f65844c27179ae1d44f"
@@ -1888,13 +1895,6 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snyk/cli-interface@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-1.5.0.tgz#b9dbe6ebfb86e67ffabf29d4e0d28a52670ac456"
-  integrity sha512-+Qo+IO3YOXWgazlo+CKxOuWFLQQdaNCJ9cSfhFQd687/FuesaIxWdInaAdfpsLScq0c6M1ieZslXgiZELSzxbg==
-  dependencies:
-    tslib "^1.9.3"
-
 "@snyk/cli-interface@2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.3.2.tgz#e93afa82de15b912e657f1ba86f9d7963983e594"
@@ -1902,14 +1902,15 @@
   dependencies:
     tslib "^1.9.3"
 
-"@snyk/cli-interface@2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.5.0.tgz#ac4176063dec629a42b13e349a200c2a6ceb028f"
-  integrity sha512-XMc2SCFH4RBSncZgoPb+BBlNq0NYpEpCzptKi69qyMpBy0VsRqIQqddedaazMCU1xEpXTytq6KMYpzUafZzp5Q==
+"@snyk/cli-interface@2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.6.1.tgz#1e4e7acf5f9aca1267ddf3c1bb98a469011c907a"
+  integrity sha512-3X+OwwwT9j0r2ObqxYIiAgdaHsTW71b92PN3wawGAxl4YgPRrRVw8Fouhe41I4WJsn7OlKUNedylZguvpYg9qw==
   dependencies:
+    "@snyk/graphlib" "2.1.9-patch"
     tslib "^1.9.3"
 
-"@snyk/cli-interface@2.8.0", "@snyk/cli-interface@^2.0.3":
+"@snyk/cli-interface@2.8.0":
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.8.0.tgz#ee5b45b7c75942163875b29e712c44f9d7f36bb3"
   integrity sha512-St/G39iJG1zQK15L24kcVYM2gmFc/ylBCcBqU2DMZKJKwOPccKLUO6s+dWIUXMccQ+DFS6TuHPvuAKQNi9C4Yg==
@@ -1918,13 +1919,22 @@
     "@snyk/graphlib" "2.1.9-patch"
     tslib "^1.9.3"
 
-"@snyk/cocoapods-lockfile-parser@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@snyk/cocoapods-lockfile-parser/-/cocoapods-lockfile-parser-3.4.0.tgz#e5a02e458b2db67de929936398565b22724ba2de"
-  integrity sha512-mAWgKIHFv0QEGpRvocVMxLAdJx7BmXtVOyQN/VtsGBoGFKqhO0jbtKUUVJC4b0jyKfVmEF2puo94i+1Uqz5q6A==
+"@snyk/cli-interface@2.8.1", "@snyk/cli-interface@^2.0.3":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.8.1.tgz#67a0c34e8473dd433d6c206c41fa8b0e12426621"
+  integrity sha512-pALcfgoY0hAavy/pBlDIqEu+FFC5m+D4bMnCwlQ26mObL/zzxp2+Ohx+HykCIom62u2J94SzAtRLFdm/2TgoOw==
   dependencies:
-    "@snyk/dep-graph" "1.18.4"
-    "@snyk/ruby-semver" "^2.0.4"
+    "@snyk/dep-graph" "1.19.0"
+    "@snyk/graphlib" "2.1.9-patch"
+    tslib "^1.9.3"
+
+"@snyk/cocoapods-lockfile-parser@3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@snyk/cocoapods-lockfile-parser/-/cocoapods-lockfile-parser-3.5.1.tgz#572907ae12abf77c1ea3dd497f7d1ced31104aa7"
+  integrity sha512-0bzajH/HdP3k5cOZKUmT/xqmHZFuWN124c/lrqh+U6Q1Z9Bt7TLOB2ifLKL+1I4rq+IgOesGWJYG1KhxBy3RLw==
+  dependencies:
+    "@snyk/dep-graph" "1.19.3"
+    "@snyk/ruby-semver" "^3.0.0"
     "@types/js-yaml" "^3.12.1"
     js-yaml "^3.13.1"
     source-map-support "^0.5.7"
@@ -1936,30 +1946,6 @@
   integrity sha512-ga4YTRjJUuP0Ufr+t1IucwVjEFAv66JSBB/zVHP2zy/jmfA3l3ZjlGQSjsRC6Me9P2Z0esQ83AYNZvmIf9pq2w==
   dependencies:
     "@snyk/lodash" "^4.17.15-patch"
-
-"@snyk/dep-graph@1.18.3":
-  version "1.18.3"
-  resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.18.3.tgz#7bf675f694ecbc329f67cca6456ae67f3f45f516"
-  integrity sha512-7qWRTIJdZuc5VzDjdV2+03AHElyAZmhq7eV9BRu+jqrYjo9ohWBGEZgYslrTdvfqfJ8rkdrG3j0/0Aa25IxJcg==
-  dependencies:
-    "@snyk/graphlib" "2.1.9-patch"
-    "@snyk/lodash" "4.17.15-patch"
-    object-hash "^2.0.3"
-    semver "^7.3.2"
-    source-map-support "^0.5.19"
-    tslib "^1.11.1"
-
-"@snyk/dep-graph@1.18.4":
-  version "1.18.4"
-  resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.18.4.tgz#4dfb1681d56090ca1f04a3bcd6593cbb8bf1a576"
-  integrity sha512-SePWsDyD7qrLxFifIieEl4GqyOODfOnP0hmUweTG5YcMroAV5nARGAUcjxREGzbXMcUpPfZhAaqFjYgzUDH8dQ==
-  dependencies:
-    "@snyk/graphlib" "2.1.9-patch"
-    "@snyk/lodash" "4.17.15-patch"
-    object-hash "^2.0.3"
-    semver "^7.3.2"
-    source-map-support "^0.5.19"
-    tslib "^1.11.1"
 
 "@snyk/dep-graph@1.19.0":
   version "1.19.0"
@@ -1973,7 +1959,7 @@
     source-map-support "^0.5.19"
     tslib "^2.0.0"
 
-"@snyk/dep-graph@^1.17.0", "@snyk/dep-graph@^1.18.2":
+"@snyk/dep-graph@1.19.3", "@snyk/dep-graph@^1.17.0", "@snyk/dep-graph@^1.19.0":
   version "1.19.3"
   resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.19.3.tgz#f20521baf060f83f052fd6b55fad8b377833418d"
   integrity sha512-WJLUFKBokoFK5imi0t8Dkyj+uqtS/5Ziuf4oE/OOFX30UqP1ffMDkv9/3sqBJQVQ9FjdgsX3Cm8JZMtMlYRc6w==
@@ -1984,6 +1970,15 @@
     semver "^6.0.0"
     source-map-support "^0.5.19"
     tslib "^1.13.0"
+
+"@snyk/docker-registry-v2-client@^1.13.5":
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/@snyk/docker-registry-v2-client/-/docker-registry-v2-client-1.13.5.tgz#8d862f0c53d4a9a25db09cd48b4cd44aa8e385c9"
+  integrity sha512-lgJiC071abCpFVLp47OnykU8MMrhdQe386Wt6QaDmjI0s2DQn/S58NfdLrPU7s6l4zoGT7UwRW9+7paozRgFTA==
+  dependencies:
+    needle "^2.5.0"
+    parse-link-header "^1.0.1"
+    tslib "^1.10.0"
 
 "@snyk/gemfile@1.2.0":
   version "1.2.0"
@@ -2038,10 +2033,10 @@
     strip-ansi "^5.0.0"
     through "^2.3.6"
 
-"@snyk/java-call-graph-builder@1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@snyk/java-call-graph-builder/-/java-call-graph-builder-1.10.0.tgz#34a28e10e9330f89377328851fe515e9ff23c7c3"
-  integrity sha512-x3vKElHJRsPjlMBRACeD6kHtki54ffahYeAm4ny5epVpxm16/OT6f6AjNjPuX8DbxcauaD7wqirtc62OPH3YqA==
+"@snyk/java-call-graph-builder@1.13.1":
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/@snyk/java-call-graph-builder/-/java-call-graph-builder-1.13.1.tgz#641d0f929baa95cd30f8e16f938b4d21499a1e9b"
+  integrity sha512-oOCSIyOMplV73a1agcXKXlFYQftK5esUUaFRTf90GOxQwKy8R9tZtKdP+CdutlgvjRP286DQ+7GlvKYsGGZbWg==
   dependencies:
     "@snyk/graphlib" "2.1.9-patch"
     ci-info "^2.0.0"
@@ -2074,25 +2069,36 @@
   dependencies:
     "@snyk/lodash" "4.17.15-patch"
 
-"@snyk/ruby-semver@^2.0.4":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@snyk/ruby-semver/-/ruby-semver-2.2.2.tgz#69efa5fc3a884ccc7f6a053c37a25b616ef7ce8b"
-  integrity sha512-zhWqr31fwU+kwh12X6LTWNMWp7QqpO6Z4qTqh/ItmCj/ImN1wO0Rv6AE1RafEbiAmTxG6kguCW3a9jzwLSWuBQ==
+"@snyk/ruby-semver@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@snyk/ruby-semver/-/ruby-semver-3.0.0.tgz#592e648343a88eccb7d787a97d3ad6c9df1dd61f"
+  integrity sha512-GoSRcwNuJ/mK3Q+tqelRJlylPh8K3RZRWh3ZpkOKm1gQPdG+z0wt+LipSIHxGR8yBDl5bQjwTrPLkL49/N1V6Q==
   dependencies:
     lodash.escaperegexp "^4.1.0"
     lodash.flatten "^4.4.0"
     lodash.uniq "^4.5.0"
+    tslib "^1.13.0"
 
-"@snyk/snyk-cocoapods-plugin@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@snyk/snyk-cocoapods-plugin/-/snyk-cocoapods-plugin-2.3.0.tgz#e228f9eb42c94ef7309d98471768838f30e3274a"
-  integrity sha512-4V1xJMqsK6J3jHu9UufKySorzA8O1vNLRIK1JgJf5KcXQCP44SJI5dk9Xr9iFGXXtGo8iI9gmokQcHlGpkPSJg==
+"@snyk/snyk-cocoapods-plugin@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@snyk/snyk-cocoapods-plugin/-/snyk-cocoapods-plugin-2.5.0.tgz#8dedb9d3165e5c8cd72ab13fdb49397083a15866"
+  integrity sha512-arK4VHzNh/D9vCFQFeAiSP+rMRXwLbzaRoIKucodf8Q/3KftIo/byeDmoc2Cc7awR1HPo5E391bwBNH5ra8UqA==
   dependencies:
-    "@snyk/cli-interface" "1.5.0"
-    "@snyk/cocoapods-lockfile-parser" "3.4.0"
-    "@snyk/dep-graph" "^1.18.2"
+    "@snyk/cli-interface" "2.6.1"
+    "@snyk/cocoapods-lockfile-parser" "3.5.1"
+    "@snyk/dep-graph" "^1.19.0"
     source-map-support "^0.5.7"
     tslib "^2.0.0"
+
+"@snyk/snyk-docker-pull@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@snyk/snyk-docker-pull/-/snyk-docker-pull-3.2.0.tgz#07c47b8be2d899d51d720099a73a0d89effe5d99"
+  integrity sha512-uWKtjh29I/d0mfmfBN7w6RwwNBQxQVKrauF5ND/gqb0PVsKV22GIpkI+viWjI7KNKso6/B0tMmsv7TX2tsNcLQ==
+  dependencies:
+    "@snyk/docker-registry-v2-client" "^1.13.5"
+    child-process "^1.0.2"
+    tar-stream "^2.1.2"
+    tmp "^0.1.0"
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -2773,25 +2779,26 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yarnpkg/core@^2.0.0-rc.26":
-  version "2.0.0-rc.30"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/core/-/core-2.0.0-rc.30.tgz#fd304711299630c8eee791081e56eeb1e0411fd2"
-  integrity sha512-EMtSAi10ObT2d12YzT6bHyxEZ2p3CYgTtStQ5sZmTD4+iYKoOCBQX0z21PjWEzjeUnUCJnqZ/GAORIVkAUF0Fw==
+"@yarnpkg/core@^2.0.0-rc.29":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/core/-/core-2.1.1.tgz#637786eb2acd09b48db7af59f2287934a0a5afd7"
+  integrity sha512-qeBxz8nHjKAbGTP2ZcXBnXGfM7+cN0A73mIai/24uru1ayvCIgfjWL1uIj/MM+m+K5lJX0Dcn94ZBHWits9JWQ==
   dependencies:
-    "@yarnpkg/fslib" "^2.0.0-rc.22"
-    "@yarnpkg/json-proxy" "^2.0.0-rc.9"
-    "@yarnpkg/libzip" "^2.0.0-rc.13"
-    "@yarnpkg/parsers" "^2.0.0-rc.13"
-    "@yarnpkg/pnp" "^2.0.0-rc.23"
-    "@yarnpkg/shell" "^2.0.0-rc.13"
+    "@arcanis/slice-ansi" "^1.0.2"
+    "@yarnpkg/fslib" "^2.1.0"
+    "@yarnpkg/json-proxy" "^2.1.0"
+    "@yarnpkg/libzip" "^2.1.0"
+    "@yarnpkg/parsers" "^2.1.0"
+    "@yarnpkg/pnp" "^2.1.0"
+    "@yarnpkg/shell" "^2.1.0"
     camelcase "^5.3.1"
     chalk "^3.0.0"
-    clipanion "^2.4.1"
+    ci-info "^2.0.0"
+    clipanion "^2.4.2"
     cross-spawn "7.0.3"
     diff "^4.0.1"
     globby "^10.0.1"
     got "^11.1.3"
-    is-ci "^2.0.0"
     json-file-plus "^3.3.1"
     logic-solver "^2.0.1"
     micromatch "^4.0.2"
@@ -2805,26 +2812,26 @@
     tslib "^1.13.0"
     tunnel "^0.0.6"
 
-"@yarnpkg/fslib@^2.0.0-rc.22":
-  version "2.0.0-rc.22"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/fslib/-/fslib-2.0.0-rc.22.tgz#517650b9fa0ab1463087f592104e15e1d60b3ea7"
-  integrity sha512-O6sF4ceVtY7oXcoL98qb9/Xj7bzZBYDmMLAWvbS/85atB+3//l47hfelQuvMa/p4lt1s+ZLjGehxPAbTmcGbSA==
+"@yarnpkg/fslib@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/fslib/-/fslib-2.1.0.tgz#c7039ec369a8fde06932cbddb3d3e473d789c458"
+  integrity sha512-E+f8w5yQZnTf1soyTWy7qdf+GmHsY+A0yEN4Di44/Txk6XRIMruyc1ShDi93mOI6ilnXxD87rNms18zJ8WnspA==
   dependencies:
-    "@yarnpkg/libzip" "^2.0.0-rc.13"
+    "@yarnpkg/libzip" "^2.1.0"
     tslib "^1.13.0"
 
-"@yarnpkg/json-proxy@^2.0.0-rc.9":
-  version "2.0.0-rc.9"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/json-proxy/-/json-proxy-2.0.0-rc.9.tgz#c4c2a2f0bdaa4f99912dbda07d71d6abd6a25eb7"
-  integrity sha512-ndaNE2DtoSZDMD/mDNYWIMKV+bJsrUzFeqDlFrHN7A1b3XXgsxD3B/HxL5O5eZYttVNHj+tG0MjYCqmC8s0KdA==
+"@yarnpkg/json-proxy@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/json-proxy/-/json-proxy-2.1.0.tgz#362a161678cd7dda74b47b4fc848a2f1730d16cd"
+  integrity sha512-rOgCg2DkyviLgr80mUMTt9vzdf5RGOujQB26yPiXjlz4WNePLBshKlTNG9rKSoKQSOYEQcw6cUmosfOKDatrCw==
   dependencies:
-    "@yarnpkg/fslib" "^2.0.0-rc.22"
+    "@yarnpkg/fslib" "^2.1.0"
     tslib "^1.13.0"
 
-"@yarnpkg/libzip@^2.0.0-rc.13":
-  version "2.0.0-rc.13"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/libzip/-/libzip-2.0.0-rc.13.tgz#e4e936a122b87e9be4b60805a32734b458a39421"
-  integrity sha512-DKAG6nhFHepKzoxsKSrNUiM4LWelx/APUU0YE/x+PRXHEcuGjL7Z4t/deRX1FxcICFZyshIQ4kZUNaTt3pXHNg==
+"@yarnpkg/libzip@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/libzip/-/libzip-2.1.0.tgz#f45d861a853555a063f90a85142199e7cf181b71"
+  integrity sha512-39c7KuSWcYUqVxlBLZwfqdD/D6lS+jplNVWd6uAnk8EpnacaYGJRegvkqWyfw5c8KHukNMeEGF5JHrXPZYBM0w==
   dependencies:
     "@types/emscripten" "^1.38.0"
     tslib "^1.13.0"
@@ -2834,31 +2841,31 @@
   resolved "https://registry.yarnpkg.com/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
   integrity sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==
 
-"@yarnpkg/parsers@^2.0.0-rc.13":
-  version "2.0.0-rc.13"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/parsers/-/parsers-2.0.0-rc.13.tgz#b1e7d5a2171362a83a2f2b4cefcefd988e7c6518"
-  integrity sha512-R6dJTiy6Bx33uH3kDXJ3MfjG6vWBman+L+3Ycdz5DQeTRyD+ABUtssgsM2gKnJ8KgOOV0BWoX5cpS5yWCa/tbg==
+"@yarnpkg/parsers@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/parsers/-/parsers-2.1.0.tgz#52615acdb54803d6404d6fb8f15fa124936bff1f"
+  integrity sha512-75OYQ6PMs1C3zm+W+T1xhLyVDX78zXQGEVHpWd4o/QwpAbhneB3/5FXVGRzI3gjPPWWSb/pKOPB1S6p0xmQD2Q==
   dependencies:
     js-yaml "^3.10.0"
     tslib "^1.13.0"
 
-"@yarnpkg/pnp@^2.0.0-rc.23":
-  version "2.0.0-rc.23"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/pnp/-/pnp-2.0.0-rc.23.tgz#645a93c5dae4a78c71a9a09877daf4497e523f18"
-  integrity sha512-ROBvzkQ+7nGq4GWaPgKS7S7p2OFmChnoPy/I6wsBfCo2KAWyEW+xsSLrx9Tr4bzm4XVg44gAWLmx6ncR2V4fcw==
+"@yarnpkg/pnp@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/pnp/-/pnp-2.1.0.tgz#0eba881ccd4675594198e7f1e327fe11a845291b"
+  integrity sha512-b8NlB71EFifv1jDX47nFaRXrykROxHcS7YuGb2dQ+Gp9gqJ0thIaZ3yB9+qWF8acdWtNcMpjCug4xkfAAR5Odw==
   dependencies:
     "@types/node" "^13.7.0"
-    "@yarnpkg/fslib" "^2.0.0-rc.22"
+    "@yarnpkg/fslib" "^2.1.0"
     tslib "^1.13.0"
 
-"@yarnpkg/shell@^2.0.0-rc.13":
-  version "2.0.0-rc.13"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/shell/-/shell-2.0.0-rc.13.tgz#61312707d2a8f3c73692ac674c2937c9d4c3cbfe"
-  integrity sha512-W00zIxLDVOH5QgGWT61FhD80nW2Doy9Mc+vTwodlv1Suh/AqUnmtkn5k4O+JV+Ky6Qhn+NQsHdq/OV8Hd0CzQA==
+"@yarnpkg/shell@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/shell/-/shell-2.1.0.tgz#e0855e59d4df663d8fe9044950a7fd390110cd4b"
+  integrity sha512-9i9ZWqeKHGV0DOfdxTVq5zl73Li8Fg947v57uLBEaytNF+HywkDfouNkg/6HfgBrpI0WH8OJ9Pz/uDaE5cpctw==
   dependencies:
-    "@yarnpkg/fslib" "^2.0.0-rc.22"
-    "@yarnpkg/parsers" "^2.0.0-rc.13"
-    clipanion "^2.4.1"
+    "@yarnpkg/fslib" "^2.1.0"
+    "@yarnpkg/parsers" "^2.1.0"
+    clipanion "^2.4.2"
     cross-spawn "7.0.3"
     fast-glob "^3.2.2"
     stream-buffers "^3.0.2"
@@ -4466,6 +4473,11 @@ cheerio@^1.0.0-rc.3:
     lodash "^4.15.0"
     parse5 "^3.0.1"
 
+child-process@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/child-process/-/child-process-1.0.2.tgz#98974dc7ed1ee4c6229f8e305fa7313a6885a7f2"
+  integrity sha1-mJdNx+0e5MYin44wX6cxOmiFp/I=
+
 chokidar@3.4.0, chokidar@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
@@ -4612,10 +4624,10 @@ cli-width@^2.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.1.tgz#b0433d0b4e9c847ef18868a4ef16fd5fc8271c48"
   integrity sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw==
 
-clipanion@^2.4.1:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/clipanion/-/clipanion-2.4.2.tgz#2dfd52f7eb3cd472752c35d868dd4eb47cb98145"
-  integrity sha512-kBCYtQKI4/R/zjierdwoDAsNUSvoh4pX2tseYxgLYQcKIpdPsHZrFWiQOfbe2Scd/btsqJEc4q6g55q0p5DZAw==
+clipanion@^2.4.2:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/clipanion/-/clipanion-2.4.4.tgz#d70244c6f60feb3f4cbd509d2fcbe829fc619061"
+  integrity sha512-KjyCBz8xplftHjIK/nOqq/9b3hPlXbAAo/AxoITrO4yySpQ6a9QSJDAfOx9PfcRUHteeqbdNxZKSPfeFqQ7plg==
 
 clipboardy@^2.3.0:
   version "2.3.0"
@@ -8600,6 +8612,23 @@ got@10.7.0:
     to-readable-stream "^2.0.0"
     type-fest "^0.10.0"
 
+got@11.4.0:
+  version "11.4.0"
+  resolved "https://registry.yarnpkg.com/got/-/got-11.4.0.tgz#1f0910310572af4efcc6890e1dacd7affb710b39"
+  integrity sha512-XysJZuZNVpaQ37Oo2LV90MIkPeYITehyy1A0QzO1JwOXm8EWuEf9eeGk2XuHePvLEGnm9AVOI37bHwD6KYyBtg==
+  dependencies:
+    "@sindresorhus/is" "^2.1.1"
+    "@szmarczak/http-timer" "^4.0.5"
+    "@types/cacheable-request" "^6.0.1"
+    "@types/responselike" "^1.0.0"
+    cacheable-lookup "^5.0.3"
+    cacheable-request "^7.0.1"
+    decompress-response "^6.0.0"
+    http2-wrapper "^1.0.0-beta.4.5"
+    lowercase-keys "^2.0.0"
+    p-cancelable "^2.0.0"
+    responselike "^2.0.0"
+
 got@8.3.2, got@^8.3.1, got@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/got/-/got-8.3.2.tgz#1d23f64390e97f776cac52e5b936e5f514d2e937"
@@ -8687,6 +8716,11 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
   integrity sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=
+
+grapheme-splitter@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
+  integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
 graphql-compose@^6.3.8:
   version "6.3.8"
@@ -11344,6 +11378,11 @@ lodash.filter@^4.6.0:
   resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
   integrity sha1-ZosdSYFgOuHMWm+nYBQ+SAtMSs4=
 
+lodash.flatmap@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.flatmap/-/lodash.flatmap-4.5.0.tgz#ef8cbf408f6e48268663345305c6acc0b778702e"
+  integrity sha1-74y/QI9uSCaGYzRTBcaswLd4cC4=
+
 lodash.flatten@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
@@ -13243,6 +13282,13 @@ parse-json@^5.0.0:
     error-ex "^1.3.1"
     json-parse-better-errors "^1.0.1"
     lines-and-columns "^1.1.6"
+
+parse-link-header@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/parse-link-header/-/parse-link-header-1.0.1.tgz#bedfe0d2118aeb84be75e7b025419ec8a61140a7"
+  integrity sha1-vt/g0hGK64S+deewJUGeyKYRQKc=
+  dependencies:
+    xtend "~4.0.1"
 
 parse-passwd@^1.0.0:
   version "1.0.0"
@@ -15687,21 +15733,32 @@ snyk-config@^3.0.0:
     lodash.merge "^4.6.2"
     nconf "^0.10.0"
 
-snyk-docker-plugin@3.12.3:
-  version "3.12.3"
-  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-3.12.3.tgz#3b451139ac3b59c896d3c2703113da7c975f650f"
-  integrity sha512-Ysv7ZDvXFt6K11f1m6wJaqYS3yM7c8YhzOIPoEmrYZW+4tL+Al5DiyKaAQBudbfYEA7xa6S6qGqE3QRitHZ5nQ==
+snyk-cpp-plugin@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/snyk-cpp-plugin/-/snyk-cpp-plugin-1.2.0.tgz#1e554eece61d40288bbc745f040c2ca54ec7e08a"
+  integrity sha512-zc2h0IAAjcxJwxWp4rauliwEUXZahmC3WoCgjTmRi36UhzwlxWJf8QpIeSOKJnc3t0NhlKzUc1YFkaQGJ2dXVQ==
+  dependencies:
+    tslib "^2.0.0"
+
+snyk-docker-plugin@3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-3.17.0.tgz#9f48f9d4455b15dc15fdfc37137c567e9c9e24e2"
+  integrity sha512-Pq0xr/NQQUss3bLb0rTfVtsot/9ID6TzZCWlF9nMrj9JFrJRrJPQxi/KO/uqfX0Nbwz4VysXDzwdWNtrxpaabg==
   dependencies:
     "@snyk/rpm-parser" "^2.0.0"
+    "@snyk/snyk-docker-pull" "^3.2.0"
     debug "^4.1.1"
     docker-modem "2.1.3"
     dockerfile-ast "0.0.19"
-    event-loop-spinner "^1.1.0"
+    event-loop-spinner "^2.0.0"
     gunzip-maybe "^1.4.2"
+    mkdirp "^1.0.4"
     semver "^6.1.0"
     snyk-nodejs-lockfile-parser "1.22.0"
     tar-stream "^2.1.0"
+    tmp "^0.2.1"
     tslib "^1"
+    uuid "^8.2.0"
 
 snyk-go-parser@1.4.1:
   version "1.4.1"
@@ -15711,15 +15768,16 @@ snyk-go-parser@1.4.1:
     toml "^3.0.0"
     tslib "^1.10.0"
 
-snyk-go-plugin@1.14.2:
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.14.2.tgz#03adb93ac28e21f9da03b444d0e06ee4b71c55ad"
-  integrity sha512-r/uaM3gk/RF7m/VGYswxlnA6I+kMgK3eVPsPyf7400BhqF8noh8K7v10CEg67mHA4JM0l7dZASqejr/5kKw9ZQ==
+snyk-go-plugin@1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.16.0.tgz#4688e45e59d1673256f645fccca2fa6a7ab0f55a"
+  integrity sha512-XNGHEFyP+pCzcqmXnj5T/1Oy6AZzm2WkTSuUpohWQ/09ecMRCCv2yrr/kwMQemrKN4+7CoJS/9xfm3GnNlzVHA==
   dependencies:
+    "@snyk/dep-graph" "1.19.3"
     "@snyk/graphlib" "2.1.9-patch"
     debug "^4.1.1"
     snyk-go-parser "1.4.1"
-    tmp "0.1.0"
+    tmp "0.2.0"
     tslib "^1.10.0"
 
 snyk-gradle-plugin@3.5.1:
@@ -15761,13 +15819,13 @@ snyk-module@^2.0.2:
     debug "^3.1.0"
     hosted-git-info "^2.7.1"
 
-snyk-mvn-plugin@2.17.1:
-  version "2.17.1"
-  resolved "https://registry.yarnpkg.com/snyk-mvn-plugin/-/snyk-mvn-plugin-2.17.1.tgz#b156709905036ed808b71bd5e682d99a681c153c"
-  integrity sha512-U7ZKrKVnUW2gcyYIzvc0w9nRYh4NXv+wShTIcs++ARCAJOG9A4nxh+ZRmINQ7Sy7EB2qLIRwN4Ssr17+y2mhuA==
+snyk-mvn-plugin@2.19.1:
+  version "2.19.1"
+  resolved "https://registry.yarnpkg.com/snyk-mvn-plugin/-/snyk-mvn-plugin-2.19.1.tgz#00b68a459a4da9e39b0d8c416ae05496b3b03ee3"
+  integrity sha512-VXYJSdhUmOQAyxdsv5frAKbi3UOcHPabWEQxQ9wxhVBEEmx2lP5ajv1a+ntxwWwL7u3jdc+rnCIKHpLlQJ5nyw==
   dependencies:
-    "@snyk/cli-interface" "2.5.0"
-    "@snyk/java-call-graph-builder" "1.10.0"
+    "@snyk/cli-interface" "2.8.1"
+    "@snyk/java-call-graph-builder" "1.13.1"
     debug "^4.1.1"
     needle "^2.5.0"
     tmp "^0.1.0"
@@ -15788,16 +15846,18 @@ snyk-nodejs-lockfile-parser@1.22.0:
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-snyk-nodejs-lockfile-parser@1.25.0:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.25.0.tgz#f11717987fc319fb57b6862646299bc63397be23"
-  integrity sha512-eikMzCCxwViIh885TMRgr5X1DjDYJI7eK+F9bqtpL/UuPealpnefUoH/LGicPtUSRknMcZvI4nzM0QSNMJ3+5w==
+snyk-nodejs-lockfile-parser@1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.27.0.tgz#cde4d052ac429c5fa2844c981578f5ff5dea3022"
+  integrity sha512-s1yEqEC8uxELzEXqXmnWKpoOIn0rM8StMjuy0X5U+FmxGvO3jRtFDU5hcVw9cAULLfrQYBHRowrO/5FaR79fxA==
   dependencies:
     "@snyk/graphlib" "2.1.9-patch"
-    "@yarnpkg/core" "^2.0.0-rc.26"
+    "@yarnpkg/core" "^2.0.0-rc.29"
     "@yarnpkg/lockfile" "^1.1.0"
     event-loop-spinner "^2.0.0"
+    got "11.4.0"
     lodash.clonedeep "^4.5.0"
+    lodash.flatmap "^4.5.0"
     lodash.isempty "^4.4.0"
     lodash.set "^4.3.2"
     lodash.topairs "^4.3.0"
@@ -15919,19 +15979,19 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.359.0:
-  version "1.359.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.359.0.tgz#88a936e7b898ad1def4bba2dfe30dc53a760c4d8"
-  integrity sha512-FkEtEUbuENZyhscXybO9Dej66P7sKwmEOnVZCCXRT7GDGclsTMaLUfedGmj1xvYic4fj5MRqBPS+khS7yOErcg==
+snyk@^1.382.0:
+  version "1.382.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.382.0.tgz#5625931dd066fca406f2d35663eb7280d57565bd"
+  integrity sha512-lZsuJ6HUVNO7ZYDQm6B2gPdcXiRtd8bCQUre8xYMZu1VakKwrCCNsJbxo91z3gK5aYqempjmTe7+qH2CksXZ+Q==
   dependencies:
-    "@snyk/cli-interface" "2.8.0"
-    "@snyk/dep-graph" "1.18.3"
+    "@snyk/cli-interface" "2.8.1"
+    "@snyk/dep-graph" "1.19.3"
     "@snyk/gemfile" "1.2.0"
     "@snyk/graphlib" "2.1.9-patch"
     "@snyk/inquirer" "6.2.2-patch"
     "@snyk/lodash" "^4.17.15-patch"
     "@snyk/ruby-semver" "2.2.0"
-    "@snyk/snyk-cocoapods-plugin" "2.3.0"
+    "@snyk/snyk-cocoapods-plugin" "2.5.0"
     abbrev "^1.1.1"
     ansi-escapes "3.2.0"
     chalk "^2.4.2"
@@ -15947,12 +16007,13 @@ snyk@^1.359.0:
     proxy-from-env "^1.0.0"
     semver "^6.0.0"
     snyk-config "3.1.0"
-    snyk-docker-plugin "3.12.3"
-    snyk-go-plugin "1.14.2"
+    snyk-cpp-plugin "1.2.0"
+    snyk-docker-plugin "3.17.0"
+    snyk-go-plugin "1.16.0"
     snyk-gradle-plugin "3.5.1"
     snyk-module "3.1.0"
-    snyk-mvn-plugin "2.17.1"
-    snyk-nodejs-lockfile-parser "1.25.0"
+    snyk-mvn-plugin "2.19.1"
+    snyk-nodejs-lockfile-parser "1.27.0"
     snyk-nuget-plugin "1.18.1"
     snyk-php-plugin "1.9.0"
     snyk-policy "1.14.1"
@@ -16882,6 +16943,17 @@ tar-stream@^2.0.0, tar-stream@^2.1.0:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
+tar-stream@^2.1.2:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/tar-stream/-/tar-stream-2.1.3.tgz#1e2022559221b7866161660f118255e20fa79e41"
+  integrity sha512-Z9yri56Dih8IaK8gncVPx4Wqt86NDmQTSh49XLZgjWpGZL9GK9HKParS2scqHCC4w6X9Gh2jwaU45V47XTKwVA==
+  dependencies:
+    bl "^4.0.1"
+    end-of-stream "^1.4.1"
+    fs-constants "^1.0.0"
+    inherits "^2.0.3"
+    readable-stream "^3.1.1"
+
 tar@^4, tar@^4.4.6:
   version "4.4.13"
   resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.13.tgz#43b364bc52888d555298637b10d60790254ab525"
@@ -17075,6 +17147,13 @@ tmp@0.1.0, tmp@^0.1.0:
   integrity sha512-J7Z2K08jbGcdA1kkQpJSqLF6T0tdQqpR2pnSUXsIchbPdTI9v3e85cLW0d6WDhwuAleOV71j2xWs8qMPfK7nKw==
   dependencies:
     rimraf "^2.6.3"
+
+tmp@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.2.0.tgz#fdc6a78d2a77bf7e426ca476d8a4f82eefcf648c"
+  integrity sha512-spsb5g6EiPmteS5TcOAECU3rltCMDMp4VMU2Sb0+WttN4qGobEkMAd+dkr1cubscN08JGNDX765dPbGImbG7MQ==
+  dependencies:
+    rimraf "^3.0.0"
 
 tmp@0.2.1, tmp@^0.2.1:
   version "0.2.1"
@@ -17272,7 +17351,7 @@ tslib@1.11.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
-tslib@^1, tslib@^1.10.0, tslib@^1.11.1, tslib@^1.11.2, tslib@^1.13.0, tslib@^1.6.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
+tslib@^1, tslib@^1.10.0, tslib@^1.11.2, tslib@^1.13.0, tslib@^1.6.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
@@ -17831,6 +17910,11 @@ uuid@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
   integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
+
+uuid@^8.2.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
 v8-compile-cache@^1.1.2:
   version "1.1.2"
