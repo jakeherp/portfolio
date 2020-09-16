@@ -20,7 +20,7 @@
     "gatsby-plugin-manifest": "^2.4.16",
     "gatsby-plugin-module-resolver": "^1.0.3",
     "gatsby-plugin-netlify": "^2.3.9",
-    "gatsby-plugin-nprogress": "^2.3.8",
+    "gatsby-plugin-nprogress": "^2.3.11",
     "gatsby-plugin-offline": "^3.2.15",
     "gatsby-plugin-react-helmet": "^3.3.8",
     "gatsby-plugin-react-svg": "^3.0.0",
