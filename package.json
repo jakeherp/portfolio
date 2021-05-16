@@ -33,7 +33,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.3.20",
     "gatsby-source-filesystem": "^2.3.16",
-    "gatsby-transformer-sharp": "^2.5.9",
+    "gatsby-transformer-sharp": "^2.12.1",
     "local-storage-fallback": "^4.1.1",
     "moment": "2.27.0",
     "prop-types": "^15.7.2",
