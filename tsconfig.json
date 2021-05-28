@@ -1,29 +1,43 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
-    "lib": ["dom", "es2015", "es2017"],
-    "jsx": "react",
-    "sourceMap": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "allowJs": true,
+    "skipLibCheck": true,
     "strict": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
     "paths": {
+      // Components
       "Atoms/*": ["./src/components/atoms/*"],
       "Molecules/*": ["./src/components/molecules/*"],
       "Organisms/*": ["./src/components/organisms/*"],
+      "Species/*": ["./src/components/species/*"],
       "Templates/*": ["./src/components/templates/*"],
-      "Assets/*": ["./src/assets/*"],
+      // Other folders
+      "@Types": ["./@types/"],
+      "@Types/*": ["./@types/*"],
+      "Config": ["./src/config/"],
+      "Config/*": ["./src/config/*"],
       "Context/*": ["./src/context/*"],
-      "Data/*": ["./src/data/*"],
-      "Helpers/*": ["./src/helpers/*"],
-      "Hooks/*": ["./src/hooks/*"]
-    }
+      "Hooks": ["./src/hooks/"],
+      "Hooks/*": ["./src/hooks/*"],
+      "MockData": ["./src/mocks"],
+      "MockData/*": ["./src/mocks/*"],
+      "Pages/*": ["./src/pages*"],
+      "Public/*": ["./public/*"],
+      "Redux/*": ["./src/redux/*"],
+      "Storybook/*": [".storybook/*"],
+      "Utils/*": ["./src/utils/*"]
+    },
+    "isolatedModules": true
   },
-  "include": ["./src/**/*", "custom.d.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules"]
 }

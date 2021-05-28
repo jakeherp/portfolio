@@ -1,52 +1,34 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<h1 align="center">
-  Jacob Herper Portfolio
-</h1>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<p align="center">
-  <a href="https://herper.io/">
-    <img src="https://res.cloudinary.com/jacobherper/image/upload/v1588145287/herper-io-website.gif" alt="Portfolio Site Screenshot" width="800" />
-  </a>
-</p>
+## Getting Started
 
-This is the repository for my personal portfolio site [herper.io](https://herper.io/) built with [GatsbyJS](https://www.gatsbyjs.org/), TypeScript, Styled-Components and Contentful.
-This project is a constant work in progress, so if you find any bugs, typos or other errors, please feel free to open an _issue_ or a _pull request_. This project is open source, so please feel free to fork and adapt for your own projects (credit would be appreciated).
+First, run the development server:
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/240ddc2a-35a8-412c-8dfb-e87b3c128950/deploy-status)](https://app.netlify.com/sites/herper-io/deploys)
-[![Build Status](https://travis-ci.com/jakeherp/portfolio.svg?branch=master)](https://travis-ci.com/jakeherp/portfolio)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/jakeherp/portfolio)](https://github.com/jakeherp/portfolio/releases)
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Getting this project up and running
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1.  **Fork or Clone**
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-    Fork or clone this project from Github to get your own copy of it.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-1.  **Add Contentful Credentials in environment files**
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-    This project is based on Contentful, add your own credentials in `.env.development` and `.env.production` files or remove Contentful dependency to use another data source instead.
+## Learn More
 
-1.  **Start developing.**
+To learn more about Next.js, take a look at the following resources:
 
-    Navigate into your new site’s directory and start it up.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-    ```sh
-    cd portfolio/
-    gatsby develop
-    ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-1.  **Open the source code and start editing!**
+## Deploy on Vercel
 
-    Your site is now running at `http://localhost:8000`!
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `portfolio` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on their website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to their documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -1,0 +1,9 @@
+---
+to: <%= directoryPath %>/styles.ts
+unless_exists: true
+---
+import styled from "styled-components"
+
+const Styled<%= className %> = styled.<%= elementName %>``;
+
+export { Styled<%= className %> };

@@ -1,0 +1,17 @@
+---
+to: <%= directoryPath %>/<%= filename %>.tsx
+unless_exists: true
+---
+import { FC } from 'react';
+import { Styled<%= className %> } from './styles';
+
+export interface <%= className %>Props {}
+
+const <%= className %>: FC<<%= className %>Props> = () => {
+	return (
+		<Styled<%= className %>>
+		</Styled<%= className %>>
+	);
+};
+
+export { <%= className %> };

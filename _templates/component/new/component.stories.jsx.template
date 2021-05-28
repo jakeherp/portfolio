@@ -1,0 +1,15 @@
+---
+to: "<%= directoryPath + '/' + filename + '.stories.tsx' %>"
+unless_exists: true
+---
+import { <%= className %>, <%= className %>Props } from './<%= filename %>';
+
+export default {
+	title: '<%= atomicType %>s/<%= className %>',
+	component: <%= className %>,
+};
+
+export const <%= className %>Story = (args: <%= className %>Props) => <<%= className %> {...args} />;
+
+<%= className %>Story.storyName = '<%= className %>';
+<%= className %>Story.args = {};
