@@ -9,7 +9,14 @@ function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main>Hello, World!</main>
+			<h1>Hello, World!</h1>
+			<p>
+				Pariatur cillum labore elit in ad aute laborum ipsum enim irure. Cillum
+				ex pariatur anim nisi duis. Id velit tempor cupidatat est aute ex dolor
+				ad. Reprehenderit incididunt consectetur eiusmod aliqua exercitation
+				nisi ea ut aliquip aliquip tempor. Enim irure elit mollit commodo sit
+				Lorem do.
+			</p>
 		</>
 	);
 }
