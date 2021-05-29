@@ -12,6 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const theme = useSelector(getTheme);
 	const dispatch = useDispatch();
 
+	const handleEventListener = (e: MediaQueryListEvent) =>
+		e.matches ? dispatch(setTheme('dark')) : dispatch(setTheme('light'));
+
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			dispatch(setTheme('dark'));
@@ -19,9 +22,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 		window
 			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', (e) => {
-				e.matches ? dispatch(setTheme('dark')) : dispatch(setTheme('light'));
-			});
+			.addEventListener('change', handleEventListener);
+
+		return () =>
+			window
+				.matchMedia('(prefers-color-scheme: dark)')
+				.removeEventListener('change', handleEventListener);
 	}, []);
 
 	return (
