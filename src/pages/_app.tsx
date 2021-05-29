@@ -1,25 +1,26 @@
 import type { AppProps } from 'next/app';
 import { GlobalStyles } from 'Styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { lightTheme, darkTheme } from 'Styles/themes';
+import { storeWrapper } from 'Redux/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { getTheme } from 'Redux/selectors';
+import { setTheme } from 'Redux/actions/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
-	const [theme, setTheme] = useState('light');
-
-	const toggleTheme = () => {
-		theme === 'light' ? setTheme('dark') : setTheme('light');
-	};
+	const theme = useSelector(getTheme);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
+			dispatch(setTheme('dark'));
 		}
 
 		window
 			.matchMedia('(prefers-color-scheme: dark)')
 			.addEventListener('change', (e) => {
-				e.matches ? setTheme('dark') : setTheme('light');
+				e.matches ? dispatch(setTheme('dark')) : dispatch(setTheme('light'));
 			});
 	}, []);
 
@@ -33,4 +34,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 	);
 }
 
-export default MyApp;
+export default storeWrapper.withRedux(MyApp);
