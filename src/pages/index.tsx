@@ -21,7 +21,11 @@ function Home() {
 				</p>
 				<p>
 					P.S. this website is open-source and available on{' '}
-					<a href="https://github.com/jakeherp/portfolio" target="_blank">
+					<a
+						href="https://github.com/jakeherp/portfolio"
+						title="Link to Github repository"
+						target="_blank"
+					>
 						Github
 					</a>
 					.

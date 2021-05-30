@@ -12,13 +12,18 @@ const ThemeToggle: FC = () => {
 	const theme = useSelector(getTheme);
 	const dispatch = useDispatch();
 
+	const lightTheme = theme === 'light';
+
 	const handleToggle = () => {
-		dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
+		dispatch(setTheme(lightTheme ? 'dark' : 'light'));
 	};
 
 	return (
-		<StyledThemeToggle onClick={handleToggle}>
-			{theme === 'light' ? <Dark /> : <Light />}
+		<StyledThemeToggle
+			onClick={handleToggle}
+			title={`Switch to ${lightTheme ? 'dark' : 'light'} theme`}
+		>
+			{lightTheme ? <Dark /> : <Light />}
 		</StyledThemeToggle>
 	);
 };
