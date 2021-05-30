@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders GITHUB correctly 1`] = `
+<div>
+  <test-file-stub />
+</div>
+`;
+
+exports[`Icon renders INSTAGRAM correctly 1`] = `
+<div>
+  <test-file-stub />
+</div>
+`;
+
+exports[`Icon renders LINKEDIN correctly 1`] = `
+<div>
+  <test-file-stub />
+</div>
+`;
+
+exports[`Icon renders TWITTER correctly 1`] = `
+<div>
+  <test-file-stub />
+</div>
+`;

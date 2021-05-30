@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeToggle renders correctly 1`] = `
+<div>
+  <button
+    class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+  >
+    <test-file-stub />
+  </button>
+</div>
+`;

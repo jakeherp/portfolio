@@ -1,4 +1,6 @@
+import { Container } from 'Atoms/Container';
 import Head from 'next/head';
+import styled from 'styled-components';
 
 function Home() {
 	return (
@@ -9,16 +11,28 @@ function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<h1>Hello, World!</h1>
-			<p>
-				Pariatur cillum labore elit in ad aute laborum ipsum enim irure. Cillum
-				ex pariatur anim nisi duis. Id velit tempor cupidatat est aute ex dolor
-				ad. Reprehenderit incididunt consectetur eiusmod aliqua exercitation
-				nisi ea ut aliquip aliquip tempor. Enim irure elit mollit commodo sit
-				Lorem do.
-			</p>
+			<Container>
+				<Headline>Hey, I'm Jacob Herper</Headline>
+				<p>
+					I am a passionate Software Engineer, specialised in front-end
+					development using React and TypeScript. As an advocate for web
+					performance and accessibility and an evangelist for the Jamstack, I
+					create amazing web applications to make the internet a better place.
+				</p>
+				<p>
+					P.S. this website is open-source and available on{' '}
+					<a href="https://github.com/jakeherp/portfolio" target="_blank">
+						Github
+					</a>
+					.
+				</p>
+			</Container>
 		</>
 	);
 }
+
+const Headline = styled.h2`
+	font-size: 3rem;
+`;
 
 export default Home;

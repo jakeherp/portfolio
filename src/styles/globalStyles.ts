@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import { brandColours } from './themes';
 
 export const GlobalStyles = createGlobalStyle`
 	html {
-		line-height: 1.15;
+		line-height: 1.5;
 		-webkit-text-size-adjust: 100%;
 		font-family: 'Basier Circle', sans-serif;
 	}
@@ -17,6 +18,10 @@ export const GlobalStyles = createGlobalStyle`
 		color: ${({ theme }) => theme.headline};
 	}
 
+	ul {
+		list-style: none;
+		padding: 0;
+	}
 
 	@font-face {
     font-family: 'Basier Circle';
@@ -77,6 +82,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	a {
 		background-color: transparent;
+		color: ${brandColours.primary};
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	abbr[title] {
 		border-bottom: none;

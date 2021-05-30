@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div>
+  <header>
+    <div
+      class="styles__StyledContainer-mepagl-0 exxZos"
+    >
+      <header
+        class="styles__Flex-sc-14e6kmf-0 iaPxwS"
+      >
+        <h1>
+          <a
+            href="/"
+          >
+            Jacob Herper
+          </a>
+        </h1>
+        <nav
+          class="styles__StyledNavigation-sc-16epmp-0"
+        >
+          <ul
+            class="styles__List-sc-16epmp-1 wwXbc"
+          >
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+              >
+                Uses
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <button
+                class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+              >
+                <test-file-stub />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </header>
+</div>
+`;

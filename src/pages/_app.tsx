@@ -7,6 +7,7 @@ import { storeWrapper } from 'Redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTheme } from 'Redux/selectors';
 import { setTheme } from 'Redux/actions/theme';
+import { Layout } from 'Templates/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const theme = useSelector(getTheme);
@@ -34,7 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
 				<GlobalStyles />
-				<Component {...pageProps} />
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
 			</ThemeProvider>
 		</>
 	);

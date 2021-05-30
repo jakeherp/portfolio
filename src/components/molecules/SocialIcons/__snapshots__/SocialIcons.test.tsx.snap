@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialIcons renders correctly 1`] = `
+<div>
+  <ul
+    class="styles__StyledSocialIcons-sc-15vq785-0 gPawva"
+  >
+    <li>
+      <a
+        href="https://github.com/jakeherp"
+        target="_blank"
+        title="Github"
+      >
+        <test-file-stub />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://twitter.com/jakeherp"
+        target="_blank"
+        title="Twitter"
+      >
+        <test-file-stub />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/jacobherper"
+        target="_blank"
+        title="LinkedIn"
+      >
+        <test-file-stub />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://instagram.com/jakeherp"
+        target="_blank"
+        title="Instagram"
+      >
+        <test-file-stub />
+      </a>
+    </li>
+  </ul>
+</div>
+`;
