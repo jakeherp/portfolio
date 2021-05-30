@@ -47,6 +47,13 @@ exports[`Header renders correctly 1`] = `
               <a
                 href="/"
               >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+              >
                 Portfolio
               </a>
             </li>

@@ -1,4 +1,5 @@
 import * as nextImage from 'next/image';
+import StyleDecorator from './decorators/globalStyles';
 
 export const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
@@ -9,6 +10,8 @@ export const parameters = {
 		},
 	},
 };
+
+export const decorators = [StyleDecorator];
 
 // Replace next/image for Storybook
 Object.defineProperty(nextImage, 'default', {

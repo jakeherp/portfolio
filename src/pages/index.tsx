@@ -1,15 +1,15 @@
 import { Container } from 'Atoms/Container';
+import { SeoHead } from 'Atoms/SeoHead';
 import Head from 'next/head';
 import styled from 'styled-components';
 
 function Home() {
 	return (
 		<>
-			<Head>
-				<title>Portfolio</title>
-				<meta name="description" content="Portfolio" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			<SeoHead
+				title="Jacob Herper - Front-End Software Engineer"
+				description="Front-End Software Engineer with a focus on JavaScript and React.js. I have more than 10 years experience working in software engineering."
+			/>
 
 			<Container>
 				<Headline>Hey, I'm Jacob Herper</Headline>

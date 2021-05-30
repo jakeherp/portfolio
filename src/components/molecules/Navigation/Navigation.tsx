@@ -24,6 +24,11 @@ const Navigation: FC = () => {
 				</li>
 				<li>
 					<Link href="/">
+						<a>Blog</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/">
 						<a>Portfolio</a>
 					</Link>
 				</li>
