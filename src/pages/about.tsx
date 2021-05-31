@@ -12,10 +12,7 @@ function Home() {
 			/>
 
 			<Container>
-				<Headline>
-					Hey, I'm
-					<wbr /> Jacob Herper <span>👋</span>
-				</Headline>
+				<Headline>About</Headline>
 				<p>
 					I am a passionate Software Engineer, specialised in front-end
 					development using React and TypeScript. As an advocate for web

@@ -16,4 +16,20 @@ const Flex = styled.div`
 	}
 `;
 
-export { Flex };
+const Desktop = styled.div`
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
+`;
+
+const Mobile = styled.div`
+	display: block;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+`;
+
+export { Desktop, Mobile, Flex };

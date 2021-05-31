@@ -3,36 +3,40 @@ import { List, StyledNavigation } from './styles';
 import Link from 'next/link';
 import { ThemeToggle } from 'Atoms/ThemeToggle';
 
-const Navigation: FC = () => {
+interface NavigationProps {
+	onClick?: () => void;
+}
+
+const Navigation: FC<NavigationProps> = ({ onClick }) => {
 	return (
 		<StyledNavigation>
 			<List>
 				<li>
 					<Link href="/">
-						<a>Home</a>
+						<a onClick={onClick}>Home</a>
 					</Link>
 				</li>
 				<li>
-					<Link href="/">
-						<a>About</a>
+					<Link href="/about">
+						<a onClick={onClick}>About</a>
 					</Link>
 				</li>
 				<li>
-					<Link href="/">
-						<a>Uses</a>
+					<Link href="/uses">
+						<a onClick={onClick}>Uses</a>
 					</Link>
 				</li>
 				<li>
-					<Link href="/">
-						<a>Blog</a>
+					<Link href="/blog">
+						<a onClick={onClick}>Blog</a>
 					</Link>
 				</li>
 				<li>
-					<Link href="/">
-						<a>Portfolio</a>
+					<Link href="/portfolio">
+						<a onClick={onClick}>Portfolio</a>
 					</Link>
 				</li>
-				<li>
+				<li className="desktop-only">
 					<ThemeToggle />
 				</li>
 			</List>

@@ -9,7 +9,7 @@ exports[`Layout renders correctly 1`] = `
       <div
         class="styles__StyledContainer-mepagl-0 exxZos"
       >
-        <header
+        <div
           class="styles__Flex-sc-14e6kmf-0 iaPxwS"
         >
           <h1>
@@ -19,57 +19,144 @@ exports[`Layout renders correctly 1`] = `
               Jacob Herper
             </a>
           </h1>
-          <nav
-            class="styles__StyledNavigation-sc-16epmp-0"
+          <div
+            class="styles__Desktop-sc-14e6kmf-1 grzcZM"
+          >
+            <nav
+              class="styles__StyledNavigation-sc-16epmp-0"
+            >
+              <ul
+                class="styles__List-sc-16epmp-1 jNQglF"
+              >
+                <li>
+                  <a
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/about"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/uses"
+                  >
+                    Uses
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog"
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/portfolio"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+                <li
+                  class="desktop-only"
+                >
+                  <button
+                    class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+                    title="Switch to light theme"
+                  >
+                    <test-file-stub />
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            class="styles__Mobile-sc-14e6kmf-2 sgtTF"
           >
             <ul
-              class="styles__List-sc-16epmp-1 wwXbc"
+              class="styles__StyledMobileNavigation-sc-14uzdzl-0 crjHjf"
             >
-              <li>
-                <a
-                  href="/"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                >
-                  Uses
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                >
-                  Portfolio
-                </a>
-              </li>
               <li>
                 <button
                   class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+                  title="Switch to light theme"
+                >
+                  <test-file-stub />
+                </button>
+              </li>
+              <li>
+                <button
+                  class="styles__Menu-sc-14uzdzl-1 dJJTrF"
                 >
                   <test-file-stub />
                 </button>
               </li>
             </ul>
-          </nav>
-        </header>
+            <div
+              class="styles__Overlay-sc-14uzdzl-2 cLmABG"
+            >
+              <nav
+                class="styles__StyledNavigation-sc-16epmp-0"
+              >
+                <ul
+                  class="styles__List-sc-16epmp-1 jNQglF"
+                >
+                  <li>
+                    <a
+                      href="/"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/uses"
+                    >
+                      Uses
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/blog"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/portfolio"
+                    >
+                      Portfolio
+                    </a>
+                  </li>
+                  <li
+                    class="desktop-only"
+                  >
+                    <button
+                      class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+                      title="Switch to light theme"
+                    >
+                      <test-file-stub />
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main />
@@ -80,7 +167,7 @@ exports[`Layout renders correctly 1`] = `
         class="styles__StyledContainer-mepagl-0 exxZos"
       >
         <div
-          class="styles__Flex-razpbj-1 gWlOje"
+          class="styles__Flex-razpbj-1 gJdgaN"
         >
           <span>
             © 
@@ -88,7 +175,7 @@ exports[`Layout renders correctly 1`] = `
              Jacob Herper
           </span>
           <ul
-            class="styles__StyledSocialIcons-sc-15vq785-0 gPawva"
+            class="styles__StyledSocialIcons-sc-15vq785-0 iHrrTj"
           >
             <li>
               <a

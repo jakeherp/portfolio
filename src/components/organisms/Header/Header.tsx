@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { Flex } from './styles';
+import { Desktop, Flex, Mobile } from './styles';
 import Link from 'next/link';
 
 import { Container } from 'Atoms/Container';
 import { Navigation } from 'Molecules/Navigation';
+import { MobileNavigation } from 'Molecules/MobileNavigation';
 
 const Header: FC = () => {
 	return (
@@ -15,7 +16,12 @@ const Header: FC = () => {
 							<a>Jacob Herper</a>
 						</Link>
 					</h1>
-					<Navigation />
+					<Desktop>
+						<Navigation />
+					</Desktop>
+					<Mobile>
+						<MobileNavigation />
+					</Mobile>
 				</Flex>
 			</Container>
 		</header>

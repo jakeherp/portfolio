@@ -6,7 +6,7 @@ exports[`Navigation renders correctly 1`] = `
     class="styles__StyledNavigation-sc-16epmp-0"
   >
     <ul
-      class="styles__List-sc-16epmp-1 wwXbc"
+      class="styles__List-sc-16epmp-1 jNQglF"
     >
       <li>
         <a
@@ -17,35 +17,38 @@ exports[`Navigation renders correctly 1`] = `
       </li>
       <li>
         <a
-          href="/"
+          href="/about"
         >
           About
         </a>
       </li>
       <li>
         <a
-          href="/"
+          href="/uses"
         >
           Uses
         </a>
       </li>
       <li>
         <a
-          href="/"
+          href="/blog"
         >
           Blog
         </a>
       </li>
       <li>
         <a
-          href="/"
+          href="/portfolio"
         >
           Portfolio
         </a>
       </li>
-      <li>
+      <li
+        class="desktop-only"
+      >
         <button
           class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+          title="Switch to light theme"
         >
           <test-file-stub />
         </button>

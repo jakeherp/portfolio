@@ -4,6 +4,7 @@ exports[`ThemeToggle renders correctly 1`] = `
 <div>
   <button
     class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+    title="Switch to light theme"
   >
     <test-file-stub />
   </button>

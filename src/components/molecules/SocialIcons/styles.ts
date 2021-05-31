@@ -5,17 +5,22 @@ const StyledSocialIcons = styled.ul`
 
 	li {
 		width: 1.5rem;
-		margin-left: 1rem;
+		margin: 0 0.5rem;
 	}
 
 	a {
-		padding: 0.5rem 1rem;
 		color: ${({ theme }) => theme.text};
 		text-decoration: none;
 		transition: 0.2s;
 
 		&:hover {
 			color: ${({ theme }) => theme.headline};
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		li {
+			margin-left: 1rem;
 		}
 	}
 `;

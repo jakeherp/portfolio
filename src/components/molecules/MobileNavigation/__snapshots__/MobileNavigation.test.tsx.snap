@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileNavigation renders correctly 1`] = `
+<div>
+  <ul
+    class="styles__StyledMobileNavigation-sc-14uzdzl-0 crjHjf"
+  >
+    <li>
+      <button
+        class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+        title="Switch to light theme"
+      >
+        <test-file-stub />
+      </button>
+    </li>
+    <li>
+      <button
+        class="styles__Menu-sc-14uzdzl-1 dJJTrF"
+      >
+        <test-file-stub />
+      </button>
+    </li>
+  </ul>
+  <div
+    class="styles__Overlay-sc-14uzdzl-2 cLmABG"
+  >
+    <nav
+      class="styles__StyledNavigation-sc-16epmp-0"
+    >
+      <ul
+        class="styles__List-sc-16epmp-1 jNQglF"
+      >
+        <li>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/uses"
+          >
+            Uses
+          </a>
+        </li>
+        <li>
+          <a
+            href="/blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            href="/portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li
+          class="desktop-only"
+        >
+          <button
+            class="styles__StyledThemeToggle-sc-1dfmkyd-0 iOJryI"
+            title="Switch to light theme"
+          >
+            <test-file-stub />
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
