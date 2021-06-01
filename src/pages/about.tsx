@@ -1,9 +1,26 @@
+import absoluteUrl from 'next-absolute-url';
+import { differenceInCalendarYears } from 'date-fns';
+import styled from 'styled-components';
+import { useState } from 'react';
+
+import { IJob } from '@Types';
+
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
-import Head from 'next/head';
-import styled from 'styled-components';
+import { GetServerSideProps } from 'next';
+import { Position } from 'Atoms/Position';
 
-function Home() {
+interface IProps {
+	jobs: IJob[];
+}
+
+function Home({ jobs }: IProps) {
+	const [loadedJobs, setLoadedJobs] = useState(2);
+
+	const loadMore = () => {
+		setLoadedJobs((prev) => prev + 3);
+	};
+
 	return (
 		<>
 			<SeoHead
@@ -12,24 +29,45 @@ function Home() {
 			/>
 
 			<Container>
-				<Headline>About</Headline>
+				<Headline>Hey, I'm Jacob Herper</Headline>
+				<h3>A senior software engineer from England</h3>
 				<p>
-					I am a passionate Software Engineer, specialised in front-end
-					development using React and TypeScript. As an advocate for web
-					performance and accessibility and an evangelist for the Jamstack, I
-					create amazing web applications to make the internet a better place.
+					As a passionate front-end developer, I create amazing websites and web
+					apps to make the internet a better place. I am an advocate for web
+					performance and accessibility as well as a JAMstack enthusiast with
+					experience in serverless technologies.
 				</p>
 				<p>
-					P.S. this website is open-source and available on{' '}
-					<a
-						href="https://github.com/jakeherp/portfolio"
-						title="Link to Github repository"
-						target="_blank"
-					>
-						Github
+					I am {differenceInCalendarYears(new Date(), new Date('1990-11-06'))}{' '}
+					years old and have been a web developer for as long as I can think.
+					The technologies I work with are JavaScript, HTML and CSS with a focus
+					on the frameworks React.js, Gatsby, Next.js, Node and Express. I use
+					code not only to do my day-to-day job, but also to solve everyday
+					problems I come across.
+				</p>
+				<p>
+					When I am not writing code I love to spend time with my wife and 3
+					year old daughter at home in London or travelling around the world. We
+					are quite a multi-cultural family with me having grown up in Germany
+					🇩🇪 and my wife being from Mexico 🇲🇽, which is why we raise our
+					daughter trilingual. I myself speak five languages (some better than
+					others). Furthermore I enjoy cooking fresh food when I come home after
+					a long day at the office.
+				</p>
+
+				<h2>Experience</h2>
+				{jobs.slice(0, loadedJobs).map((job) => (
+					<Position job={job} />
+				))}
+				<Center>
+					{loadedJobs < jobs.length && (
+						<button onClick={loadMore}>Load more</button>
+					)}
+
+					<a href="/cv-2021.pdf" target="_blank">
+						Download a copy of my CV
 					</a>
-					.
-				</p>
+				</Center>
 			</Container>
 		</>
 	);
@@ -37,10 +75,7 @@ function Home() {
 
 const Headline = styled.h2`
 	font-size: 2rem;
-
-	span {
-		display: none;
-	}
+	margin-bottom: 0;
 
 	@media screen and (min-width: 768px) {
 		font-size: 3rem;
@@ -66,5 +101,37 @@ const Headline = styled.h2`
 		}
 	}
 `;
+
+const Center = styled.div`
+	text-align: center;
+	font-weight: bold;
+	margin-top: 2rem;
+
+	button {
+		display: block;
+		margin: 2rem auto;
+		border: 2px solid ${({ theme }) => theme.text};
+		color: ${({ theme }) => theme.text};
+		padding: 0.5rem 3rem;
+		border-radius: 5px;
+		background: transparent;
+	}
+`;
+
+const fetcher = async (input: RequestInfo, init?: RequestInit) => {
+	const res = await fetch(input, init);
+	return res.json();
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	const { origin } = absoluteUrl(req);
+	const { positions } = await fetcher(`${origin}/api/jobs`);
+
+	return {
+		props: {
+			jobs: positions,
+		},
+	};
+};
 
 export default Home;

@@ -8,6 +8,7 @@ const List = styled.ul`
 	flex-direction: column;
 	font-size: 2rem;
 	line-height: 2;
+	font-weight: bold;
 
 	.desktop-only {
 		display: none;
@@ -27,6 +28,7 @@ const List = styled.ul`
 	@media screen and (min-width: 768px) {
 		flex-direction: row;
 		font-size: 1rem;
+		font-weight: normal;
 
 		.desktop-only {
 			display: block;
