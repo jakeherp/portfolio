@@ -3,23 +3,28 @@ import { differenceInCalendarYears } from 'date-fns';
 import styled from 'styled-components';
 import { useState } from 'react';
 
-import { IJob } from '@Types';
+import { IEducation, IJob, ISkills } from '@Types';
 
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 import { GetServerSideProps } from 'next';
 import { Position } from 'Atoms/Position';
+import { Education } from 'Atoms/Education';
 
 interface IProps {
 	jobs: IJob[];
+	education: IEducation[];
+	skills: ISkills;
 }
 
-function Home({ jobs }: IProps) {
+function Home({ jobs, education, skills }: IProps) {
 	const [loadedJobs, setLoadedJobs] = useState(2);
 
 	const loadMore = () => {
 		setLoadedJobs((prev) => prev + 3);
 	};
+
+	console.log(`education`, education);
 
 	return (
 		<>
@@ -56,14 +61,21 @@ function Home({ jobs }: IProps) {
 				</p>
 
 				<h2>Experience</h2>
-				{jobs.slice(0, loadedJobs).map((job) => (
-					<Position job={job} />
+				{jobs.slice(0, loadedJobs).map((job, i) => (
+					<Position job={job} key={job.company + i} />
 				))}
 				<Center>
 					{loadedJobs < jobs.length && (
 						<button onClick={loadMore}>Load more</button>
 					)}
+				</Center>
 
+				<h2>Education</h2>
+				{education.map((edu) => (
+					<Education education={edu} key={edu.course} />
+				))}
+
+				<Center>
 					<a href="/cv-2021.pdf" target="_blank">
 						Download a copy of my CV
 					</a>
@@ -126,10 +138,14 @@ const fetcher = async (input: RequestInfo, init?: RequestInit) => {
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 	const { origin } = absoluteUrl(req);
 	const { positions } = await fetcher(`${origin}/api/jobs`);
+	const { education } = await fetcher(`${origin}/api/education`);
+	const skills = await fetcher(`${origin}/api/skills`);
 
 	return {
 		props: {
 			jobs: positions,
+			education,
+			skills,
 		},
 	};
 };
