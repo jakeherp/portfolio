@@ -1,21 +1,21 @@
 module.exports = {
-  poweredByHeader: false,
-  assetPrefix: process.env.ASSET_HOST || "",
-  productionBrowserSourceMaps: process.env.NODE_ENV === "production",
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
+	poweredByHeader: false,
+	assetPrefix: process.env.ASSET_HOST || '',
+	productionBrowserSourceMaps: process.env.NODE_ENV === 'production',
+	webpack(config) {
+		config.module.rules.push({
+			test: /\.svg$/,
 
-      issuer: {
-        test: /\.(js|ts)x?$/,
-      },
-      use: ["@svgr/webpack"],
-    });
+			issuer: {
+				test: /\.(js|ts)x?$/,
+			},
+			use: ['@svgr/webpack'],
+		});
 
-    return config;
-  },
-  publicRuntimeConfig: {},
-  images: {
-    domains: [],
-  },
+		return config;
+	},
+	publicRuntimeConfig: {},
+	images: {
+		domains: ['dev-to-uploads.s3.amazonaws.com', 'res.cloudinary.com'],
+	},
 };

@@ -15,7 +15,7 @@ export default function Blog({ posts }: any) {
 			<Container>
 				<Headline>Blog</Headline>
 				{posts.map((post: any) => (
-					<BlogPost post={post} />
+					<BlogPost post={post} key={post.slug} />
 				))}
 			</Container>
 		</>

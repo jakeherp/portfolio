@@ -15,11 +15,14 @@ export function getBlogPostBySlug(slug: string, fields: string[] = []) {
 	try {
 		const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-		const { data } = matter(fileContents);
-		const items: Record<string, unknown> = {};
+		const { data, content } = matter(fileContents);
+		const items: IPost | Record<string, string> = {};
 		fields.forEach((field) => {
 			if (field === 'slug') {
 				items[field] = realSlug;
+			}
+			if (field === 'content') {
+				items[field] = content;
 			}
 			if (data[field]) {
 				items[field] = data[field];

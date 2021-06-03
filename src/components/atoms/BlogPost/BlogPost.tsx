@@ -22,7 +22,7 @@ const BlogPost: FC<BlogPostProps> = ({
 					<p>{description}</p>
 					<Tags>
 						{tags.map((tag) => (
-							<li>#{tag}</li>
+							<li key={tag}>#{tag}</li>
 						))}
 					</Tags>
 				</a>
