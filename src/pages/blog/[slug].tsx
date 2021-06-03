@@ -1,4 +1,3 @@
-import { BlogPost } from 'Atoms/BlogPost';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 import React from 'react';
@@ -32,7 +31,7 @@ export default function Blog({ post, mdxSource }: any) {
 					<Text>
 						<strong>Tags:</strong>
 						<Tags>
-							{tags.map((tag) => (
+							{tags.map((tag: string) => (
 								<li key={tag}>#{tag}</li>
 							))}
 						</Tags>
