@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Education renders correctly 1`] = `
+<div>
+  <div
+    class="styles__StyledEducation-sc-1irolb5-0 bjYQZD"
+  >
+    <div
+      class="styles__Flex-sc-1irolb5-1 bTesre"
+    >
+      <div>
+        <strong>
+          <a
+            href="https://cs50.harvard.edu/x/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            CS50
+          </a>
+        </strong>
+         
+        - 
+        Harvard X
+      </div>
+      <div>
+        06/2020
+      </div>
+    </div>
+    <small>
+      <em>
+        <strong>
+          Course contents:
+        </strong>
+         
+        C, Python, SQL, Algorithms, Data Structures
+      </em>
+    </small>
+  </div>
+</div>
+`;

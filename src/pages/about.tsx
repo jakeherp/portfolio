@@ -14,23 +14,20 @@ import { Education } from 'Atoms/Education';
 interface IProps {
 	jobs: IJob[];
 	education: IEducation[];
-	skills: ISkills;
 }
 
-function Home({ jobs, education, skills }: IProps) {
+function Home({ jobs, education }: IProps) {
 	const [loadedJobs, setLoadedJobs] = useState(2);
 
 	const loadMore = () => {
 		setLoadedJobs((prev) => prev + 3);
 	};
 
-	console.log(`education`, education);
-
 	return (
 		<>
 			<SeoHead
-				title="Jacob Herper - Front-End Software Engineer"
-				description="Front-End Software Engineer with a focus on JavaScript and React.js. I have more than 10 years experience working in software engineering."
+				title="About Jacob Herper - Front-End Software Engineer"
+				description="As a passionate front-end developer, I create amazing websites and web apps to make the internet a better place."
 			/>
 
 			<Container>

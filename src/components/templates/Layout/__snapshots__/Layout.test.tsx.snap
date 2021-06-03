@@ -26,7 +26,7 @@ exports[`Layout renders correctly 1`] = `
               class="styles__StyledNavigation-sc-16epmp-0"
             >
               <ul
-                class="styles__List-sc-16epmp-1 jNQglF"
+                class="styles__List-sc-16epmp-1 gPSCMv"
               >
                 <li>
                   <a
@@ -105,7 +105,7 @@ exports[`Layout renders correctly 1`] = `
                 class="styles__StyledNavigation-sc-16epmp-0"
               >
                 <ul
-                  class="styles__List-sc-16epmp-1 jNQglF"
+                  class="styles__List-sc-16epmp-1 gPSCMv"
                 >
                   <li>
                     <a

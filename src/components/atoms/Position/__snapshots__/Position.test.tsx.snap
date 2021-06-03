@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Position renders correctly 1`] = `
+<div>
+  <div
+    class="styles__StyledPosition-sc-1clk440-0"
+  >
+    <div
+      class="styles__Flex-sc-1clk440-1 gzqcjV"
+    >
+      <div>
+        <strong>
+          Software Development Engineer 2
+        </strong>
+         -
+         
+        Holland & Barrett
+      </div>
+      <div>
+        08/2020
+         -
+         
+        present
+      </div>
+    </div>
+    <small>
+      <em>
+        <strong>
+          Technologies:
+        </strong>
+         
+        TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
+      </em>
+    </small>
+    <div
+      class="styles__Text-sc-1clk440-2 fLfbMf"
+    >
+      <ul>
+        <li>
+          Joined Holland & Barrett as a senior software engineer, first with front-end expertise in the fulfilment squad (alongside six back-end engineers)
+        </li>
+        <li>
+          Led hiring process of several further UI engineers across multiple squads
+        </li>
+        <li>
+          Tech lead developing a custom-built customer services portal based on React and Next.js using TypeScript and Redux, retiring a third-party solution, saving a 6-digit sum in licence fees
+        </li>
+        <li>
+          Increased non-existent test-coverage to 90+%
+        </li>
+        <li>
+          Introduced e2e tests using Cypress
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

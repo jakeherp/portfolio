@@ -9,6 +9,7 @@ declare module 'styled-components' {
 	export interface DefaultTheme {
 		body: string;
 		text: string;
+		grey: string;
 		headline: string;
 	}
 }

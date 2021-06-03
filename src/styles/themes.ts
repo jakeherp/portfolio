@@ -11,9 +11,11 @@ export const lightTheme = {
 	body: brandColours.white,
 	text: brandColours.offBlack,
 	headline: brandColours.black,
+	grey: '#ccc',
 };
 export const darkTheme = {
 	body: brandColours.black,
 	text: brandColours.offWhite,
 	headline: brandColours.white,
+	grey: '#ccc',
 };
