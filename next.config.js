@@ -1,15 +1,33 @@
 module.exports = {
+	future: {
+		webpack5: true,
+	},
 	poweredByHeader: false,
 	assetPrefix: process.env.ASSET_HOST || '',
 	productionBrowserSourceMaps: process.env.NODE_ENV === 'production',
 	webpack(config) {
 		config.module.rules.push({
-			test: /\.svg$/,
-
-			issuer: {
-				test: /\.(js|ts)x?$/,
-			},
-			use: ['@svgr/webpack'],
+			test: /\.svg?$/,
+			oneOf: [
+				{
+					use: [
+						{
+							loader: '@svgr/webpack',
+							options: {
+								prettier: false,
+								svgo: true,
+								svgoConfig: {
+									plugins: [{ removeViewBox: false }],
+								},
+								titleProp: true,
+							},
+						},
+					],
+					issuer: {
+						and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+					},
+				},
+			],
 		});
 
 		return config;
