@@ -46,6 +46,7 @@ function Home({ skills }: IProps) {
 						showCursor
 						cursorChar="|"
 					/>
+					.
 				</p>
 				<p>
 					P.S. this website is open-source and available on{' '}

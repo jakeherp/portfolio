@@ -3,15 +3,46 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { IPost } from '@Types/post';
 
-const blogPostsDirectory = join(process.cwd(), 'src/blog');
+type MdxType = 'BLOG' | 'PORTFOLIO' | 'PAGES';
 
-export function getBlogPostSlugs() {
-	return fs.readdirSync(blogPostsDirectory);
+const blogPostsDirectory = 'src/blog';
+const portfolioDirectory = 'src/portfolio';
+const pagesDirectory = 'src/mdx-pages';
+
+export function getSlugs(type: MdxType) {
+	let dir;
+
+	switch (type) {
+		case 'BLOG':
+			dir = join(process.cwd(), blogPostsDirectory);
+			break;
+		case 'PORTFOLIO':
+			dir = join(process.cwd(), portfolioDirectory);
+			break;
+		case 'PAGES':
+			dir = join(process.cwd(), pagesDirectory);
+			break;
+	}
+
+	return fs.readdirSync(dir);
 }
 
-export function getBlogPostBySlug(slug: string, fields: string[] = []) {
+export function getBySlug(type: MdxType, slug: string, fields: string[] = []) {
 	const realSlug = slug.replace(/\.mdx$/, '');
-	const fullPath = join(blogPostsDirectory, `${realSlug}.mdx`);
+	let fullPath = '';
+
+	switch (type) {
+		case 'BLOG':
+			fullPath = join(blogPostsDirectory, `${realSlug}.mdx`);
+			break;
+		case 'PORTFOLIO':
+			fullPath = join(portfolioDirectory, `${realSlug}.mdx`);
+			break;
+		case 'PAGES':
+			fullPath = join(pagesDirectory, `${realSlug}.mdx`);
+			break;
+	}
+
 	try {
 		const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -35,9 +66,9 @@ export function getBlogPostBySlug(slug: string, fields: string[] = []) {
 	}
 }
 
-export function getAllBlogPosts(fields: string[] = []) {
-	const slugs = getBlogPostSlugs();
-	const blogPosts = slugs.map((slug) => getBlogPostBySlug(slug, fields));
+export function getAllDocuments(type: MdxType, fields: string[] = []) {
+	const slugs = getSlugs(type);
+	const documents = slugs.map((slug) => getBySlug(type, slug, fields));
 
-	return blogPosts;
+	return documents;
 }

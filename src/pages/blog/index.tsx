@@ -1,10 +1,9 @@
-import { IPost } from '@Types/post';
 import { BlogPost } from 'Atoms/BlogPost';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 import React from 'react';
 import styled from 'styled-components';
-import { getAllBlogPosts } from 'Utils/api';
+import { getAllDocuments } from 'Utils/api';
 import orderBy from 'lodash.orderby';
 
 export default function Blog({ posts }: any) {
@@ -25,7 +24,7 @@ export default function Blog({ posts }: any) {
 }
 
 export async function getStaticProps() {
-	const posts = getAllBlogPosts([
+	const posts = getAllDocuments('BLOG', [
 		'title',
 		'description',
 		'slug',

@@ -2,7 +2,7 @@ import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 import React from 'react';
 import styled from 'styled-components';
-import { getAllBlogPosts, getBlogPostBySlug } from 'Utils/api';
+import { getAllDocuments, getBySlug } from 'Utils/api';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
@@ -47,7 +47,7 @@ export default function BlogPost({ post, mdxSource }: any) {
 }
 
 export async function getStaticProps({ params }: any) {
-	const post = getBlogPostBySlug(params.slug, [
+	const post = getBySlug('BLOG', params.slug, [
 		'title',
 		'description',
 		'slug',
@@ -66,7 +66,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export async function getStaticPaths() {
-	const posts = getAllBlogPosts(['slug']);
+	const posts = getAllDocuments('BLOG', ['slug']);
 
 	return {
 		paths: posts.map((post) => {
