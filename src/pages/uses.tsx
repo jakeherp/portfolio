@@ -30,7 +30,11 @@ function Home() {
 				<List>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3ySbHP2" target="_blank">
+							<a
+								href="https://amzn.to/3ySbHP2"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Macbook Pro 16"
 							</a>
 						</strong>{' '}
@@ -38,7 +42,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3uGdfbs" target="_blank">
+							<a
+								href="https://amzn.to/3uGdfbs"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Apple Magic Keyboard 2
 							</a>
 						</strong>{' '}
@@ -46,7 +54,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3c6al9k" target="_blank">
+							<a
+								href="https://amzn.to/3c6al9k"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Apple Magic Trackpad 2
 							</a>
 						</strong>{' '}
@@ -54,7 +66,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3fxf7Pr" target="_blank">
+							<a
+								href="https://amzn.to/3fxf7Pr"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								LG 34WN80C-B
 							</a>
 						</strong>{' '}
@@ -62,7 +78,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/2RWN1nP" target="_blank">
+							<a
+								href="https://amzn.to/2RWN1nP"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Invision MX450
 							</a>
 						</strong>{' '}
@@ -70,14 +90,22 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3uDzFu3" target="_blank">
+							<a
+								href="https://amzn.to/3uDzFu3"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Rain Design mStand
 							</a>
 						</strong>
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3vGlCFa" target="_blank">
+							<a
+								href="https://amzn.to/3vGlCFa"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								iPhone 12 Pro
 							</a>
 						</strong>{' '}
@@ -85,7 +113,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3wCC35E" target="_blank">
+							<a
+								href="https://amzn.to/3wCC35E"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Bose 700
 							</a>
 						</strong>{' '}
@@ -93,7 +125,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/2R889al" target="_blank">
+							<a
+								href="https://amzn.to/2R889al"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Apple AirPods Pro
 							</a>
 						</strong>{' '}
@@ -101,7 +137,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3ux8DnT" target="_blank">
+							<a
+								href="https://amzn.to/3ux8DnT"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Nest Wifi
 							</a>
 						</strong>{' '}
@@ -112,6 +152,7 @@ function Home() {
 							<a
 								href="https://store.google.com/product/google_home"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								Google Home
 							</a>
@@ -120,7 +161,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://amzn.to/3vBBSHy" target="_blank">
+							<a
+								href="https://amzn.to/3vBBSHy"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Tonor Q9
 							</a>
 						</strong>{' '}
@@ -131,7 +176,11 @@ function Home() {
 				<List>
 					<li>
 						<strong>
-							<a href="https://code.visualstudio.com/" target="_blank">
+							<a
+								href="https://code.visualstudio.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								VS Code
 							</a>
 						</strong>{' '}
@@ -140,6 +189,7 @@ function Home() {
 							<a
 								href="https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								Night Owl
 							</a>
@@ -149,6 +199,7 @@ function Home() {
 							<a
 								href="https://www.typography.com/fonts/operator/styles/operatormono"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								Operator Mono
 							</a>
@@ -157,7 +208,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://www.iterm2.com/" target="_blank">
+							<a
+								href="https://www.iterm2.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								iTerm 2
 							</a>
 						</strong>{' '}
@@ -165,7 +220,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://www.sourcetreeapp.com/" target="_blank">
+							<a
+								href="https://www.sourcetreeapp.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Sourcetree
 							</a>
 						</strong>{' '}
@@ -173,7 +232,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://insomnia.rest/" target="_blank">
+							<a
+								href="https://insomnia.rest/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Insomnia
 							</a>
 						</strong>{' '}
@@ -184,21 +247,33 @@ function Home() {
 				<List>
 					<li>
 						<strong>
-							<a href="https://www.sketch.com/" target="_blank">
+							<a
+								href="https://www.sketch.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Sketch
 							</a>
 						</strong>
 					</li>
 					<li>
 						<strong>
-							<a href="https://www.figma.com/" target="_blank">
+							<a
+								href="https://www.figma.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Figma
 							</a>
 						</strong>
 					</li>
 					<li>
 						<strong>
-							<a href="https://affinity.serif.com/en-gb/photo/" target="_blank">
+							<a
+								href="https://affinity.serif.com/en-gb/photo/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Affinity Photo
 							</a>
 						</strong>
@@ -207,6 +282,7 @@ function Home() {
 							<a
 								href="https://affinity.serif.com/en-gb/designer/"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								Affinity Designer
 							</a>
@@ -216,6 +292,7 @@ function Home() {
 							<a
 								href="https://affinity.serif.com/en-gb/publisher/"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								Affinity Publisher
 							</a>
@@ -229,6 +306,7 @@ function Home() {
 							<a
 								href="https://www.notion.so/?r=008f1f1395694a2594659c43f8d666d8"
 								target="_blank"
+								rel="noopener noreferrer"
 							>
 								Notion
 							</a>
@@ -237,7 +315,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://www.atlassian.com/software/jira" target="_blank">
+							<a
+								href="https://www.atlassian.com/software/jira"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Jira
 							</a>
 						</strong>{' '}
@@ -245,7 +327,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://slack.com/" target="_blank">
+							<a
+								href="https://slack.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Slack
 							</a>
 						</strong>{' '}
@@ -253,7 +339,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://workspace.google.com/" target="_blank">
+							<a
+								href="https://workspace.google.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Google Workspace
 							</a>
 						</strong>{' '}
@@ -264,7 +354,11 @@ function Home() {
 				<List>
 					<li>
 						<strong>
-							<a href="https://brave.com/" target="_blank">
+							<a
+								href="https://brave.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Brave browser
 							</a>
 						</strong>{' '}
@@ -272,7 +366,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://1password.com/" target="_blank">
+							<a
+								href="https://1password.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								1Password
 							</a>
 						</strong>{' '}
@@ -280,7 +378,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://www.backblaze.com/" target="_blank">
+							<a
+								href="https://www.backblaze.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Backblaze
 							</a>
 						</strong>{' '}
@@ -288,7 +390,11 @@ function Home() {
 					</li>
 					<li>
 						<strong>
-							<a href="https://magnet.crowdcafe.com/" target="_blank">
+							<a
+								href="https://magnet.crowdcafe.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Magnet
 							</a>
 						</strong>{' '}

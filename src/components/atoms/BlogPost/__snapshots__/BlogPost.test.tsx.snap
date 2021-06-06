@@ -9,7 +9,7 @@ exports[`BlogPost renders correctly 1`] = `
       href="/blog/blog-post"
     >
       <div
-        class="styles__Flex-sc-1r22brh-1 dFQjVh"
+        class="styles__Flex-sc-1r22brh-1 ikIXMP"
       >
         <h1>
           Blog Post
@@ -22,7 +22,7 @@ exports[`BlogPost renders correctly 1`] = `
         Blog Description
       </p>
       <ul
-        class="styles__Tags-sc-1r22brh-2 dDMeSK"
+        class="styles__Tags-sc-1r22brh-2 iNbxpZ"
       >
         <li>
           #

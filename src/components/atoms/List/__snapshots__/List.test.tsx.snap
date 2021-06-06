@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders correctly 1`] = `
+<div>
+  <ul
+    class="styles__StyledList-sze0tr-0 fqIYCz"
+  >
+    <li>
+      List element
+    </li>
+  </ul>
+</div>
+`;

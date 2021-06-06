@@ -99,7 +99,7 @@ exports[`Layout renders correctly 1`] = `
               </li>
             </ul>
             <div
-              class="styles__Overlay-sc-14uzdzl-2 cLmABG"
+              class="styles__Overlay-sc-14uzdzl-2 grizif"
             >
               <nav
                 class="styles__StyledNavigation-sc-16epmp-0"
@@ -180,6 +180,7 @@ exports[`Layout renders correctly 1`] = `
             <li>
               <a
                 href="https://github.com/jakeherp"
+                rel="noopener noreferrer"
                 target="_blank"
                 title="Github"
               >
@@ -189,6 +190,7 @@ exports[`Layout renders correctly 1`] = `
             <li>
               <a
                 href="https://twitter.com/jakeherp"
+                rel="noopener noreferrer"
                 target="_blank"
                 title="Twitter"
               >
@@ -198,6 +200,7 @@ exports[`Layout renders correctly 1`] = `
             <li>
               <a
                 href="https://www.linkedin.com/in/jacobherper"
+                rel="noopener noreferrer"
                 target="_blank"
                 title="LinkedIn"
               >
@@ -207,6 +210,7 @@ exports[`Layout renders correctly 1`] = `
             <li>
               <a
                 href="https://instagram.com/jakeherp"
+                rel="noopener noreferrer"
                 target="_blank"
                 title="Instagram"
               >

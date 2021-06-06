@@ -53,6 +53,7 @@ function Home({ skills }: IProps) {
 						href="https://github.com/jakeherp/portfolio"
 						title="Link to Github repository"
 						target="_blank"
+						rel="noopener noreferrer"
 					>
 						Github
 					</a>

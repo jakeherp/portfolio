@@ -8,6 +8,7 @@ exports[`SocialIcons renders correctly 1`] = `
     <li>
       <a
         href="https://github.com/jakeherp"
+        rel="noopener noreferrer"
         target="_blank"
         title="Github"
       >
@@ -17,6 +18,7 @@ exports[`SocialIcons renders correctly 1`] = `
     <li>
       <a
         href="https://twitter.com/jakeherp"
+        rel="noopener noreferrer"
         target="_blank"
         title="Twitter"
       >
@@ -26,6 +28,7 @@ exports[`SocialIcons renders correctly 1`] = `
     <li>
       <a
         href="https://www.linkedin.com/in/jacobherper"
+        rel="noopener noreferrer"
         target="_blank"
         title="LinkedIn"
       >
@@ -35,6 +38,7 @@ exports[`SocialIcons renders correctly 1`] = `
     <li>
       <a
         href="https://instagram.com/jakeherp"
+        rel="noopener noreferrer"
         target="_blank"
         title="Instagram"
       >

@@ -13,7 +13,7 @@ export const lightTheme = {
 	body: brandColours.offWhite,
 	text: brandColours.offBlack,
 	headline: brandColours.black,
-	grey: '#ccc',
+	grey: '#666',
 	primary: brandColours.primaryDark,
 };
 export const darkTheme = {
