@@ -10,13 +10,14 @@ import { SeoHead } from 'Atoms/SeoHead';
 import { GetServerSideProps } from 'next';
 import { Position } from 'Atoms/Position';
 import { Education } from 'Atoms/Education';
+import { fetcher } from 'Utils/fetcher';
 
 interface IProps {
 	jobs: IJob[];
 	education: IEducation[];
 }
 
-function Home({ jobs, education }: IProps) {
+function About({ jobs, education }: IProps) {
 	const [loadedJobs, setLoadedJobs] = useState(2);
 
 	const loadMore = () => {
@@ -127,11 +128,6 @@ const Center = styled.div`
 	}
 `;
 
-const fetcher = async (input: RequestInfo, init?: RequestInit) => {
-	const res = await fetch(input, init);
-	return res.json();
-};
-
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 	const { origin } = absoluteUrl(req);
 	const { positions } = await fetcher(`${origin}/api/jobs`);
@@ -147,4 +143,4 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 	};
 };
 
-export default Home;
+export default About;

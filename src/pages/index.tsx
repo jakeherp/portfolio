@@ -1,9 +1,22 @@
+import absoluteUrl from 'next-absolute-url';
+import { fetcher } from 'Utils/fetcher';
+import { GetServerSideProps } from 'next';
+import { ISkills } from '@Types';
+import styled from 'styled-components';
+import Typed from 'react-typed';
+
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
-import Head from 'next/head';
-import styled from 'styled-components';
 
-function Home() {
+interface IProps {
+	skills: ISkills;
+}
+
+function Home({ skills }: IProps) {
+	const { technologies, frameworks } = skills;
+
+	const talkAbout = [...technologies, ...frameworks];
+
 	return (
 		<>
 			<SeoHead
@@ -21,6 +34,18 @@ function Home() {
 					development using React and TypeScript. As an advocate for web
 					performance and accessibility and an evangelist for the Jamstack, I
 					create amazing web applications to make the internet a better place.
+					You can talk to me about{' '}
+					<Typed
+						loop
+						typeSpeed={80}
+						backSpeed={20}
+						strings={talkAbout}
+						smartBackspace
+						backDelay={1000}
+						loopCount={0}
+						showCursor
+						cursorChar="|"
+					/>
 				</p>
 				<p>
 					P.S. this website is open-source and available on{' '}
@@ -37,6 +62,17 @@ function Home() {
 		</>
 	);
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	const { origin } = absoluteUrl(req);
+	const skills = await fetcher(`${origin}/api/skills`);
+
+	return {
+		props: {
+			skills,
+		},
+	};
+};
 
 const Headline = styled.h2`
 	font-size: 2rem;

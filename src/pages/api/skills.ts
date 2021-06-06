@@ -5,8 +5,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 		'JavaScript',
 		'TypeScript',
 		'GraphQL',
-		'RESTful API',
-		'ES6',
+		'Redux',
+		'RESTful APIs',
 		'HTML',
 		'CSS',
 	];

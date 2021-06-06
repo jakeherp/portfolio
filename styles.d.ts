@@ -11,5 +11,6 @@ declare module 'styled-components' {
 		text: string;
 		grey: string;
 		headline: string;
+		primary: string;
 	}
 }

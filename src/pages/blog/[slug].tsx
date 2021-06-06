@@ -9,8 +9,8 @@ import Image from 'next/image';
 import format from 'date-fns/format';
 import { List } from 'Atoms/List';
 
-export default function Blog({ post, mdxSource }: any) {
-	const { title, date, tags } = post;
+export default function BlogPost({ post, mdxSource }: any) {
+	const { title, description, date, tags } = post;
 
 	const components = {
 		img: (props: any) => (
@@ -22,8 +22,8 @@ export default function Blog({ post, mdxSource }: any) {
 	return (
 		<>
 			<SeoHead
-				title="Jacob Herper's Blog - Front-End Software Engineer"
-				description="I try to make an effort to document my journey as a software engineer in the form of blog posts. Here you find some of the articles I published over the years."
+				title={`${title} - Jacob Herper's Blog - Front-End Software Engineer`}
+				description={description}
 			/>
 			<Container>
 				<Headline>{title}</Headline>

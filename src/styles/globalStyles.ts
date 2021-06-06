@@ -82,7 +82,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	a {
 		background-color: transparent;
-		color: ${brandColours.primary};
+		color: ${({ theme }) => theme.primary};
 
 		&:hover {
 			text-decoration: none;
