@@ -8,6 +8,10 @@ export interface HeadProps {
 	keywords?: string;
 	author?: string;
 	image?: string;
+	meta?: Array<{
+		name: string;
+		content: string;
+	}>;
 }
 
 const SeoHead: FC<HeadProps> = ({
@@ -16,6 +20,7 @@ const SeoHead: FC<HeadProps> = ({
 	author = 'Jacob Herper',
 	keywords,
 	image = 'https://res.cloudinary.com/jacobherper/image/upload/c_fill,g_north,h_1080,w_1920/v1587315694/herper-io.png ',
+	meta,
 }) => {
 	return (
 		<Head>
@@ -30,6 +35,9 @@ const SeoHead: FC<HeadProps> = ({
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:creator" content={author} />
+			{meta &&
+				meta.length > 0 &&
+				meta.map(({ name, content }) => <meta name={name} content={content} />)}
 			{image && <meta name="og:image" content={image} />}
 			{image && <meta name="twitter:image" content={image} />}
 			{keywords && <meta name="keywords" content={keywords} />}
