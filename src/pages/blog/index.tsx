@@ -1,9 +1,11 @@
+import { IPost } from '@Types/post';
 import { BlogPost } from 'Atoms/BlogPost';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 import React from 'react';
 import styled from 'styled-components';
 import { getAllBlogPosts } from 'Utils/api';
+import orderBy from 'lodash.orderby';
 
 export default function Blog({ posts }: any) {
 	return (
@@ -31,8 +33,10 @@ export async function getStaticProps() {
 		'date',
 	]);
 
+	const sortedPosts = orderBy(posts, ['date'], ['desc']);
+
 	return {
-		props: { posts },
+		props: { posts: sortedPosts },
 	};
 }
 

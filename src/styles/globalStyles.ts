@@ -208,4 +208,15 @@ export const GlobalStyles = createGlobalStyle`
 	[hidden] {
 		display: none;
 	}
+	blockquote {
+		font-size: 1.1rem;
+		font-style: italic;
+		border-left: 3px solid ${({ theme }) => theme.grey};
+		line-height: 1.5;
+		margin: 0;
+		padding: 0 1rem;
+	}
+	hr {
+		background: ${({ theme }) => theme.grey};
+	}
 `;

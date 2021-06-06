@@ -7,12 +7,16 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
 import format from 'date-fns/format';
+import { List } from 'Atoms/List';
 
 export default function Blog({ post, mdxSource }: any) {
 	const { title, date, tags } = post;
 
 	const components = {
-		img: (props: any) => <Image {...props} width={1920} height={1080} />,
+		img: (props: any) => (
+			<Image {...props} width={1920} height={1080} objectFit="cover" />
+		),
+		ul: (props: any) => <List {...props} />,
 	};
 
 	return (
@@ -101,6 +105,7 @@ const Flex = styled.div`
 
 const Tags = styled.ul`
 	display: flex;
+	flex-wrap: wrap;
 	color: ${({ theme }) => theme.grey};
 
 	li {

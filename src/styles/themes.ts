@@ -1,6 +1,7 @@
 export const brandColours = {
 	white: '#fff',
-	offWhite: '#afb5bf',
+	offWhite: '#f9fafc',
+	lightGrey: '#afb5bf',
 	black: '#000',
 	offBlack: '#192f39',
 	primary: '#457b9d',
@@ -8,14 +9,14 @@ export const brandColours = {
 };
 
 export const lightTheme = {
-	body: brandColours.white,
+	body: brandColours.offWhite,
 	text: brandColours.offBlack,
 	headline: brandColours.black,
 	grey: '#ccc',
 };
 export const darkTheme = {
 	body: brandColours.black,
-	text: brandColours.offWhite,
+	text: brandColours.lightGrey,
 	headline: brandColours.white,
 	grey: '#ccc',
 };

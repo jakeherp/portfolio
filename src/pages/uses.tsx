@@ -1,4 +1,5 @@
 import { Container } from 'Atoms/Container';
+import { List } from 'Atoms/List';
 import { SeoHead } from 'Atoms/SeoHead';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -329,12 +330,6 @@ const Headline = styled.h2`
 			animation: wave 0.5s ease infinite;
 		}
 	}
-`;
-
-const List = styled.ul`
-	list-style: square;
-	padding: 0 1rem;
-	line-height: 2;
 `;
 
 export default Home;

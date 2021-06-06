@@ -37,6 +37,7 @@ const Overlay = styled.div`
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.5s ease;
+	z-index: 10;
 
 	&.open {
 		opacity: 1;

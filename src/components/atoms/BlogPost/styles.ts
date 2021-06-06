@@ -21,10 +21,16 @@ const StyledBlogPost = styled.article`
 const Flex = styled.div`
 	display: flex;
 	justify-content: space-between;
+	flex-direction: column;
+
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
 `;
 
 const Tags = styled.ul`
 	display: flex;
+	flex-wrap: wrap;
 	color: ${({ theme }) => theme.grey};
 	margin-top: 0.5rem;
 
