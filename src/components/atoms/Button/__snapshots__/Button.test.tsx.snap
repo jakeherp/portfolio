@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders Button Link correctly 1`] = `
+<div>
+  <a
+    class="styles__StyledLink-a6av32-1 yMtKJ"
+    href="/url"
+    target="_blank"
+  >
+    Button text
+  </a>
+</div>
+`;
+
+exports[`Button renders Button correctly 1`] = `
+<div>
+  <button
+    class="styles__StyledButton-a6av32-0 edzQTh"
+  >
+    Button text
+  </button>
+</div>
+`;
