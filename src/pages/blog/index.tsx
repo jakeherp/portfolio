@@ -1,10 +1,10 @@
+import { getAllDocuments } from 'Utils/api';
+import orderBy from 'lodash.orderby';
+import styled from 'styled-components';
+
 import { BlogPost } from 'Atoms/BlogPost';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
-import React from 'react';
-import styled from 'styled-components';
-import { getAllDocuments } from 'Utils/api';
-import orderBy from 'lodash.orderby';
 
 export default function Blog({ posts }: any) {
 	return (

@@ -1,11 +1,10 @@
-import { BlogPost } from 'Atoms/BlogPost';
-import { Container } from 'Atoms/Container';
-import { SeoHead } from 'Atoms/SeoHead';
-import React from 'react';
 import styled from 'styled-components';
 import { getAllDocuments } from 'Utils/api';
 import orderBy from 'lodash.orderby';
+
+import { Container } from 'Atoms/Container';
 import { PortfolioItem } from 'Atoms/PortfolioItem';
+import { SeoHead } from 'Atoms/SeoHead';
 
 export default function Blog({ portfolioItems }: any) {
 	return (
