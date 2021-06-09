@@ -73,7 +73,7 @@
 		"@types/lodash.orderby": "^4.6.6",
 		"@types/nprogress": "^0.2.0",
 		"@types/react-redux": "^7.1.16",
-		"@types/styled-components": "^5.1.9",
+		"@types/styled-components": "^5.1.10",
 		"@typescript-eslint/eslint-plugin": "^4.26.0",
 		"@typescript-eslint/parser": "^4.26.0",
 		"babel-loader": "^8.2.2",
