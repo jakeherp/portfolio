@@ -1,22 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jacob Herper Portfolio
 
-## Getting Started
+This is my portfolio website, proudly built with [Next.js](https://nextjs.org/), TypeScript, Styled-Components and MDX.
+Previously I built my website using Gatsby, but decided to move over to Next.js due to their major improvements that make it my first choice, not only for applications, but also for websites.
 
-First, run the development server:
+This project is a constant work in progress, so if you find any bugs, typos or other errors, please feel free to open an issue or a pull request. This project is open source, so please feel free to fork and adapt for your own projects (credit would be appreciated).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/jakeherp/portfolio)](https://github.com/jakeherp/portfolio/releases)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting this project up and running
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1.  **Fork or Clone**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+    Fork or clone this project from Github to get your own copy of it.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1.  **Start developing.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```sh
+    cd portfolio/
+    yarn dev
+    ```
+
+1.  **Open the source code and start editing!**
+
+    Your site is now running at `http://localhost:3000`!
+
+    Open the `portfolio` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
 
 ## Learn More
 
@@ -26,9 +36,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
