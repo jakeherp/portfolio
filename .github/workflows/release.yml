@@ -1,4 +1,4 @@
-- name: Conventional Changelog
+- name: Conventional Changelog Action
   id: changelog
   uses: TriPSs/conventional-changelog-action@v3
   with:
