@@ -1,13 +1,19 @@
-import type { AppProps } from 'next/app';
+import { getTheme } from 'Redux/selectors';
 import { GlobalStyles } from 'Styles/globalStyles';
+import { Layout } from 'Templates/Layout';
+import NProgress from 'nprogress';
+import Router from 'next/router';
+import { setTheme } from 'Redux/actions/theme';
+import { storeWrapper } from 'Redux/store';
 import { ThemeProvider } from 'styled-components';
 import { useEffect } from 'react';
+import type { AppProps } from 'next/app';
 import { lightTheme, darkTheme } from 'Styles/themes';
-import { storeWrapper } from 'Redux/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTheme } from 'Redux/selectors';
-import { setTheme } from 'Redux/actions/theme';
-import { Layout } from 'Templates/Layout';
+
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const theme = useSelector(getTheme);
