@@ -19,6 +19,9 @@ export default function BlogPost({ post, mdxSource }: any) {
 		ul: (props: any) => <List {...props} />,
 	};
 
+	const numOfWords = mdxSource.compiledSource.split(' ').length;
+	const readTime = Math.ceil(numOfWords / 250);
+
 	return (
 		<>
 			<SeoHead
@@ -27,6 +30,7 @@ export default function BlogPost({ post, mdxSource }: any) {
 			/>
 			<Container>
 				<Headline>{title}</Headline>
+				<em>{readTime} minute read</em>
 				<MDXRemote {...mdxSource} components={components} />
 				<Flex>
 					<Text>
