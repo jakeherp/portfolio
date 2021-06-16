@@ -8206,10 +8206,10 @@ jest-resolve@^27.0.4:
     resolve "^1.20.0"
     slash "^3.0.0"
 
-jest-runner-eslint@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/jest-runner-eslint/-/jest-runner-eslint-0.10.0.tgz#5d7197d1e982b2cceea9e65f078dc371cc4a9815"
-  integrity sha512-XXKz2hMLGvyH50i29UcNQDQY2Sj1hLuCn7H3otMdeOB2LOzdHXXif3RXX+8m/eAewflB5RqqqlF1K7FozYZKrg==
+jest-runner-eslint@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/jest-runner-eslint/-/jest-runner-eslint-0.10.1.tgz#f76eacb51154736d53d64eb195cc8a82f02caf12"
+  integrity sha512-3HiDDWwJfXksVUkpDIHphwPkXYtaKFCBjufTz3aR4b6WqSl31WECmTGFqhkfWzQdEACShO6WkKjBj/gSfgLsqQ==
   dependencies:
     chalk "^3.0.0"
     cosmiconfig "^6.0.0"
@@ -12965,10 +12965,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
