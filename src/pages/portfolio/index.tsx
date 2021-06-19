@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { getAllDocuments } from 'Utils/api';
 import orderBy from 'lodash.orderby';
+import styled from 'styled-components';
 
 import { Container } from 'Atoms/Container';
 import { PortfolioItem } from 'Atoms/PortfolioItem';

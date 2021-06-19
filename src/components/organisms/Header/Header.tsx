@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { Desktop, Flex, Mobile } from './styles';
 import Link from 'next/link';
+import { Desktop, Flex, Mobile } from './styles';
 
 import { Container } from 'Atoms/Container';
-import { Navigation } from 'Molecules/Navigation';
 import { MobileNavigation } from 'Molecules/MobileNavigation';
+import { Navigation } from 'Molecules/Navigation';
 
 const Header: FC = () => {
 	return (

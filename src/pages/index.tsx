@@ -26,7 +26,7 @@ function Home({ skills }: IProps) {
 
 			<Container>
 				<Headline>
-					Hey, I'm
+					Hey, I&apos;m
 					<wbr /> Jacob Herper <span>👋</span>
 				</Headline>
 				<p>

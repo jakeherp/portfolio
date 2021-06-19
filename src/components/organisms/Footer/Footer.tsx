@@ -1,7 +1,8 @@
-import { Container } from 'Atoms/Container';
-import { SocialIcons } from 'Molecules/SocialIcons';
 import { FC } from 'react';
 import { Flex, StyledFooter } from './styles';
+
+import { Container } from 'Atoms/Container';
+import { SocialIcons } from 'Molecules/SocialIcons';
 
 const Footer: FC = () => {
 	return (

@@ -1,3 +1,4 @@
+import type { AppProps } from 'next/app';
 import { getTheme } from 'Redux/selectors';
 import { GlobalStyles } from 'Styles/globalStyles';
 import { Layout } from 'Templates/Layout';
@@ -7,8 +8,7 @@ import { setTheme } from 'Redux/actions/theme';
 import { storeWrapper } from 'Redux/store';
 import { ThemeProvider } from 'styled-components';
 import { useEffect } from 'react';
-import type { AppProps } from 'next/app';
-import { lightTheme, darkTheme } from 'Styles/themes';
+import { darkTheme, lightTheme } from 'Styles/themes';
 import { useDispatch, useSelector } from 'react-redux';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			window
 				.matchMedia('(prefers-color-scheme: dark)')
 				.removeEventListener('change', handleEventListener);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

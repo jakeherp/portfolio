@@ -1,7 +1,7 @@
-import { IPost } from '@Types';
-import { format } from 'date-fns';
-import Link from 'next/link';
 import { FC } from 'react';
+import { format } from 'date-fns';
+import { IPost } from '@Types';
+import Link from 'next/link';
 import { Flex, StyledBlogPost, Tags } from './styles';
 
 export interface BlogPostProps {

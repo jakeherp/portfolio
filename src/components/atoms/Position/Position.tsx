@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { format } from 'date-fns';
-import { Flex, StyledPosition, Text } from './styles';
 import { IJob } from '@Types';
 import Markdown from 'markdown-to-jsx';
+import { Flex, StyledPosition, Text } from './styles';
 
 export interface PositionProps {
 	job: IJob;

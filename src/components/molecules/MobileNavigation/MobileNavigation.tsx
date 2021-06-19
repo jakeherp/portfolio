@@ -1,9 +1,10 @@
-import { Icon } from 'Atoms/Icon';
-import { ThemeToggle } from 'Atoms/ThemeToggle';
 import classnames from 'classnames';
-import { Navigation } from 'Molecules/Navigation';
 import { FC, useState } from 'react';
 import { Menu, Overlay, StyledMobileNavigation } from './styles';
+
+import { Icon } from 'Atoms/Icon';
+import { Navigation } from 'Molecules/Navigation';
+import { ThemeToggle } from 'Atoms/ThemeToggle';
 
 const MobileNavigation: FC = () => {
 	const [isOpen, setOpen] = useState(false);

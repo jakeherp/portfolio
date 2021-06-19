@@ -1,6 +1,7 @@
-import { Icon } from 'Atoms/Icon';
 import { FC } from 'react';
 import { StyledSocialIcons } from './styles';
+
+import { Icon } from 'Atoms/Icon';
 
 const SocialIcons: FC = () => {
 	return (

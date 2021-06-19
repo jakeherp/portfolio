@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { List, StyledNavigation } from './styles';
 import Link from 'next/link';
+import { List, StyledNavigation } from './styles';
+
 import { ThemeToggle } from 'Atoms/ThemeToggle';
 
 interface NavigationProps {

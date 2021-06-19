@@ -2,8 +2,8 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { IPortfolioItem } from '@Types';
 import Link from 'next/link';
-import { StyledPortfolioItem } from './styles';
 import { shimmer } from 'Utils/shimmer';
+import { StyledPortfolioItem } from './styles';
 
 export interface PortfolioItemProps {
 	item: IPortfolioItem;

@@ -1,5 +1,5 @@
-import { ThemeToggle } from '../ThemeToggle';
 import { render } from '@testing-library/react';
+import { ThemeToggle } from '../ThemeToggle';
 
 const mockDispatch = jest.fn();
 
