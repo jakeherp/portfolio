@@ -1,3 +1,17 @@
+# 3.2.0
+
+## features
+
+- updates devDependencies
+- adds blur placeholders to images
+
+# 3.1.0
+
+## features
+
+- adds nprogress bar
+- adds read time
+
 # 3.0.0
 
 ## features
