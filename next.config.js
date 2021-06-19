@@ -1,7 +1,4 @@
 module.exports = {
-	future: {
-		webpack5: true,
-	},
 	poweredByHeader: false,
 	assetPrefix: process.env.ASSET_HOST || '',
 	productionBrowserSourceMaps: process.env.NODE_ENV === 'production',
