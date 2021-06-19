@@ -1,3 +1,9 @@
+# 3.2.1
+
+## fixes
+
+- fixes eslint config
+
 # 3.2.0
 
 ## features
