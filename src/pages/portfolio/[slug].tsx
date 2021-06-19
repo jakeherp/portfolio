@@ -1,8 +1,9 @@
-import styled from 'styled-components';
 import { getAllDocuments, getBySlug } from 'Utils/api';
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
+import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import { shimmer } from 'Utils/shimmer';
+import styled from 'styled-components';
 
 import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';
@@ -33,6 +34,8 @@ export default function BlogPost({ item, mdxSource }: any) {
 					height={1080}
 					objectFit="cover"
 					alt={`Screenshot of ${title}`}
+					placeholder="blur"
+					blurDataURL={shimmer(1920, 1080)}
 				/>{' '}
 				<Headline>{title}</Headline>
 				<h3>{type}</h3>

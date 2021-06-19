@@ -1,8 +1,11 @@
+import Image from 'next/image';
+import styled from 'styled-components';
+
 import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';
 import { SeoHead } from 'Atoms/SeoHead';
-import Image from 'next/image';
-import styled from 'styled-components';
+
+import desk from 'Public/assets/desk.jpg';
 
 function Home() {
 	return (
@@ -21,10 +24,11 @@ function Home() {
 					2021.
 				</p>
 				<Image
-					src="/assets/desk.jpg"
+					src={desk}
 					width={1920}
 					height={1080}
 					alt="A photo of my desk"
+					placeholder="blur"
 				/>
 				<h3>Computer & Hardware</h3>
 				<List>

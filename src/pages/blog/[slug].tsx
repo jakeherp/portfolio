@@ -8,13 +8,21 @@ import styled from 'styled-components';
 import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';
 import { SeoHead } from 'Atoms/SeoHead';
+import { shimmer } from 'Utils/shimmer';
 
 export default function BlogPost({ post, mdxSource }: any) {
 	const { title, description, date, tags } = post;
 
 	const components = {
 		img: (props: any) => (
-			<Image {...props} width={1920} height={1080} objectFit="cover" />
+			<Image
+				{...props}
+				width={1920}
+				height={1080}
+				objectFit="cover"
+				placeholder="blur"
+				blurDataURL={shimmer(1920, 1080)}
+			/>
 		),
 		ul: (props: any) => <List {...props} />,
 	};

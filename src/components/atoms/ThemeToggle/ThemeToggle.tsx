@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { StyledThemeToggle } from './styles';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +7,7 @@ import Light from 'Public/assets/light.svg';
 import Dark from 'Public/assets/dark.svg';
 import { setTheme } from 'Redux/actions/theme';
 
-const ThemeToggle: FC = () => {
+const ThemeToggle = () => {
 	const theme = useSelector(getTheme);
 	const dispatch = useDispatch();
 

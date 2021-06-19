@@ -1,8 +1,9 @@
-import { IPortfolioItem } from '@Types';
 import { FC } from 'react';
-import { StyledPortfolioItem } from './styles';
 import Image from 'next/image';
+import { IPortfolioItem } from '@Types';
 import Link from 'next/link';
+import { StyledPortfolioItem } from './styles';
+import { shimmer } from 'Utils/shimmer';
 
 export interface PortfolioItemProps {
 	item: IPortfolioItem;
@@ -21,6 +22,8 @@ const PortfolioItem: FC<PortfolioItemProps> = ({ item }) => {
 						height={1080}
 						objectFit="cover"
 						alt={title}
+						placeholder="blur"
+						blurDataURL={shimmer(1920, 1080)}
 					/>
 				</a>
 			</Link>

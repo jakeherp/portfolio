@@ -16,7 +16,7 @@ export default function Blog({ portfolioItems }: any) {
 			<Container>
 				<Headline>Portfolio</Headline>
 				{portfolioItems.map((item: any) => (
-					<PortfolioItem item={item} />
+					<PortfolioItem item={item} key={item.slug} />
 				))}
 			</Container>
 		</>
