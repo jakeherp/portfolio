@@ -1,9 +1,9 @@
 import format from 'date-fns/format';
-import { getAllDocuments, getBySlug } from 'Utils/api';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import styled from 'styled-components';
+import { getAllDocuments, getBySlug } from 'Utils/api';
 
 import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';

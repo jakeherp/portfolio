@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { format } from 'date-fns';
-import { Flex, StyledEducation } from './styles';
 import { IEducation } from '@Types';
+import { Flex, StyledEducation } from './styles';
 
 export interface EducationProps {
 	education: IEducation;

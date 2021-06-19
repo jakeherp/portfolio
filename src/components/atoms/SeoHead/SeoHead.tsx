@@ -37,7 +37,9 @@ const SeoHead: FC<HeadProps> = ({
 			<meta name="twitter:creator" content={author} />
 			{meta &&
 				meta.length > 0 &&
-				meta.map(({ name, content }) => <meta name={name} content={content} />)}
+				meta.map(({ name, content }) => (
+					<meta name={name} content={content} key={name} />
+				))}
 			{image && <meta name="og:image" content={image} />}
 			{image && <meta name="twitter:image" content={image} />}
 			{keywords && <meta name="keywords" content={keywords} />}

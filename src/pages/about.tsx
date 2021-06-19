@@ -1,16 +1,16 @@
 import absoluteUrl from 'next-absolute-url';
 import { differenceInCalendarYears } from 'date-fns';
+import { fetcher } from 'Utils/fetcher';
+import { GetServerSideProps } from 'next';
 import styled from 'styled-components';
 import { useState } from 'react';
 
-import { IEducation, IJob, ISkills } from '@Types';
+import { IEducation, IJob } from '@Types';
 
 import { Container } from 'Atoms/Container';
-import { SeoHead } from 'Atoms/SeoHead';
-import { GetServerSideProps } from 'next';
-import { Position } from 'Atoms/Position';
 import { Education } from 'Atoms/Education';
-import { fetcher } from 'Utils/fetcher';
+import { Position } from 'Atoms/Position';
+import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
 	jobs: IJob[];
@@ -32,7 +32,7 @@ function About({ jobs, education }: IProps) {
 			/>
 
 			<Container>
-				<Headline>Hey, I'm Jacob Herper</Headline>
+				<Headline>Hey, I&apos;m Jacob Herper</Headline>
 				<h3>A senior software engineer from England</h3>
 				<p>
 					As a passionate front-end developer, I create amazing websites and web

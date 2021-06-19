@@ -39,7 +39,7 @@ function Home() {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Macbook Pro 16"
+								Macbook Pro 16&quot;
 							</a>
 						</strong>{' '}
 						(2.4 GHz i9 CPU, 32 GB Ram, 2TB storage)
@@ -78,7 +78,7 @@ function Home() {
 								LG 34WN80C-B
 							</a>
 						</strong>{' '}
-						34" ultra-wide monitor, connected via USB-C
+						34&quot; ultra-wide monitor, connected via USB-C
 					</li>
 					<li>
 						<strong>
@@ -244,7 +244,7 @@ function Home() {
 								Insomnia
 							</a>
 						</strong>{' '}
-						to test REST and GraphQL API's
+						to test REST and GraphQL API&apos;s
 					</li>
 				</List>
 				<h3>Design Tools</h3>

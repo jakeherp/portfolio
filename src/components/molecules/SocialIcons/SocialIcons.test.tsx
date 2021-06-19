@@ -1,5 +1,5 @@
-import { SocialIcons } from '../SocialIcons';
 import { render } from '@testing-library/react';
+import { SocialIcons } from '../SocialIcons';
 
 describe('SocialIcons', () => {
 	it('renders correctly', () => {

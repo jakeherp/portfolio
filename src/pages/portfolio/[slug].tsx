@@ -1,14 +1,14 @@
-import { getAllDocuments, getBySlug } from 'Utils/api';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { shimmer } from 'Utils/shimmer';
 import styled from 'styled-components';
+import { getAllDocuments, getBySlug } from 'Utils/api';
 
+import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';
 import { SeoHead } from 'Atoms/SeoHead';
-import { Button } from 'Atoms/Button';
 
 export default function BlogPost({ item, mdxSource }: any) {
 	const { title, link, type, technologies, slug } = item;
@@ -96,32 +96,5 @@ const Headline = styled.h2`
 
 	@media screen and (min-width: 768px) {
 		font-size: 3rem;
-	}
-`;
-
-const Text = styled.p`
-	margin-top: 3rem 0;
-	display: flex;
-	align-items: baseline;
-`;
-
-const Flex = styled.div`
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
-
-	@media screen and (min-width: 768px) {
-		flex-direction: row;
-	}
-`;
-
-const Tags = styled.ul`
-	display: flex;
-	flex-wrap: wrap;
-	color: ${({ theme }) => theme.grey};
-
-	li {
-		margin-left: 1rem;
-		font-size: 0.9rem;
 	}
 `;

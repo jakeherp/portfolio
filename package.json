@@ -1,7 +1,7 @@
 {
 	"name": "portfolio",
 	"description": "A redesign of my portfolio website.",
-	"version": "3.2.0",
+	"version": "3.2.1",
 	"author": {
 		"name": "Jacob Herper",
 		"email": "jacob@herper.io",
@@ -80,6 +80,7 @@
 		"babel-plugin-styled-components": "^1.12.0",
 		"core-js": "^3.14.0",
 		"eslint": "^7.29.0",
+		"eslint-config-next": "^11.0.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-jest": "^24.3.6",
 		"eslint-plugin-jsx-a11y": "^6.4.1",

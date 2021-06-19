@@ -1,5 +1,5 @@
-import { SeoHead } from './SeoHead';
 import { render } from '@testing-library/react';
+import { SeoHead } from './SeoHead';
 
 describe('Head', () => {
 	it('renders correctly', () => {

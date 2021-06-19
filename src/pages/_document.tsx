@@ -1,8 +1,8 @@
 import { ServerStyleSheet } from 'styled-components';
 import Document, {
 	DocumentContext,
-	Html,
 	Head,
+	Html,
 	Main,
 	NextScript,
 } from 'next/document';
