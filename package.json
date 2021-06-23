@@ -89,7 +89,7 @@
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"husky": "^6.0.0",
 		"hygen": "^6.1.0",
-		"jest": "^27.0.4",
+		"jest": "^27.0.5",
 		"jest-runner-eslint": "^0.10.1",
 		"jest-watch-select-projects": "^2.0.0",
 		"jest-watch-typeahead": "^0.6.4",
