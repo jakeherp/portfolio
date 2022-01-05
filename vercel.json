@@ -1,5 +1,4 @@
 {
-	"trailingSlash": true,
 	"redirects": [
 		{ "source": "/portfolio", "destination": "/case-studies" },
 		{ "source": "/portfolio/:path", "destination": "/case-studies" },
