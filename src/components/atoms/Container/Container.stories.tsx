@@ -5,11 +5,15 @@ export default {
 	component: Container,
 };
 
-export const ContainerStory = ({ children }: any) => (
+interface Props {
+	children: React.ReactNode;
+}
+
+export const ContainerStory = ({ children }: Props) => (
 	<Container>{children}</Container>
 );
 
 ContainerStory.storyName = 'Container';
 ContainerStory.args = {
-	children: <p>Page Content</p>,
+	children: 'Content',
 };

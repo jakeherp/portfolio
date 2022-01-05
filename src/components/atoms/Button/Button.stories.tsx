@@ -9,7 +9,7 @@ export const ButtonStory = (args: ButtonProps) => <Button {...args} />;
 
 ButtonStory.storyName = 'Button';
 ButtonStory.args = {
-	children: 'Button Text',
-	href: '/link',
-	target: '_blank',
+	href: '/',
+	text: 'Button',
+	target: '_self',
 };

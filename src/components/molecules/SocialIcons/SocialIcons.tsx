@@ -1,52 +1,27 @@
-import { FC } from 'react';
-import { StyledSocialIcons } from './styles';
+import { Icon, IconProps } from 'Atoms/Icon';
 
-import { Icon } from 'Atoms/Icon';
+export interface SocialIconsProps {
+	profiles: Array<{
+		url: string;
+		name: string;
+		icon: IconProps['icon'];
+	}>;
+}
 
-const SocialIcons: FC = () => {
+const SocialIcons = ({ profiles }: SocialIconsProps) => {
 	return (
-		<StyledSocialIcons>
-			<li>
-				<a
-					href="https://github.com/jakeherp"
-					target="_blank"
-					rel="noopener noreferrer"
-					title="Github"
+		<ul className="flex gap-6">
+			{profiles.map(({ url, name, icon }) => (
+				<li
+					className="w-6 h-6 opacity-70 hover:opacity-100 transition"
+					key={name}
 				>
-					<Icon icon="GITHUB" />
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://twitter.com/jakeherp"
-					target="_blank"
-					rel="noopener noreferrer"
-					title="Twitter"
-				>
-					<Icon icon="TWITTER" />
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://www.linkedin.com/in/jacobherper"
-					target="_blank"
-					rel="noopener noreferrer"
-					title="LinkedIn"
-				>
-					<Icon icon="LINKEDIN" />
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://instagram.com/jakeherp"
-					target="_blank"
-					rel="noopener noreferrer"
-					title="Instagram"
-				>
-					<Icon icon="INSTAGRAM" />
-				</a>
-			</li>
-		</StyledSocialIcons>
+					<a href={url} target="_blank" rel="noopener noreferrer" title={name}>
+						<Icon icon={icon} />
+					</a>
+				</li>
+			))}
+		</ul>
 	);
 };
 

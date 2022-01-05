@@ -1,8 +1,15 @@
+import { ICompany, IRawCompany } from '@types';
+
 export interface IEducation {
-	institute: string;
-	website: string;
+	institute: ICompany;
 	course: string;
-	endDate: string | Date;
-	place: string;
+	date: string;
 	technologies: string[];
+}
+
+export interface IRawEducation {
+	course: string;
+	date: string;
+	institute: IRawCompany;
+	courseContents: Array<{ skill: string }>;
 }

@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import { StyledContainer } from './styles';
 
 const Container: FC = ({ children }) => {
-	return <StyledContainer>{children}</StyledContainer>;
+	return <div className="mx-auto w-full px-4 md:max-w-5xl">{children}</div>;
 };
 
 export { Container };

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BurgerIcon renders correctly 1`] = `
+<div>
+  <div
+    class="burger-icon"
+  >
+    <span />
+    <span />
+    <span />
+    <span />
+  </div>
+</div>
+`;

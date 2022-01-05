@@ -1,5 +1,7 @@
-export type { IEducation } from './education';
-export type { IJob } from './job';
-export type { IPortfolioItem } from './portfolioItem';
-export type { IPost } from './post';
-export type { ISkills } from './skills';
+export * from './blog';
+export * from './caseStudy';
+export * from './company';
+export * from './education';
+export * from './image';
+export * from './job';
+export * from './podcast';

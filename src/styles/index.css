@@ -1,0 +1,249 @@
+:root {
+	--light-gradient: linear-gradient(95.08deg, #00baff 2.49%, #063ef9 97.19%);
+	--dark-gradient: linear-gradient(
+		95.08deg,
+		#945bf1 2.49%,
+		#bb48bf 49%,
+		#f67e4d 97.19%
+	);
+}
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Basier Circle';
+	src: url('/fonts/basiercircle-regular-webfont.eot');
+	src: url('/fonts/basiercircle-regular-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		url('/fonts/basiercircle-regular-webfont.woff2') format('woff2'),
+		url('/fonts/basiercircle-regular-webfont.woff') format('woff'),
+		url('/fonts/basiercircle-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Basier Circle';
+	src: url('/fonts/basiercircle-regularitalic-webfont.eot');
+	src: url('/fonts/basiercircle-regularitalic-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		url('/fonts/basiercircle-regularitalic-webfont.woff2') format('woff2'),
+		url('/fonts/basiercircle-regularitalic-webfont.woff') format('woff'),
+		url('/fonts/basiercircle-regularitalic-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Basier Circle';
+	src: url('/fonts/basiercircle-bold-webfont.eot');
+	src: url('/fonts/basiercircle-bold-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		url('/fonts/basiercircle-bold-webfont.woff2') format('woff2'),
+		url('/fonts/basiercircle-bold-webfont.woff') format('woff'),
+		url('/fonts/basiercircle-bold-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Basier Circle';
+	src: url('/fonts/basiercircle-bolditalic-webfont.eot');
+	src: url('/fonts/basiercircle-bolditalic-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		url('/fonts/basiercircle-bolditalic-webfont.woff2') format('woff2'),
+		url('/fonts/basiercircle-bolditalic-webfont.woff') format('woff'),
+		url('/fonts/basiercircle-bolditalic-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+::selection {
+	background: #945bf170;
+}
+
+html.dark .headroom--pinned header {
+	border-bottom: 1px solid rgba(78, 75, 102, 0.78);
+}
+
+html.light .headroom--pinned header {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+@layer components {
+	.headline {
+		@apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:via-purple-middle dark:to-purple-stop;
+	}
+
+	.underlined::after {
+		content: '';
+		height: 2px;
+		transform: scaleX(0);
+		transition: transform 0.25s ease;
+		transform-origin: left;
+		left: 0;
+		width: 100%;
+		display: block;
+		position: absolute;
+	}
+
+	.underlined-light:hover::after,
+	.underlined-light:focus::after,
+	.active.underlined-light::after {
+		background: var(--light-gradient);
+		transform: scaleX(1);
+	}
+
+	.underlined-dark:hover::after,
+	.underlined-dark:focus::after,
+	.active.underlined-dark::after {
+		background: var(--dark-gradient);
+		transform: scaleX(1);
+	}
+
+	.animation-delay {
+		animation-delay: 500ms !important;
+	}
+
+	.animate-hover {
+		animation: 2s ease-in-out 0s infinite alternate none running hover;
+	}
+
+	@keyframes hover {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(10px);
+		}
+	}
+
+	.glass-light {
+		background: linear-gradient(
+			114.67deg,
+			rgba(255, 255, 255, 0.65) 5%,
+			rgba(252, 252, 252, 0.08) 74.94%
+		);
+		mix-blend-mode: normal;
+		backdrop-filter: blur(30px);
+		border: 1px solid rgba(255, 255, 255, 0.65);
+	}
+
+	.glass-dark {
+		background: linear-gradient(
+			114.67deg,
+			rgba(78, 75, 102, 0.78) 5%,
+			rgba(78, 75, 102, 0.08) 74.94%
+		);
+		mix-blend-mode: normal;
+		backdrop-filter: blur(30px);
+		border: 1px solid rgba(78, 75, 102, 0.78);
+	}
+
+	.gradient-bg-dark {
+		background: var(--dark-gradient);
+	}
+
+	.gradient-bg-light {
+		background: var(--light-gradient);
+	}
+
+	.gradient-border-dark {
+		border-style: solid;
+		border-width: 2px;
+		border-image: var(--dark-gradient) 1;
+	}
+
+	.gradient-border-light {
+		border-style: solid;
+		border-width: 2px;
+		border-image: var(--light-gradient) 1;
+	}
+
+	.gradient-border {
+		@apply gradient-border-light dark:gradient-border-dark;
+	}
+
+	.gradient-bg {
+		@apply gradient-bg-light dark:gradient-bg-dark;
+	}
+
+	.underlined {
+		@apply underlined-light dark:underlined-dark;
+	}
+
+	.burger-icon {
+		width: 32px;
+		height: 24px;
+		position: relative;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: 0.5s ease-in-out;
+		-moz-transition: 0.5s ease-in-out;
+		-o-transition: 0.5s ease-in-out;
+		transition: 0.5s ease-in-out;
+		cursor: pointer;
+	}
+
+	.burger-icon span {
+		@apply bg-off-black dark:bg-off-white;
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		border-radius: 3px;
+		opacity: 1;
+		left: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: 0.25s ease-in-out;
+		-moz-transition: 0.25s ease-in-out;
+		-o-transition: 0.25s ease-in-out;
+		transition: 0.25s ease-in-out;
+	}
+
+	.burger-icon span:nth-child(1) {
+		top: 0px;
+	}
+
+	.burger-icon span:nth-child(2),
+	.burger-icon span:nth-child(3) {
+		top: 12px;
+	}
+
+	.burger-icon span:nth-child(4) {
+		top: 24px;
+	}
+
+	.burger-icon.open span:nth-child(1) {
+		top: 18px;
+		width: 0%;
+		left: 50%;
+	}
+
+	.burger-icon.open span:nth-child(2) {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.burger-icon.open span:nth-child(3) {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	.burger-icon.open span:nth-child(4) {
+		top: 18px;
+		width: 0%;
+		left: 50%;
+	}
+}
