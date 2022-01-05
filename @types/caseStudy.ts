@@ -1,4 +1,4 @@
-import { IImage, IRawClient } from '@types';
+import { IImage, IRawCompany } from '@types';
 
 export interface ICaseStudy {
 	id: string;
@@ -22,7 +22,7 @@ export interface IRawCaseStudy {
 	slug: string;
 	seoDescription: string;
 	projectUrl?: string;
-	client: IRawClient;
+	client: IRawCompany;
 	content: {
 		markdown: string;
 	};

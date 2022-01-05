@@ -1,6 +1,5 @@
 export * from './blog';
 export * from './caseStudy';
-export * from './client';
 export * from './company';
 export * from './education';
 export * from './image';

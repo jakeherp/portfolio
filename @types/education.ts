@@ -1,7 +1,7 @@
-import { IClient, IRawClient } from '@types';
+import { ICompany, IRawCompany } from '@types';
 
 export interface IEducation {
-	institute: IClient;
+	institute: ICompany;
 	course: string;
 	date: string;
 	technologies: string[];
@@ -10,6 +10,6 @@ export interface IEducation {
 export interface IRawEducation {
 	course: string;
 	date: string;
-	institute: IRawClient;
+	institute: IRawCompany;
 	courseContents: Array<{ skill: string }>;
 }

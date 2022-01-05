@@ -1,7 +1,7 @@
-import { IClient, IRawClient } from '@types';
+import { ICompany, IRawCompany } from '@types';
 
 export interface IJob {
-	company: IClient;
+	company: ICompany;
 	jobTitle: string;
 	fromDate: string;
 	toDate: string | null;
@@ -10,7 +10,7 @@ export interface IJob {
 }
 
 export interface IRawJob {
-	company: IRawClient;
+	company: IRawCompany;
 	jobTitle: string;
 	fromDate: string;
 	toDate: string | null;
