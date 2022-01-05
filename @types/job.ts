@@ -1,10 +1,10 @@
+import { ICompany } from '@types';
+
 export interface IJob {
-	company: string;
-	website?: string;
+	company: ICompany;
 	jobTitle: string;
-	startDate: string | Date;
-	endDate: string | Date | null;
+	fromDate: string;
+	toDate: string | null;
 	technologies: string[];
 	description: string;
-	place: string;
 }

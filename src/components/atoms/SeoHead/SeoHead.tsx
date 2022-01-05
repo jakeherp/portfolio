@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import Head from 'next/head';
 
 export interface HeadProps {
 	title: string;
 	description: string;
 	lang?: string;
-	keywords?: string;
+	keywords?: string[];
 	author?: string;
 	image?: string;
 	meta?: Array<{
@@ -14,14 +13,14 @@ export interface HeadProps {
 	}>;
 }
 
-const SeoHead: FC<HeadProps> = ({
+const SeoHead = ({
 	title,
 	description,
 	author = 'Jacob Herper',
 	keywords,
 	image = 'https://res.cloudinary.com/jacobherper/image/upload/c_fill,g_north,h_1080,w_1920/v1587315694/herper-io.png ',
 	meta,
-}) => {
+}: HeadProps) => {
 	return (
 		<Head>
 			<title>{title}</title>
@@ -42,7 +41,9 @@ const SeoHead: FC<HeadProps> = ({
 				))}
 			{image && <meta name="og:image" content={image} />}
 			{image && <meta name="twitter:image" content={image} />}
-			{keywords && <meta name="keywords" content={keywords} />}
+			{keywords && <meta name="keywords" content={keywords.join(', ')} />}
+			<meta charSet="utf-8" />
+			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{

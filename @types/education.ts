@@ -1,8 +1,8 @@
+import { ICompany } from '@types';
+
 export interface IEducation {
-	institute: string;
-	website: string;
+	institute: ICompany;
 	course: string;
-	endDate: string | Date;
-	place: string;
+	date: string;
 	technologies: string[];
 }

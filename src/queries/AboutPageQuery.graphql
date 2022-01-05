@@ -1,0 +1,44 @@
+query AboutPageQuery {
+	podcasts(orderBy: position_ASC) {
+		id
+		name
+		url
+		logo {
+			url
+		}
+	}
+	jobs(orderBy: fromDate_DESC) {
+		id
+		jobTitle
+		fromDate
+		toDate
+		description {
+			markdown
+		}
+		company {
+			name
+			url
+			logo {
+				url
+			}
+		}
+		skills {
+			skill
+		}
+	}
+	educations(orderBy: date_DESC) {
+		id
+		course
+		date
+		courseContents {
+			skill
+		}
+		institute {
+			name
+			url
+			logo {
+				url
+			}
+		}
+	}
+}

@@ -1,16 +1,15 @@
 import { Layout } from '../Layout';
 import { render } from '@testing-library/react';
 
-const mockDispatch = jest.fn();
-
-jest.mock('react-redux', () => ({
-	useSelector: jest.fn(),
-	useDispatch: () => mockDispatch,
+jest.mock('next/router', () => ({
+	useRouter: jest.fn().mockReturnValue({
+		asPath: '/',
+	}),
 }));
 
 describe('Layout', () => {
 	it('renders correctly', () => {
-		const { container } = render(<Layout />);
+		const { container } = render(<Layout title="Some title" />);
 		expect(container).toMatchSnapshot();
 	});
 });

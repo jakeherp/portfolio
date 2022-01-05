@@ -1,93 +1,41 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "baseUrl": ".",
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "paths": {
-      // Components
-      "Atoms/*": [
-        "./src/components/atoms/*"
-      ],
-      "Molecules/*": [
-        "./src/components/molecules/*"
-      ],
-      "Organisms/*": [
-        "./src/components/organisms/*"
-      ],
-      "Species/*": [
-        "./src/components/species/*"
-      ],
-      "Templates/*": [
-        "./src/components/templates/*"
-      ],
-      // Other folders
-      "@Types": [
-        "./@types/"
-      ],
-      "@Types/*": [
-        "./@types/*"
-      ],
-      "Config": [
-        "./src/config/"
-      ],
-      "Config/*": [
-        "./src/config/*"
-      ],
-      "Styles/*": [
-        "./src/styles/*"
-      ],
-      "Hooks": [
-        "./src/hooks/"
-      ],
-      "Hooks/*": [
-        "./src/hooks/*"
-      ],
-      "MockData": [
-        "./src/mocks"
-      ],
-      "MockData/*": [
-        "./src/mocks/*"
-      ],
-      "Pages/*": [
-        "./src/pages*"
-      ],
-      "Public/*": [
-        "./public/*"
-      ],
-      "Redux/*": [
-        "./src/redux/*"
-      ],
-      "Storybook/*": [
-        ".storybook/*"
-      ],
-      "Utils/*": [
-        "./src/utils/*"
-      ]
-    },
-    "isolatedModules": true,
-    "incremental": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"baseUrl": ".",
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"paths": {
+			// Components
+			"Atoms/*": ["./src/components/atoms/*"],
+			"Molecules/*": ["./src/components/molecules/*"],
+			"Organisms/*": ["./src/components/organisms/*"],
+			"Species/*": ["./src/components/species/*"],
+			"Templates/*": ["./src/components/templates/*"],
+			// Other folders
+			"@types": ["./@types/"],
+			"@types/*": ["./@types/*"],
+			"config": ["./src/config/"],
+			"config/*": ["./src/config/*"],
+			"MockData": ["./src/mockData"],
+			"MockData/*": ["./src/mockData/*"],
+			"pages/*": ["./src/pages*"],
+			"public/*": ["./public/*"],
+			"queries/*": ["./src/queries/*"],
+			"redux/*": ["./src/redux/*"],
+			"utils/*": ["./src/utils/*"]
+		},
+		"incremental": true
+	},
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules"]
 }

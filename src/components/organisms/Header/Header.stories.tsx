@@ -8,4 +8,3 @@ export default {
 export const HeaderStory = () => <Header />;
 
 HeaderStory.storyName = 'Header';
-HeaderStory.args = {};

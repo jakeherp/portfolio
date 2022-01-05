@@ -1,49 +1,65 @@
-import { getAllDocuments } from 'Utils/api';
-import orderBy from 'lodash.orderby';
-import styled from 'styled-components';
+import { client } from 'apollo-client';
+import { format } from 'date-fns';
+import { gql } from '@apollo/client';
+import Link from 'next/link';
+import { NextPage } from 'next';
 
-import { BlogPost } from 'Atoms/BlogPost';
 import { Container } from 'Atoms/Container';
-import { SeoHead } from 'Atoms/SeoHead';
+import { Layout } from 'Templates/Layout';
 
-export default function Blog({ posts }: any) {
-	return (
-		<>
-			<SeoHead
-				title="Jacob Herper's Blog - Front-End Software Engineer"
-				description="I try to make an effort to document my journey as a software engineer in the form of blog posts. Here you find some of the articles I published over the years."
-			/>
-			<Container>
-				<Headline>Blog</Headline>
-				{posts.map((post: any) => (
-					<BlogPost post={post} key={post.slug} />
-				))}
-			</Container>
-		</>
-	);
+interface IProps {
+	posts: any;
 }
 
-export async function getStaticProps() {
-	const posts = getAllDocuments('BLOG', [
-		'title',
-		'description',
-		'slug',
-		'tags',
-		'date',
-	]);
+const BlogPage: NextPage<IProps> = ({ posts }) => {
+	return (
+		<Layout
+			title="Software Engineering Blog by Jacob Herper"
+			description="I try to make an effort to document my journey as a software developer in the form of blog posts. Here you find some of the articles I published over the years."
+		>
+			<Container>
+				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
+					Blog
+				</h1>
+				{posts.map(({ title, slug, introText, publishedDate }: any) => (
+					<article key={slug} className="mb-12">
+						<Link href={`/blog/${slug}`}>
+							<a className="group">
+								<h1 className="text-2xl font-bold mb-2 relative inline-block underlined">
+									{title}
+								</h1>
+								<p>{introText}</p>
+								<em className="block mt-2">
+									Published on {format(new Date(publishedDate), 'do MMMM yyyy')}
+								</em>
+							</a>
+						</Link>
+					</article>
+				))}
+			</Container>
+		</Layout>
+	);
+};
 
-	const sortedPosts = orderBy(posts, ['date'], ['desc']);
+export async function getStaticProps() {
+	const { data } = await client.query({
+		query: gql`
+			query BlogPageQuery {
+				blogs(orderBy: publishedDate_DESC) {
+					slug
+					title
+					introText
+					publishedDate
+				}
+			}
+		`,
+	});
 
 	return {
-		props: { posts: sortedPosts },
+		props: {
+			posts: data.blogs,
+		},
 	};
 }
 
-const Headline = styled.h2`
-	font-size: 2rem;
-	margin-bottom: 0;
-
-	@media screen and (min-width: 768px) {
-		font-size: 3rem;
-	}
-`;
+export default BlogPage;

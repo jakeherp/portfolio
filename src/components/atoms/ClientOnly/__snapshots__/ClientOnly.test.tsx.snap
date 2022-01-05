@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClientOnly renders correctly 1`] = `
+<div>
+  <div>
+    Client-side only content
+  </div>
+</div>
+`;

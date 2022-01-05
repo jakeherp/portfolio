@@ -11,5 +11,5 @@ export const ContainerStory = ({ children }: any) => (
 
 ContainerStory.storyName = 'Container';
 ContainerStory.args = {
-	children: <p>Page Content</p>,
+	children: 'Content',
 };

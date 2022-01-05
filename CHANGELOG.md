@@ -1,3 +1,10 @@
+# 3.3.0
+
+## features
+
+- fresh coat of paint
+- updated to use latest version of dependencies
+
 # 3.2.1
 
 ## fixes

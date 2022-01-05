@@ -1,19 +1,34 @@
-import { FC } from 'react';
-import { Flex, StyledFooter } from './styles';
-
-import { Container } from 'Atoms/Container';
 import { SocialIcons } from 'Molecules/SocialIcons';
 
-const Footer: FC = () => {
+const Footer = () => {
 	return (
-		<StyledFooter>
-			<Container>
-				<Flex>
-					<span>&copy; {new Date().getFullYear()} Jacob Herper</span>
-					<SocialIcons />
-				</Flex>
-			</Container>
-		</StyledFooter>
+		<footer className="flex justify-between mt-20 px-4 md:px-20 py-8">
+			<span>&copy; {new Date().getFullYear()} Jacob Herper</span>
+			<SocialIcons
+				profiles={[
+					{
+						name: 'Github',
+						url: 'https://www.github.com/jakeherp',
+						icon: 'GITHUB',
+					},
+					{
+						name: 'LinkedIn',
+						url: 'https://www.linkedin.com/in/jacobherper',
+						icon: 'LINKEDIN',
+					},
+					{
+						name: 'Twitter',
+						url: 'https://twitter.com/jakeherp',
+						icon: 'TWITTER',
+					},
+					{
+						name: 'Instagram',
+						url: 'https://www.instagram.com/jakeherp',
+						icon: 'INSTAGRAM',
+					},
+				]}
+			/>
+		</footer>
 	);
 };
 

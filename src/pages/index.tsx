@@ -1,35 +1,46 @@
-import absoluteUrl from 'next-absolute-url';
-import { fetcher } from 'Utils/fetcher';
-import { GetServerSideProps } from 'next';
-import { ISkills } from '@Types';
-import styled from 'styled-components';
+import { Container } from 'Atoms/Container';
+import { Layout } from 'Templates/Layout';
 import Typed from 'react-typed';
 
-import { Container } from 'Atoms/Container';
-import { SeoHead } from 'Atoms/SeoHead';
-
-interface IProps {
-	skills: ISkills;
-}
-
-function Home({ skills }: IProps) {
-	const { technologies, frameworks } = skills;
-
-	const talkAbout = [...technologies, ...frameworks];
+const IndexPage = () => {
+	const talkAbout = [
+		'React',
+		'JavaScript',
+		'TypeScript',
+		'GraphQL',
+		'Redux',
+		'Jamstack',
+		'Next.js',
+		'RESTful APIs',
+		'HTML',
+		'CSS',
+		'Gatsby',
+		'Svelte',
+	];
 
 	return (
-		<>
-			<SeoHead
-				title="Jacob Herper - Front-End Software Engineer"
-				description="Front-End Software Engineer with a focus on JavaScript and React.js. I have more than 10 years experience working in software engineering."
-			/>
-
+		<Layout
+			title="Senior Software Engineer and Consultant – Jacob Herper"
+			description="A Front-End Software Engineer with a focus on JavaScript and React. I have more than 10 years experience working in software engineering and consulting."
+			keywords={[
+				'Software Engineer',
+				'Jacob Herper',
+				'Software Consulting',
+				'Front-End',
+				'Full-Stack',
+				'React',
+				'TypeScript',
+				'JavaScript',
+				'GraphQL',
+				'CSS',
+				'Tailwind',
+			]}
+		>
 			<Container>
-				<Headline>
-					Hey, I&apos;m
-					<wbr /> Jacob Herper <span>👋</span>
-				</Headline>
-				<p>
+				<h1 className="headline mt-20 text-3xl md:text-5xl lg:text-6xl">
+					Hey, I&apos;m Jacob Herper 👋
+				</h1>
+				<p className="my-8 text-lg">
 					I am a passionate Software Engineer, specialised in front-end
 					development using React and TypeScript. As an advocate for web
 					performance and accessibility and an evangelist for the Jamstack, I
@@ -55,57 +66,15 @@ function Home({ skills }: IProps) {
 						title="Link to Github repository"
 						target="_blank"
 						rel="noopener noreferrer"
+						className="underlined font-bold relative border-b-2 border-grey-300 dark:border-grey-700 hover:border-b-0"
 					>
 						Github
 					</a>
 					.
 				</p>
 			</Container>
-		</>
+		</Layout>
 	);
-}
-
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-	const { origin } = absoluteUrl(req);
-	const skills = await fetcher(`${origin}/api/skills`);
-
-	return {
-		props: {
-			skills,
-		},
-	};
 };
 
-const Headline = styled.h2`
-	font-size: 2rem;
-
-	span {
-		display: none;
-	}
-
-	@media screen and (min-width: 768px) {
-		font-size: 3rem;
-
-		span {
-			display: inline-block;
-		}
-
-		@keyframes wave {
-			0% {
-				transform: rotate(0);
-			}
-			50% {
-				transform: rotate(-10deg);
-			}
-			100% {
-				transform: rotate(10deg);
-			}
-		}
-
-		&:hover span {
-			animation: wave 0.5s ease infinite;
-		}
-	}
-`;
-
-export default Home;
+export default IndexPage;
