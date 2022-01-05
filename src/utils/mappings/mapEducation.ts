@@ -1,6 +1,7 @@
-// TODO: add types
-export const mapEducation = (educationResponse: any) =>
-	educationResponse.map(({ course, date, institute, courseContents }: any) => ({
+import { IRawEducation } from '@types';
+
+export const mapEducation = (educationResponse: IRawEducation[]) =>
+	educationResponse.map(({ course, date, institute, courseContents }) => ({
 		course,
 		date,
 		institute: {
@@ -8,5 +9,5 @@ export const mapEducation = (educationResponse: any) =>
 			url: institute.url,
 			logo: institute.logo.url,
 		},
-		technologies: courseContents.map(({ skill }: any) => skill),
+		technologies: courseContents.map(({ skill }) => skill),
 	}));

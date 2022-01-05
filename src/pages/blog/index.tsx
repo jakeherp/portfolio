@@ -1,6 +1,7 @@
 import { client } from 'apollo-client';
 import { format } from 'date-fns';
 import { gql } from '@apollo/client';
+import { IBlogPost } from '@types';
 import Link from 'next/link';
 import { NextPage } from 'next';
 
@@ -8,7 +9,7 @@ import { Container } from 'Atoms/Container';
 import { Layout } from 'Templates/Layout';
 
 interface IProps {
-	posts: any;
+	posts: IBlogPost[];
 }
 
 const BlogPage: NextPage<IProps> = ({ posts }) => {
@@ -21,7 +22,7 @@ const BlogPage: NextPage<IProps> = ({ posts }) => {
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
 					Blog
 				</h1>
-				{posts.map(({ title, slug, introText, publishedDate }: any) => (
+				{posts.map(({ title, slug, introText, publishedDate }) => (
 					<article key={slug} className="mb-12">
 						<Link href={`/blog/${slug}`}>
 							<a className="group">
@@ -57,7 +58,7 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			posts: data.blogs,
+			posts: data.blogs as IBlogPost[],
 		},
 	};
 }

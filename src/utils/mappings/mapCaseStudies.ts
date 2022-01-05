@@ -1,5 +1,6 @@
-// TODO: add types
-export const mapCaseStudies = (caseStudiesResponse: any) =>
+import { IRawCaseStudy } from '@types';
+
+export const mapCaseStudies = (caseStudiesResponse: IRawCaseStudy[]) =>
 	caseStudiesResponse.map(
 		({
 			id,
@@ -12,7 +13,7 @@ export const mapCaseStudies = (caseStudiesResponse: any) =>
 			technologies,
 			primaryImage,
 			secondaryImages,
-		}: any) => ({
+		}) => ({
 			id,
 			title,
 			slug,
@@ -23,8 +24,8 @@ export const mapCaseStudies = (caseStudiesResponse: any) =>
 				logo: client.logo.url,
 			},
 			content: content.markdown,
-			technologies: technologies.map(({ skill }: any) => skill),
+			technologies: technologies.map(({ skill }) => skill),
 			primaryImage: primaryImage.url,
-			secondaryImages: secondaryImages.map(({ url }: any) => url),
+			secondaryImages: secondaryImages.map(({ url }) => url),
 		})
 	);

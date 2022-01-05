@@ -1,6 +1,7 @@
 import { client } from 'apollo-client';
 import format from 'date-fns/format';
 import { gql } from '@apollo/client';
+import { IBlogPost } from '@types';
 import Markdown from 'react-markdown';
 import { NextPage } from 'next';
 
@@ -59,13 +60,18 @@ export async function getStaticPaths() {
 	});
 
 	return {
-		paths: data.blogs.map(({ slug }: any) => ({
+		paths: data.blogs.map(({ slug }: IBlogPost) => ({
 			params: { slug },
 		})),
 		fallback: false,
 	};
 }
-export async function getStaticProps({ params }: any) {
+
+type Params = {
+	params: { slug: IBlogPost['slug'] };
+};
+
+export async function getStaticProps({ params }: Params) {
 	const { data } = await client.query({
 		query: gql`
 			query PostPageQuery($slug: String!) {

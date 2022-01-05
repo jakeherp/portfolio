@@ -1,12 +1,12 @@
 import { IImage } from '@types';
 
-export interface IPodcast {
+export interface IClient {
 	name: string;
-	imagePath: string;
 	url: string;
+	logo: string;
 }
 
-export interface IRawPodcast {
+export interface IRawClient {
 	name: string;
 	url: string;
 	logo: IImage;

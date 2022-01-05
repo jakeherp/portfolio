@@ -9,7 +9,7 @@ import { Container } from 'Atoms/Container';
 import { Layout } from 'Templates/Layout';
 
 interface IProps {
-	caseStudies: any;
+	caseStudies: ICaseStudy[];
 }
 
 const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
@@ -22,7 +22,7 @@ const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8 mb-12">
 					Case Studies
 				</h1>
-				{caseStudies.map((caseStudy: ICaseStudy) => (
+				{caseStudies.map((caseStudy) => (
 					<CaseStudy key={caseStudy.slug} {...caseStudy} />
 				))}
 			</Container>

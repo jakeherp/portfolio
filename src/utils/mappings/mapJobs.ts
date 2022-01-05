@@ -1,7 +1,8 @@
-// TODO: add types
-export const mapJobs = (jobsResponse: any) =>
+import { IRawJob } from '@types';
+
+export const mapJobs = (jobsResponse: IRawJob[]) =>
 	jobsResponse.map(
-		({ company, jobTitle, fromDate, toDate, skills, description }: any) => ({
+		({ company, jobTitle, fromDate, toDate, skills, description }) => ({
 			company: {
 				name: company.name,
 				logo: company.logo.url,
@@ -10,7 +11,7 @@ export const mapJobs = (jobsResponse: any) =>
 			jobTitle,
 			fromDate,
 			toDate,
-			technologies: skills.map(({ skill }: any) => skill),
+			technologies: skills.map(({ skill }) => skill),
 			description: description.markdown,
 		})
 	);

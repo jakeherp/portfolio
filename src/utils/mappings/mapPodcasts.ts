@@ -1,6 +1,7 @@
-// TODO: add types
-export const mapPodcasts = (podcastsResponse: any) =>
-	podcastsResponse.map(({ name, url, logo }: any) => ({
+import { IRawPodcast } from '@types';
+
+export const mapPodcasts = (podcastsResponse: IRawPodcast[]) =>
+	podcastsResponse.map(({ name, url, logo }) => ({
 		name,
 		url,
 		imagePath: logo.url,

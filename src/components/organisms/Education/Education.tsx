@@ -11,7 +11,7 @@ const Education = ({ education }: EducationProps) => {
 	return (
 		<>
 			{education.map(
-				({ course, date, institute, technologies }: any, index: number) => (
+				({ course, date, institute, technologies }, index: number) => (
 					<div
 						className={classNames(
 							'flex transition-all transform md:hover:scale-[1.01]',

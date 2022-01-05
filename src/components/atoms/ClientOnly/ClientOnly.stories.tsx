@@ -5,7 +5,11 @@ export default {
 	component: ClientOnly,
 };
 
-export const ClientOnlyStory = ({ children }: any) => (
+interface Props {
+	children: React.ReactNode;
+}
+
+export const ClientOnlyStory = ({ children }: Props) => (
 	<ClientOnly>{children}</ClientOnly>
 );
 

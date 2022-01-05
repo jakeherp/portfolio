@@ -5,7 +5,11 @@ export default {
 	component: Box,
 };
 
-export const BoxStory = ({ children }: any) => <Box>{children}</Box>;
+interface Props {
+	children: React.ReactNode;
+}
+
+export const BoxStory = ({ children }: Props) => <Box>{children}</Box>;
 
 BoxStory.storyName = 'Box';
 BoxStory.args = {

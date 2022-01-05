@@ -106,13 +106,18 @@ export async function getStaticPaths() {
 	});
 
 	return {
-		paths: data.caseStudies.map(({ slug }: any) => ({
+		paths: data.caseStudies.map(({ slug }: ICaseStudy) => ({
 			params: { slug },
 		})),
 		fallback: false,
 	};
 }
-export async function getStaticProps({ params }: any) {
+
+type Params = {
+	params: { slug: ICaseStudy['slug'] };
+};
+
+export async function getStaticProps({ params }: Params) {
 	const { data } = await client.query({
 		query: gql`
 			query CaseStudyPageQuery($slug: String!) {

@@ -1,3 +1,5 @@
+import { IImage, IRawClient } from '@types';
+
 export interface ICaseStudy {
 	id: string;
 	slug: string;
@@ -12,4 +14,19 @@ export interface ICaseStudy {
 	technologies: string[];
 	primaryImage: string;
 	secondaryImages: string[];
+}
+
+export interface IRawCaseStudy {
+	id: string;
+	title: string;
+	slug: string;
+	seoDescription: string;
+	projectUrl?: string;
+	client: IRawClient;
+	content: {
+		markdown: string;
+	};
+	technologies: Array<{ skill: string }>;
+	primaryImage: IImage;
+	secondaryImages: IImage[];
 }
