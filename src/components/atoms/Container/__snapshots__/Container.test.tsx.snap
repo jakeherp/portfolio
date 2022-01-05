@@ -3,9 +3,9 @@
 exports[`Container renders correctly 1`] = `
 <div>
   <div
-    class="styles__StyledContainer-mepagl-0 exxZos"
+    class="mx-auto w-full px-4 md:max-w-5xl"
   >
-    Page Content
+    Content
   </div>
 </div>
 `;

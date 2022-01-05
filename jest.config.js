@@ -1,38 +1,33 @@
-process.env.TZ = 'GMT';
+const nextJest = require('next/jest');
 
-module.exports = {
-	roots: ['<rootDir>'],
-	testMatch: [
-		'**/tests/**/*.test.ts',
-		'**/tests/**/*.test.tsx',
-		'**/*.test.ts',
-		'**/*.test.tsx',
-	],
-	setupFilesAfterEnv: ['<rootDir>/test/jest.setup.js'],
-	testPathIgnorePatterns: [
-		'<rootDir>/build/',
-		'/dist/',
-		'<rootDir>/node_modules/',
-		'<rootDir>/test/mockedTypes/',
-	],
-	moduleFileExtensions: ['js', 'ts', 'tsx', 'json'],
-	collectCoverageFrom: [
-		'**/src/**/**/*.{js,jsx,ts,tsx}',
-		'src/**/*.{js,jsx,ts,tsx}',
-		'!src/redux/**/index.ts',
-		'!**/src/components/**/*.stories.+(js|ts|tsx)',
-		'!**/__tests__/**',
-		'!**/node_modules/**',
-		'!**/.next/**',
-		'!**/build/**',
-	],
-	coverageThreshold: {
-		global: {
-			statements: 80,
-			branches: 75,
-			functions: 80,
-			lines: 80,
-		},
+const createJestConfig = nextJest({
+	dir: './',
+});
+
+const customJestConfig = {
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+	moduleDirectories: ['node_modules', './'],
+	moduleNameMapper: {
+		// Components
+		'^Atoms(.*)$': '<rootDir>/src/components/atoms$1',
+		'^Molecules(.*)$': '<rootDir>/src/components/molecules$1',
+		'^Organisms(.*)$': '<rootDir>/src/components/organisms$1',
+		'^Species(.*)$': '<rootDir>/src/components/species$1',
+		'^Templates(.*)$': '<rootDir>/src/components/templates$1',
+		// Other folders
+		'^@types(.*)$': '<rootDir>/@types$1',
+		'^Config(.*)$': '<rootDir>/src/config$1',
+		'^MockData(.*)$': '<rootDir>/src/mockData$1',
+		'^Pages(.*)$': '<rootDir>/src/pages$1',
+		'^Public(.*)$': '<rootDir>/public$1',
+		'^Utils(.*)$': '<rootDir>/src/utils$1',
 	},
-	projects: ['./test/jest.lint.js', './test/jest.unittest.js'],
+	watchPlugins: [
+		'jest-watch-typeahead/filename',
+		'jest-watch-typeahead/testname',
+		'jest-watch-select-projects',
+	],
+	testEnvironment: 'jest-environment-jsdom',
 };
+
+module.exports = createJestConfig(customJestConfig);

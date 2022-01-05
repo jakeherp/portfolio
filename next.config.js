@@ -1,36 +1,18 @@
 module.exports = {
 	poweredByHeader: false,
+	swcMinify: true,
 	assetPrefix: process.env.ASSET_HOST || '',
 	productionBrowserSourceMaps: process.env.NODE_ENV === 'production',
 	webpack(config) {
 		config.module.rules.push({
-			test: /\.svg?$/,
-			oneOf: [
-				{
-					use: [
-						{
-							loader: '@svgr/webpack',
-							options: {
-								prettier: false,
-								svgo: true,
-								svgoConfig: {
-									plugins: [{ removeViewBox: false }],
-								},
-								titleProp: true,
-							},
-						},
-					],
-					issuer: {
-						and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
-					},
-				},
-			],
+			test: /\.svg$/,
+			use: ['@svgr/webpack'],
 		});
 
 		return config;
 	},
 	publicRuntimeConfig: {},
 	images: {
-		domains: ['dev-to-uploads.s3.amazonaws.com', 'res.cloudinary.com'],
+		domains: ['dev-to-uploads.s3.amazonaws.com', 'media.graphcms.com'],
 	},
 };

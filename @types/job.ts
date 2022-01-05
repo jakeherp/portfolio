@@ -1,10 +1,21 @@
+import { ICompany, IRawCompany } from '@types';
+
 export interface IJob {
-	company: string;
-	website?: string;
+	company: ICompany;
 	jobTitle: string;
-	startDate: string | Date;
-	endDate: string | Date | null;
+	fromDate: string;
+	toDate: string | null;
 	technologies: string[];
 	description: string;
-	place: string;
+}
+
+export interface IRawJob {
+	company: IRawCompany;
+	jobTitle: string;
+	fromDate: string;
+	toDate: string | null;
+	skills: Array<{ skill: string }>;
+	description: {
+		markdown: string;
+	};
 }

@@ -1,52 +1,51 @@
-import absoluteUrl from 'next-absolute-url';
-import { differenceInCalendarYears } from 'date-fns';
-import { fetcher } from 'Utils/fetcher';
-import { GetServerSideProps } from 'next';
-import styled from 'styled-components';
-import { useState } from 'react';
+import { IEducation, IJob, IPodcast } from '@types';
 
-import { IEducation, IJob } from '@Types';
+import { client } from 'apollo-client';
+import { gql } from '@apollo/client';
+import { mapEducation } from 'utils/mappings/mapEducation';
+import { mapJobs } from 'utils/mappings/mapJobs';
+import { mapPodcasts } from 'utils/mappings/mapPodcasts';
+import { NextPage } from 'next';
 
+import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
-import { Education } from 'Atoms/Education';
-import { Position } from 'Atoms/Position';
-import { SeoHead } from 'Atoms/SeoHead';
+import { Education } from 'Organisms/Education';
+import { Icon } from 'Atoms/Icon';
+import { Layout } from 'Templates/Layout';
+import { PodcastList } from 'Molecules/PodcastList';
+import { WorkExperience } from 'Organisms/WorkExperience';
 
 interface IProps {
+	podcasts: IPodcast[];
 	jobs: IJob[];
 	education: IEducation[];
 }
 
-function About({ jobs, education }: IProps) {
-	const [loadedJobs, setLoadedJobs] = useState(2);
-
-	const loadMore = () => {
-		setLoadedJobs((prev) => prev + 3);
-	};
-
+const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
-		<>
-			<SeoHead
-				title="About Jacob Herper - Front-End Software Engineer"
-				description="As a passionate front-end developer, I create amazing websites and web apps to make the internet a better place."
-			/>
-
+		<Layout
+			title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
+			description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
+		>
 			<Container>
-				<Headline>Hey, I&apos;m Jacob Herper</Headline>
-				<h3>A senior software engineer from England</h3>
-				<p>
+				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
+					Hey, I&apos;m Jacob Herper
+				</h1>
+				<h2 className="font-bold text-xl md:text-2xl mt-2">
+					Senior Software Engineer from the UK
+				</h2>
+				<p className="mt-8">
 					As a passionate front-end developer, I create amazing websites and web
 					apps to make the internet a better place. I am an advocate for web
 					performance and accessibility as well as a JAMstack enthusiast with
 					experience in serverless technologies.
 				</p>
-				<p>
-					I am {differenceInCalendarYears(new Date(), new Date('1990-11-06'))}{' '}
-					years old and have been a web developer for as long as I can think.
-					The technologies I work with are JavaScript, HTML and CSS with a focus
-					on the frameworks React.js, Gatsby, Next.js, Node and Express. I use
-					code not only to do my day-to-day job, but also to solve everyday
-					problems I come across.
+				<p className="my-4">
+					I am 31 years old and have been a web developer for as long as I can
+					think. The technologies I work with are JavaScript, HTML and CSS with
+					a focus on the frameworks React.js, Gatsby, Next.js, Node and Express.
+					I use code not only to do my day-to-day job, but also to solve
+					everyday problems I come across.
 				</p>
 				<p>
 					When I am not writing code I love to spend time with my wife and 3
@@ -57,90 +56,96 @@ function About({ jobs, education }: IProps) {
 					others). Furthermore I enjoy cooking fresh food when I come home after
 					a long day at the office.
 				</p>
+				<h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
 
-				<h2>Experience</h2>
-				{jobs.slice(0, loadedJobs).map((job, i) => (
-					<Position job={job} key={job.company + i} />
-				))}
-				<Center>
-					{loadedJobs < jobs.length && (
-						<button onClick={loadMore}>Load more</button>
-					)}
-				</Center>
+				<PodcastList podcasts={podcasts} />
 
-				<h2>Education</h2>
-				{education.map((edu) => (
-					<Education education={edu} key={edu.course} />
-				))}
+				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
 
-				<Center>
-					<a href="/cv-2021.pdf" target="_blank">
-						Download a copy of my CV
-					</a>
-				</Center>
+				<WorkExperience jobs={jobs} />
+
+				<h2 className="headline mt-12 mb-4 text-4xl">Education</h2>
+				<p className="mb-6">
+					I am mostly self-taught, but here are some of the most relevant
+					certifications I have achieved:
+				</p>
+
+				<Education education={education} />
+
+				<div className="flex justify-center mt-8">
+					<Button
+						href="/cv-2021.pdf"
+						download={true}
+						className="group flex gap-2 whitespace-nowrap"
+					>
+						<div className="w-6 text-blue-500 group-hover:text-off-white dark:text-purple-500">
+							<Icon icon="DOWNLOAD" />
+						</div>
+						Download my CV
+					</Button>
+				</div>
 			</Container>
-		</>
+		</Layout>
 	);
-}
+};
 
-const Headline = styled.h2`
-	font-size: 2rem;
-	margin-bottom: 0;
-
-	@media screen and (min-width: 768px) {
-		font-size: 3rem;
-
-		span {
-			display: inline-block;
-		}
-
-		@keyframes wave {
-			0% {
-				transform: rotate(0);
+export async function getStaticProps() {
+	const { data } = await client.query({
+		query: gql`
+			query AboutPageQuery {
+				podcasts(orderBy: position_ASC) {
+					id
+					name
+					url
+					logo {
+						url
+					}
+				}
+				jobs(orderBy: fromDate_DESC) {
+					id
+					jobTitle
+					fromDate
+					toDate
+					description {
+						markdown
+					}
+					company {
+						name
+						url
+						logo {
+							url
+						}
+					}
+					skills {
+						skill
+					}
+				}
+				educations(orderBy: date_DESC) {
+					id
+					course
+					date
+					courseContents {
+						skill
+					}
+					institute {
+						name
+						url
+						logo {
+							url
+						}
+					}
+				}
 			}
-			50% {
-				transform: rotate(-10deg);
-			}
-			100% {
-				transform: rotate(10deg);
-			}
-		}
-
-		&:hover span {
-			animation: wave 0.5s ease infinite;
-		}
-	}
-`;
-
-const Center = styled.div`
-	text-align: center;
-	font-weight: bold;
-	margin-top: 2rem;
-
-	button {
-		display: block;
-		margin: 2rem auto;
-		border: 2px solid ${({ theme }) => theme.text};
-		color: ${({ theme }) => theme.text};
-		padding: 0.5rem 3rem;
-		border-radius: 5px;
-		background: transparent;
-	}
-`;
-
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-	const { origin } = absoluteUrl(req);
-	const { positions } = await fetcher(`${origin}/api/jobs`);
-	const { education } = await fetcher(`${origin}/api/education`);
-	const skills = await fetcher(`${origin}/api/skills`);
+		`,
+	});
 
 	return {
 		props: {
-			jobs: positions,
-			education,
-			skills,
+			podcasts: mapPodcasts(data.podcasts),
+			education: mapEducation(data.educations),
+			jobs: mapJobs(data.jobs),
 		},
 	};
-};
+}
 
-export default About;
+export default AboutPage;

@@ -3,65 +3,65 @@
 exports[`Footer renders correctly 1`] = `
 <div>
   <footer
-    class="styles__StyledFooter-razpbj-0 jZveNS"
+    class="flex justify-between mt-20 px-4 md:px-20 py-8"
   >
-    <div
-      class="styles__StyledContainer-mepagl-0 exxZos"
+    <span>
+      © 
+      2022
+       Jacob Herper
+    </span>
+    <ul
+      class="flex gap-6"
     >
-      <div
-        class="styles__Flex-razpbj-1 gJdgaN"
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
       >
-        <span>
-          © 
-          2021
-           Jacob Herper
-        </span>
-        <ul
-          class="styles__StyledSocialIcons-sc-15vq785-0 iHrrTj"
+        <a
+          href="https://www.github.com/jakeherp"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Github"
         >
-          <li>
-            <a
-              href="https://github.com/jakeherp"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="Github"
-            >
-              <test-file-stub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/jakeherp"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="Twitter"
-            >
-              <test-file-stub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/jacobherper"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="LinkedIn"
-            >
-              <test-file-stub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com/jakeherp"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="Instagram"
-            >
-              <test-file-stub />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+          <test-file-stub />
+        </a>
+      </li>
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://www.linkedin.com/in/jacobherper"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <test-file-stub />
+        </a>
+      </li>
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://twitter.com/jakeherp"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Twitter"
+        >
+          <test-file-stub />
+        </a>
+      </li>
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://www.instagram.com/jakeherp"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Instagram"
+        >
+          <test-file-stub />
+        </a>
+      </li>
+    </ul>
   </footer>
 </div>
 `;

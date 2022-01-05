@@ -1,6 +1,7 @@
 {
 	"parser": "@typescript-eslint/parser",
 	"extends": [
+		"plugin:@next/next/recommended",
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/recommended",
@@ -15,7 +16,7 @@
 	},
 	"rules": {
 		"sort-imports": [
-			1,
+			2,
 			{
 				"ignoreCase": true,
 				"ignoreDeclarationSort": false,

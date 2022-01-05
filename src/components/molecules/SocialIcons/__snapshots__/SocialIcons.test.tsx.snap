@@ -3,44 +3,16 @@
 exports[`SocialIcons renders correctly 1`] = `
 <div>
   <ul
-    class="styles__StyledSocialIcons-sc-15vq785-0 iHrrTj"
+    class="flex gap-6"
   >
-    <li>
+    <li
+      class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+    >
       <a
-        href="https://github.com/jakeherp"
+        href="https://github.com"
         rel="noopener noreferrer"
         target="_blank"
         title="Github"
-      >
-        <test-file-stub />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://twitter.com/jakeherp"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Twitter"
-      >
-        <test-file-stub />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/in/jacobherper"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="LinkedIn"
-      >
-        <test-file-stub />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://instagram.com/jakeherp"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Instagram"
       >
         <test-file-stub />
       </a>
