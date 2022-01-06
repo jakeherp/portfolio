@@ -7,6 +7,12 @@ jest.mock('next/router', () => ({
 	}),
 }));
 
+jest.mock('next/link', () => {
+	const React = require('react');
+	return ({ children, href }: React.PropsWithChildren<{ href: string }>) =>
+		React.cloneElement(React.Children.only(children), { href });
+});
+
 describe('NavigationItem', () => {
 	it('renders correctly', () => {
 		const { container } = render(

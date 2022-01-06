@@ -1,3 +1,9 @@
+# 3.4.0
+
+## features
+
+- added page for recruiters
+
 # 3.3.0
 
 ## features
