@@ -21,7 +21,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header className="relative z-50 bg-gradient-to-b from-grey-200 dark:from-grey-900 to-transparent backdrop-blur-md px-4 lg:px-20 py-8">
+			<header className="relative z-50 backdrop-blur-md px-4 lg:px-20 py-8">
 				<div className="flex justify-between items-center">
 					<Link href="/">
 						<a className="group relative transition whitespace-nowrap hover:transition duration-300 text-2xl font-bold">

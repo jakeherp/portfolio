@@ -82,8 +82,11 @@ export const RecruiterForm = ({
 								type="submit"
 								disabled={isSubmitting}
 								onClick={(noop: unknown) => noop}
+								className="group"
 							>
-								{isSubmitting ? 'Loading ...' : 'Sign up'}
+								<div className="block headline group-hover:text-off-white">
+									{isSubmitting ? 'Loading ...' : 'Sign up'}
+								</div>
 							</Button>
 						</div>
 					</Box>

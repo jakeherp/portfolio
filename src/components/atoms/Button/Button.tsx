@@ -31,7 +31,7 @@ const Button: FC<ButtonProps> = (props) => {
 	const disabled = !isLink(props) ? props.disabled || false : undefined;
 
 	const classes =
-		'gradient-border transition-all transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white';
+		'block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white';
 
 	if (isLink(props)) {
 		return (

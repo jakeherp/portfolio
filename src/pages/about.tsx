@@ -81,7 +81,9 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 						<div className="w-6 text-blue-500 group-hover:text-off-white dark:text-purple-500">
 							<Icon icon="DOWNLOAD" />
 						</div>
-						Download my CV
+						<div className="block headline group-hover:text-off-white">
+							Download my CV
+						</div>
 					</Button>
 				</div>
 			</Container>
