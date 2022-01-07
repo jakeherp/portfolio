@@ -1,6 +1,7 @@
 import { ICaseStudy } from '@types';
 
 import { Box } from 'Atoms/Box';
+import { FloatingImages } from 'Atoms/FloatingImages';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,15 +14,13 @@ const CaseStudy = ({
 	secondaryImages,
 }: ICaseStudy) => {
 	return (
-		<article className="mb-32 transition md:hover:scale-[1.01]">
+		<article className="mb-16 transition md:hover:scale-[1.01]">
 			<Link href={`/case-studies/${slug}`}>
 				<a className="group">
 					<Box>
-						<div className="relative md:h-72">
-							<div className="flex flex-col h-full justify-center">
-								<h1 className="text-3xl font-bold mb-2 relative inline-block">
-									{title}
-								</h1>
+						<div className="flex flex-col md:flex-row gap-4">
+							<div className="flex flex-col md:w-1/2 h-full">
+								<h1 className="text-xl md:text-3xl font-bold mb-2">{title}</h1>
 								<div className="mb-4 flex gap-2 items-center">
 									<Image
 										src={client.logo}
@@ -36,30 +35,13 @@ const CaseStudy = ({
 									{technologies.join(', ')}
 								</p>
 							</div>
-							<div className="mt-6 md:mt-0 md:relative w-full md:w-[475px] md:-top-72 md:-right-96">
-								<div className="absolute w-1/2 md:w-auto top-40 right-28 md:-top-10 md:right-20 z-20 animate-hover">
-									<Image
-										src={secondaryImages[0]}
-										width={330}
-										height={210}
-										alt={client.name}
-									/>
-								</div>
-								<Image
-									src={primaryImage}
-									width={475}
-									height={275}
-									alt={title}
-									className="absolute"
+							<div className="-mb-12 -mx-4 md:mx-0 md:-mr-20 md:-mt-8 md:-mb-12">
+								<FloatingImages
+									topFloatingImage={secondaryImages[0]}
+									bottomFloatingImage={secondaryImages[1]}
+									mainImage={primaryImage}
+									altText={title}
 								/>
-								<div className="absolute w-1/2 md:w-auto top-64 right-20 md:top-40 md:right-20 z-20 animate-hover animation-delay">
-									<Image
-										src={secondaryImages[1]}
-										width={330}
-										height={210}
-										alt={client.name}
-									/>
-								</div>
 							</div>
 						</div>
 					</Box>

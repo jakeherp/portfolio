@@ -8,6 +8,7 @@ import { NextPage } from 'next';
 
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
+import { FloatingImages } from 'Atoms/FloatingImages';
 import { Layout } from 'Templates/Layout';
 import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
 import { mdxComponents } from 'utils/mdxComponents';
@@ -34,10 +35,10 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 			description={seoDescription}
 		>
 			<Container>
-				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-8">
+				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-4">
 					{title}
 				</h1>
-				<div className="relative md:h-72 md:mb-32">
+				<div className="flex justify-between md:h-72 md:mb-12">
 					<div className="flex flex-col h-full justify-center">
 						<strong className="mb-2 text-sm">Client:</strong>
 						<div className="mb-4 flex gap-2 items-center">
@@ -54,37 +55,22 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 							{technologies.join(', ')}
 						</p>
 						{projectUrl && (
-							<div className="w-auto mt-8">
-								<Button href={projectUrl} target="_blank">
-									Visit project
+							<div className="flex mt-8">
+								<Button href={projectUrl} target="_blank" className="group">
+									<span className="block headline group-hover:text-off-white">
+										Visit project
+									</span>
 								</Button>
 							</div>
 						)}
 					</div>
-					<div className="mt-6 md:mt-0 md:relative w-full md:w-[475px] md:-top-72 md:-right-1/2">
-						<div className="absolute w-1/2 md:w-auto top-40 right-28 md:-top-10 md:right-20 z-20 animate-hover">
-							<Image
-								src={secondaryImages[0]}
-								width={330}
-								height={210}
-								alt={client.name}
-							/>
-						</div>
-						<Image
-							src={primaryImage}
-							width={475}
-							height={275}
-							alt={title}
-							className="absolute"
+					<div>
+						<FloatingImages
+							topFloatingImage={secondaryImages[0]}
+							bottomFloatingImage={secondaryImages[1]}
+							mainImage={primaryImage}
+							altText={title}
 						/>
-						<div className="absolute w-1/2 md:w-auto top-64 right-20 md:top-40 md:right-20 z-20 animate-hover animation-delay">
-							<Image
-								src={secondaryImages[1]}
-								width={330}
-								height={210}
-								alt={client.name}
-							/>
-						</div>
 					</div>
 				</div>
 				<Markdown components={mdxComponents}>{content}</Markdown>
