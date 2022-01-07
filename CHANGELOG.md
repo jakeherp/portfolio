@@ -1,3 +1,11 @@
+# 3.4.1
+
+## fixes
+
+- fixed layout issues on case studies pages
+- fixed safari styling issues
+- updated readme
+
 # 3.4.0
 
 ## features

@@ -19,7 +19,7 @@ const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 			description={`Here you can find ${caseStudies.length} case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.`}
 		>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8 mb-12">
+				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
 					Case Studies
 				</h1>
 				{caseStudies.map((caseStudy) => (

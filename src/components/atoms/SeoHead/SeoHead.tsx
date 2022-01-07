@@ -18,7 +18,7 @@ const SeoHead = ({
 	description,
 	author = 'Jacob Herper',
 	keywords,
-	image = 'https://res.cloudinary.com/jacobherper/image/upload/c_fill,g_north,h_1080,w_1920/v1587315694/herper-io.png ',
+	image = 'https://res.cloudinary.com/jacobherper/image/upload/v1641565970/website-dark-light.png',
 	meta,
 }: HeadProps) => {
 	return (
