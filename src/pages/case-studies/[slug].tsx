@@ -38,7 +38,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-4">
 					{title}
 				</h1>
-				<div className="flex justify-between md:h-72 md:mb-12">
+				<div className="flex flex-col-reverse md:flex-row justify-between md:h-72 md:mb-12">
 					<div className="flex flex-col h-full justify-center">
 						<strong className="mb-2 text-sm">Client:</strong>
 						<div className="mb-4 flex gap-2 items-center">
@@ -64,7 +64,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 							</div>
 						)}
 					</div>
-					<div>
+					<div className="-mb-8 md:mb-0">
 						<FloatingImages
 							topFloatingImage={secondaryImages[0]}
 							bottomFloatingImage={secondaryImages[1]}
