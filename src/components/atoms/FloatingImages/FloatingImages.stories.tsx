@@ -5,7 +5,14 @@ export default {
 	component: FloatingImages,
 };
 
-export const FloatingImagesStory = (args: FloatingImagesProps) => <FloatingImages {...args} />;
+export const FloatingImagesStory = (args: FloatingImagesProps) => (
+	<FloatingImages {...args} />
+);
 
 FloatingImagesStory.storyName = 'FloatingImages';
-FloatingImagesStory.args = {};
+FloatingImagesStory.args = {
+	mainImage: '/some-img.png',
+	topFloatingImage: '/top-image.png',
+	bottomFloatingImage: '/bottom-image.png',
+	altText: 'Some image',
+};

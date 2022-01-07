@@ -3,7 +3,7 @@
 exports[`Button renders Button correctly 1`] = `
 <div>
   <button
-    class="gradient-border transition-all transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white"
+    class="block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white"
   >
     Button
   </button>
@@ -13,7 +13,7 @@ exports[`Button renders Button correctly 1`] = `
 exports[`Button renders Link correctly 1`] = `
 <div>
   <a
-    class="gradient-border transition-all transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white"
+    class="block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white"
     href="/"
   >
     Button Link
