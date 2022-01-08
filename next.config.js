@@ -1,4 +1,6 @@
-module.exports = {
+const { withSentryConfig } = require('@sentry/nextjs');
+
+const moduleExports = {
 	poweredByHeader: false,
 	swcMinify: true,
 	assetPrefix: process.env.ASSET_HOST || '',
@@ -20,3 +22,11 @@ module.exports = {
 		domains: ['dev-to-uploads.s3.amazonaws.com', 'media.graphcms.com'],
 	},
 };
+
+const sentryWebpackPluginOptions = {
+	silent: true, // Suppresses all logs
+	// For all available options, see:
+	// https://github.com/getsentry/sentry-webpack-plugin#options.
+};
+
+module.exports = withSentryConfig(moduleExports, sentryWebpackPluginOptions);

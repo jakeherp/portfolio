@@ -72,6 +72,14 @@ const IndexPage = () => {
 					</a>
 					.
 				</p>
+				<button
+					type="button"
+					onClick={() => {
+						throw new Error('Sentry Frontend Error');
+					}}
+				>
+					Throw error
+				</button>
 			</Container>
 		</Layout>
 	);
