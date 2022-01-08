@@ -47,6 +47,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 								alt={client.name}
 								width={32}
 								height={32}
+								className="rounded-md"
 							/>
 							<h2 className="font-bold text-xl">{client.name}</h2>
 						</div>
