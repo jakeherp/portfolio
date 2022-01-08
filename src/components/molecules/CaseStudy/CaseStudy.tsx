@@ -6,7 +6,7 @@ import { FloatingImages } from 'Atoms/FloatingImages';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface CaseStudyProps extends ICaseStudy {
+export interface CaseStudyProps extends ICaseStudy {
 	index: number;
 }
 

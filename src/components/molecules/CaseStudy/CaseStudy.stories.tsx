@@ -1,4 +1,4 @@
-import { ICaseStudy } from '@types';
+import { CaseStudyProps } from './CaseStudy';
 
 import { CaseStudy } from './CaseStudy';
 import { mockCaseStudy } from 'MockData';
@@ -8,7 +8,10 @@ export default {
 	component: CaseStudy,
 };
 
-export const CaseStudyStory = (args: ICaseStudy) => <CaseStudy {...args} />;
+export const CaseStudyStory = (args: CaseStudyProps) => <CaseStudy {...args} />;
 
 CaseStudyStory.storyName = 'CaseStudy';
-CaseStudyStory.args = mockCaseStudy;
+CaseStudyStory.args = {
+	...mockCaseStudy,
+	index: 0,
+};
