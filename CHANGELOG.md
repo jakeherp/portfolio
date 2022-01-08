@@ -1,3 +1,9 @@
+# 3.4.2
+
+## fixes
+
+- implemented case studies layout improvements
+
 # 3.4.1
 
 ## fixes
