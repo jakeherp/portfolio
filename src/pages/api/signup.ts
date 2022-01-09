@@ -1,3 +1,4 @@
+import { withSentry } from '@sentry/nextjs';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import getConfig from 'next/config';
@@ -17,7 +18,7 @@ mailchimp.setConfig({
 	server: MAILCHIMP_API_SERVER,
 });
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const signupHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { firstName, lastName, company, email, type } = req.body;
 
 	if (!email) {
@@ -44,3 +45,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		return res.status(500).json({ error: err.message || err.toString() });
 	}
 };
+
+export default withSentry(signupHandler);
