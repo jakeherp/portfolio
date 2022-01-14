@@ -1,9 +1,14 @@
 import { NavigationItem } from '../NavigationItem';
 import { render } from '@testing-library/react';
+import { useRouter } from 'next/router';
 
 jest.mock('next/router', () => ({
+	__esModule: true,
 	useRouter: jest.fn().mockReturnValue({
-		asPath: '/some-path',
+		route: '',
+		pathname: '',
+		query: '',
+		asPath: '',
 	}),
 }));
 
@@ -14,6 +19,10 @@ jest.mock('next/link', () => {
 });
 
 describe('NavigationItem', () => {
+	(useRouter as jest.Mock).mockReturnValue({
+		asPath: '',
+	});
+
 	it('renders correctly', () => {
 		const { container } = render(
 			<NavigationItem href="/" title="Navigation Link" />
