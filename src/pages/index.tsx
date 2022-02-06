@@ -1,5 +1,6 @@
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
 import Typed from 'react-typed';
 
 const IndexPage = () => {
@@ -19,23 +20,24 @@ const IndexPage = () => {
 	];
 
 	return (
-		<Layout
-			title="Senior Software Engineer and Consultant – Jacob Herper"
-			description="A Front-End Software Engineer with a focus on JavaScript and React. I have more than 10 years experience working in software engineering and consulting."
-			keywords={[
-				'Software Engineer',
-				'Jacob Herper',
-				'Software Consulting',
-				'Front-End',
-				'Full-Stack',
-				'React',
-				'TypeScript',
-				'JavaScript',
-				'GraphQL',
-				'CSS',
-				'Tailwind',
-			]}
-		>
+		<AnimatePage>
+			<SeoHead
+				title="Senior Software Engineer and Consultant – Jacob Herper"
+				description="A Front-End Software Engineer with a focus on JavaScript and React. I have more than 10 years experience working in software engineering and consulting."
+				keywords={[
+					'Software Engineer',
+					'Jacob Herper',
+					'Software Consulting',
+					'Front-End',
+					'Full-Stack',
+					'React',
+					'TypeScript',
+					'JavaScript',
+					'GraphQL',
+					'CSS',
+					'Tailwind',
+				]}
+			/>
 			<Container>
 				<h1 className="headline mt-20 text-3xl md:text-5xl lg:text-6xl">
 					Hey, I&apos;m Jacob Herper 👋
@@ -73,7 +75,7 @@ const IndexPage = () => {
 					.
 				</p>
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 

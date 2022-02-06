@@ -1,18 +1,35 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { motion, Variants } from 'framer-motion';
 
 export interface NavigationItemProps {
 	href: string;
 	title: string;
+	variants: Variants;
+	initial: string;
+	animate: string;
+	customDelay: number;
 }
 
-const NavigationItem = ({ href, title }: NavigationItemProps) => {
+const NavigationItem = ({
+	href,
+	title,
+	variants,
+	initial,
+	animate,
+	customDelay,
+}: NavigationItemProps) => {
 	const { asPath } = useRouter();
 	const isActive = asPath.startsWith(href);
 
 	return (
-		<li>
+		<motion.li
+			variants={variants}
+			initial={initial}
+			animate={animate}
+			custom={customDelay}
+		>
 			<Link href={href}>
 				<a
 					className={classNames(
@@ -25,7 +42,7 @@ const NavigationItem = ({ href, title }: NavigationItemProps) => {
 					{title}
 				</a>
 			</Link>
-		</li>
+		</motion.li>
 	);
 };
 

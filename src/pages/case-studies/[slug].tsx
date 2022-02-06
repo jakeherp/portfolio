@@ -6,10 +6,12 @@ import Image from 'next/image';
 import Markdown from 'react-markdown';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { FloatingImages } from 'Atoms/FloatingImages';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
+
 import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
 import { mdxComponents } from 'utils/mdxComponents';
 
@@ -30,10 +32,11 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 	} = caseStudy;
 
 	return (
-		<Layout
-			title={`Case Study: ${title} - Jacob Herper's Case Studies`}
-			description={seoDescription}
-		>
+		<AnimatePage>
+			<SeoHead
+				title={`Case Study: ${title} - Jacob Herper's Case Studies`}
+				description={seoDescription}
+			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-4">
 					{title}
@@ -76,7 +79,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 				</div>
 				<Markdown components={mdxComponents}>{content}</Markdown>
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 

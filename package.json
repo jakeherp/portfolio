@@ -37,6 +37,7 @@
 		"classnames": "^2.3.1",
 		"date-fns": "^2.28.0",
 		"formik": "^2.2.9",
+		"framer-motion": "^6.2.4",
 		"glob-parent": "6.0.2",
 		"graphql": "^16.2.0",
 		"immer": "9.0.12",

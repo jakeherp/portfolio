@@ -5,8 +5,10 @@ import { IBlogPost } from '@types';
 import Markdown from 'react-markdown';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
+
 import { mdxComponents } from 'utils/mdxComponents';
 
 interface IProps {
@@ -27,10 +29,11 @@ const PostPage: NextPage<IProps> = ({
 	const readTime = Math.ceil(numOfWords / 250);
 
 	return (
-		<Layout
-			title={`${title} - Jacob Herper's Blog`}
-			description={seoDescription}
-		>
+		<AnimatePage>
+			<SeoHead
+				title={`${title} - Jacob Herper's Blog`}
+				description={seoDescription}
+			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8">
 					{title}
@@ -43,7 +46,7 @@ const PostPage: NextPage<IProps> = ({
 				</p>
 				<Markdown components={mdxComponents}>{content}</Markdown>
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 

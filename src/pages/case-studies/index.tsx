@@ -4,9 +4,10 @@ import { ICaseStudy } from '@types';
 import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { CaseStudy } from 'Molecules/CaseStudy';
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
+import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
 	caseStudies: ICaseStudy[];
@@ -14,10 +15,11 @@ interface IProps {
 
 const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 	return (
-		<Layout
-			title="Software Engineering Case Studies – Jacob Herper"
-			description={`Here you can find ${caseStudies.length} case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.`}
-		>
+		<AnimatePage>
+			<SeoHead
+				title="Software Engineering Case Studies – Jacob Herper"
+				description={`Here you can find ${caseStudies.length} case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.`}
+			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
 					Case Studies
@@ -26,7 +28,7 @@ const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 					<CaseStudy key={caseStudy.slug} {...caseStudy} index={i} />
 				))}
 			</Container>
-		</Layout>
+		</AnimatePage>
 	);
 };
 

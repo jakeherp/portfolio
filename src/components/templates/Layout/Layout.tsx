@@ -3,25 +3,8 @@ import { FC, useEffect } from 'react';
 
 import { Footer } from 'Organisms/Footer';
 import { Header } from 'Organisms/Header';
-import { SeoHead } from 'Atoms/SeoHead';
 
-export type Props = {
-	title: string;
-	description: string;
-	keywords?: string[];
-	meta?: Array<{
-		name: string;
-		content: string;
-	}>;
-};
-
-export const Layout: FC<Props> = ({
-	children,
-	title = 'Jacob Herper - Software Engineer',
-	description,
-	keywords,
-	meta,
-}) => {
+export const Layout: FC = ({ children }) => {
 	const { resolvedTheme } = useTheme();
 
 	useEffect(() => {
@@ -31,12 +14,6 @@ export const Layout: FC<Props> = ({
 
 	return (
 		<div className="flex flex-col justify-between min-h-screen">
-			<SeoHead
-				title={title}
-				description={description}
-				meta={meta}
-				keywords={keywords}
-			/>
 			<Header />
 			<main>{children}</main>
 			<Footer />
