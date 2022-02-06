@@ -6,9 +6,30 @@ import { BurgerIcon } from 'Atoms/BurgerIcon';
 import { MobileMenu } from 'Molecules/MobileMenu';
 import { NavigationItem } from 'Atoms/NavigationItem';
 import { ThemeToggle } from 'Atoms/ThemeToggle';
+import { useRouter } from 'next/router';
+
+export const navItems = [
+	{
+		href: '/about',
+		title: 'About',
+	},
+	{
+		href: '/uses',
+		title: 'Uses',
+	},
+	{
+		href: '/case-studies',
+		title: 'Case Studies',
+	},
+	{
+		href: '/blog',
+		title: 'Blog',
+	},
+];
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const { pathname } = useRouter();
 
 	useEffect(() => {
 		if (isOpen) {
@@ -20,6 +41,10 @@ const Header = () => {
 		};
 	}, [isOpen]);
 
+	useEffect(() => {
+		setIsOpen(false);
+	}, [pathname]);
+
 	const navigationVariants = {
 		hidden: { opacity: 0, y: -10 },
 		visible: (custom: number) => ({
@@ -29,28 +54,9 @@ const Header = () => {
 		}),
 	};
 
-	const navItems = [
-		{
-			href: '/about',
-			title: 'About',
-		},
-		{
-			href: '/uses',
-			title: 'Uses',
-		},
-		{
-			href: '/case-studies',
-			title: 'Case Studies',
-		},
-		{
-			href: '/blog',
-			title: 'Blog',
-		},
-	];
-
 	return (
 		<>
-			<header className="relative z-50 backdrop-blur-md px-4 lg:px-20 py-8">
+			<header className="relative z-50 px-4 lg:px-20 py-8">
 				<div className="flex justify-between items-center">
 					<Link href="/" passHref>
 						<motion.a
