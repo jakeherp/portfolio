@@ -5,9 +5,9 @@ import { NextPage } from 'next';
 import { useState } from 'react';
 
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
 import { mdxComponents } from 'utils/mdxComponents';
 import { RecruiterForm } from 'Molecules/RecruiterForm';
+import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
 	markdown: string;
@@ -48,10 +48,11 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 	};
 
 	return (
-		<Layout
-			title="Recruiter Information about Jacob Herper"
-			description="Thank you for your interest in me for software engineering roles you are hiring for."
-		>
+		<>
+			<SeoHead
+				title="Recruiter Information about Jacob Herper"
+				description="Thank you for your interest in me for software engineering roles you are hiring for."
+			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
 					Hi, I&apos;m Jacob!
@@ -67,7 +68,7 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 					error={error}
 				/>
 			</Container>
-		</Layout>
+		</>
 	);
 };
 

@@ -11,8 +11,8 @@ import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { Education } from 'Organisms/Education';
 import { Icon } from 'Atoms/Icon';
-import { Layout } from 'Templates/Layout';
 import { PodcastList } from 'Molecules/PodcastList';
+import { SeoHead } from 'Atoms/SeoHead';
 import { WorkExperience } from 'Organisms/WorkExperience';
 
 interface IProps {
@@ -23,10 +23,11 @@ interface IProps {
 
 const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
-		<Layout
-			title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
-			description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
-		>
+		<>
+			<SeoHead
+				title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
+				description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
+			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
 					Hey, I&apos;m Jacob Herper
@@ -87,7 +88,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 					</Button>
 				</div>
 			</Container>
-		</Layout>
+		</>
 	);
 };
 

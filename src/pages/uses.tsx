@@ -4,8 +4,8 @@ import Markdown from 'react-markdown';
 import { NextPage } from 'next';
 
 import { Container } from 'Atoms/Container';
-import { Layout } from 'Templates/Layout';
 import { mdxComponents } from 'utils/mdxComponents';
+import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
 	markdown: string;
@@ -13,15 +13,16 @@ interface IProps {
 
 const UsesPage: NextPage<IProps> = ({ markdown }) => {
 	return (
-		<Layout
-			title="Jacob Herper uses ..."
-			description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a software engineer in the UK."
-		>
+		<>
+			<SeoHead
+				title="Jacob Herper uses ..."
+				description="This is a comprehensive list of tech equipment and software I use for my day-to-day work as a software engineer in the UK."
+			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>
 				<Markdown components={mdxComponents}>{markdown}</Markdown>
 			</Container>
-		</Layout>
+		</>
 	);
 };
 
