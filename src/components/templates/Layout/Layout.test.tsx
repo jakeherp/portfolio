@@ -18,9 +18,7 @@ describe('Layout', () => {
 	});
 
 	it('renders correctly', () => {
-		const { container } = render(
-			<Layout title="Some title" description="Some description" />
-		);
+		const { container } = render(<Layout />);
 		expect(container).toMatchSnapshot();
 	});
 });
