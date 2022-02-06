@@ -5,6 +5,7 @@ import { IBlogPost } from '@types';
 import Link from 'next/link';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 
@@ -14,7 +15,7 @@ interface IProps {
 
 const BlogPage: NextPage<IProps> = ({ posts }) => {
 	return (
-		<>
+		<AnimatePage>
 			<SeoHead
 				title="Software Engineering Blog by Jacob Herper"
 				description="I try to make an effort to document my journey as a software developer in the form of blog posts. Here you find some of the articles I published over the years."
@@ -39,7 +40,7 @@ const BlogPage: NextPage<IProps> = ({ posts }) => {
 					</article>
 				))}
 			</Container>
-		</>
+		</AnimatePage>
 	);
 };
 

@@ -4,6 +4,7 @@ import { ICaseStudy } from '@types';
 import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { CaseStudy } from 'Molecules/CaseStudy';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
@@ -14,7 +15,7 @@ interface IProps {
 
 const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 	return (
-		<>
+		<AnimatePage>
 			<SeoHead
 				title="Software Engineering Case Studies – Jacob Herper"
 				description={`Here you can find ${caseStudies.length} case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.`}
@@ -27,7 +28,7 @@ const CaseStudiesPage: NextPage<IProps> = ({ caseStudies }) => {
 					<CaseStudy key={caseStudy.slug} {...caseStudy} index={i} />
 				))}
 			</Container>
-		</>
+		</AnimatePage>
 	);
 };
 

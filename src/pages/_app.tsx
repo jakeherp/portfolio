@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import { ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
 import { client } from 'apollo-client';
@@ -11,7 +12,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<ApolloProvider client={client}>
 			<ThemeProvider attribute="class">
 				<Layout>
-					<Component {...pageProps} />
+					<AnimatePresence
+						exitBeforeEnter
+						initial={false}
+						onExitComplete={() => window.scrollTo(0, 0)}
+					>
+						<Component {...pageProps} />
+					</AnimatePresence>
 				</Layout>
 			</ThemeProvider>
 		</ApolloProvider>

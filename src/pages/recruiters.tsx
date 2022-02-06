@@ -1,11 +1,12 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
 import Markdown from 'react-markdown';
+import { mdxComponents } from 'utils/mdxComponents';
 import { NextPage } from 'next';
 import { useState } from 'react';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
-import { mdxComponents } from 'utils/mdxComponents';
 import { RecruiterForm } from 'Molecules/RecruiterForm';
 import { SeoHead } from 'Atoms/SeoHead';
 
@@ -48,7 +49,7 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 	};
 
 	return (
-		<>
+		<AnimatePage>
 			<SeoHead
 				title="Recruiter Information about Jacob Herper"
 				description="Thank you for your interest in me for software engineering roles you are hiring for."
@@ -68,7 +69,7 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 					error={error}
 				/>
 			</Container>
-		</>
+		</AnimatePage>
 	);
 };
 

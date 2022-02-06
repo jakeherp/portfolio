@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Markdown from 'react-markdown';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { FloatingImages } from 'Atoms/FloatingImages';
@@ -31,7 +32,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 	} = caseStudy;
 
 	return (
-		<>
+		<AnimatePage>
 			<SeoHead
 				title={`Case Study: ${title} - Jacob Herper's Case Studies`}
 				description={seoDescription}
@@ -78,7 +79,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 				</div>
 				<Markdown components={mdxComponents}>{content}</Markdown>
 			</Container>
-		</>
+		</AnimatePage>
 	);
 };
 

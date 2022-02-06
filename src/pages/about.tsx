@@ -7,6 +7,7 @@ import { mapJobs } from 'utils/mappings/mapJobs';
 import { mapPodcasts } from 'utils/mappings/mapPodcasts';
 import { NextPage } from 'next';
 
+import { AnimatePage } from 'Atoms/AnimatePage';
 import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { Education } from 'Organisms/Education';
@@ -23,7 +24,7 @@ interface IProps {
 
 const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
-		<>
+		<AnimatePage>
 			<SeoHead
 				title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
 				description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
@@ -88,7 +89,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 					</Button>
 				</div>
 			</Container>
-		</>
+		</AnimatePage>
 	);
 };
 
