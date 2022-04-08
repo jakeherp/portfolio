@@ -1,8 +1,9 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-import Markdown from 'react-markdown';
 import { mdxComponents } from 'utils/mdxComponents';
 import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichTextContent } from '@graphcms/rich-text-types';
 import { useState } from 'react';
 
 import { AnimatePage } from 'Atoms/AnimatePage';
@@ -11,10 +12,15 @@ import { RecruiterForm } from 'Molecules/RecruiterForm';
 import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
-	markdown: string;
+	markdown: RichTextContent;
+	salary: {
+		minimum: number;
+		median: number;
+		maximum: number;
+	};
 }
 
-const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
+const RecruitersPage: NextPage<IProps> = ({ markdown, salary }) => {
 	const [success, setSuccess] = useState(false);
 	const [error, setError] = useState(false);
 
@@ -61,7 +67,15 @@ const RecruitersPage: NextPage<IProps> = ({ markdown }) => {
 				<h2 className="headline text-xl md:text-2xl lg:text-3xl">
 					Nice to meet you.
 				</h2>
-				<Markdown components={mdxComponents}>{markdown}</Markdown>
+				<RichText
+					content={markdown}
+					renderers={{
+						...mdxComponents,
+						embed: {
+							Salary: ({ id }) => <strong>I am a salary {id}!</strong>,
+						},
+					}}
+				/>
 
 				<RecruiterForm
 					handleSubmit={handleSubmit}
@@ -79,8 +93,13 @@ export async function getStaticProps() {
 			query RecruitersPageQuery {
 				page(where: { slug: "recruiters" }) {
 					content {
-						markdown
+						raw
 					}
+				}
+				salary(where: { id: "cl1fknk2a1mv40bmrio155zi8" }) {
+					minimum
+					median
+					maximum
 				}
 			}
 		`,
@@ -88,7 +107,8 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			markdown: data.page.content.markdown,
+			markdown: data.page.content.raw,
+			salary: data.salary,
 		},
 	};
 }
