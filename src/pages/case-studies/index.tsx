@@ -48,7 +48,7 @@ export async function getStaticProps() {
 						}
 					}
 					content {
-						markdown
+						raw
 					}
 					technologies {
 						skill

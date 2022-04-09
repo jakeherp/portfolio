@@ -3,8 +3,8 @@ import { ICaseStudy } from '@types';
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-import Markdown from 'react-markdown';
 import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
 
 import { AnimatePage } from 'Atoms/AnimatePage';
 import { Button } from 'Atoms/Button';
@@ -77,7 +77,7 @@ const CaseStudyPage: NextPage<IProps> = ({ caseStudy }) => {
 						/>
 					</div>
 				</div>
-				<Markdown components={mdxComponents}>{content}</Markdown>
+				<RichText content={content} renderers={mdxComponents} />
 			</Container>
 		</AnimatePage>
 	);
@@ -124,7 +124,7 @@ export async function getStaticProps({ params }: Params) {
 						}
 					}
 					content {
-						markdown
+						raw
 					}
 					technologies {
 						skill
