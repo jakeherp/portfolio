@@ -1,10 +1,14 @@
 import { useTheme } from 'next-themes';
-import { FC, useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 
 import { Footer } from 'Organisms/Footer';
 import { Header } from 'Organisms/Header';
 
-export const Layout: FC = ({ children }) => {
+interface LayoutProps {
+	children: ReactNode;
+}
+
+export const Layout: FC<LayoutProps> = ({ children }) => {
 	const { resolvedTheme } = useTheme();
 
 	useEffect(() => {

@@ -1,11 +1,12 @@
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 type Button = {
 	onClick: (...args: unknown[]) => void;
 	type?: 'submit' | 'button';
 	disabled?: boolean;
 	className?: string;
+	children: ReactNode;
 };
 
 type Link = {
@@ -13,6 +14,7 @@ type Link = {
 	target?: '_blank' | '_self';
 	className?: string;
 	download?: boolean;
+	children: ReactNode;
 };
 
 export type ButtonProps = Button | Link;

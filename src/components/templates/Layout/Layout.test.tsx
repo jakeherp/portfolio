@@ -18,7 +18,7 @@ describe('Layout', () => {
 	});
 
 	it('renders correctly', () => {
-		const { container } = render(<Layout />);
+		const { container } = render(<Layout>Some content</Layout>);
 		expect(container).toMatchSnapshot();
 	});
 });

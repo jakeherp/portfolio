@@ -25,7 +25,21 @@ describe('NavigationItem', () => {
 
 	it('renders correctly', () => {
 		const { container } = render(
-			<NavigationItem href="/" title="Navigation Link" />
+			<NavigationItem
+				href="/"
+				title="Navigation Link"
+				variants={{
+					hidden: { opacity: 0, x: -50 },
+					visible: (custom: number) => ({
+						opacity: 1,
+						x: 0,
+						transition: { delay: custom },
+					}),
+				}}
+				initial="initial"
+				animate="animate"
+				customDelay={0}
+			/>
 		);
 		expect(container).toMatchSnapshot();
 	});

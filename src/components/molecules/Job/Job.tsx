@@ -1,12 +1,16 @@
 import { IJob } from '@types';
 
-import { FC } from 'react';
 import { format } from 'date-fns';
 import Image from 'next/image';
+import { FC, ReactNode } from 'react';
 
 import { Box } from 'Atoms/Box';
 
-const Job: FC<Omit<IJob, 'description'>> = ({
+interface JobProps extends Omit<IJob, 'description'> {
+	children?: ReactNode;
+}
+
+const Job: FC<JobProps> = ({
 	company,
 	jobTitle,
 	fromDate,

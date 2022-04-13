@@ -1,7 +1,11 @@
-import { FC } from 'react';
 import { motion } from 'framer-motion';
+import { FC, ReactNode } from 'react';
 
-const AnimatePage: FC<never> = ({ children }) => {
+interface AnimatePageProps {
+	children: ReactNode;
+}
+
+const AnimatePage: FC<AnimatePageProps> = ({ children }) => {
 	const variants = {
 		hidden: { opacity: 0, x: 0, y: 100 },
 		enter: { opacity: 1, x: 0, y: 0 },

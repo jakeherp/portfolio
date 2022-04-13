@@ -76,6 +76,7 @@ exports[`Job renders correctly 1`] = `
       </strong>
       TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
     </p>
+    Some body
   </div>
 </div>
 `;

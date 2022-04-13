@@ -13,7 +13,7 @@ exports[`CaseStudy renders correctly 1`] = `
         class="md:w-10/12 px-8 py-6 rounded-3xl glass-light dark:glass-dark mb-6 drop-shadow-lg hover:drop-shadow-2xl transition-all"
       >
         <div
-          class="flex flex-col gap-4 md:flex-row-reverse"
+          class="flex flex-col gap-4 md:flex-row"
         >
           <div
             class="flex flex-col md:w-1/2 h-full"
@@ -65,7 +65,7 @@ exports[`CaseStudy renders correctly 1`] = `
             </p>
           </div>
           <div
-            class="-mb-12 -mx-10 md:mx-0 md:-mt-8 md:-mb-12 md:-ml-20"
+            class="-mb-12 -mx-10 md:mx-0 md:-mt-8 md:-mb-12 md:-mr-20"
           >
             <div
               class="relative inline-block w-auto"

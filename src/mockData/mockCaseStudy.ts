@@ -9,7 +9,7 @@ export const mockCaseStudy: ICaseStudy = {
 		name: 'Holland & Barrett',
 		logo: 'https://media.graphcms.com/CzdmdudMQ4mUl4OQJQS2',
 	},
-	content: 'Case Study coming soon\n',
+	content: [],
 	technologies: [
 		'React',
 		'Express',

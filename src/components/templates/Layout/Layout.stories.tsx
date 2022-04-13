@@ -5,6 +5,6 @@ export default {
 	component: Layout,
 };
 
-export const LayoutStory = () => <Layout />;
+export const LayoutStory = () => <Layout>Some content</Layout>;
 
 LayoutStory.storyName = 'Layout';
