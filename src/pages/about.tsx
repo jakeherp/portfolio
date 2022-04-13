@@ -111,7 +111,7 @@ export async function getStaticProps() {
 					fromDate
 					toDate
 					description {
-						markdown
+						raw
 					}
 					company {
 						name

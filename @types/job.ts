@@ -17,6 +17,6 @@ export interface IRawJob {
 	toDate: string | null;
 	skills: Array<{ skill: string }>;
 	description: {
-		markdown: string;
+		raw: RichTextContent;
 	};
 }
