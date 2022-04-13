@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileMenu renders correctly 1`] = `
+<div>
+  <div
+    class="fixed md:hidden z-40 transition-all duration-700 delay-100 ease-in-out bg-gradient-to-b from-grey-200 dark:from-grey-900 to-transparent backdrop-blur-xl w-screen p-4 gap-12 top-0 h-screen"
+    style="opacity: 0; transform: translateX(0px) translateY(-50%) translateZ(0);"
+  >
+    <ul
+      class="flex flex-col justify-center align-center text-center gap-4 h-full"
+    >
+      <li
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <a
+          class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+          href="/about"
+        >
+          About
+        </a>
+      </li>
+      <li
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <a
+          class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+          href="/uses"
+        >
+          Uses
+        </a>
+      </li>
+      <li
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <a
+          class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+          href="/case-studies"
+        >
+          Case Studies
+        </a>
+      </li>
+      <li
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <a
+          class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+          href="/blog"
+        >
+          Blog
+        </a>
+      </li>
+      <li
+        class="flex justify-center mt-12"
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <button
+          aria-label="Toggle Dark Mode"
+          class="p-2 bg-transparent border-2 border-grey-300 dark:border-grey-700 rounded-full dark:bg-transparent flex items-center justify-center hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200 transition-all"
+          type="button"
+        >
+          <svg
+            class="w-5 h-5 text-grey-800 dark:text-grey-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <span
+            class="md:hidden"
+          >
+            Switch to 
+            dark
+             mode
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
