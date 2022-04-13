@@ -12,15 +12,4 @@ describe('Salary', () => {
 		const { container } = render(<Salary salaryRange={testRange} />);
 		expect(container).toMatchSnapshot();
 	});
-
-	it('displays the correct emoji', () => {
-		const { getByTestId, getByText } = render(
-			<Salary salaryRange={testRange} />
-		);
-
-		fireEvent.change(getByTestId('salaryRange'), {
-			target: { value: testRange.minimum - 30_000 },
-		});
-		expect('😭').toBeInTheDocument();
-	});
 });
