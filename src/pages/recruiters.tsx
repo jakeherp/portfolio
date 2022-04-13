@@ -9,10 +9,12 @@ import { useState } from 'react';
 import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
 import { RecruiterForm } from 'Molecules/RecruiterForm';
+import { Salary } from 'Molecules/Salary';
 import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
 	markdown: RichTextContent;
+	references: any;
 	salary: {
 		minimum: number;
 		median: number;
@@ -20,7 +22,7 @@ interface IProps {
 	};
 }
 
-const RecruitersPage: NextPage<IProps> = ({ markdown, salary }) => {
+const RecruitersPage: NextPage<IProps> = ({ markdown, references, salary }) => {
 	const [success, setSuccess] = useState(false);
 	const [error, setError] = useState(false);
 
@@ -69,10 +71,11 @@ const RecruitersPage: NextPage<IProps> = ({ markdown, salary }) => {
 				</h2>
 				<RichText
 					content={markdown}
+					references={references}
 					renderers={{
 						...mdxComponents,
 						embed: {
-							Salary: ({ id }) => <strong>I am a salary {id}!</strong>,
+							Salary: () => <Salary salaryRange={salary} />,
 						},
 					}}
 				/>
@@ -94,6 +97,12 @@ export async function getStaticProps() {
 				page(where: { slug: "recruiters" }) {
 					content {
 						raw
+						references {
+							__typename
+							... on Salary {
+								id
+							}
+						}
 					}
 				}
 				salary(where: { id: "cl1fknk2a1mv40bmrio155zi8" }) {
@@ -108,6 +117,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			markdown: data.page.content.raw,
+			references: data.page.content.references,
 			salary: data.salary,
 		},
 	};
