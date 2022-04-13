@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Education renders correctly 1`] = `
+exports[`WorkExperience renders correctly 1`] = `
 <div>
   <div
     class="flex transition-all transform md:hover:scale-[1.01]"
@@ -9,7 +9,7 @@ exports[`Education renders correctly 1`] = `
       class="md:w-10/12 px-8 py-6 rounded-3xl glass-light dark:glass-dark mb-6 drop-shadow-lg hover:drop-shadow-2xl transition-all"
     >
       <div
-        class="flex gap-4 items-center"
+        class="flex gap-4 items-start md:items-center"
       >
         <span
           style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
@@ -25,7 +25,7 @@ exports[`Education renders correctly 1`] = `
             />
           </span>
           <img
-            alt="Some Company"
+            alt="Holland & Barrett"
             class="rounded-md"
             data-nimg="intrinsic"
             decoding="async"
@@ -38,37 +38,47 @@ exports[`Education renders correctly 1`] = `
           class="w-full mb-2"
         >
           <div
-            class="flex justify-between"
+            class="flex flex-col-reverse md:flex-row justify-between"
           >
             <h3
               class="font-bold"
             >
-              Some course
+              Senior Software Engineer
             </h3>
-            <span>
-              Jan 2020
+            <span
+              class="text-sm md:text-base"
+            >
+              Aug 2020 — present
             </span>
           </div>
           <h4>
             <a
               class="underlined relative"
-              href="https://somecompany.com/"
+              href="https://www.hollandandbarrett.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Some Company
+              Holland & Barrett
             </a>
           </h4>
           <p
-            class="text-sm"
+            class="hidden md:block text-sm"
           >
             <strong>
-              Course Contents: 
+              Technologies: 
             </strong>
-            TypeScript, React
+            TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
           </p>
         </div>
       </div>
+      <p
+        class="md:hidden text-sm"
+      >
+        <strong>
+          Technologies: 
+        </strong>
+        TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
+      </p>
     </div>
   </div>
 </div>

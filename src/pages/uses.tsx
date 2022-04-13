@@ -1,15 +1,16 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-import Markdown from 'react-markdown';
 import { mdxComponents } from 'utils/mdxComponents';
 import { NextPage } from 'next';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichTextContent } from '@graphcms/rich-text-types';
 
 import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 
 interface IProps {
-	markdown: string;
+	markdown: RichTextContent;
 }
 
 const UsesPage: NextPage<IProps> = ({ markdown }) => {
@@ -21,7 +22,7 @@ const UsesPage: NextPage<IProps> = ({ markdown }) => {
 			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>
-				<Markdown components={mdxComponents}>{markdown}</Markdown>
+				<RichText content={markdown} renderers={mdxComponents} />
 			</Container>
 		</AnimatePage>
 	);
@@ -33,7 +34,7 @@ export async function getStaticProps() {
 			query UsesPageQuery {
 				page(where: { slug: "uses" }) {
 					content {
-						markdown
+						raw
 					}
 				}
 			}
@@ -42,7 +43,7 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			markdown: data.page.content.markdown,
+			markdown: data.page.content.raw,
 		},
 	};
 }

@@ -1,3 +1,4 @@
+import { RichTextContent } from '@graphcms/rich-text-types';
 import { ICompany, IRawCompany } from '@types';
 
 export interface IJob {
@@ -6,7 +7,7 @@ export interface IJob {
 	fromDate: string;
 	toDate: string | null;
 	technologies: string[];
-	description: string;
+	description: RichTextContent;
 }
 
 export interface IRawJob {
@@ -16,6 +17,6 @@ export interface IRawJob {
 	toDate: string | null;
 	skills: Array<{ skill: string }>;
 	description: {
-		markdown: string;
+		raw: RichTextContent;
 	};
 }

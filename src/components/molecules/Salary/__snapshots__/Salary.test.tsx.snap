@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Salary renders correctly 1`] = `
+<div>
+  <div>
+    <p>
+      <strong>
+        Salary Expectation: 
+      </strong>
+      There are several factors that influence the salary expectation I have for a future role, but here‘s a good approximation (please don‘t make me cry):
+    </p>
+    <input
+      class="mx-2"
+      data-testid="salaryRange"
+      max="250000"
+      min="60000"
+      step="5000"
+      type="range"
+      value="60000"
+    />
+    <label
+      for="salaryRange"
+    >
+      £60,000.00
+    </label>
+    <p>
+      <strong>
+        Happiness Score:
+      </strong>
+      <span
+        class="text-3xl"
+      >
+         
+        😭
+      </span>
+    </p>
+  </div>
+</div>
+`;

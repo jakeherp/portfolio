@@ -1,3 +1,4 @@
+import { RichTextContent } from '@graphcms/rich-text-types';
 import { IImage, IRawCompany } from '@types';
 
 export interface ICaseStudy {
@@ -10,7 +11,7 @@ export interface ICaseStudy {
 		name: string;
 		logo: string;
 	};
-	content: string;
+	content: RichTextContent;
 	technologies: string[];
 	primaryImage: string;
 	secondaryImages: string[];
@@ -24,7 +25,7 @@ export interface IRawCaseStudy {
 	projectUrl?: string;
 	client: IRawCompany;
 	content: {
-		markdown: string;
+		raw: RichTextContent;
 	};
 	technologies: Array<{ skill: string }>;
 	primaryImage: IImage;

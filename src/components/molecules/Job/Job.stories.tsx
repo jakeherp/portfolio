@@ -11,4 +11,7 @@ export default {
 export const JobStory = (args: Omit<IJob, 'description'>) => <Job {...args} />;
 
 JobStory.storyName = 'Job';
-JobStory.args = mockJobs[0];
+JobStory.args = {
+	...mockJobs[0],
+	children: <div>Some body</div>,
+};
