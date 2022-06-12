@@ -2,24 +2,24 @@
 
 exports[`Icon renders GITHUB correctly 1`] = `
 <div>
-  <test-file-stub />
+  <svg />
 </div>
 `;
 
 exports[`Icon renders INSTAGRAM correctly 1`] = `
 <div>
-  <test-file-stub />
+  <svg />
 </div>
 `;
 
 exports[`Icon renders LINKEDIN correctly 1`] = `
 <div>
-  <test-file-stub />
+  <svg />
 </div>
 `;
 
 exports[`Icon renders TWITTER correctly 1`] = `
 <div>
-  <test-file-stub />
+  <svg />
 </div>
 `;

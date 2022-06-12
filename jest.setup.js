@@ -16,3 +16,12 @@ window.universal_variable = {
 	session: {},
 	product: {},
 };
+
+jest.mock('Atoms/Icon', () => {
+	return {
+		__esModule: true,
+		Icon: () => {
+			return <svg />;
+		},
+	};
+});

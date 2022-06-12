@@ -14,7 +14,7 @@ exports[`SocialIcons renders correctly 1`] = `
         target="_blank"
         title="Github"
       >
-        <test-file-stub />
+        <svg />
       </a>
     </li>
   </ul>
