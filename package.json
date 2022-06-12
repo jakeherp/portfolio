@@ -23,8 +23,8 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"test:ci": "jest --ci",
-		"test:coverage": "jest --selectProjects test --coverage",
-		"test:watch": "jest --selectProjects test --watch ",
+		"test:coverage": "jest --coverage",
+		"test:watch": "jest --watchAll",
 		"test": "jest"
 	},
 	"dependencies": {
