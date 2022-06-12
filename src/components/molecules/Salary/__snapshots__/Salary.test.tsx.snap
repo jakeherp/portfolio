@@ -29,9 +29,10 @@ exports[`Salary renders correctly 1`] = `
       </strong>
       <span
         class="text-3xl"
+        data-testid="emoji"
+        title="way too low"
       >
-         
-        😭
+         😭
       </span>
     </p>
   </div>

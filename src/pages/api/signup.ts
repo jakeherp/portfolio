@@ -30,8 +30,7 @@ const signupHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		await mailchimp.lists.setListMember(MAILCHIMP_AUDIENCE_ID, hashedEmail, {
 			email_address: email,
-			// @ts-expect-error something about the enum
-			status: 'subscribed',
+			status_if_new: 'subscribed',
 			merge_fields: {
 				FNAME: firstName,
 				LNAME: lastName,

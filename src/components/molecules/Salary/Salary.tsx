@@ -13,38 +13,47 @@ const Salary = ({ salaryRange }: SalaryProps) => {
 		salaryRange.minimum - 40_000
 	);
 	const [emoji, setEmoji] = useState('❓');
+	const [textContent, setTextContent] = useState('unknown');
 
 	const { minimum, median, maximum } = salaryRange;
 
 	useEffect(() => {
 		if (selectedSalary <= minimum - 30_000) {
 			setEmoji('😭');
+			setTextContent('way too low');
 		} else if (
 			selectedSalary > minimum - 30_000 &&
 			selectedSalary <= minimum - 20_000
 		) {
 			setEmoji('😢');
+			setTextContent('too low');
 		} else if (
 			selectedSalary > minimum - 20_000 &&
 			selectedSalary <= minimum - 10_000
 		) {
 			setEmoji('🙁');
+			setTextContent('low');
 		} else if (selectedSalary > minimum - 10_000 && selectedSalary < minimum) {
 			setEmoji('😕');
+			setTextContent('you can do better');
 		} else if (selectedSalary >= minimum && selectedSalary < minimum + 10_000) {
 			setEmoji('😏');
+			setTextContent('getting there');
 		} else if (
 			selectedSalary > minimum + 10_000 &&
 			selectedSalary <= minimum + 20_000
 		) {
 			setEmoji('🙂');
+			setTextContent('pretty good');
 		} else if (
 			selectedSalary > minimum + 20_000 &&
 			selectedSalary <= median + 20_000
 		) {
 			setEmoji('😀');
+			setTextContent('great');
 		} else if (selectedSalary >= maximum) {
 			setEmoji('🤑');
+			setTextContent('make it rain!');
 		}
 	}, [maximum, median, minimum, selectedSalary]);
 
@@ -74,7 +83,9 @@ const Salary = ({ salaryRange }: SalaryProps) => {
 			</label>
 			<p>
 				<strong>Happiness Score:</strong>
-				<span className="text-3xl"> {emoji}</span>
+				<span className="text-3xl" data-testid="emoji" title={textContent}>
+					{` ${emoji}`}
+				</span>
 			</p>
 		</div>
 	);

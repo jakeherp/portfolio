@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<div>
+  <label
+    class="flex flex-col font-bold mb-2 mt-6"
+    for="firstName"
+  >
+    Some input
+    <input
+      class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+      id="some-input"
+      name="some-input"
+      placeholder="Some placeholder"
+      type="text"
+      value=""
+    />
+    <div
+      class="font-sm font-normal text-red-600"
+    />
+  </label>
+</div>
+`;
