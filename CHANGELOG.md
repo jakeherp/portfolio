@@ -1,3 +1,23 @@
+# 3.5.1
+
+## fixes
+
+- **dependencies:** updates all dependencies to latest versions
+- **salary-component:** improves accessibility and adds unit test
+- fixes some unit tests
+
+# 3.5.0
+
+## features
+
+- **salary:** adds salary component
+
+## fixes
+
+- upgrades dependencies
+- fixes tests
+- fixes ts errors after react 18 update
+
 # 3.4.2
 
 ## fixes
