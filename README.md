@@ -22,7 +22,7 @@ This project is a constant work in progress, so if you find any bugs, typos or o
 
     ```sh
     cd portfolio/
-    yarn dev
+    pnpm dev
     ```
 
 1.  **Open the source code and start editing!**
