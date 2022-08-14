@@ -6,7 +6,7 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-	moduleDirectories: ['node_modules', './'],
+	moduleDirectories: ['node_modules', __dirname],
 	moduleNameMapper: {
 		// Components
 		'^Atoms(.*)$': '<rootDir>/src/components/atoms$1',
@@ -16,11 +16,11 @@ const customJestConfig = {
 		'^Templates(.*)$': '<rootDir>/src/components/templates$1',
 		// Other folders
 		'^@types(.*)$': '<rootDir>/@types$1',
-		'^Config(.*)$': '<rootDir>/src/config$1',
+		'^config(.*)$': '<rootDir>/src/config$1',
 		'^MockData(.*)$': '<rootDir>/src/mockData$1',
-		'^Pages(.*)$': '<rootDir>/src/pages$1',
-		'^Public(.*)$': '<rootDir>/public$1',
-		'^Utils(.*)$': '<rootDir>/src/utils$1',
+		'^pages(.*)$': '<rootDir>/src/pages$1',
+		'^public(.*)$': '<rootDir>/public$1',
+		'^utils(.*)$': '<rootDir>/src/utils$1',
 	},
 	watchPlugins: [
 		'jest-watch-typeahead/filename',
