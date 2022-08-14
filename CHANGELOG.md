@@ -1,3 +1,14 @@
+# 3.6.0
+
+## features
+
+- **pnpm:** switches to pnpm package manager
+
+## fixes
+
+- **jest:** fixes bug with module directories containing `.`
+- **unset-value:** creates override to fix snyk error
+
 # 3.5.1
 
 ## fixes
