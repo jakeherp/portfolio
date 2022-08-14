@@ -98,6 +98,9 @@
 		"typescript": "4.7.4",
 		"webpack": "5.74.0"
 	},
+	"resolutions": {
+		"unset-value": "2.0.1"
+	},
 	"pnpm": {
 		"overrides": {
 			"unset-value": "2.0.1"
