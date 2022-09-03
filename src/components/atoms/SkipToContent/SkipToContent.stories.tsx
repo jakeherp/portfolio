@@ -1,11 +1,10 @@
-import { SkipToContent, SkipToContentProps } from './SkipToContent';
+import { SkipToContent } from './SkipToContent';
 
 export default {
 	title: 'atoms/SkipToContent',
 	component: SkipToContent,
 };
 
-export const SkipToContentStory = (args: SkipToContentProps) => <SkipToContent {...args} />;
+export const SkipToContentStory = () => <SkipToContent />;
 
 SkipToContentStory.storyName = 'SkipToContent';
-SkipToContentStory.args = {};
