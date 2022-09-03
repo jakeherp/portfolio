@@ -12,8 +12,8 @@ import { Container } from 'Atoms/Container';
 import { FloatingImages } from 'Atoms/FloatingImages';
 import { SeoHead } from 'Atoms/SeoHead';
 
-import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
-import { mdxComponents } from 'utils/mdxComponents';
+import { mapCaseStudies } from 'Utils/mappings/mapCaseStudies';
+import { mdxComponents } from 'Utils/mdxComponents';
 
 interface IProps {
 	caseStudy: ICaseStudy;

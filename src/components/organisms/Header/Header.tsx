@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Headroom from 'react-headroom';
 import { useEffect, useState } from 'react';
 
 import { BurgerIcon } from 'Atoms/BurgerIcon';
+import { Logo } from 'Atoms/Logo';
 import { MobileMenu } from 'Molecules/MobileMenu';
 import { NavigationItem } from 'Atoms/NavigationItem';
 import { ThemeToggle } from 'Atoms/ThemeToggle';
@@ -55,23 +55,10 @@ const Header = () => {
 	};
 
 	return (
-		<>
-			<header className="relative z-50 px-4 lg:px-20 py-8">
+		<Headroom>
+			<header className="relative z-50 px-4 lg:px-20 py-8 backdrop-blur-md">
 				<div className="flex justify-between items-center">
-					<Link href="/" passHref>
-						<motion.a
-							className="group relative transition whitespace-nowrap hover:transition duration-300 text-2xl font-bold"
-							animate={{ opacity: 1, y: 0 }}
-							initial={{ opacity: 0, y: -10 }}
-						>
-							<span className="transition duration-300 opacity-100 group-hover:opacity-0">
-								@jakeherp
-							</span>
-							<span className="absolute transition duration-300 left-0	 opacity-0 group-hover:opacity-100 text-transparent bg-clip-text hover:bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:to-purple-stop">
-								Jacob Herper
-							</span>
-						</motion.a>
-					</Link>
+					<Logo />
 					<nav className="hidden md:block">
 						<ul className="flex gap-8 text-lg">
 							{navItems.map(({ href, title }, i) => (
@@ -100,7 +87,7 @@ const Header = () => {
 				</div>
 			</header>
 			<MobileMenu isOpen={isOpen} />
-		</>
+		</Headroom>
 	);
 };
 

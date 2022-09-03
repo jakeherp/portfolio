@@ -10,7 +10,7 @@ import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 
-import { mdxComponents } from 'utils/mdxComponents';
+import { mdxComponents } from 'Utils/mdxComponents';
 
 interface IProps {
 	title: string;

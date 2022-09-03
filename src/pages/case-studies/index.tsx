@@ -1,7 +1,7 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
 import { ICaseStudy } from '@types';
-import { mapCaseStudies } from 'utils/mappings/mapCaseStudies';
+import { mapCaseStudies } from 'Utils/mappings/mapCaseStudies';
 import { NextPage } from 'next';
 
 import { AnimatePage } from 'Atoms/AnimatePage';

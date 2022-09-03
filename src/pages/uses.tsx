@@ -1,6 +1,6 @@
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-import { mdxComponents } from 'utils/mdxComponents';
+import { mdxComponents } from 'Utils/mdxComponents';
 import { NextPage } from 'next';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
