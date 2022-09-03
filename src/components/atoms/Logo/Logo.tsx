@@ -1,4 +1,5 @@
-import Jacob from 'Public/assets/jacob.svg';
+import Image from 'next/image';
+import Jacob from './jacob-herper.png';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -10,7 +11,14 @@ const Logo = () => {
 				animate={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
 			>
-				<Jacob className="logo w-12 h-12" />
+				<Image
+					src={Jacob}
+					width={48}
+					height={48}
+					quality={100}
+					alt="Vectorised image of Jacob Herper"
+					className="w-12 h-12"
+				/>
 				<span className="transition duration-300 opacity-100 group-hover:opacity-0">
 					@jakeherp
 				</span>

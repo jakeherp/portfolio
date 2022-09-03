@@ -94,15 +94,15 @@ const IndexPage = () => {
 					</h2>
 
 					<div className="flex flex-wrap items-center justify-center max-w-5xl mt-8 mx-auto gap-x-16 gap-y-8">
-						<LogoNext className="w-32" />
-						<LogoSvelte className="w-12" />
-						<LogoHygraph className="w-36" />
-						<LogoPrismic className="w-40" />
-						<LogoGraphql className="w-36" />
-						<LogoStorybook className="w-40" />
-						<LogoVercel className="w-36" />
-						<LogoFigma className="w-8" />
-						<LogoCypress className="w-40" />
+						<LogoNext className="w-32" aria-label="Next.js" />
+						<LogoSvelte className="w-12" aria-label="SvelteKit" />
+						<LogoHygraph className="w-28 md:w-36" aria-label="Hygraph" />
+						<LogoPrismic className="w-32 md:w-40" aria-label="Prismic" />
+						<LogoStorybook className="w-32 md:w-40" aria-label="Storybook" />
+						<LogoGraphql className="w-28 md:w-36" aria-label="GraphQL" />
+						<LogoVercel className="w-32 md:w-36" aria-label="Vercel" />
+						<LogoFigma className="w-8" aria-label="Figma" />
+						<LogoCypress className="w-32 md:w-40" aria-label="Cypress" />
 					</div>
 				</Container>
 			</section>

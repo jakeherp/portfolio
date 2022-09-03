@@ -1,3 +1,4 @@
+import Headroom from 'react-headroom';
 import { useEffect, useState } from 'react';
 
 import { BurgerIcon } from 'Atoms/BurgerIcon';
@@ -54,8 +55,8 @@ const Header = () => {
 	};
 
 	return (
-		<>
-			<header className="relative z-50 px-4 lg:px-20 py-8">
+		<Headroom>
+			<header className="relative z-50 px-4 lg:px-20 py-8 backdrop-blur-md">
 				<div className="flex justify-between items-center">
 					<Logo />
 					<nav className="hidden md:block">
@@ -86,7 +87,7 @@ const Header = () => {
 				</div>
 			</header>
 			<MobileMenu isOpen={isOpen} />
-		</>
+		</Headroom>
 	);
 };
 
