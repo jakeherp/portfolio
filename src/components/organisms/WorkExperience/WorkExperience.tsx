@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 
 import { Job } from 'Molecules/Job';
-import { mdxComponents } from 'utils/mdxComponents';
+import { mdxComponents } from 'Utils/mdxComponents';
 
 export interface WorkExperienceProps {
 	jobs: IJob[];

@@ -23,7 +23,7 @@ const customJestConfig = {
 		'^MockData(.*)$': '<rootDir>/src/mockData$1',
 		'^Pages(.*)$': '<rootDir>/src/pages$1',
 		'^Public(.*)$': '<rootDir>/public$1',
-		'^utils(.*)$': '<rootDir>/src/utils$1',
+		'^Utils(.*)$': '<rootDir>/src/utils$1',
 	},
 	watchPlugins: [
 		'jest-watch-typeahead/filename',

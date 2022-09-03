@@ -24,15 +24,13 @@
 			// Other folders
 			"@types": ["./@types/"],
 			"@types/*": ["./@types/*"],
-			"config": ["./src/config/"],
-			"config/*": ["./src/config/*"],
+			"Config": ["./src/config/"],
+			"Config/*": ["./src/config/*"],
 			"MockData": ["./src/mockData"],
 			"MockData/*": ["./src/mockData/*"],
-			"pages/*": ["./src/pages*"],
-			"public/*": ["./public/*"],
-			"queries/*": ["./src/queries/*"],
-			"redux/*": ["./src/redux/*"],
-			"utils/*": ["./src/utils/*"]
+			"Pages/*": ["./src/pages*"],
+			"Public/*": ["./public/*"],
+			"Utils/*": ["./src/utils/*"]
 		},
 		"incremental": true
 	},

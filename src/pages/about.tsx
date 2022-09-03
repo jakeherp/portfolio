@@ -2,9 +2,9 @@ import { IEducation, IJob, IPodcast } from '@types';
 
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
-import { mapEducation } from 'utils/mappings/mapEducation';
-import { mapJobs } from 'utils/mappings/mapJobs';
-import { mapPodcasts } from 'utils/mappings/mapPodcasts';
+import { mapEducation } from 'Utils/mappings/mapEducation';
+import { mapJobs } from 'Utils/mappings/mapJobs';
+import { mapPodcasts } from 'Utils/mappings/mapPodcasts';
 import { NextPage } from 'next';
 
 import { AnimatePage } from 'Atoms/AnimatePage';
