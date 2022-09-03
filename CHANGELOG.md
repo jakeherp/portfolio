@@ -1,3 +1,14 @@
+# 3.7.0
+
+## features
+
+- updates content for 2022
+- **accessibility:** improves accessibility
+
+## fixes
+
+- **config:** fixes inconsistent casing in path aliases
+
 # 3.6.0
 
 ## features
