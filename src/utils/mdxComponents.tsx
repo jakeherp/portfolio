@@ -1,4 +1,5 @@
 import { NodeRendererType } from '@graphcms/rich-text-react-renderer';
+import { ReactNode } from 'react';
 
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Image from 'next/image';
@@ -30,7 +31,7 @@ export const mdxComponents: NodeRendererType = {
 			style={dracula}
 			className="text-sm rounded-md p-4 border border-grey-300 dark:border-grey-700 shadow-lg shadow-grey-500 dark:shadow-grey-800"
 		>
-			{children}
+			{children as string}
 		</SyntaxHighlighter>
 	),
 	img: ({ altText, src }) => (
