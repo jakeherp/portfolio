@@ -1,4 +1,5 @@
 import Headroom from 'react-headroom';
+import { useOnKeyDown } from 'Hooks/useOnKeyDown';
 import { useEffect, useState } from 'react';
 
 import { BurgerIcon } from 'Atoms/BurgerIcon';
@@ -44,6 +45,8 @@ const Header = () => {
 	useEffect(() => {
 		setIsOpen(false);
 	}, [pathname]);
+
+	useOnKeyDown('Escape', () => setIsOpen(false));
 
 	const navigationVariants = {
 		hidden: { opacity: 0, y: -10 },

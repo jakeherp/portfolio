@@ -20,6 +20,7 @@ const customJestConfig = {
 		// Other folders
 		'^@types(.*)$': '<rootDir>/@types$1',
 		'^Config(.*)$': '<rootDir>/src/config$1',
+		'^Hooks(.*)$': '<rootDir>/src/hooks$1',
 		'^MockData(.*)$': '<rootDir>/src/mockData$1',
 		'^Pages(.*)$': '<rootDir>/src/pages$1',
 		'^Public(.*)$': '<rootDir>/public$1',

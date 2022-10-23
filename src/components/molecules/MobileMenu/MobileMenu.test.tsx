@@ -11,6 +11,11 @@ jest.mock('next/router', () => ({
 	}),
 }));
 
+jest.mock('focus-trap-react', () => ({
+	__esModule: true,
+	default: ({ children }: any) => <div id="focus-trap">{children}</div>,
+}));
+
 describe('MobileMenu', () => {
 	it('renders correctly', () => {
 		const { container } = render(<MobileMenu isOpen={true} />);

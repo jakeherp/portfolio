@@ -21,6 +21,7 @@ specifiers:
   '@testing-library/dom': ^8.17.1
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.3.0
+  '@testing-library/react-hooks': ^8.0.1
   '@types/mailchimp__mailchimp_marketing': ^3.0.5
   '@types/md5': ^2.3.2
   '@types/node': ^18.7.3
@@ -42,6 +43,7 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-react: ^7.30.1
   eslint-plugin-react-hooks: ^4.6.0
+  focus-trap-react: ^10.0.0
   formik: ^2.2.9
   framer-motion: ^7.1.0
   glob-parent: 6.0.2
@@ -83,6 +85,7 @@ dependencies:
   browserslist: 4.21.3
   classnames: 2.3.1
   date-fns: 2.29.1
+  focus-trap-react: 10.0.0_biqbaboplfbrettd7655fr4n2y
   formik: 2.2.9_react@18.2.0
   framer-motion: 7.1.0_biqbaboplfbrettd7655fr4n2y
   glob-parent: 6.0.2
@@ -112,6 +115,7 @@ devDependencies:
   '@testing-library/dom': 8.17.1
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
+  '@testing-library/react-hooks': 8.0.1_y6lpz2mvcoua7qihahug4ke22i
   '@types/mailchimp__mailchimp_marketing': 3.0.5
   '@types/md5': 2.3.2
   '@types/node': 18.7.3
@@ -140,7 +144,7 @@ devDependencies:
   prettier: 2.7.1
   react-test-renderer: 18.2.0_react@18.2.0
   storybook-tailwind-dark-mode: 1.0.12_biqbaboplfbrettd7655fr4n2y
-  tailwindcss: 3.1.8
+  tailwindcss: 3.1.8_postcss@8.4.16
   tsconfig-paths-webpack-plugin: 4.0.0
   typescript: 4.7.4
   webpack: 5.74.0
@@ -4108,7 +4112,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.1.8
+      tailwindcss: 3.1.8_postcss@8.4.16
     dev: true
 
   /@testing-library/dom/8.17.1:
@@ -4138,6 +4142,30 @@ packages:
       dom-accessibility-api: 0.5.14
       lodash: 4.17.21
       redent: 3.0.0
+    dev: true
+
+  /@testing-library/react-hooks/8.0.1_y6lpz2mvcoua7qihahug4ke22i:
+    resolution: {integrity: sha512-Aqhl2IVmLt8IovEVarNDFuJDVWVvhnr9/GCU6UUnrYXwgDFF9h2L2o2P9KBni1AST5sT6riAyoukFLyjQUgD/g==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      '@types/react': ^16.9.0 || ^17.0.0
+      react: ^16.9.0 || ^17.0.0
+      react-dom: ^16.9.0 || ^17.0.0
+      react-test-renderer: ^16.9.0 || ^17.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react-dom:
+        optional: true
+      react-test-renderer:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@types/react': 18.0.17
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-error-boundary: 3.1.4_react@18.2.0
+      react-test-renderer: 18.2.0_react@18.2.0
     dev: true
 
   /@testing-library/react/13.3.0_biqbaboplfbrettd7655fr4n2y:
@@ -7965,6 +7993,25 @@ packages:
       inherits: 2.0.4
       readable-stream: 2.3.7
     dev: true
+
+  /focus-trap-react/10.0.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-I0tReLdpmCwWuVb6YAmOD+S9KHj0GrlIWmnVJf61j2NHxiIg7DbrsabPmtPC+1yzGJrsy+/iTZiqXtStjlBQcA==}
+    peerDependencies:
+      prop-types: ^15.8.1
+      react: '>=16.3.0'
+      react-dom: '>=16.3.0'
+    dependencies:
+      focus-trap: 7.0.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tabbable: 6.0.0
+    dev: false
+
+  /focus-trap/7.0.0:
+    resolution: {integrity: sha512-uT4Bl8TwU+5vVAx/DHil/1eVS54k9unqhK/vGy2KSh7esPmqgC0koAB9J2sJ+vtj8+vmiFyGk2unLkhNLQaxoA==}
+    dependencies:
+      tabbable: 6.0.0
+    dev: false
 
   /for-in/1.0.2:
     resolution: {integrity: sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==}
@@ -12462,6 +12509,16 @@ packages:
       react-is: 17.0.2
     dev: true
 
+  /react-error-boundary/3.1.4_react@18.2.0:
+    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.18.9
+      react: 18.2.0
+    dev: true
+
   /react-fast-compare/2.0.4:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
     dev: false
@@ -13736,10 +13793,16 @@ packages:
     resolution: {integrity: sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==}
     dev: true
 
-  /tailwindcss/3.1.8:
+  /tabbable/6.0.0:
+    resolution: {integrity: sha512-SxhZErfHc3Yozz/HLAl/iPOxuIj8AtUw13NRewVOjFW7vbsqT1f3PuiHrPQbUkRcLNEgAedAv2DnjLtzynJXiw==}
+    dev: false
+
+  /tailwindcss/3.1.8_postcss@8.4.16:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
@@ -14224,6 +14287,7 @@ packages:
   /unified/9.2.0:
     resolution: {integrity: sha512-vx2Z0vY+a3YoTj8+pttM3tiJHCwY5UFbYdiWrwBEbHmK8pvsPj2rtAX2BFfgXen8T39CJWblWRDT4L5WGXtDdg==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-buffer: 2.0.5

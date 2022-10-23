@@ -1,3 +1,4 @@
+import FocusTrap from 'focus-trap-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { NavigationItem } from 'Atoms/NavigationItem';
@@ -28,28 +29,34 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 					exit={{ opacity: 0, y: '-50%' }}
 					transition={{ duration: 0, delay: 0 }}
 				>
-					<ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
-						{navItems.map(({ href, title }, i) => (
-							<NavigationItem
-								href={href}
-								title={title}
-								key={href}
+					<FocusTrap
+						focusTrapOptions={{
+							allowOutsideClick: false,
+						}}
+					>
+						<ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
+							{navItems.map(({ href, title }, i) => (
+								<NavigationItem
+									href={href}
+									title={title}
+									key={href}
+									variants={navigationVariants}
+									initial="hidden"
+									animate="visible"
+									customDelay={0.5 + (i + 1) * 0.1}
+								/>
+							))}
+							<motion.li
+								className="flex justify-center mt-12"
 								variants={navigationVariants}
 								initial="hidden"
 								animate="visible"
-								customDelay={0.5 + (i + 1) * 0.1}
-							/>
-						))}
-						<motion.li
-							className="flex justify-center mt-12"
-							variants={navigationVariants}
-							initial="hidden"
-							animate="visible"
-							custom={0.5 + (navItems.length + 1) * 0.1}
-						>
-							<ThemeToggle />
-						</motion.li>
-					</ul>
+								custom={0.5 + (navItems.length + 1) * 0.1}
+							>
+								<ThemeToggle />
+							</motion.li>
+						</ul>
+					</FocusTrap>
 				</motion.div>
 			) : null}
 		</AnimatePresence>
