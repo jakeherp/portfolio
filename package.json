@@ -1,7 +1,7 @@
 {
 	"name": "portfolio",
 	"description": "A redesign of my portfolio website.",
-	"version": "3.7.0",
+	"version": "3.8.0",
 	"author": {
 		"name": "Jacob Herper",
 		"email": "jacob@herper.io",
@@ -30,6 +30,7 @@
 	"dependencies": {
 		"@apollo/client": "^3.6.9",
 		"@graphcms/rich-text-react-renderer": "^0.6.1",
+		"@graphcms/rich-text-types": "^0.5.0",
 		"@mailchimp/mailchimp_marketing": "^3.0.78",
 		"@sentry/nextjs": "^7.10.0",
 		"@svgr/webpack": "6.3.1",

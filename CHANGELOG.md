@@ -1,3 +1,9 @@
+# 3.8.0
+
+## features
+
+- **mobile-menu:** accessibility improvements
+
 # 3.7.0
 
 ## features
