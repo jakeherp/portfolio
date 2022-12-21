@@ -31,7 +31,7 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 				>
 					<FocusTrap
 						focusTrapOptions={{
-							allowOutsideClick: false,
+							clickOutsideDeactivates: true,
 						}}
 					>
 						<ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
