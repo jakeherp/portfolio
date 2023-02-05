@@ -3,7 +3,7 @@ import { IJob } from '@types';
 import classNames from 'classnames';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 
-import { Job } from 'Molecules/Job';
+import { Job } from '@/components/molecules/Job';
 import { mdxComponents } from 'Utils/mdxComponents';
 
 export interface WorkExperienceProps {

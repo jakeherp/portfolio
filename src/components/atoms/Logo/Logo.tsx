@@ -10,7 +10,7 @@ interface LogoProps {
 const Logo = ({ hideName }: LogoProps) => {
 	return (
 		<Link href="/" passHref>
-			<motion.a
+			<motion.div
 				className="group relative transition whitespace-nowrap hover:transition duration-300 text-2xl font-bold flex gap-4 items-center"
 				animate={{ opacity: 1, y: 0 }}
 				initial={{ opacity: 0, y: -10 }}
@@ -33,7 +33,7 @@ const Logo = ({ hideName }: LogoProps) => {
 						</span>
 					</>
 				)}
-			</motion.a>
+			</motion.div>
 		</Link>
 	);
 };

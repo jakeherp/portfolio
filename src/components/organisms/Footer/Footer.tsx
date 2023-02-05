@@ -1,4 +1,4 @@
-import { SocialIcons } from 'Molecules/SocialIcons';
+import { SocialIcons } from '@/components/molecules/SocialIcons';
 
 const Footer = () => {
 	return (

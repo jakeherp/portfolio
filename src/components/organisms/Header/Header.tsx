@@ -1,13 +1,15 @@
+"use client";
+
 import Headroom from 'react-headroom';
-import { useOnKeyDown } from 'Hooks/useOnKeyDown';
+import { useOnKeyDown } from '@/hooks/useOnKeyDown';
 import { useEffect, useState } from 'react';
 
-import { BurgerIcon } from 'Atoms/BurgerIcon';
-import { Logo } from 'Atoms/Logo';
-import { MobileMenu } from 'Molecules/MobileMenu';
-import { NavigationItem } from 'Atoms/NavigationItem';
-import { ThemeToggle } from 'Atoms/ThemeToggle';
-import { useRouter } from 'next/router';
+import { BurgerIcon } from '@/components/atoms/BurgerIcon';
+import { Logo } from '@/components/atoms/Logo';
+import { MobileMenu } from '@/components/molecules/MobileMenu';
+import { NavigationItem } from '@/components/atoms/NavigationItem';
+import { ThemeToggle } from '@/components/atoms/ThemeToggle';
+import { usePathname } from 'next/navigation';
 
 export const navItems = [
 	{
@@ -16,7 +18,7 @@ export const navItems = [
 	},
 	{
 		href: '/uses',
-		title: 'Uses',
+		title: 'Uses', 
 	},
 	{
 		href: '/case-studies',
@@ -30,7 +32,7 @@ export const navItems = [
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const { pathname } = useRouter();
+	const pathname = usePathname();
 
 	useEffect(() => {
 		if (isOpen) {

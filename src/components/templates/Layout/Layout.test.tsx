@@ -11,7 +11,7 @@ jest.mock('next/router', () => ({
 		asPath: '',
 	}),
 }));
-jest.mock('Atoms/Logo');
+jest.mock('@/components/atoms/Logo');
 
 describe('Layout', () => {
 	(useRouter as jest.Mock).mockReturnValue({

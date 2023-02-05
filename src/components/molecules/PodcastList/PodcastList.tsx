@@ -1,5 +1,5 @@
 import { IPodcast } from '@types';
-import { Podcast } from 'Atoms/Podcast';
+import { Podcast } from '@/components/atoms/Podcast';
 
 export interface PodcastListProps {
 	podcasts: IPodcast[];

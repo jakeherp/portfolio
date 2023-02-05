@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { IEducation } from '@types';
 
-import { School } from 'Molecules/School';
+import { School } from '@/components/molecules/School';
 
 export interface EducationProps {
 	education: IEducation[];

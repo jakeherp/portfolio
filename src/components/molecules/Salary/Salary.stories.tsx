@@ -1,7 +1,7 @@
 import { Salary, SalaryProps } from './Salary';
 
 export default {
-	title: 'Molecules/Salary',
+	title: '@/components/molecules/Salary',
 	component: Salary,
 };
 

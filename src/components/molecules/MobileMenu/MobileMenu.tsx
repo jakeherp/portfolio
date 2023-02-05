@@ -1,9 +1,9 @@
 import FocusTrap from 'focus-trap-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { NavigationItem } from 'Atoms/NavigationItem';
-import { navItems } from 'Organisms/Header';
-import { ThemeToggle } from 'Atoms/ThemeToggle';
+import { NavigationItem } from '@/components/atoms/NavigationItem';
+import { navItems } from '@/components/organisms/Header';
+import { ThemeToggle } from '@/components/atoms/ThemeToggle';
 
 export interface MobileMenuProps {
 	isOpen: boolean;

@@ -1,4 +1,4 @@
-import { Icon, IconProps } from 'Atoms/Icon';
+import { Icon, IconProps } from '@/components/atoms/Icon';
 
 export interface SocialIconsProps {
 	profiles: Array<{

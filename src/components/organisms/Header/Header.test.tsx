@@ -1,7 +1,7 @@
 import { Header } from '../Header';
 import { render } from '@testing-library/react';
 
-jest.mock('Atoms/NavigationItem');
+jest.mock('@/components/atoms/NavigationItem');
 jest.mock('next/router', () => ({
 	__esModule: true,
 	useRouter: jest.fn().mockReturnValue({
@@ -11,7 +11,7 @@ jest.mock('next/router', () => ({
 		asPath: '',
 	}),
 }));
-jest.mock('Atoms/Logo');
+jest.mock('@/components/atoms/Logo');
 
 describe('Header', () => {
 	it('renders correctly', () => {

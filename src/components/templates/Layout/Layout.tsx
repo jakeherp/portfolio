@@ -1,9 +1,9 @@
 import { useTheme } from 'next-themes';
 import { FC, ReactNode, useEffect } from 'react';
 
-import { Footer } from 'Organisms/Footer';
-import { Header } from 'Organisms/Header';
-import { SkipToContent } from 'Atoms/SkipToContent';
+import { Footer } from '@/components/organisms/Footer';
+import { Header } from '@/components/organisms/Header';
+import { SkipToContent } from '@/components/atoms/SkipToContent';
 
 interface LayoutProps {
 	children: ReactNode;
