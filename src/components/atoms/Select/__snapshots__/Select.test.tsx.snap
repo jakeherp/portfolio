@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+<div>
+  <label
+    class="flex flex-col font-bold mb-2 mt-6"
+    for="some-select"
+  >
+    Some select
+    <select
+      class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+      id="some-select"
+      name="some-select"
+    >
+      <option
+        selected=""
+        value="none"
+      >
+        Please select
+      </option>
+      <option
+        value="1"
+      >
+        1
+      </option>
+      <option
+        value="2"
+      >
+        2
+      </option>
+      <option
+        value="3"
+      >
+        3
+      </option>
+    </select>
+    <div
+      class="font-sm font-normal text-red-600"
+    />
+  </label>
+</div>
+`;

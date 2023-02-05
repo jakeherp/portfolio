@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders Button correctly 1`] = `
+<div>
+  <button
+    class="block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders Link correctly 1`] = `
+<div>
+  <a
+    class="block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white"
+    href="/"
+  >
+    Button Link
+  </a>
+</div>
+`;

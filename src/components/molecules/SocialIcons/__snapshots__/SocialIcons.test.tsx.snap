@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialIcons renders correctly 1`] = `
+<div>
+  <ul
+    class="flex gap-6"
+  >
+    <li
+      class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+    >
+      <a
+        href="https://github.com"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Github"
+      >
+        <svg />
+      </a>
+    </li>
+  </ul>
+</div>
+`;

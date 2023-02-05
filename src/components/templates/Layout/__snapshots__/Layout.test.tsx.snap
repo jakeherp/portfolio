@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<div>
+  <div
+    class="flex flex-col justify-between min-h-screen"
+  >
+    <a
+      class="sr-only focus:not-sr-only focus:absolute focus:z-10"
+      href="#content"
+    >
+      Skip to content
+    </a>
+    <div
+      class="headroom-wrapper"
+    >
+      <div
+        class="headroom headroom--unfixed"
+        style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3D(0, 0, 0);"
+      >
+        <header
+          class="relative z-50 px-4 lg:px-20 py-8 backdrop-blur-md"
+        >
+          <div
+            class="flex justify-between items-center"
+          >
+            <nav
+              class="hidden md:block"
+            >
+              <ul
+                class="flex gap-8 text-lg"
+              >
+                <li
+                  style="opacity: 0; transform: translateY(-10px) translateZ(0);"
+                >
+                  <a
+                    class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+                    href="/about"
+                  >
+                    About
+                  </a>
+                </li>
+                <li
+                  style="opacity: 0; transform: translateY(-10px) translateZ(0);"
+                >
+                  <a
+                    class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+                    href="/uses"
+                  >
+                    Uses
+                  </a>
+                </li>
+                <li
+                  style="opacity: 0; transform: translateY(-10px) translateZ(0);"
+                >
+                  <a
+                    class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+                    href="/case-studies"
+                  >
+                    Case Studies
+                  </a>
+                </li>
+                <li
+                  style="opacity: 0; transform: translateY(-10px) translateZ(0);"
+                >
+                  <a
+                    class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+                    href="/blog"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button
+              aria-label="Menu"
+              class="absolute z-50 top-8 right-4 md:hidden"
+            >
+              <div
+                class="burger-icon"
+              >
+                <span />
+                <span />
+                <span />
+                <span />
+              </div>
+            </button>
+            <div
+              class="hidden md:block"
+            >
+              <button
+                aria-label="Toggle Dark Mode"
+                class="p-2 bg-transparent border-2 border-grey-300 dark:border-grey-700 rounded-full dark:bg-transparent flex items-center justify-center hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200 transition-all"
+                type="button"
+              >
+                <svg
+                  class="w-5 h-5 text-grey-800 dark:text-grey-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span
+                  class="md:hidden"
+                >
+                  Switch to 
+                  dark
+                   mode
+                </span>
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <main
+      id="content"
+    >
+      Some content
+    </main>
+    <footer
+      class="flex justify-between mt-8 md:mt-20 px-4 md:px-20 py-8"
+    >
+      <span>
+        © 
+        2022
+         Jacob Herper
+      </span>
+      <ul
+        class="flex gap-6"
+      >
+        <li
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+        >
+          <a
+            href="https://www.github.com/jakeherp"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Github"
+          >
+            <svg />
+          </a>
+        </li>
+        <li
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+        >
+          <a
+            href="https://www.linkedin.com/in/jacobherper"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <svg />
+          </a>
+        </li>
+        <li
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+        >
+          <a
+            href="https://twitter.com/jakeherp"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Twitter"
+          >
+            <svg />
+          </a>
+        </li>
+        <li
+          class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+        >
+          <a
+            href="https://www.instagram.com/jakeherp"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Instagram"
+          >
+            <svg />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</div>
+`;

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<div>
+  <footer
+    class="flex justify-between mt-8 md:mt-20 px-4 md:px-20 py-8"
+  >
+    <span>
+      © 
+      2022
+       Jacob Herper
+    </span>
+    <ul
+      class="flex gap-6"
+    >
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://www.github.com/jakeherp"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Github"
+        >
+          <svg />
+        </a>
+      </li>
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://www.linkedin.com/in/jacobherper"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <svg />
+        </a>
+      </li>
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://twitter.com/jakeherp"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Twitter"
+        >
+          <svg />
+        </a>
+      </li>
+      <li
+        class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://www.instagram.com/jakeherp"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Instagram"
+        >
+          <svg />
+        </a>
+      </li>
+    </ul>
+  </footer>
+</div>
+`;

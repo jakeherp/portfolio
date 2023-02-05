@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationItem renders correctly 1`] = `
+<div>
+  <li>
+    <a
+      class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+      href="/"
+    >
+      Navigation Link
+    </a>
+  </li>
+</div>
+`;

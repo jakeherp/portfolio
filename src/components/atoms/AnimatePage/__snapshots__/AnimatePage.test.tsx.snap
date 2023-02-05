@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatePage renders correctly 1`] = `
+<div>
+  <div
+    style="opacity: 0; transform: translateX(0px) translateY(100px) translateZ(0);"
+  >
+    Page Content
+  </div>
+</div>
+`;

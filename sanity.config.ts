@@ -3,6 +3,8 @@ import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from '@/schemas';
 
+import { StudioLogo } from '@/components/atoms/Logo';
+
 export default defineConfig({
 	name: 'portfolio-content-studio',
 	basePath: '/studio',
@@ -14,6 +16,8 @@ export default defineConfig({
 		types: schemaTypes,
 	},
 	studio: {
-		components: {},
+		components: {
+			logo: StudioLogo
+		},
 	},
 });

@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecruiterForm renders correctly 1`] = `
+<div>
+  <form
+    action="#"
+    class="mt-8"
+    role="form"
+  >
+    <div
+      class="md:w-10/12 px-8 py-6 rounded-3xl glass-light dark:glass-dark mb-6 drop-shadow-lg hover:drop-shadow-2xl transition-all"
+    >
+      <label
+        class="flex flex-col font-bold mb-2 mt-6"
+        for="firstName"
+      >
+        First Name
+        <input
+          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          id="firstName"
+          name="firstName"
+          placeholder="John"
+          type="text"
+          value=""
+        />
+        <div
+          class="font-sm font-normal text-red-600"
+        />
+      </label>
+      <label
+        class="flex flex-col font-bold mb-2 mt-6"
+        for="firstName"
+      >
+        Last Name
+        <input
+          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          id="lastName"
+          name="lastName"
+          placeholder="Doe"
+          type="text"
+          value=""
+        />
+        <div
+          class="font-sm font-normal text-red-600"
+        />
+      </label>
+      <label
+        class="flex flex-col font-bold mb-2 mt-6"
+        for="firstName"
+      >
+        Company
+        <input
+          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          id="company"
+          name="company"
+          type="text"
+          value=""
+        />
+        <div
+          class="font-sm font-normal text-red-600"
+        />
+      </label>
+      <label
+        class="flex flex-col font-bold mb-2 mt-6"
+        for="firstName"
+      >
+        Email Address
+        <input
+          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          id="email"
+          name="email"
+          placeholder="johndoe@gmail.com"
+          type="email"
+          value=""
+        />
+        <div
+          class="font-sm font-normal text-red-600"
+        />
+      </label>
+      <label
+        class="flex flex-col font-bold mb-2 mt-6"
+        for="type"
+      >
+        Who are you?
+        <select
+          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          id="type"
+          name="type"
+        >
+          <option
+            value="none"
+          >
+            Please select
+          </option>
+          <option
+            value="I am an in-house recruiter"
+          >
+            I am an in-house recruiter
+          </option>
+          <option
+            value="I work for a recruitment firm"
+          >
+            I work for a recruitment firm
+          </option>
+          <option
+            value="I am an independent recruiter"
+          >
+            I am an independent recruiter
+          </option>
+          <option
+            value="None of the above"
+          >
+            None of the above
+          </option>
+        </select>
+        <div
+          class="font-sm font-normal text-red-600"
+        />
+      </label>
+      <div
+        class="mt-6"
+      >
+        <button
+          class="block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white group"
+          type="submit"
+        >
+          <div
+            class="block headline group-hover:text-off-white"
+          >
+            Sign up
+          </div>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
