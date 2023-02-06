@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Podcast } from './Podcast';
 
 import { mockPodcast } from '@mockdata';

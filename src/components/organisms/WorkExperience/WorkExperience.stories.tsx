@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { WorkExperience, WorkExperienceProps } from './WorkExperience';
 
 import { mockJobs } from '@mockdata';

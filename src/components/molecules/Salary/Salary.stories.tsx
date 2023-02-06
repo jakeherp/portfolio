@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Salary, SalaryProps } from './Salary';
 
 export default {

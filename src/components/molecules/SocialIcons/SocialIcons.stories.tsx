@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { SocialIcons, SocialIconsProps } from './SocialIcons';
 
 export default {

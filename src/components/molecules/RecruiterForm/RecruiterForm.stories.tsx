@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { RecruiterForm, RecruiterFormProps } from './RecruiterForm';
 
 export default {

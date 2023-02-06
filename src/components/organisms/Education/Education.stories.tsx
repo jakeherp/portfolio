@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Education, EducationProps } from './Education';
 
 import { mockSchool } from '@mockdata';

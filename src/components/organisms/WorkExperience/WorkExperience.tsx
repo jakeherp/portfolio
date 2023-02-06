@@ -11,10 +11,7 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
 	return (
 		<>
 			{jobs.map(
-				(
-					{ company, jobTitle, fromDate, toDate, technologies, description },
-					index
-				) => (
+				({ company, jobTitle, fromDate, toDate, technologies }, index) => (
 					<div
 						className={classNames(
 							'flex transition-all transform md:hover:scale-[1.01]',
