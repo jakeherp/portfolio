@@ -1,11 +1,11 @@
 import format from 'date-fns/format';
-import { ICompany } from '@types';
+import { Company } from '@/types';
 import Image from 'next/image';
 
 import { Box } from '@/components/atoms/Box';
 
 export interface SchoolProps {
-	institute: ICompany;
+	institute: Company;
 	course: string;
 	date: string;
 	technologies: string[];

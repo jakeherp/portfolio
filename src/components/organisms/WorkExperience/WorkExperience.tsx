@@ -1,13 +1,11 @@
-import { IJob } from '@types';
+import { Job as JobType } from '@/types';
 
 import classNames from 'classnames';
-import { RichText } from '@graphcms/rich-text-react-renderer';
 
 import { Job } from '@/components/molecules/Job';
-import { mdxComponents } from 'Utils/mdxComponents';
 
 export interface WorkExperienceProps {
-	jobs: IJob[];
+	jobs: JobType[];
 }
 
 const WorkExperience = ({ jobs }: WorkExperienceProps) => {
@@ -34,7 +32,7 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
 							toDate={toDate}
 							technologies={technologies}
 						>
-							<RichText renderers={mdxComponents} content={description} />
+							{/* <RichText renderers={mdxComponents} content={description} /> */}
 						</Job>
 					</div>
 				)

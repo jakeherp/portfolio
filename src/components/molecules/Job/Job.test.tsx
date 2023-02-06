@@ -1,5 +1,5 @@
 import { Job } from '../Job';
-import { mockJobs } from 'MockData';
+import { mockJobs } from '@/mockdata';
 import { render } from '@testing-library/react';
 
 describe('Job', () => {

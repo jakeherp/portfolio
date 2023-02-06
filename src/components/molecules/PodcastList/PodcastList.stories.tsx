@@ -1,4 +1,4 @@
-import { mockPodcast } from 'MockData';
+import { mockPodcast } from '@/mockdata';
 import { PodcastList, PodcastListProps } from './PodcastList';
 
 export default {

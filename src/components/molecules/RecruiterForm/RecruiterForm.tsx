@@ -1,4 +1,4 @@
-import * as Yup from 'yup';
+// import * as Yup from 'yup';
 import { Form, Formik } from 'formik';
 
 import { Box } from '@/components/atoms/Box';
@@ -27,17 +27,17 @@ export const RecruiterForm = ({
 		'I am an independent recruiter',
 		'None of the above',
 	];
-	const validationSchema = Yup.object({
-		firstName: Yup.string().required('This field is required'),
-		lastName: Yup.string().required('This field is required'),
-		email: Yup.string()
-			.email('Please enter a valid email address')
-			.required('This field is required'),
-		company: Yup.string(),
-		type: Yup.mixed()
-			.oneOf(typeOptions, 'Please select an option')
-			.required('Please select an option'),
-	});
+	// const validationSchema = Yup.object({
+	// 	firstName: Yup.string().required('This field is required'),
+	// 	lastName: Yup.string().required('This field is required'),
+	// 	email: Yup.string()
+	// 		.email('Please enter a valid email address')
+	// 		.required('This field is required'),
+	// 	company: Yup.string(),
+	// 	type: Yup.mixed()
+	// 		.oneOf(typeOptions, 'Please select an option')
+	// 		.required('Please select an option'),
+	// });
 
 	return (
 		<Formik
@@ -48,7 +48,7 @@ export const RecruiterForm = ({
 				company: '',
 				type: '',
 			}}
-			validationSchema={validationSchema}
+			// validationSchema={validationSchema}
 			onSubmit={(values, { setSubmitting, resetForm }) => {
 				handleSubmit(values, setSubmitting, resetForm);
 			}}

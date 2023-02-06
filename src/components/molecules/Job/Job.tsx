@@ -1,4 +1,4 @@
-import { IJob } from '@types';
+import { Job as JobType } from '@/types';
 
 import { format } from 'date-fns';
 import Image from 'next/image';
@@ -6,7 +6,7 @@ import { FC, ReactNode } from 'react';
 
 import { Box } from '@/components/atoms/Box';
 
-interface JobProps extends Omit<IJob, 'description'> {
+interface JobProps extends Omit<JobType, 'description'> {
 	children?: ReactNode;
 }
 

@@ -1,10 +1,10 @@
 import classNames from 'classnames';
-import { IEducation } from '@types';
+import { Education } from '@/types';
 
 import { School } from '@/components/molecules/School';
 
 export interface EducationProps {
-	education: IEducation[];
+	education: Education[];
 }
 
 const Education = ({ education }: EducationProps) => {

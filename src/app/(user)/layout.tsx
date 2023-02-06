@@ -11,7 +11,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 	const { resolvedTheme } = useTheme();
 
 	useEffect(() => {
-		const favicon = document.querySelector("link[rel~='icon']") as any;
+		const favicon = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
 		if (favicon) favicon.href = `/assets/favicon_${resolvedTheme}.svg`;
 	}, [resolvedTheme]);
 

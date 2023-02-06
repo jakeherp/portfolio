@@ -1,8 +1,8 @@
-import { IPodcast } from '@types';
+import { Podcast as PodcastType } from '@/types';
 import { Podcast } from '@/components/atoms/Podcast';
 
 export interface PodcastListProps {
-	podcasts: IPodcast[];
+	podcasts: PodcastType[];
 }
 
 const PodcastList = ({ podcasts }: PodcastListProps) => {
