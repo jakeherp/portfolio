@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { SkipToContent } from '@/components/atoms/SkipToContent';
 import { Footer } from '@/components/organisms/Footer';

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Headroom from 'react-headroom';
 import { useOnKeyDown } from '@/hooks/useOnKeyDown';
@@ -18,7 +18,7 @@ export const navItems = [
 	},
 	{
 		href: '/uses',
-		title: 'Uses', 
+		title: 'Uses',
 	},
 	{
 		href: '/case-studies',

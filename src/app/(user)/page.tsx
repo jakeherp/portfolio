@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { AnimatePage } from "@/components/atoms/AnimatePage";
-import { Container } from "@/components/atoms/Container";
-import { SeoHead } from "@/components/atoms/SeoHead";
-import ReactTyped from "react-typed";
+import { AnimatePage } from '@/components/atoms/AnimatePage';
+import { Container } from '@/components/atoms/Container';
+import { SeoHead } from '@/components/atoms/SeoHead';
+import ReactTyped from 'react-typed';
 
-import LogoCypress from 'Public/assets/tools/cypress.svg';
-import LogoFigma from 'Public/assets/tools/figma.svg';
-import LogoGraphql from 'Public/assets/tools/graphql.svg';
-import LogoHygraph from 'Public/assets/tools/hygraph.svg';
-import LogoNext from 'Public/assets/tools/nextjs.svg';
-import LogoPrismic from 'Public/assets/tools/prismic.svg';
-import LogoStorybook from 'Public/assets/tools/storybook.svg';
-import LogoSvelte from 'Public/assets/tools/svelte.svg';
-import LogoVercel from 'Public/assets/tools/vercel.svg';
+import LogoCypress from '../../../public/assets/tools/cypress.svg';
+import LogoFigma from '../../../public/assets/tools/figma.svg';
+import LogoGraphql from '../../../public/assets/tools/graphql.svg';
+import LogoHygraph from '../../../public/assets/tools/hygraph.svg';
+import LogoNext from '../../../public/assets/tools/nextjs.svg';
+import LogoPrismic from '../../../public/assets/tools/prismic.svg';
+import LogoStorybook from '../../../public/assets/tools/storybook.svg';
+import LogoSvelte from '../../../public/assets/tools/svelte.svg';
+import LogoVercel from '../../../public/assets/tools/vercel.svg';
 
 export default function Home() {
 	const talkAbout = [
