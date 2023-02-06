@@ -1,6 +1,6 @@
 import classNames from 'classnames';
+import { Variants, motion } from 'framer-motion';
 import Link from 'next/link';
-import { motion, Variants } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 export interface NavigationItemProps {

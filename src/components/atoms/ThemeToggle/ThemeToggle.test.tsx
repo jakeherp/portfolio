@@ -1,5 +1,6 @@
-import { render } from '@testing-library/react';
 import { ThemeToggle } from '../ThemeToggle';
+
+import { render } from '@testing-library/react';
 
 describe('ThemeToggle', () => {
 	it('renders correctly', () => {

@@ -3,7 +3,6 @@
 import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Container } from '@components/atoms/Container';
 import { SeoHead } from '@components/atoms/SeoHead';
-import ReactTyped from 'react-typed';
 
 import LogoCypress from '@root/public/assets/tools/cypress.svg';
 import LogoFigma from '@root/public/assets/tools/figma.svg';
@@ -14,6 +13,7 @@ import LogoPrismic from '@root/public/assets/tools/prismic.svg';
 import LogoStorybook from '@root/public/assets/tools/storybook.svg';
 import LogoSvelte from '@root/public/assets/tools/svelte.svg';
 import LogoVercel from '@root/public/assets/tools/vercel.svg';
+import ReactTyped from 'react-typed';
 
 export default function Home() {
 	const talkAbout = [

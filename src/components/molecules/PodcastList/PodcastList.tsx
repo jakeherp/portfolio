@@ -1,5 +1,6 @@
-import { Podcast as PodcastType } from '@types';
 import { Podcast } from '@components/atoms/Podcast';
+
+import { Podcast as PodcastType } from '@types';
 
 export interface PodcastListProps {
 	podcasts: PodcastType[];

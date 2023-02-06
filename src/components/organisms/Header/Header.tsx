@@ -1,15 +1,16 @@
 'use client';
 
-import Headroom from 'react-headroom';
-import { useOnKeyDown } from '@hooks/useOnKeyDown';
-import { useEffect, useState } from 'react';
-
 import { BurgerIcon } from '@components/atoms/BurgerIcon';
 import { Logo } from '@components/atoms/Logo';
-import { MobileMenu } from '@components/molecules/MobileMenu';
 import { NavigationItem } from '@components/atoms/NavigationItem';
 import { ThemeToggle } from '@components/atoms/ThemeToggle';
+import { MobileMenu } from '@components/molecules/MobileMenu';
+
+import { useOnKeyDown } from '@hooks/useOnKeyDown';
+
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import Headroom from 'react-headroom';
 
 export const navItems = [
 	{

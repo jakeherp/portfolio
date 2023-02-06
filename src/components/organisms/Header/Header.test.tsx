@@ -1,4 +1,5 @@
 import { Header } from '../Header';
+
 import { render } from '@testing-library/react';
 
 jest.mock('@components/atoms/NavigationItem');

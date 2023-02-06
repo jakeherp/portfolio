@@ -1,6 +1,7 @@
+import { WorkExperience } from '../WorkExperience';
+
 import { mockJobs } from '@mockdata';
 import { render } from '@testing-library/react';
-import { WorkExperience } from '../WorkExperience';
 
 describe('WorkExperience', () => {
 	it('renders correctly', () => {

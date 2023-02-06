@@ -1,8 +1,7 @@
-import { Job as JobType } from '@types';
-
-import classNames from 'classnames';
-
 import { Job } from '@components/molecules/Job';
+
+import { Job as JobType } from '@types';
+import classNames from 'classnames';
 
 export interface WorkExperienceProps {
 	jobs: JobType[];

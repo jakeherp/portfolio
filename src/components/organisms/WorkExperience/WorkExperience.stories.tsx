@@ -1,5 +1,6 @@
-import { mockJobs } from '@mockdata';
 import { WorkExperience, WorkExperienceProps } from './WorkExperience';
+
+import { mockJobs } from '@mockdata';
 
 export default {
 	title: 'organisms/WorkExperience',

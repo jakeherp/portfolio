@@ -1,5 +1,6 @@
-import { mockPodcast } from '@mockdata';
 import { PodcastList, PodcastListProps } from './PodcastList';
+
+import { mockPodcast } from '@mockdata';
 
 export default {
 	title: 'molecules/PodcastList',

@@ -1,6 +1,7 @@
+import { School } from '../School';
+
 import { mockSchool } from '@mockdata';
 import { render } from '@testing-library/react';
-import { School } from '../School';
 
 describe('School', () => {
 	it('renders correctly', () => {

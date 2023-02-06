@@ -1,4 +1,5 @@
 import { BurgerIcon } from '../BurgerIcon';
+
 import { render } from '@testing-library/react';
 
 describe('BurgerIcon', () => {

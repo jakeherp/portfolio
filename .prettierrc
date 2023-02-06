@@ -1,4 +1,5 @@
 {
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
 	"arrowParens": "always",
 	"bracketSpacing": true,
 	"jsxSingleQuote": false,
@@ -9,5 +10,8 @@
 	"singleQuote": true,
 	"tabWidth": 2,
 	"trailingComma": "es5",
-	"useTabs": true
+	"useTabs": true,
+	"importOrder": ["^[./]", "^@components/(.*)$", "^@hooks/(.*)$", "^@lib/(.*)$", "^@mockdata/(.*)$", "^@schemas/(.*)$", "^@styles/(.*)$", "^@types/(.*)$", "<THIRD_PARTY_MODULES>"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

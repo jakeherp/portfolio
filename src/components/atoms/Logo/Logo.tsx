@@ -1,7 +1,8 @@
-import Image from 'next/image';
 import Jacob from './jacob-herper.png';
-import Link from 'next/link';
+
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface LogoProps {
 	hideName?: boolean;

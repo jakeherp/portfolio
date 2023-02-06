@@ -1,5 +1,6 @@
-import { render } from '@testing-library/react';
 import { SkipToContent } from '../SkipToContent';
+
+import { render } from '@testing-library/react';
 
 describe('SkipToContent', () => {
 	it('renders correctly', () => {

@@ -1,9 +1,9 @@
-import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
+import { StudioLogo } from '@components/atoms/Logo';
+
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from '@schemas';
-
-import { StudioLogo } from '@components/atoms/Logo';
+import { defineConfig } from 'sanity';
+import { deskTool } from 'sanity/desk';
 
 export default defineConfig({
 	name: 'portfolio-content-studio',
@@ -17,7 +17,7 @@ export default defineConfig({
 	},
 	studio: {
 		components: {
-			logo: StudioLogo
+			logo: StudioLogo,
 		},
 	},
 });

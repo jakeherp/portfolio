@@ -1,4 +1,5 @@
 import { NavigationItem } from '../NavigationItem';
+
 import { render } from '@testing-library/react';
 
 jest.mock('next/navigation', () => ({

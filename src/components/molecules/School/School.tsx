@@ -1,8 +1,8 @@
-import format from 'date-fns/format';
-import { Company } from '@types';
-import Image from 'next/image';
-
 import { Box } from '@components/atoms/Box';
+
+import { Company } from '@types';
+import format from 'date-fns/format';
+import Image from 'next/image';
 
 export interface SchoolProps {
 	institute: Company;

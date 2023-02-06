@@ -1,4 +1,5 @@
 import { Salary } from '../Salary';
+
 import { fireEvent, render } from '@testing-library/react';
 
 describe('Salary', () => {

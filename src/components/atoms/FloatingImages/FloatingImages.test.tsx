@@ -1,4 +1,5 @@
 import { FloatingImages } from '../FloatingImages';
+
 import { render } from '@testing-library/react';
 
 describe('FloatingImages', () => {

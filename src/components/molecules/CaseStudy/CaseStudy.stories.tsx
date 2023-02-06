@@ -1,6 +1,6 @@
 import { CaseStudyProps } from './CaseStudy';
-
 import { CaseStudy } from './CaseStudy';
+
 import { mockCaseStudy } from '@mockdata';
 
 export default {

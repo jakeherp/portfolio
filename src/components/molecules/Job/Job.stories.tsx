@@ -1,14 +1,16 @@
-import { Job as JobType } from '@types';
-
 import { Job } from './Job';
+
 import { mockJobs } from '@mockdata';
+import { Job as JobType } from '@types';
 
 export default {
 	title: 'molecules/Job',
 	component: Job,
 };
 
-export const JobStory = (args: Omit<JobType, 'description'>) => <Job {...args} />;
+export const JobStory = (args: Omit<JobType, 'description'>) => (
+	<Job {...args} />
+);
 
 JobStory.storyName = 'Job';
 JobStory.args = {

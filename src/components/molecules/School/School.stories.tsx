@@ -1,5 +1,6 @@
-import { mockSchool } from '@mockdata';
 import { School, SchoolProps } from './School';
+
+import { mockSchool } from '@mockdata';
 
 export default {
 	title: 'molecules/School',

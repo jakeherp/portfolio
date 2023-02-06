@@ -1,4 +1,5 @@
 import { ClientOnly } from '../ClientOnly';
+
 import { render } from '@testing-library/react';
 
 describe('ClientOnly', () => {

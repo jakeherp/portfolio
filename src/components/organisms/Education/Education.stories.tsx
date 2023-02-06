@@ -1,5 +1,6 @@
-import { mockSchool } from '@mockdata';
 import { Education, EducationProps } from './Education';
+
+import { mockSchool } from '@mockdata';
 
 export default {
 	title: 'organisms/Education',
