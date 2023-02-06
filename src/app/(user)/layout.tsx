@@ -6,19 +6,10 @@ import { Header } from '@components/organisms/Header';
 
 import '@styles/globals.css';
 
-import { ThemeProvider, useTheme } from 'next-themes';
-import { PropsWithChildren, useEffect } from 'react';
+import { ThemeProvider } from 'next-themes';
+import { PropsWithChildren } from 'react';
 
 export default function RootLayout({ children }: PropsWithChildren) {
-	const { resolvedTheme } = useTheme();
-
-	useEffect(() => {
-		const favicon = document.querySelector(
-			"link[rel~='icon']"
-		) as HTMLLinkElement;
-		if (favicon) favicon.href = `/assets/favicon_${resolvedTheme}.svg`;
-	}, [resolvedTheme]);
-
 	return (
 		<html lang="en">
 			<head />
