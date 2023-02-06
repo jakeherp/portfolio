@@ -1,4 +1,5 @@
-import { SocialIcons } from '@/components/molecules/SocialIcons';
+import { IconGithub, IconInstagram, IconLinkedin, IconTwitter } from '@components/atoms/Icons';
+import { SocialIcons } from '@components/molecules/SocialIcons';
 
 const Footer = () => {
 	return (
@@ -9,22 +10,22 @@ const Footer = () => {
 					{
 						name: 'Github',
 						url: 'https://www.github.com/jakeherp',
-						icon: 'GITHUB',
+						icon: <IconGithub />,
 					},
 					{
 						name: 'LinkedIn',
 						url: 'https://www.linkedin.com/in/jacobherper',
-						icon: 'LINKEDIN',
+						icon: <IconLinkedin />,
 					},
 					{
 						name: 'Twitter',
 						url: 'https://twitter.com/jakeherp',
-						icon: 'TWITTER',
+						icon: <IconTwitter />,
 					},
 					{
 						name: 'Instagram',
 						url: 'https://www.instagram.com/jakeherp',
-						icon: 'INSTAGRAM',
+						icon: <IconInstagram />,
 					},
 				]}
 			/>

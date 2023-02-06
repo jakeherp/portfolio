@@ -1,12 +1,12 @@
 import classNames from 'classnames';
-import { CaseStudy } from '@/types';
+import { CaseStudy as CaseStudyType } from '@types';
 
-import { Box } from '@/components/atoms/Box';
-import { FloatingImages } from '@/components/atoms/FloatingImages';
+import { Box } from '@components/atoms/Box';
+import { FloatingImages } from '@components/atoms/FloatingImages';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export interface CaseStudyProps extends CaseStudy {
+export interface CaseStudyProps extends CaseStudyType {
 	index: number;
 }
 

@@ -1,4 +1,4 @@
-import { mockSchool } from '@/mockdata';
+import { mockSchool } from '@mockdata';
 import { render } from '@testing-library/react';
 import { School } from '../School';
 

@@ -1,4 +1,4 @@
-import { Company, RawCompany } from '@/types';
+import { Company, RawCompany } from '@types';
 
 export interface Education {
 	institute: Company;

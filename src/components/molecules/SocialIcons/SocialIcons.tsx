@@ -1,10 +1,10 @@
-import { Icon, IconProps } from '@/components/atoms/Icon';
+import { ReactNode } from "react";
 
 export interface SocialIconsProps {
 	profiles: Array<{
 		url: string;
 		name: string;
-		icon: IconProps['icon'];
+		icon: ReactNode;
 	}>;
 }
 
@@ -13,11 +13,11 @@ const SocialIcons = ({ profiles }: SocialIconsProps) => {
 		<ul className="flex gap-6">
 			{profiles.map(({ url, name, icon }) => (
 				<li
-					className="w-6 h-6 opacity-70 hover:opacity-100 transition"
+					className="text-2xl opacity-70 hover:opacity-100 transition"
 					key={name}
 				>
 					<a href={url} target="_blank" rel="noopener noreferrer" title={name}>
-						<Icon icon={icon} />
+						{icon}
 					</a>
 				</li>
 			))}

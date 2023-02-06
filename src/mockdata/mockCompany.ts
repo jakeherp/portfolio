@@ -1,4 +1,4 @@
-import { Company } from '@/types';
+import { Company } from '@types';
 
 export const mockCompany: Company = {
 	name: 'Some Company',

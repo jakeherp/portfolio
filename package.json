@@ -21,6 +21,7 @@
 		"type-check": "tsc",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
+		"svgr": "svgr --icon --title-prop --replace-attr-values '#000=currentColor' --svg-props 'focusable=false' --svg-props 'aria-hidden=true' --typescript --index-template ./svgr/index-template.js --template ./svgr/template.js -d src/components/atoms/Icons src/components/atoms/Icons/assets",
 		"test:ci": "jest --ci",
 		"test:coverage": "jest --coverage",
 		"test:watch": "jest --watchAll",
@@ -55,6 +56,7 @@
 	},
 	"devDependencies": {
 		"@sanity/eslint-config-studio": "^2.0.1",
+		"@svgr/cli": "^6.5.1",
 		"@tailwindcss/typography": "^0.5.9",
 		"@testing-library/dom": "^8.20.0",
 		"@testing-library/jest-dom": "^5.16.5",

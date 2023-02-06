@@ -1,4 +1,4 @@
-import { RawCaseStudy } from '@/types';
+import { RawCaseStudy } from '@types';
 
 export const mapCaseStudies = (caseStudiesResponse: RawCaseStudy[]) =>
 	caseStudiesResponse.map(

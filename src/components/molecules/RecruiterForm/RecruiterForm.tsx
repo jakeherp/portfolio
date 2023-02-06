@@ -1,10 +1,10 @@
 // import * as Yup from 'yup';
 import { Form, Formik } from 'formik';
 
-import { Box } from '@/components/atoms/Box';
-import { Button } from '@/components/atoms/Button';
-import { Input } from '@/components/atoms/Input';
-import { Select } from '@/components/atoms/Select';
+import { Box } from '@components/atoms/Box';
+import { Button } from '@components/atoms/Button';
+import { Input } from '@components/atoms/Input';
+import { Select } from '@components/atoms/Select';
 
 export interface RecruiterFormProps {
 	handleSubmit: (

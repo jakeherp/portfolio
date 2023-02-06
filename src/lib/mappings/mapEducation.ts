@@ -1,4 +1,4 @@
-import { RawEducation } from '@/types';
+import { RawEducation } from '@types';
 
 export const mapEducation = (educationResponse: RawEducation[]) =>
 	educationResponse.map(({ course, date, institute, courseContents }) => ({

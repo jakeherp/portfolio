@@ -1,4 +1,4 @@
-import { Image } from '@/types';
+import { Image } from '@types';
 
 export interface Company {
 	name: string;

@@ -1,5 +1,5 @@
-import { Podcast as PodcastType } from '@/types';
-import { mockPodcast } from '@/mockdata';
+import { Podcast as PodcastType } from '@types';
+import { mockPodcast } from '@mockdata';
 import { Podcast } from './Podcast';
 
 export default {

@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+import '@styles/globals.css';
 import { PropsWithChildren } from 'react';
 
 export default function RootLayout({ children }: PropsWithChildren) {

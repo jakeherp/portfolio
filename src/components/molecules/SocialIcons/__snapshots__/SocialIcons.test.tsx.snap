@@ -6,7 +6,7 @@ exports[`SocialIcons renders correctly 1`] = `
     class="flex gap-6"
   >
     <li
-      class="w-6 h-6 opacity-70 hover:opacity-100 transition"
+      class="text-2xl opacity-70 hover:opacity-100 transition"
     >
       <a
         href="https://github.com"
@@ -14,7 +14,7 @@ exports[`SocialIcons renders correctly 1`] = `
         target="_blank"
         title="Github"
       >
-        <svg />
+        GITHUB
       </a>
     </li>
   </ul>

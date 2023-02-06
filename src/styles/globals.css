@@ -48,6 +48,53 @@ html.light .logo .jacob_svg__background {
 }
 
 @layer components {
+	.headline {
+		@apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:via-purple-middle dark:to-purple-stop;
+	}
+
+	.underlined::after {
+		content: '';
+		height: 2px;
+		transform: scaleX(0);
+		transition: transform 0.25s ease;
+		transform-origin: left;
+		left: 0;
+		width: 100%;
+		display: block;
+		position: absolute;
+	}
+
+	.underlined-light:hover::after,
+	.underlined-light:focus::after,
+	.active.underlined-light::after {
+		background: var(--light-gradient);
+		transform: scaleX(1);
+	}
+
+	.underlined-dark:hover::after,
+	.underlined-dark:focus::after,
+	.active.underlined-dark::after {
+		background: var(--dark-gradient);
+		transform: scaleX(1);
+	}
+
+	.animation-delay {
+		animation-delay: 500ms !important;
+	}
+
+	.animate-hover {
+		animation: 2s ease-in-out 0s infinite alternate none running hover;
+	}
+
+	@keyframes hover {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(10px);
+		}
+	}
 
 	.burger-icon {
 		width: 32px;

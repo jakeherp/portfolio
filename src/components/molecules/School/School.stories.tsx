@@ -1,4 +1,4 @@
-import { mockSchool } from '@/mockdata';
+import { mockSchool } from '@mockdata';
 import { School, SchoolProps } from './School';
 
 export default {

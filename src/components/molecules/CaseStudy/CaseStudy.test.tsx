@@ -1,5 +1,5 @@
 import { CaseStudy } from '../CaseStudy';
-import { mockCaseStudy } from '@/mockdata';
+import { mockCaseStudy } from '@mockdata';
 import { render } from '@testing-library/react';
 
 describe('CaseStudy', () => {

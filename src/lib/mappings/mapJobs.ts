@@ -1,4 +1,4 @@
-import { RawJob } from '@/types';
+import { RawJob } from '@types';
 
 export const mapJobs = (jobsResponse: RawJob[]) =>
 	jobsResponse.map(

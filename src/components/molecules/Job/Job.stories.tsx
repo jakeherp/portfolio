@@ -1,7 +1,7 @@
-import { Job as JobType } from '@/types';
+import { Job as JobType } from '@types';
 
 import { Job } from './Job';
-import { mockJobs } from '@/mockdata';
+import { mockJobs } from '@mockdata';
 
 export default {
 	title: 'molecules/Job',

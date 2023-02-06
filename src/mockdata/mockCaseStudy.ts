@@ -1,4 +1,4 @@
-import { CaseStudy } from '@/types';
+import { CaseStudy } from '@types';
 
 export const mockCaseStudy: CaseStudy = {
 	id: 'ckxnmvyrk2itv0d18rg1lnmm9',

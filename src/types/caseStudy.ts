@@ -1,4 +1,4 @@
-import { Image, RawCompany } from '@/types';
+import { Image, RawCompany } from '@types';
 
 export interface CaseStudy {
 	id: string;
