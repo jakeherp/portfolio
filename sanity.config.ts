@@ -1,5 +1,6 @@
 import { StudioLogo } from '@components/atoms/Logo';
 
+import { codeInput } from '@sanity/code-input';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from '@schemas';
 import { defineConfig } from 'sanity';
@@ -11,7 +12,14 @@ export default defineConfig({
 	title: 'Portfolio Content Studio',
 	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
 	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-	plugins: [deskTool(), visionTool()],
+	decorators: [
+		{ title: 'Strong', value: 'strong' },
+		{ title: 'Emphasis', value: 'em' },
+		{ title: 'Code', value: 'code' },
+		{ title: 'Underline', value: 'underline' },
+		{ title: 'Strike', value: 'strike-through' },
+	],
+	plugins: [deskTool(), visionTool(), codeInput()],
 	schema: {
 		types: schemaTypes,
 	},

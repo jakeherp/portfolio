@@ -30,6 +30,7 @@
 	"dependencies": {
 		"@next/font": "13.1.6",
 		"@portabletext/react": "^2.0.1",
+		"@sanity/code-input": "^4.0.0",
 		"@sanity/image-url": "^1.0.2",
 		"@sanity/vision": "^3.2.6",
 		"@svgr/webpack": "^6.5.1",

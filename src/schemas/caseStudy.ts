@@ -1,13 +1,13 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-	name: 'post',
-	title: 'Post',
+	name: 'caseStudy',
+	title: 'Case Study',
 	type: 'document',
 	fields: [
 		defineField({
 			name: 'title',
-			title: 'Title',
+			title: 'Project Title',
 			type: 'string',
 		}),
 		defineField({
@@ -19,6 +19,13 @@ export default defineType({
 				maxLength: 96,
 			},
 		}),
+
+		defineField({
+			name: 'client',
+			title: 'Client',
+			type: 'reference',
+			to: [{ type: 'company' }],
+		}),
 		defineField({
 			name: 'mainImage',
 			title: 'Featured image',
@@ -26,6 +33,30 @@ export default defineType({
 			options: {
 				hotspot: true,
 			},
+		}),
+		defineField({
+			name: 'secondaryImages',
+			title: 'Secondary Images',
+			type: 'array',
+			of: [
+				{
+					type: 'image',
+					options: {
+						hotspot: true,
+					},
+				},
+			],
+		}),
+		defineField({
+			name: 'skills',
+			title: 'Skills',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: [{ type: 'skill' }],
+				},
+			],
 		}),
 		defineField({
 			name: 'publishedAt',
@@ -38,9 +69,9 @@ export default defineType({
 			type: 'string',
 		}),
 		defineField({
-			name: 'intro',
-			title: 'Intro text',
-			type: 'blockContent',
+			name: 'url',
+			title: 'URL',
+			type: 'url',
 		}),
 		defineField({
 			name: 'body',
@@ -52,12 +83,12 @@ export default defineType({
 	preview: {
 		select: {
 			title: 'title',
-			author: 'author.name',
+			company: 'client.name',
 			media: 'mainImage',
 		},
 		prepare(selection) {
-			const { author } = selection;
-			return { ...selection, subtitle: author && `by ${author}` };
+			const { company } = selection;
+			return { ...selection, subtitle: company };
 		},
 	},
 });
