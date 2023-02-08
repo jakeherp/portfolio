@@ -1,3 +1,4 @@
+export * from './author';
 export * from './blog';
 export * from './caseStudy';
 export * from './company';

@@ -26,6 +26,7 @@
 			"@lib/*": ["./src/lib/*"],
 			"@mockdata": ["./src/mockdata"],
 			"@root/*": ["./*"],
+			"@queries/*": ["./src/queries/*"],
 			"@schemas": ["./src/schemas"],
 			"@styles/*": ["./src/styles/*"],
 			"@types": ["./src/types"]

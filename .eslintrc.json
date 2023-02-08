@@ -6,5 +6,8 @@
 		"plugin:prettier/recommended",
 		"plugin:jest/recommended"
 	],
-	"plugins": ["@typescript-eslint", "jsx-a11y"]
+	"plugins": ["@typescript-eslint", "jsx-a11y"],
+	"rules": {
+		"@typescript-eslint/no-non-null-assertion": 0
+	}
 }
