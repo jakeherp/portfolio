@@ -3,18 +3,18 @@ import { Box } from '@components/atoms/Box';
 import { Job as JobType } from '@types';
 import { format } from 'date-fns';
 import Image from 'next/image';
-import { FC, ReactNode } from 'react';
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
 interface JobProps extends Omit<JobType, 'description'> {
 	children?: ReactNode;
 }
 
-const Job: FC<JobProps> = ({
+const Job: FC<PropsWithChildren<JobProps>> = ({
 	company,
 	jobTitle,
 	fromDate,
 	toDate,
-	technologies,
+	skills,
 	children,
 }) => {
 	return (
@@ -54,13 +54,13 @@ const Job: FC<JobProps> = ({
 					</h4>
 					<p className="hidden md:block text-sm">
 						<strong>Technologies: </strong>
-						{technologies.join(', ')}
+						{skills.join(', ')}
 					</p>
 				</div>
 			</div>
 			<p className="md:hidden text-sm">
 				<strong>Technologies: </strong>
-				{technologies.join(', ')}
+				{skills.join(', ')}
 			</p>
 			{children}
 		</Box>

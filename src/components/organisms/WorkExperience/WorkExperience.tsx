@@ -10,29 +10,27 @@ export interface WorkExperienceProps {
 const WorkExperience = ({ jobs }: WorkExperienceProps) => {
 	return (
 		<>
-			{jobs.map(
-				({ company, jobTitle, fromDate, toDate, technologies }, index) => (
-					<div
-						className={classNames(
-							'flex transition-all transform md:hover:scale-[1.01]',
-							{
-								'justify-end': index % 2 !== 0,
-							}
-						)}
-						key={`${company} ${jobTitle}`}
+			{jobs.map(({ company, jobTitle, fromDate, toDate, skills }, index) => (
+				<div
+					className={classNames(
+						'flex transition-all transform md:hover:scale-[1.01]',
+						{
+							'justify-end': index % 2 !== 0,
+						}
+					)}
+					key={`${company} ${jobTitle}`}
+				>
+					<Job
+						company={company}
+						jobTitle={jobTitle}
+						fromDate={fromDate}
+						toDate={toDate}
+						skills={skills}
 					>
-						<Job
-							company={company}
-							jobTitle={jobTitle}
-							fromDate={fromDate}
-							toDate={toDate}
-							technologies={technologies}
-						>
-							{/* <RichText renderers={mdxComponents} content={description} /> */}
-						</Job>
-					</div>
-				)
-			)}
+						{/* <RichText renderers={mdxComponents} content={description} /> */}
+					</Job>
+				</div>
+			))}
 		</>
 	);
 };

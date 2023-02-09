@@ -14,8 +14,8 @@ const CaseStudy = ({
 	slug,
 	title,
 	client,
-	technologies,
-	primaryImage,
+	skills,
+	mainImage,
 	secondaryImages,
 	index,
 }: CaseStudyProps) => {
@@ -45,7 +45,7 @@ const CaseStudy = ({
 							</div>
 							<p className="text-sm max-w-xs">
 								<strong>Tech used: </strong>
-								{technologies.join(', ')}
+								{skills.join(', ')}
 							</p>
 						</div>
 						<div
@@ -60,7 +60,7 @@ const CaseStudy = ({
 							<FloatingImages
 								topFloatingImage={secondaryImages[0]}
 								bottomFloatingImage={secondaryImages[1]}
-								mainImage={primaryImage}
+								mainImage={mainImage}
 								altText={title}
 							/>
 						</div>

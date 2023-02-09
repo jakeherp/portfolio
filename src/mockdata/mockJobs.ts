@@ -10,7 +10,7 @@ export const mockJobs: Job[] = [
 		jobTitle: 'Senior Software Engineer',
 		fromDate: '2020-08-10',
 		toDate: null,
-		technologies: [
+		skills: [
 			'TypeScript',
 			'React',
 			'Next.js',
@@ -20,7 +20,7 @@ export const mockJobs: Job[] = [
 			'Jest',
 			'Cypress',
 		],
-		description: '',
+		description: [],
 	},
 	{
 		company: {
@@ -31,7 +31,7 @@ export const mockJobs: Job[] = [
 		jobTitle: 'Senior Software Engineer',
 		fromDate: 'Aug 2020',
 		toDate: 'present',
-		technologies: [
+		skills: [
 			'TypeScript',
 			'React',
 			'Next.js',
@@ -41,7 +41,7 @@ export const mockJobs: Job[] = [
 			'Jest',
 			'Cypress',
 		],
-		description: '',
+		description: [],
 	},
 	{
 		company: {
@@ -52,7 +52,7 @@ export const mockJobs: Job[] = [
 		jobTitle: 'Senior Software Engineer',
 		fromDate: 'Aug 2020',
 		toDate: 'present',
-		technologies: [
+		skills: [
 			'TypeScript',
 			'React',
 			'Next.js',
@@ -62,6 +62,6 @@ export const mockJobs: Job[] = [
 			'Jest',
 			'Cypress',
 		],
-		description: '',
+		description: [],
 	},
 ];

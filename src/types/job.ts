@@ -1,21 +1,10 @@
-import { Company, RawCompany } from '@types';
+import { BlockContent, Company } from '@types';
 
 export interface Job {
+	jobTitle: string;
 	company: Company;
-	jobTitle: string;
+	description: BlockContent[];
 	fromDate: string;
 	toDate: string | null;
-	technologies: string[];
-	description: string;
-}
-
-export interface RawJob {
-	company: RawCompany;
-	jobTitle: string;
-	fromDate: string;
-	toDate: string | null;
-	skills: Array<{ skill: string }>;
-	description: {
-		raw: string;
-	};
+	skills: string[];
 }

@@ -5,20 +5,20 @@ import format from 'date-fns/format';
 import Image from 'next/image';
 
 export interface SchoolProps {
-	institute: Company;
+	institution: Company;
 	course: string;
 	date: string;
-	technologies: string[];
+	courseContents: string[];
 }
 
-const School = ({ institute, course, date, technologies }: SchoolProps) => {
+const School = ({ institution, course, date, courseContents }: SchoolProps) => {
 	return (
 		<Box>
 			<div className="flex gap-4 items-center">
-				{institute.logo && (
+				{institution.logo && (
 					<Image
-						src={institute.logo}
-						alt={institute.name}
+						src={institution.logo}
+						alt={institution.name}
 						width={64}
 						height={64}
 						className="rounded-md"
@@ -30,22 +30,22 @@ const School = ({ institute, course, date, technologies }: SchoolProps) => {
 						<span>{format(new Date(date), 'MMM yyyy')}</span>
 					</div>
 					<h4>
-						{institute.url ? (
+						{institution.url ? (
 							<a
-								href={institute.url}
+								href={institution.url}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="underlined relative"
 							>
-								{institute.name}
+								{institution.name}
 							</a>
 						) : (
-							<>{institute.name}</>
+							<>{institution.name}</>
 						)}
 					</h4>
 					<p className="text-sm">
 						<strong>Course Contents: </strong>
-						{technologies.join(', ')}
+						{courseContents.join(', ')}
 					</p>
 				</div>
 			</div>
