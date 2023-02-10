@@ -1,21 +1,37 @@
-'use client';
-
 import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Container } from '@components/atoms/Container';
-import { SeoHead } from '@components/atoms/SeoHead';
+import { TypeWriter } from '@components/atoms/TypeWriter';
 
 import LogoCypress from '@root/public/assets/tools/cypress.svg';
 import LogoFigma from '@root/public/assets/tools/figma.svg';
 import LogoGraphql from '@root/public/assets/tools/graphql.svg';
 import LogoHygraph from '@root/public/assets/tools/hygraph.svg';
 import LogoNext from '@root/public/assets/tools/nextjs.svg';
-import LogoPrismic from '@root/public/assets/tools/prismic.svg';
+import LogoSanity from '@root/public/assets/tools/sanity.svg';
 import LogoStorybook from '@root/public/assets/tools/storybook.svg';
 import LogoSvelte from '@root/public/assets/tools/svelte.svg';
 import LogoVercel from '@root/public/assets/tools/vercel.svg';
-import ReactTyped from 'react-typed';
 
-export default function Home() {
+export const metadata = {
+	title: 'Software Engineer and Consultant Jacob Herper',
+	description:
+		'A Front-End Software Engineer with a focus on JavaScript and React. I have more than 10 years experience working in software engineering and consulting.',
+	keywords: [
+		'Software Engineer',
+		'Jacob Herper',
+		'Software Consulting',
+		'Front-End',
+		'Full-Stack',
+		'React',
+		'TypeScript',
+		'JavaScript',
+		'GraphQL',
+		'CSS',
+		'Tailwind',
+	],
+};
+
+const HomePage = () => {
 	const talkAbout = [
 		'React',
 		'JavaScript',
@@ -43,19 +59,7 @@ export default function Home() {
 						development using React and TypeScript. As an advocate for web
 						performance and accessibility and an evangelist for the Jamstack, I
 						create amazing web applications to make the internet a better place.
-						You can talk to me about{' '}
-						<ReactTyped
-							loop
-							typeSpeed={80}
-							backSpeed={20}
-							strings={talkAbout}
-							smartBackspace
-							backDelay={1000}
-							loopCount={0}
-							showCursor
-							cursorChar="|"
-						/>
-						.
+						You can talk to me about <TypeWriter strings={talkAbout} />.
 					</p>
 					<p>
 						P.S. this website is open-source and available on{' '}
@@ -82,7 +86,7 @@ export default function Home() {
 						<LogoNext className="w-32" aria-label="Next.js" />
 						<LogoSvelte className="w-12" aria-label="SvelteKit" />
 						<LogoHygraph className="w-28 md:w-36" aria-label="Hygraph" />
-						<LogoPrismic className="w-32 md:w-40" aria-label="Prismic" />
+						<LogoSanity className="w-32 md:w-40" aria-label="Sanity" />
 						<LogoStorybook className="w-32 md:w-40" aria-label="Storybook" />
 						<LogoGraphql className="w-28 md:w-36" aria-label="GraphQL" />
 						<LogoVercel className="w-32 md:w-36" aria-label="Vercel" />
@@ -224,4 +228,6 @@ export default function Home() {
 			</section>
 		</AnimatePage>
 	);
-}
+};
+
+export default HomePage;

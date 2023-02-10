@@ -1,11 +1,5 @@
-import { FC, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
-interface ContainerProps {
-	children: ReactNode;
-}
-
-const Container: FC<ContainerProps> = ({ children }) => {
+export const Container = ({ children }: PropsWithChildren) => {
 	return <div className="mx-auto w-full px-4 md:max-w-5xl">{children}</div>;
 };
-
-export { Container };

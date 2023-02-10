@@ -1,3 +1,5 @@
+'use client';
+
 import classNames from 'classnames';
 import { Variants, motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,7 +11,7 @@ export interface NavigationItemProps {
 	variants: Variants;
 	initial: string;
 	animate: string;
-	customDelay: number;
+	customDelay?: number;
 }
 
 const NavigationItem = ({

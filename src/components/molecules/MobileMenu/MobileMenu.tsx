@@ -1,3 +1,5 @@
+'use client';
+
 import { NavigationItem } from '@components/atoms/NavigationItem';
 import { ThemeToggle } from '@components/atoms/ThemeToggle';
 import { navItems } from '@components/organisms/Header';
@@ -9,7 +11,7 @@ export interface MobileMenuProps {
 	isOpen: boolean;
 }
 
-const MobileMenu = ({ isOpen }: MobileMenuProps) => {
+export const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 	const navigationVariants = {
 		hidden: { opacity: 0, x: -50 },
 		visible: (custom: number) => ({
@@ -37,9 +39,9 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 						<ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
 							{navItems.map(({ href, title }, i) => (
 								<NavigationItem
+									key={href}
 									href={href}
 									title={title}
-									key={href}
 									variants={navigationVariants}
 									initial="hidden"
 									animate="visible"
@@ -62,5 +64,3 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 		</AnimatePresence>
 	);
 };
-
-export { MobileMenu };

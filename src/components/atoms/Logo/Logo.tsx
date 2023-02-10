@@ -1,3 +1,5 @@
+'use client';
+
 import Jacob from './jacob-herper.png';
 
 import { motion } from 'framer-motion';

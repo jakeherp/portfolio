@@ -31,7 +31,7 @@ export const navItems = [
 	},
 ];
 
-const Header = () => {
+export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const pathname = usePathname();
 
@@ -96,5 +96,3 @@ const Header = () => {
 		</Headroom>
 	);
 };
-
-export { Header };

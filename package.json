@@ -43,7 +43,7 @@
 		"focus-trap-react": "^10.0.2",
 		"formik": "^2.2.9",
 		"framer-motion": "^9.0.1",
-		"next": "13.1.6",
+		"next": "canary",
 		"next-sanity": "^4.1.2",
 		"next-themes": "^0.2.1",
 		"react": "18.2.0",

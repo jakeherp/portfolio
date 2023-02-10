@@ -2,10 +2,24 @@
 
 import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Container } from '@components/atoms/Container';
-import { FloatingImages } from '@components/atoms/FloatingImages';
 
-import Image from 'next/image';
+import { sanityClient } from '@lib/sanity';
+
+import { CaseStudy } from '@root/src/types';
+import { groq } from 'next-sanity';
 import React from 'react';
+
+export const generateStaticParams = async () => {
+	const query = groq`
+		*[_type == 'caseStudy'] {
+			"slug": slug.current
+		}
+	`;
+
+	const slugs: Pick<CaseStudy, 'slug'>[] = await sanityClient.fetch(query);
+
+	return slugs.map(({ slug }) => slug);
+};
 
 const CaseStudyPage = () => {
 	return (
