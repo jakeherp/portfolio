@@ -1,5 +1,6 @@
 import { Education } from '../Education';
-import { mockSchool } from 'MockData';
+
+import { mockSchool } from '@mockdata';
 import { render } from '@testing-library/react';
 
 describe('Education', () => {

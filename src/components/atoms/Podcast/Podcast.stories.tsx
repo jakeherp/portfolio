@@ -1,13 +1,15 @@
-import { IPodcast } from '@types';
-import { mockPodcast } from 'MockData';
+/* eslint-disable import/no-anonymous-default-export */
 import { Podcast } from './Podcast';
+
+import { mockPodcast } from '@mockdata';
+import { Podcast as PodcastType } from '@types';
 
 export default {
 	title: 'atoms/Podcast',
 	component: Podcast,
 };
 
-export const PodcastStory = (args: IPodcast) => <Podcast {...args} />;
+export const PodcastStory = (args: PodcastType) => <Podcast {...args} />;
 
 PodcastStory.storyName = 'Podcast';
 PodcastStory.args = mockPodcast;

@@ -1,13 +1,14 @@
-import { IPodcast } from '@types';
-import { Podcast } from 'Atoms/Podcast';
+import { Podcast } from '@components/atoms/Podcast';
+
+import { Podcast as PodcastType } from '@types';
 
 export interface PodcastListProps {
-	podcasts: IPodcast[];
+	podcasts: PodcastType[];
 }
 
 const PodcastList = ({ podcasts }: PodcastListProps) => {
 	return (
-		<ul className="relative w-full flex gap-4 snap-x scroll-mandatory overflow-x-auto pb-14">
+		<ul className="relative px-4 md:px-0 -mx-4 md:mx-0 w-[100vw] md:w-full flex gap-4 snap-x scroll-mandatory overflow-x-auto pb-14">
 			{podcasts.map((podcast) => (
 				<Podcast {...podcast} key={podcast.name} />
 			))}

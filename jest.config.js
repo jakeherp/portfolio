@@ -11,26 +11,17 @@ const customJestConfig = {
 		'\\.svg': '<rootDir>/__mocks__/svg.js',
 		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
 			'<rootDir>/__mocks__/fileMock.js',
-		// Components
-		'^Atoms(.*)$': '<rootDir>/src/components/atoms$1',
-		'^Molecules(.*)$': '<rootDir>/src/components/molecules$1',
-		'^Organisms(.*)$': '<rootDir>/src/components/organisms$1',
-		'^Species(.*)$': '<rootDir>/src/components/species$1',
-		'^Templates(.*)$': '<rootDir>/src/components/templates$1',
-		// Other folders
-		'^@types(.*)$': '<rootDir>/@types$1',
-		'^Config(.*)$': '<rootDir>/src/config$1',
-		'^Hooks(.*)$': '<rootDir>/src/hooks$1',
-		'^MockData(.*)$': '<rootDir>/src/mockData$1',
-		'^Pages(.*)$': '<rootDir>/src/pages$1',
-		'^Public(.*)$': '<rootDir>/public$1',
-		'^Utils(.*)$': '<rootDir>/src/utils$1',
+		'@components(.*)': '<rootDir>/src/components$1',
+		'@hooks(.*)': '<rootDir>/src/hooks$1',
+		'@lib(.*)': '<rootDir>/src/lib$1',
+		'@mockdata(.*)': '<rootDir>/src/mockdata$1',
+		'@root(.*)': '<rootDir>/$1',
+		'@queries(.*)': '<rootDir>/src/queries$1',
+		'@schemas(.*)': '<rootDir>/src/schemas$1',
+		'@styles(.*)': '<rootDir>/src/styles$1',
+		'@types(.*)': '<rootDir>/src/types$1',
 	},
-	watchPlugins: [
-		'jest-watch-typeahead/filename',
-		'jest-watch-typeahead/testname',
-		'jest-watch-select-projects',
-	],
+	watchPlugins: [],
 	testEnvironment: 'jest-environment-jsdom',
 };
 

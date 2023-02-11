@@ -1,7 +1,8 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { CaseStudyProps } from './CaseStudy';
-
 import { CaseStudy } from './CaseStudy';
-import { mockCaseStudy } from 'MockData';
+
+import { mockCaseStudy } from '@mockdata';
 
 export default {
 	title: 'molecules/CaseStudy',

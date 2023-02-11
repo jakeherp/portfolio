@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { NavigationItem, NavigationItemProps } from './NavigationItem';
 
 export default {

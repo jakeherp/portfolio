@@ -1,5 +1,7 @@
-import { mockPodcast } from 'MockData';
+/* eslint-disable import/no-anonymous-default-export */
 import { PodcastList, PodcastListProps } from './PodcastList';
+
+import { mockPodcast } from '@mockdata';
 
 export default {
 	title: 'molecules/PodcastList',

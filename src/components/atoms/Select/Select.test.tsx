@@ -1,6 +1,7 @@
-import { Formik } from 'formik';
-import { render } from '@testing-library/react';
 import { Select } from '../Select';
+
+import { render } from '@testing-library/react';
+import { Formik } from 'formik';
 
 const mockField = {
 	value: '',

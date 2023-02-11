@@ -1,17 +1,11 @@
-import { RecruiterForm, RecruiterFormProps } from './RecruiterForm';
+/* eslint-disable import/no-anonymous-default-export */
+import { RecruiterForm } from './RecruiterForm';
 
 export default {
 	title: 'molecules/RecruiterForm',
 	component: RecruiterForm,
 };
 
-export const RecruiterFormStory = (args: RecruiterFormProps) => (
-	<RecruiterForm {...args} />
-);
+export const RecruiterFormStory = () => <RecruiterForm />;
 
 RecruiterFormStory.storyName = 'RecruiterForm';
-RecruiterFormStory.args = {
-	handleSubmit: () => console.log('Submitted'),
-	success: false,
-	error: false,
-};

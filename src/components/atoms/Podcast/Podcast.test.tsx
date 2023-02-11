@@ -1,5 +1,6 @@
-import { mockPodcast } from 'MockData';
 import { Podcast } from '../Podcast';
+
+import { mockPodcast } from '@mockdata';
 import { render } from '@testing-library/react';
 
 describe('Podcast', () => {

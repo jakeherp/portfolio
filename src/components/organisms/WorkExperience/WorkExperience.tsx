@@ -1,29 +1,21 @@
-import { IJob } from '@types';
+import { ContentBlock } from '@components/atoms/ContentBlock';
+import { Job } from '@components/molecules/Job';
 
+import { Job as JobType } from '@types';
 import classNames from 'classnames';
-import { RichText } from '@graphcms/rich-text-react-renderer';
-
-import { Job } from 'Molecules/Job';
-import { mdxComponents } from 'Utils/mdxComponents';
 
 export interface WorkExperienceProps {
-	jobs: IJob[];
+	jobs: JobType[];
 }
 
 const WorkExperience = ({ jobs }: WorkExperienceProps) => {
 	return (
 		<>
 			{jobs.map(
-				(
-					{ company, jobTitle, fromDate, toDate, technologies, description },
-					index
-				) => (
+				({ company, jobTitle, fromDate, toDate, skills, description }) => (
 					<div
 						className={classNames(
-							'flex transition-all transform md:hover:scale-[1.01]',
-							{
-								'justify-end': index % 2 !== 0,
-							}
+							'flex transition-all transform md:hover:scale-[1.01]'
 						)}
 						key={`${company} ${jobTitle}`}
 					>
@@ -32,9 +24,9 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
 							jobTitle={jobTitle}
 							fromDate={fromDate}
 							toDate={toDate}
-							technologies={technologies}
+							skills={skills}
 						>
-							<RichText renderers={mdxComponents} content={description} />
+							<ContentBlock value={description} />
 						</Job>
 					</div>
 				)

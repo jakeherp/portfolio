@@ -1,6 +1,8 @@
-const { withSentryConfig } = require('@sentry/nextjs');
-
-const moduleExports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	experimental: {
+		appDir: true,
+	},
 	poweredByHeader: false,
 	swcMinify: true,
 	productionBrowserSourceMaps: process.env.NODE_ENV === 'production',
@@ -12,24 +14,20 @@ const moduleExports = {
 
 		return config;
 	},
-	publicRuntimeConfig: {
-		MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY || '',
-		MAILCHIMP_API_SERVER: process.env.MAILCHIMP_API_SERVER || '',
-		MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID || '',
-	},
 	images: {
-		domains: [
-			'dev-to-uploads.s3.amazonaws.com',
-			'media.graphcms.com',
-			'media.graphassets.com',
-		],
+		domains: ['dev-to-uploads.s3.amazonaws.com', 'cdn.sanity.io'],
+	},
+	publicRuntimeConfig: {
+		sanityProjectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+		sanityDataset: process.env.NEXT_PUBLIC_SANITY_DATASET || '',
+		sanityApiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || '',
+		mailchimpAudienceId: process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID || '',
+		mailchimpApiServer: process.env.NEXT_PUBLIC_MAILCHIMP_API_SERVER || '',
+	},
+	serverRuntimeConfig: {
+		sanityApiToken: process.env.SANITY_API_TOKEN || '',
+		mailchimpApiKey: process.env.MAILCHIMP_API_KEY || '',
 	},
 };
 
-const sentryWebpackPluginOptions = {
-	silent: false, // Suppresses all logs
-	// For all available options, see:
-	// https://github.com/getsentry/sentry-webpack-plugin#options.
-};
-
-module.exports = withSentryConfig(moduleExports, sentryWebpackPluginOptions);
+module.exports = nextConfig;

@@ -1,5 +1,7 @@
-import { mockSchool } from 'MockData';
+/* eslint-disable import/no-anonymous-default-export */
 import { Education, EducationProps } from './Education';
+
+import { mockSchool } from '@mockdata';
 
 export default {
 	title: 'organisms/Education',

@@ -1,14 +1,17 @@
-import { IJob } from '@types';
-
+/* eslint-disable import/no-anonymous-default-export */
 import { Job } from './Job';
-import { mockJobs } from 'MockData';
+
+import { mockJobs } from '@mockdata';
+import { Job as JobType } from '@types';
 
 export default {
 	title: 'molecules/Job',
 	component: Job,
 };
 
-export const JobStory = (args: Omit<IJob, 'description'>) => <Job {...args} />;
+export const JobStory = (args: Omit<JobType, 'description'>) => (
+	<Job {...args} />
+);
 
 JobStory.storyName = 'Job';
 JobStory.args = {

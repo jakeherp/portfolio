@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Button, ButtonProps } from './Button';
 
 export default {

@@ -1,6 +1,6 @@
 import { Input } from '../Input';
-import { render } from '@testing-library/react';
 
+import { render } from '@testing-library/react';
 import { Formik } from 'formik';
 
 const mockField = {

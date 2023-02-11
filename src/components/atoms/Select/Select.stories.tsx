@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Select, SelectProps } from './Select';
 
 export default {

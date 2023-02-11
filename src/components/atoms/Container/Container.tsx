@@ -1,11 +1,22 @@
-import { FC, ReactNode } from 'react';
+import classNames from 'classnames';
+import { PropsWithChildren } from 'react';
 
 interface ContainerProps {
-	children: ReactNode;
+	className?: string;
 }
 
-const Container: FC<ContainerProps> = ({ children }) => {
-	return <div className="mx-auto w-full px-4 md:max-w-5xl">{children}</div>;
+export const Container = ({
+	children,
+	className,
+}: PropsWithChildren<ContainerProps>) => {
+	return (
+		<div
+			className={classNames(
+				'mx-auto w-full px-4 md:max-w-4xl lg:max-w-7xl',
+				className
+			)}
+		>
+			{children}
+		</div>
+	);
 };
-
-export { Container };

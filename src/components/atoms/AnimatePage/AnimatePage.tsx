@@ -1,11 +1,9 @@
+'use client';
+
 import { motion } from 'framer-motion';
-import { FC, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
-interface AnimatePageProps {
-	children: ReactNode;
-}
-
-const AnimatePage: FC<AnimatePageProps> = ({ children }) => {
+const AnimatePage = ({ children }: PropsWithChildren) => {
 	const variants = {
 		hidden: { opacity: 0, x: 0, y: 100 },
 		enter: { opacity: 1, x: 0, y: 0 },

@@ -1,7 +1,9 @@
+'use client';
+
 import classNames from 'classnames';
+import { Variants, motion } from 'framer-motion';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, Variants } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export interface NavigationItemProps {
 	href: string;
@@ -9,7 +11,7 @@ export interface NavigationItemProps {
 	variants: Variants;
 	initial: string;
 	animate: string;
-	customDelay: number;
+	customDelay?: number;
 }
 
 const NavigationItem = ({
@@ -20,8 +22,8 @@ const NavigationItem = ({
 	animate,
 	customDelay,
 }: NavigationItemProps) => {
-	const { asPath } = useRouter();
-	const isActive = asPath.startsWith(href);
+	const pathname = usePathname();
+	const isActive = pathname?.startsWith(href);
 
 	return (
 		<motion.li
@@ -30,17 +32,16 @@ const NavigationItem = ({
 			animate={animate}
 			custom={customDelay}
 		>
-			<Link href={href}>
-				<a
-					className={classNames(
-						isActive
-							? 'font-bold text-off-black dark:text-off-white'
-							: 'font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white',
-						'md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg'
-					)}
-				>
-					{title}
-				</a>
+			<Link
+				href={href}
+				className={classNames(
+					isActive
+						? 'font-bold text-off-black dark:text-off-white'
+						: 'font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white',
+					'md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg'
+				)}
+			>
+				{title}
 			</Link>
 		</motion.li>
 	);

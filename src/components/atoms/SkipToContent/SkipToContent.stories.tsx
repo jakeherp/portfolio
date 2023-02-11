@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { SkipToContent } from './SkipToContent';
 
 export default {

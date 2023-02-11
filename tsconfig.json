@@ -3,7 +3,6 @@
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
-		"baseUrl": ".",
 		"skipLibCheck": true,
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
@@ -14,27 +13,25 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
+		"incremental": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"baseUrl": ".",
 		"paths": {
-			// Components
-			"Atoms/*": ["./src/components/atoms/*"],
-			"Molecules/*": ["./src/components/molecules/*"],
-			"Organisms/*": ["./src/components/organisms/*"],
-			"Species/*": ["./src/components/species/*"],
-			"Templates/*": ["./src/components/templates/*"],
-			// Other folders
-			"@types": ["./@types/"],
-			"@types/*": ["./@types/*"],
-			"Config": ["./src/config/"],
-			"Config/*": ["./src/config/*"],
-			"Hooks/*": ["./src/hooks/*"],
-			"MockData": ["./src/mockData"],
-			"MockData/*": ["./src/mockData/*"],
-			"Pages/*": ["./src/pages*"],
-			"Public/*": ["./public/*"],
-			"Utils/*": ["./src/utils/*"]
-		},
-		"incremental": true
+			"@components/*": ["./src/components/*"],
+			"@hooks/*": ["./src/hooks/*"],
+			"@lib/*": ["./src/lib/*"],
+			"@mockdata": ["./src/mockdata"],
+			"@root/*": ["./*"],
+			"@queries/*": ["./src/queries/*"],
+			"@schemas": ["./src/schemas"],
+			"@styles/*": ["./src/styles/*"],
+			"@types": ["./src/types"]
+		}
 	},
-	"include": ["*.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
 	"exclude": ["node_modules"]
 }

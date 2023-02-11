@@ -1,5 +1,7 @@
 import { MobileMenu } from '../MobileMenu';
+
 import { render } from '@testing-library/react';
+import { PropsWithChildren } from 'react';
 
 jest.mock('next/router', () => ({
 	__esModule: true,
@@ -13,7 +15,9 @@ jest.mock('next/router', () => ({
 
 jest.mock('focus-trap-react', () => ({
 	__esModule: true,
-	default: ({ children }: any) => <div id="focus-trap">{children}</div>,
+	default: ({ children }: PropsWithChildren) => (
+		<div id="focus-trap">{children}</div>
+	),
 }));
 
 describe('MobileMenu', () => {

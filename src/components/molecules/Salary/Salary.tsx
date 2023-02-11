@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 export interface SalaryProps {
@@ -9,53 +11,52 @@ export interface SalaryProps {
 }
 
 const Salary = ({ salaryRange }: SalaryProps) => {
-	const [selectedSalary, setSelectedSalary] = useState(
-		salaryRange.minimum - 40_000
-	);
-	const [emoji, setEmoji] = useState('❓');
-	const [textContent, setTextContent] = useState('unknown');
+	const { median } = salaryRange;
 
-	const { minimum, median, maximum } = salaryRange;
+	const roundNum = (num: number) => {
+		return Math.round(num / 5000) * 5000;
+	};
+
+	const minVisible = roundNum(median * 0.5);
+	const maxVisible = roundNum(median * 1.6);
+	const minSad = roundNum(median * 0.6);
+	const stillSad = roundNum(median * 0.7);
+	const minAcceptable = roundNum(median * 0.8);
+	const veryHappy = roundNum(median * 1.2);
+	const overTheMoon = roundNum(median * 1.4);
+
+	const [selectedSalary, setSelectedSalary] = useState(minAcceptable);
+	const [emoji, setEmoji] = useState('❓');
+	const [title, setTitle] = useState('❓');
 
 	useEffect(() => {
-		if (selectedSalary <= minimum - 30_000) {
+		if (selectedSalary < minSad) {
+			setEmoji('🤬');
+			setTitle('Are you serious?');
+		} else if (selectedSalary >= minSad && selectedSalary < stillSad) {
 			setEmoji('😭');
-			setTextContent('way too low');
-		} else if (
-			selectedSalary > minimum - 30_000 &&
-			selectedSalary <= minimum - 20_000
-		) {
+			setTitle('Way too low');
+		} else if (selectedSalary >= stillSad && selectedSalary < minAcceptable) {
 			setEmoji('😢');
-			setTextContent('too low');
-		} else if (
-			selectedSalary > minimum - 20_000 &&
-			selectedSalary <= minimum - 10_000
-		) {
-			setEmoji('🙁');
-			setTextContent('low');
-		} else if (selectedSalary > minimum - 10_000 && selectedSalary < minimum) {
-			setEmoji('😕');
-			setTextContent('you can do better');
-		} else if (selectedSalary >= minimum && selectedSalary < minimum + 10_000) {
+			setTitle('Too low');
+		} else if (selectedSalary >= minAcceptable && selectedSalary < median) {
 			setEmoji('😏');
-			setTextContent('getting there');
-		} else if (
-			selectedSalary > minimum + 10_000 &&
-			selectedSalary <= minimum + 20_000
-		) {
+			setTitle('getting there');
+		} else if (selectedSalary >= median && selectedSalary < veryHappy) {
 			setEmoji('🙂');
-			setTextContent('pretty good');
-		} else if (
-			selectedSalary > minimum + 20_000 &&
-			selectedSalary <= median + 20_000
-		) {
+			setTitle('pretty good');
+		} else if (selectedSalary >= veryHappy && selectedSalary < overTheMoon) {
 			setEmoji('😀');
-			setTextContent('great');
-		} else if (selectedSalary >= maximum) {
+			setTitle('even better');
+		} else if (selectedSalary >= overTheMoon && selectedSalary < maxVisible) {
+			setEmoji('😃');
+			setTitle('amazing');
+		} else if (selectedSalary >= maxVisible) {
 			setEmoji('🤑');
-			setTextContent('make it rain!');
+			setTitle('make it rain!');
 		}
-	}, [maximum, median, minimum, selectedSalary]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [selectedSalary]);
 
 	return (
 		<div>
@@ -67,8 +68,8 @@ const Salary = ({ salaryRange }: SalaryProps) => {
 			</p>
 			<input
 				type="range"
-				min={minimum - 40_000}
-				max={maximum + 50_000}
+				min={minVisible}
+				max={maxVisible}
 				value={selectedSalary}
 				step={5_000}
 				onChange={(e) => setSelectedSalary(Number(e.target.value))}
@@ -83,7 +84,7 @@ const Salary = ({ salaryRange }: SalaryProps) => {
 			</label>
 			<p>
 				<strong>Happiness Score:</strong>
-				<span className="text-3xl" data-testid="emoji" title={textContent}>
+				<span className="text-3xl" data-testid="emoji" title={title}>
 					{` ${emoji}`}
 				</span>
 			</p>
