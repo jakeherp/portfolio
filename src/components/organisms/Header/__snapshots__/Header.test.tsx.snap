@@ -7,7 +7,7 @@ exports[`Header renders correctly 1`] = `
   >
     <div
       class="headroom headroom--unfixed"
-      style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3D(0, 0, 0);"
+      style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 50; transform: translate3D(0, 0, 0);"
     >
       <header
         class="relative z-50 py-8 backdrop-blur-md"

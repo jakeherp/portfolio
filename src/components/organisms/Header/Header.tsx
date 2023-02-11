@@ -62,7 +62,7 @@ export const Header = () => {
 	};
 
 	return (
-		<Headroom>
+		<Headroom style={{ zIndex: 50 }}>
 			<header className="relative z-50 py-8 backdrop-blur-md">
 				<Container>
 					<div className="flex justify-between items-center">

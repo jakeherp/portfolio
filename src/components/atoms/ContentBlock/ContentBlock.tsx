@@ -1,3 +1,5 @@
+import CodeBlock from './Code';
+
 import { sanityClient } from '@lib/sanity';
 
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
@@ -15,31 +17,19 @@ export const urlFor = (source: SanityImageSource) => {
 
 const components: Partial<PortableTextReactComponents> = {
 	types: {
-		image: ({ value, ...props }) => {
-			console.log(value, props);
+		image: ({ value }) => (
+			<div className="relative w-[100vw] md:w-full lg:max-w-4xl aspect-video m-10 -mx-4 md:mx-auto">
+				<Image
+					src={urlFor(value).url()}
+					alt={value.alt}
+					className="object-cover"
+					fill
+				/>
+			</div>
+		),
 
-			return (
-				<div className="relative w-[100vw] md:w-full lg:max-w-4xl aspect-video m-10 -mx-4 md:mx-auto">
-					<Image
-						src={urlFor(value).url()}
-						alt={value.alt}
-						className="object-cover"
-						fill
-					/>
-				</div>
-			);
-		},
-
-		reference: ({ value, ...props }) => {
-			console.log({ value, props });
-
-			return null;
-		},
-
-		salary: ({ value, ...props }) => {
-			console.log({ value, props });
-
-			return <div>SALARY!</div>;
+		code: ({ value }) => {
+			return <CodeBlock code={value.code} language={value.language} />;
 		},
 	},
 

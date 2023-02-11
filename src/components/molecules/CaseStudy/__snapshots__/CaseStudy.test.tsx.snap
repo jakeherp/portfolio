@@ -75,6 +75,7 @@ exports[`CaseStudy renders correctly 1`] = `
               >
                 <img
                   alt="Subscriptions Service"
+                  class="z-30"
                   data-nimg="1"
                   decoding="async"
                   height="210"

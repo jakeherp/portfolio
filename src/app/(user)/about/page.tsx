@@ -35,8 +35,6 @@ const getData = async () => {
 const AboutPage = async () => {
 	const { education, jobs, podcasts } = await getData();
 
-	console.log({ education, jobs, podcasts });
-
 	return (
 		<AnimatePage>
 			<Container>

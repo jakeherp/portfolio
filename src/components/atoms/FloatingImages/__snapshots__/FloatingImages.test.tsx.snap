@@ -21,6 +21,7 @@ exports[`FloatingImages renders correctly 1`] = `
     >
       <img
         alt="Some image"
+        class="z-30"
         data-nimg="1"
         decoding="async"
         height="210"
