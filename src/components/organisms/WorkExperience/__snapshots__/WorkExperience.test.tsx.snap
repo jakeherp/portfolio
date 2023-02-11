@@ -67,6 +67,9 @@ exports[`WorkExperience renders correctly 1`] = `
         </strong>
         TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
       </p>
+      <div
+        id="contentBlock"
+      />
     </div>
   </div>
 </div>

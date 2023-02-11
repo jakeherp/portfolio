@@ -2,7 +2,6 @@ import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Button } from '@components/atoms/Button';
 import { Container } from '@components/atoms/Container';
 import { IconDownload } from '@components/atoms/Icons';
-import { SeoHead } from '@components/atoms/SeoHead';
 import { PodcastList } from '@components/molecules/PodcastList';
 import { Education } from '@components/organisms/Education';
 import { WorkExperience } from '@components/organisms/WorkExperience';
@@ -13,6 +12,13 @@ import { educationQuery } from '@queries/education';
 import { jobsQuery } from '@queries/jobs';
 import { podcastsQuery } from '@queries/podcasts';
 import { Education as EducationType, Job, Podcast } from '@types';
+
+export const metadata = {
+	title:
+		'About Jacob Herper, a Senior Software Engineer and Consultant in the UK',
+	description:
+		'As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place.',
+};
 
 const getData = async () => {
 	const podcasts: Podcast[] = await sanityClient.fetch(podcastsQuery);
@@ -33,10 +39,6 @@ const AboutPage = async () => {
 
 	return (
 		<AnimatePage>
-			<SeoHead
-				title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
-				description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
-			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
 					Hey, I&apos;m Jacob Herper
@@ -51,11 +53,11 @@ const AboutPage = async () => {
 					experience in serverless technologies.
 				</p>
 				<p className="my-4">
-					I am 31 years old and have been a web developer for as long as I can
-					think. The technologies I work with are JavaScript, HTML and CSS with
-					a focus on the frameworks React.js, Gatsby, Next.js, Node and Express.
-					I use code not only to do my day-to-day job, but also to solve
-					everyday problems I come across.
+					I am &radic;1,024 years old and have been a web developer for as long
+					as I can think. The technologies I work with are JavaScript, HTML and
+					CSS with a focus on the frameworks React.js, Gatsby, Next.js, Node and
+					Express. I use code not only to do my day-to-day job, but also to
+					solve everyday problems I come across.
 				</p>
 				<p>
 					When I am not writing code I love to spend time with my wife and 3

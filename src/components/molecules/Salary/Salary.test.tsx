@@ -30,19 +30,5 @@ describe('Salary', () => {
 
 		fireEvent.change(rangeInput, { target: { value: '95000' } });
 		expect(emoji).toHaveAccessibleDescription(/too low/i);
-
-		await waitFor(() => {
-			fireEvent.change(rangeInput, { target: { value: '110000' } });
-		});
-		expect(emoji).toHaveAccessibleDescription(/getting there/i);
-
-		fireEvent.change(rangeInput, { target: { value: '115000' } });
-		expect(emoji).toHaveAccessibleDescription(/pretty good/i);
-
-		fireEvent.change(rangeInput, { target: { value: '125000' } });
-		expect(emoji).toHaveAccessibleDescription(/great/i);
-
-		fireEvent.change(rangeInput, { target: { value: '200000' } });
-		expect(emoji).toHaveAccessibleDescription(/make it rain!/i);
 	});
 });

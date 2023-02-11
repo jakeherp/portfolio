@@ -39,6 +39,12 @@ const RecruitersPage = async () => {
 					Nice to meet you.
 				</p>
 
+				<p className="text-lg mb-8">
+					Thank you for your interest in me for software engineering roles you
+					are hiring for. ⁠I have created this page to save us both time and
+					tell you exactly what I am looking for in my next position.
+				</p>
+
 				<h2 className="text-4xl py-4 font-bold">First things first</h2>
 				<Salary salaryRange={salaryRange} />
 

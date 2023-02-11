@@ -7,6 +7,12 @@ import { sanityClient } from '@lib/sanity';
 import { postsQuery } from '@queries/posts';
 import { Post } from '@types';
 
+export const metadata = {
+	title: 'Software Engineering Blog by Jacob Herper',
+	description:
+		'I try to make an effort to document my journey as a software developer in the form of blog posts. Here you find some of the articles I published over the years.',
+};
+
 const getData = async () => {
 	const posts: Post[] = await sanityClient.fetch(postsQuery());
 

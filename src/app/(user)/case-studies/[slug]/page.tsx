@@ -26,6 +26,14 @@ interface PageProps {
 	};
 }
 
+export const generateMetadata = async ({ params }: PageProps) => {
+	const caseStudy = await getData(params.slug);
+	return {
+		title: `${caseStudy.title} - Jacob Herper's Case Studies`,
+		description: caseStudy.seoDescription,
+	};
+};
+
 const CaseStudyPage = async ({ params }: PageProps) => {
 	const { slug } = params;
 

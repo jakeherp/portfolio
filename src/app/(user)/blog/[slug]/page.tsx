@@ -8,17 +8,25 @@ import { postsQuery } from '@queries/posts';
 import { Post } from '@types';
 import { groq } from 'next-sanity';
 
+interface PageProps {
+	params: {
+		slug: string;
+	};
+}
+
 const getData = async (slug: string) => {
 	const post: [Post] = await sanityClient.fetch(postsQuery(slug));
 
 	return post[0];
 };
 
-interface PageProps {
-	params: {
-		slug: string;
+export const generateMetadata = async ({ params }: PageProps) => {
+	const post = await getData(params.slug);
+	return {
+		title: `${post.title} - Jacob Herper's Blog`,
+		description: post.seoDescription,
 	};
-}
+};
 
 const BlogPostPage = async ({ params }: PageProps) => {
 	const { slug } = params;

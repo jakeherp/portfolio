@@ -7,6 +7,12 @@ import { sanityClient } from '@lib/sanity';
 import { caseStudiesQuery } from '@root/src/queries/caseStudies';
 import { CaseStudy as CaseStudyType } from '@types';
 
+export const metadata = {
+	title: 'Software Engineering Case Studies – Jacob Herper',
+	description:
+		'Here you can find case studies of projects I have worked on over the last few years. Learn how I have overcome challenges.',
+};
+
 const getData = async () => {
 	const caseStudies: CaseStudyType[] = await sanityClient.fetch(
 		caseStudiesQuery()
