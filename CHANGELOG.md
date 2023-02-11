@@ -1,3 +1,21 @@
+# 4.0.0
+
+## 🎉 Major Version Release
+
+### 🚀 Features
+
+- Upgrades to Next.js 13
+- Uses Next.js `app` directory
+- Removes boilerplate and implements best practices closer to defaults
+- Switches to Sanity for content management
+- Adds public API routes to fetch data from Sanity
+
+### 🐛 Bug Fixes
+
+- Many performance improvements
+- Improvements to Tailwind setup
+- Simplifies eslint config and brings it in line with Next.js defaults
+
 # 3.8.0
 
 ## features
