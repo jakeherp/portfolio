@@ -12,16 +12,16 @@ exports[`Salary renders correctly 1`] = `
     <input
       class="mx-2"
       data-testid="salaryRange"
-      max="250000"
-      min="60000"
+      max="240000"
+      min="75000"
       step="5000"
       type="range"
-      value="60000"
+      value="120000"
     />
     <label
       for="salaryRange"
     >
-      £60,000.00
+      £120,000.00
     </label>
     <p>
       <strong>
@@ -30,9 +30,9 @@ exports[`Salary renders correctly 1`] = `
       <span
         class="text-3xl"
         data-testid="emoji"
-        title="way too low"
+        title="getting there"
       >
-         😭
+         😏
       </span>
     </p>
   </div>

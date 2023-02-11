@@ -1,44 +1,33 @@
-'use client';
-
 import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Container } from '@components/atoms/Container';
+import { ContentBlock } from '@components/atoms/ContentBlock';
 import { RecruiterForm } from '@components/molecules/RecruiterForm';
+import { Salary } from '@components/molecules/Salary';
 
-import { useState } from 'react';
+import { sanityClient } from '@lib/sanity';
 
-const RecruitersPage = () => {
-	const [success, setSuccess] = useState(false);
-	const [error, setError] = useState(false);
+import { pagesQuery } from '@queries/pages';
+import { salaryQuery } from '@queries/salary';
+import { Page, Salary as SalaryRange } from '@types';
 
-	const handleSubmit = async (
-		formValues: Record<string, string>,
-		setSubmitting: (arg: boolean) => void,
-		resetForm: () => void
-	) => {
-		setError(false);
-		setSuccess(false);
+export const metadata = {
+	title: 'Recruiter Information about Jacob Herper',
+	description:
+		'Thank you for your interest in me for software engineering roles you are hiring for.',
+};
 
-		const res = await fetch('/api/signup', {
-			body: JSON.stringify(formValues),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			method: 'POST',
-		});
+const getData = async () => {
+	const page: [Page] = await sanityClient.fetch(pagesQuery('recruiters'));
+	const salaryRange: SalaryRange = await sanityClient.fetch(salaryQuery);
 
-		const { error } = await res.json();
-
-		if (error) {
-			setError(true);
-			console.error('Mailchimp Error:', error);
-			setSubmitting(false);
-			return;
-		}
-
-		setSubmitting(false);
-		setSuccess(true);
-		resetForm();
+	return {
+		page: page[0],
+		salaryRange,
 	};
+};
+
+const RecruitersPage = async () => {
+	const { page, salaryRange } = await getData();
 
 	return (
 		<AnimatePage>
@@ -46,25 +35,16 @@ const RecruitersPage = () => {
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
 					Hi, I&apos;m Jacob!
 				</h1>
-				<h2 className="headline text-xl md:text-2xl lg:text-3xl">
+				<p className="headline text-xl md:text-2xl lg:text-3xl mb-16">
 					Nice to meet you.
-				</h2>
-				{/* <RichText
-					content={markdown}
-					references={references}
-					renderers={{
-						...mdxComponents,
-						embed: {
-							Salary: () => <Salary salaryRange={salary} />,
-						},
-					}}
-				/> */}
+				</p>
 
-				<RecruiterForm
-					handleSubmit={handleSubmit}
-					success={success}
-					error={error}
-				/>
+				<h2 className="text-4xl py-4 font-bold">First things first</h2>
+				<Salary salaryRange={salaryRange} />
+
+				<ContentBlock value={page.body} />
+
+				<RecruiterForm />
 			</Container>
 		</AnimatePage>
 	);

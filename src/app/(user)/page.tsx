@@ -59,6 +59,7 @@ const HomePage = () => {
 						development using React and TypeScript. As an advocate for web
 						performance and accessibility and an evangelist for the Jamstack, I
 						create amazing web applications to make the internet a better place.
+						<br />
 						You can talk to me about <TypeWriter strings={talkAbout} />.
 					</p>
 					<p>

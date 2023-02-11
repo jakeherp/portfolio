@@ -1,10 +1,11 @@
 import { StudioLogo } from '@components/atoms/Logo';
 
 import { codeInput } from '@sanity/code-input';
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from '@schemas';
 import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
+import { StructureBuilder, deskTool } from 'sanity/desk';
 
 export default defineConfig({
 	name: 'portfolio-content-studio',
@@ -19,7 +20,20 @@ export default defineConfig({
 		{ title: 'Underline', value: 'underline' },
 		{ title: 'Strike', value: 'strike-through' },
 	],
-	plugins: [deskTool(), visionTool(), codeInput()],
+	plugins: [
+		deskTool(),
+		// deskTool({
+		// 	structure: (S, context) => {
+		// 		return S.list()
+		// 			.title('Content')
+		// 			.items([
+		// 				orderableDocumentListDeskItem({ type: 'category', S, context }),
+		// 			]);
+		// 	},
+		// }),
+		visionTool(),
+		codeInput(),
+	],
 	schema: {
 		types: schemaTypes,
 	},

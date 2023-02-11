@@ -1,3 +1,5 @@
+'use client';
+
 // import * as Yup from 'yup';
 import { Box } from '@components/atoms/Box';
 import { Button } from '@components/atoms/Button';
@@ -5,28 +7,49 @@ import { Input } from '@components/atoms/Input';
 import { Select } from '@components/atoms/Select';
 
 import { Form, Formik } from 'formik';
+import { useState } from 'react';
 
-export interface RecruiterFormProps {
-	handleSubmit: (
-		values: Record<string, string>,
-		setSubmitting: (isSubmitting: boolean) => void,
-		resetForm: () => void
-	) => void;
-	success: boolean;
-	error: boolean;
-}
+export const RecruiterForm = () => {
+	const [success, setSuccess] = useState(false);
+	const [error, setError] = useState(false);
 
-export const RecruiterForm = ({
-	handleSubmit,
-	success,
-	error,
-}: RecruiterFormProps) => {
 	const typeOptions = [
 		'I am an in-house recruiter',
 		'I work for a recruitment firm',
 		'I am an independent recruiter',
 		'None of the above',
 	];
+
+	const handleSubmit = async (
+		formValues: Record<string, string>,
+		setSubmitting: (arg: boolean) => void,
+		resetForm: () => void
+	) => {
+		setError(false);
+		setSuccess(false);
+
+		const res = await fetch('/api/signup', {
+			body: JSON.stringify(formValues),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			method: 'POST',
+		});
+
+		const { error } = await res.json();
+
+		if (error) {
+			setError(true);
+			console.error('Mailchimp Error:', error);
+			setSubmitting(false);
+			return;
+		}
+
+		setSubmitting(false);
+		setSuccess(true);
+		resetForm();
+	};
+
 	// const validationSchema = Yup.object({
 	// 	firstName: Yup.string().required('This field is required'),
 	// 	lastName: Yup.string().required('This field is required'),

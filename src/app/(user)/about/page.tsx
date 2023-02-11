@@ -1,5 +1,3 @@
-'use client';
-
 import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Button } from '@components/atoms/Button';
 import { Container } from '@components/atoms/Container';
@@ -9,7 +7,30 @@ import { PodcastList } from '@components/molecules/PodcastList';
 import { Education } from '@components/organisms/Education';
 import { WorkExperience } from '@components/organisms/WorkExperience';
 
-export default function Home() {
+import { sanityClient } from '@lib/sanity';
+
+import { educationQuery } from '@queries/education';
+import { jobsQuery } from '@queries/jobs';
+import { podcastsQuery } from '@queries/podcasts';
+import { Education as EducationType, Job, Podcast } from '@types';
+
+const getData = async () => {
+	const podcasts: Podcast[] = await sanityClient.fetch(podcastsQuery);
+	const jobs: Job[] = await sanityClient.fetch(jobsQuery);
+	const education: EducationType[] = await sanityClient.fetch(educationQuery);
+
+	return {
+		education,
+		jobs,
+		podcasts,
+	};
+};
+
+const AboutPage = async () => {
+	const { education, jobs, podcasts } = await getData();
+
+	console.log({ education, jobs, podcasts });
+
 	return (
 		<AnimatePage>
 			<SeoHead
@@ -47,11 +68,11 @@ export default function Home() {
 				</p>
 				<h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
 
-				<PodcastList podcasts={[]} />
+				<PodcastList podcasts={podcasts} />
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
 
-				<WorkExperience jobs={[]} />
+				<WorkExperience jobs={jobs} />
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Education</h2>
 				<p className="mb-6">
@@ -59,7 +80,7 @@ export default function Home() {
 					certifications I have achieved:
 				</p>
 
-				<Education education={[]} />
+				<Education education={education} />
 
 				<div className="flex justify-center mt-8">
 					<Button
@@ -74,4 +95,6 @@ export default function Home() {
 			</Container>
 		</AnimatePage>
 	);
-}
+};
+
+export default AboutPage;
