@@ -1,3 +1,5 @@
+const { withSentryConfig } = require('@sentry/nextjs');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	experimental: {
@@ -27,7 +29,12 @@ const nextConfig = {
 	serverRuntimeConfig: {
 		sanityApiToken: process.env.SANITY_API_TOKEN || '',
 		mailchimpApiKey: process.env.MAILCHIMP_API_KEY || '',
+		sendgridApiKey: process.env.SENDGRID_API_KEY || '',
 	},
 };
 
-module.exports = nextConfig;
+module.exports = withSentryConfig(
+	nextConfig,
+	{ silent: true },
+	{ hideSourceMaps: true }
+);

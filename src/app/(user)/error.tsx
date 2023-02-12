@@ -2,7 +2,8 @@
 
 import { ErrorFallback } from '@components/templates/ErrorFallback';
 
-import { useEffect } from 'react';
+import * as Sentry from '@sentry/nextjs';
+import { NextPageContext } from 'next';
 
 interface ErrorProps {
 	error: {
@@ -12,10 +13,11 @@ interface ErrorProps {
 	reset: () => void;
 }
 
-const Error = ({ error, reset }: ErrorProps) => {
-	useEffect(() => {
-		console.log('logging error:', error);
-	}, [error]);
+const Error = async (props: ErrorProps) => {
+	const { error, reset } = props;
+	await Sentry.captureUnderscoreErrorException(
+		props as unknown as NextPageContext
+	);
 
 	return <ErrorFallback error={error} reset={reset} />;
 };
