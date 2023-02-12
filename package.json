@@ -95,6 +95,11 @@
 		"prettier": "^2.8.4",
 		"tailwindcss": "^3.2.6"
 	},
+	"pnpm": {
+		"overrides": {
+			"ansi-regex": "5.0.1"
+		}
+	},
 	"jest-runner-eslint": {
 		"cliOptions": {
 			"ignorePath": "./.gitignore"
