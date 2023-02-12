@@ -1,4 +1,5 @@
 import mailchimp from '@mailchimp/mailchimp_marketing';
+import * as Sentry from '@sentry/nextjs';
 import md5 from 'md5';
 import { NextApiRequest, NextApiResponse } from 'next';
 import getConfig from 'next/config';
@@ -34,9 +35,15 @@ const signupHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 			},
 		});
 
+		Sentry.captureEvent({
+			message: 'Recruiter Signup registered',
+			tags: { company, type },
+		});
+
 		return res.status(201).json({ error: '' });
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	} catch (err: any) {
+		Sentry.captureException(err);
 		return res.status(500).json({ error: err.message || err.toString() });
 	}
 };
