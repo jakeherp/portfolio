@@ -1,3 +1,10 @@
+# 4.1.0
+
+## features
+
+- _contact:_ implements contact form api and page
+- _sentry:_ re-implements sentry error logging
+
 # 4.0.2
 
 ## fixes
