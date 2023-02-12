@@ -1,3 +1,9 @@
+# 4.0.1
+
+## fixes
+
+- _generateStaticParams:_ fixes implementation and exports static pages for blog posts and case studies
+
 # 4.0.0
 
 ## 🎉 Major Version Release
