@@ -50,6 +50,7 @@ const contactHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 						Sentry.captureEvent({
 							message: `Contact Form Submitted`,
 							tags: { ticketNumber },
+							level: 'info',
 						});
 						resolve(info);
 					}

@@ -38,6 +38,7 @@ const signupHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 		Sentry.captureEvent({
 			message: 'Recruiter Signup registered',
 			tags: { company, type },
+			level: 'info',
 		});
 
 		return res.status(201).json({ error: '' });
