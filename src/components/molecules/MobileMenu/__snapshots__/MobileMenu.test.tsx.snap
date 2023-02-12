@@ -53,6 +53,16 @@ exports[`MobileMenu renders correctly 1`] = `
           </a>
         </li>
         <li
+          style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+        >
+          <a
+            class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+        <li
           class="flex justify-center mt-12"
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >

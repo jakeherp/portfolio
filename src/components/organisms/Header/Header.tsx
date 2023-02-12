@@ -30,6 +30,10 @@ export const navItems = [
 		href: '/blog',
 		title: 'Blog',
 	},
+	{
+		href: '/contact',
+		title: 'Contact',
+	},
 ];
 
 export const Header = () => {
