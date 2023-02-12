@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import { FC, ReactNode } from 'react';
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
 type Button = {
-	onClick: (...args: unknown[]) => void;
+	onClick?: (...args: unknown[]) => void;
 	type?: 'submit' | 'button';
 	disabled?: boolean;
 	className?: string;
@@ -23,7 +23,7 @@ const isLink = (button: Button | Link): button is Link => {
 	return (button as Link).href !== undefined;
 };
 
-const Button: FC<ButtonProps> = (props) => {
+const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
 	const { className, children } = props;
 	const href = isLink(props) ? props.href : undefined;
 	const target = isLink(props) ? props.target : undefined;
@@ -33,7 +33,7 @@ const Button: FC<ButtonProps> = (props) => {
 	const disabled = !isLink(props) ? props.disabled || false : undefined;
 
 	const classes =
-		'block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white';
+		'block gradient-border transition transition-300 rounded-md px-4 py-2 headline hover:gradient-bg hover:text-off-white disabled:opacity-50 disabled:cursor-not-allowed';
 
 	if (isLink(props)) {
 		return (
