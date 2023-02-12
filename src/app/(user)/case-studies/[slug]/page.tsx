@@ -95,14 +95,14 @@ const CaseStudyPage = async ({ params }: PageProps) => {
 
 export default CaseStudyPage;
 
-// export const generateStaticParams = async () => {
-// 	const query = groq`
-// 		*[_type == 'caseStudy'] {
-// 			"slug": slug.current
-// 		}
-// 	`;
+export const generateStaticParams = async () => {
+	const query = groq`
+		*[_type == 'caseStudy'] {
+			"slug": slug.current
+		}
+	`;
 
-// 	const slugs: Pick<CaseStudy, 'slug'>[] = await sanityClient.fetch(query);
+	const slugs: Pick<CaseStudy, 'slug'>[] = await sanityClient.fetch(query);
 
-// 	return slugs.map(({ slug }) => slug);
-// };
+	return slugs.map(({ slug }) => ({ slug }));
+};

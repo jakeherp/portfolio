@@ -54,14 +54,14 @@ const BlogPostPage = async ({ params }: PageProps) => {
 
 export default BlogPostPage;
 
-// export const generateStaticParams = async () => {
-// 	const query = groq`
-// 		*[_type == 'post'] {
-// 			"slug": slug.current
-// 		}
-// 	`;
+export const generateStaticParams = async () => {
+	const query = groq`
+		*[_type == 'post'] {
+			"slug": slug.current
+		}
+	`;
 
-// 	const slugs: Pick<Post, 'slug'>[] = await sanityClient.fetch(query);
+	const slugs: Pick<Post, 'slug'>[] = await sanityClient.fetch(query);
 
-// 	return slugs.map(({ slug }) => slug);
-// };
+	return slugs.map(({ slug }) => ({ slug }));
+};
