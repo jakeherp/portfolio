@@ -1,3 +1,4 @@
+import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Container } from '@components/atoms/Container';
 import { ContentBlock } from '@components/atoms/ContentBlock';
 
@@ -22,10 +23,12 @@ const UsesPage = async () => {
 	const page = await getData();
 
 	return (
-		<Container>
-			<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>
-			<ContentBlock value={page.body} />
-		</Container>
+		<AnimatePage>
+			<Container>
+				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>
+				<ContentBlock value={page.body} />
+			</Container>
+		</AnimatePage>
 	);
 };
 
