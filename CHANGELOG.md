@@ -1,3 +1,9 @@
+# 4.0.2
+
+## fixes
+
+- _uses page:_ adds page animation back
+
 # 4.0.1
 
 ## fixes
