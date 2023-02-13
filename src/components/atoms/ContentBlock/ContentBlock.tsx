@@ -31,6 +31,8 @@ const components: Partial<PortableTextReactComponents> = {
 		code: ({ value }) => {
 			return <CodeBlock code={value.code} language={value.language} />;
 		},
+
+		reference: () => null,
 	},
 
 	list: {

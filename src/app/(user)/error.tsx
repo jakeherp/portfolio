@@ -14,12 +14,11 @@ interface ErrorProps {
 }
 
 const Error = async (props: ErrorProps) => {
-	const { error, reset } = props;
 	await Sentry.captureUnderscoreErrorException(
 		props as unknown as NextPageContext
 	);
 
-	return <ErrorFallback error={error} reset={reset} />;
+	return <ErrorFallback error={props?.error} reset={props?.reset} />;
 };
 
 export default Error;
