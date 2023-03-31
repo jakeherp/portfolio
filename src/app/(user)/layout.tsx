@@ -2,6 +2,7 @@ import LayoutClient from './layout-client';
 
 import '@styles/globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { PropsWithChildren } from 'react';
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 			</head>
 			<body>
 				<LayoutClient>{children}</LayoutClient>
+				<Analytics />
 			</body>
 		</html>
 	);
