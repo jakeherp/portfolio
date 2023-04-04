@@ -1,21 +1,32 @@
+# 4.2.0
+
+## features
+
+- upgrades dependencies
+- **analytics:** implements vercel analytics
+
+## fixes
+
+- **recruiter-signup:** fixes path to api route
+
 # 4.1.0
 
 ## features
 
-- _contact:_ implements contact form api and page
-- _sentry:_ re-implements sentry error logging
+- **contact:** implements contact form api and page
+- **sentry:** re-implements sentry error logging
 
 # 4.0.2
 
 ## fixes
 
-- _uses page:_ adds page animation back
+- **uses page:** adds page animation back
 
 # 4.0.1
 
 ## fixes
 
-- _generateStaticParams:_ fixes implementation and exports static pages for blog posts and case studies
+- **generateStaticParams:** fixes implementation and exports static pages for blog posts and case studies
 
 # 4.0.0
 
