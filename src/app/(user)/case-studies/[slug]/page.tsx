@@ -67,10 +67,8 @@ const CaseStudyPage = async ({ params }: PageProps) => {
 							</p>
 							{url && (
 								<div className="flex mt-8">
-									<Button href={url} target="_blank" className="group">
-										<span className="block headline group-hover:text-off-white">
-											Visit project
-										</span>
+									<Button href={url} target="_blank">
+										Visit project
 									</Button>
 								</div>
 							)}

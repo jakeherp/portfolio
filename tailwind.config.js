@@ -11,11 +11,6 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'blue-start': '#00BAFF',
-				'blue-stop': '#063EF9',
-				'purple-start': '#945BF1',
-				'purple-middle': '#BB48BF',
-				'purple-stop': '#F67E4D',
 				'off-black': '#14142B',
 				'off-white': '#FCFCFC',
 				grey: {

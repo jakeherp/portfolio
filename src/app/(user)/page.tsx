@@ -1,6 +1,7 @@
 import { AnimatePage } from '@components/atoms/AnimatePage';
 import { Container } from '@components/atoms/Container';
 import { TypeWriter } from '@components/atoms/TypeWriter';
+import { HeroSection } from '@components/molecules/HeroSection/HeroSection';
 
 import LogoCypress from '@root/public/assets/tools/cypress.svg';
 import LogoFigma from '@root/public/assets/tools/figma.svg';
@@ -49,34 +50,7 @@ const HomePage = () => {
 
 	return (
 		<AnimatePage>
-			<section id="home" className="h-full">
-				<Container>
-					<h1 className="headline mt-20 text-3xl md:text-5xl lg:text-6xl">
-						Hey, I&apos;m Jacob Herper 👋
-					</h1>
-					<p className="my-8 text-lg">
-						I am a passionate Software Engineer, specialised in front-end
-						development using React and TypeScript. As an advocate for web
-						performance and accessibility and an evangelist for the Jamstack, I
-						create amazing web applications to make the internet a better place.
-						<br />
-						You can talk to me about <TypeWriter strings={talkAbout} />.
-					</p>
-					<p>
-						P.S. this website is open-source and available on{' '}
-						<a
-							href="https://github.com/jakeherp/portfolio"
-							title="Link to Github repository"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="underlined font-bold relative border-b-2 border-grey-300 dark:border-grey-700 hover:border-b-0"
-						>
-							Github
-						</a>
-						.
-					</p>
-				</Container>
-			</section>
+			<HeroSection />
 			<section id="tools" className="my-40">
 				<Container>
 					<h2 className="headline text-xl md:text-2xl lg:text-3xl mt-24 text-center">

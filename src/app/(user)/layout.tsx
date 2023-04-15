@@ -18,7 +18,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 					href="/assets/favicon_dark.svg"
 				/>
 			</head>
-			<body className={`${basierCircle.variable}`}>
+			<body className={`${basierCircle.variable} bg-off-white dark:bg-black`}>
 				<LayoutClient>{children}</LayoutClient>
 				<Analytics />
 			</body>

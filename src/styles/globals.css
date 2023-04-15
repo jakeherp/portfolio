@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--light-gradient: linear-gradient(95.08deg, #00baff 2.49%, #063ef9 97.19%);
-	--dark-gradient: linear-gradient(
-		95.08deg,
-		#945bf1 2.49%,
-		#bb48bf 49%,
-		#f67e4d 97.19%
-	);
-}
-
 ::selection {
 	background: #945bf170;
 }
@@ -34,7 +24,7 @@ html.light .logo .jacob_svg__background {
 
 @layer components {
 	.headline {
-		@apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:via-purple-middle dark:to-purple-stop;
+		@apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700;
 	}
 
 	.underlined::after {
@@ -49,17 +39,10 @@ html.light .logo .jacob_svg__background {
 		position: absolute;
 	}
 
-	.underlined-light:hover::after,
-	.underlined-light:focus::after,
-	.active.underlined-light::after {
-		background: var(--light-gradient);
-		transform: scaleX(1);
-	}
-
-	.underlined-dark:hover::after,
-	.underlined-dark:focus::after,
-	.active.underlined-dark::after {
-		background: var(--dark-gradient);
+	.underlined-bg:hover::after,
+	.underlined-bg:focus::after,
+	.active.underlined-bg::after {
+		@apply bg-gradient-to-r from-blue-400 to-blue-700;
 		transform: scaleX(1);
 	}
 
@@ -72,22 +55,14 @@ html.light .logo .jacob_svg__background {
 	}
 
 	.glass-light {
-		background: linear-gradient(
-			114.67deg,
-			rgba(255, 255, 255, 0.65) 5%,
-			rgba(252, 252, 252, 0.08) 74.94%
-		);
+		@apply bg-gradient-to-br from-slate-200 to-slate-100;
 		mix-blend-mode: normal;
 		backdrop-filter: blur(30px);
 		border: 1px solid rgba(255, 255, 255, 0.65);
 	}
 
 	.glass-dark {
-		background: linear-gradient(
-			114.67deg,
-			rgba(78, 75, 102, 0.78) 5%,
-			rgba(78, 75, 102, 0.08) 74.94%
-		);
+		@apply bg-gradient-to-br from-slate-900 to-slate-800;
 		mix-blend-mode: normal;
 		backdrop-filter: blur(30px);
 		border: 1px solid rgba(78, 75, 102, 0.78);
@@ -122,7 +97,7 @@ html.light .logo .jacob_svg__background {
 	}
 
 	.underlined {
-		@apply underlined-light dark:underlined-dark;
+		@apply underlined-bg;
 	}
 
 	@keyframes hover {
