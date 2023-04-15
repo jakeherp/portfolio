@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 					rel="icon"
 					type="image/png"
 					sizes="32x32"
-					href="/assets/favicon_dark.svg"
+					href="/assets/favicon.svg"
 				/>
 			</head>
 			<body className={`${basierCircle.variable} bg-off-white dark:bg-black`}>
