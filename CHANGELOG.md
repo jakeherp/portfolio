@@ -1,3 +1,23 @@
+# 4.3.0
+
+## features
+
+- **dependencies:** updates dependencies
+
+## fixes
+
+- **blog:** fixes date time formatting
+
+## refactoring
+
+- **fonts:** implements next/font
+- **services:** adds illustrations
+
+## styling
+
+- updates styling
+- **forms:** updates form styling
+
 # 4.2.0
 
 ## features
