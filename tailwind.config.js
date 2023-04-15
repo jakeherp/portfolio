@@ -32,7 +32,7 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				sans: ["'Basier Circle'", ...fontFamily.sans],
+				sans: ['--font-basier-circle', ...fontFamily.sans],
 			},
 			listStyleType: {
 				disc: 'disc',
