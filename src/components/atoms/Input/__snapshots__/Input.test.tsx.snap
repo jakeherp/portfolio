@@ -8,7 +8,7 @@ exports[`Input renders correctly 1`] = `
   >
     Some input
     <input
-      class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+      class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
       id="some-input"
       name="some-input"
       placeholder="Some placeholder"

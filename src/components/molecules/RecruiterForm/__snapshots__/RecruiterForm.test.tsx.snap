@@ -16,7 +16,7 @@ exports[`RecruiterForm renders correctly 1`] = `
       >
         First Name
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="firstName"
           name="firstName"
           placeholder="John"
@@ -33,7 +33,7 @@ exports[`RecruiterForm renders correctly 1`] = `
       >
         Last Name
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="lastName"
           name="lastName"
           placeholder="Doe"
@@ -50,7 +50,7 @@ exports[`RecruiterForm renders correctly 1`] = `
       >
         Company
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="company"
           name="company"
           type="text"
@@ -66,7 +66,7 @@ exports[`RecruiterForm renders correctly 1`] = `
       >
         Email Address
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="email"
           name="email"
           placeholder="johndoe@gmail.com"
@@ -83,7 +83,7 @@ exports[`RecruiterForm renders correctly 1`] = `
       >
         Who are you?
         <select
-          class="px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700"
+          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="type"
           name="type"
         >

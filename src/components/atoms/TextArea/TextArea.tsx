@@ -21,9 +21,10 @@ export const TextArea = ({ label, placeholder, id }: TextAreaProps) => {
 				name={id}
 				id={id}
 				className={classNames(
-					'px-4 py-2 rounded-md my-2 ring-1 ring-grey-400 dark:ring-grey-700',
+					'px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent',
 					{
 						'ring-red-600': meta.touched && meta.error,
+						'ring-grey-400 dark:ring-slate-500': !meta.touched || !meta.error,
 					}
 				)}
 				rows={5}
