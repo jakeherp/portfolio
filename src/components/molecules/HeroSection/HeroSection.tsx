@@ -23,10 +23,10 @@ export const HeroSection = () => {
 		<section id="hero" className="relative isolate overflow-hidden pt-14">
 			<div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-from-t from-off-white dark:from-black sm:h-32" />
 			<div
-				className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] shadow-xl dark:shadow-slate-700 sm:-mr-80 lg:-mr-96"
+				className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] lg:shadow-xl dark:shadow-slate-700 sm:-mr-80 lg:-mr-96"
 				aria-hidden="true"
 			/>
-			<div className="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+			<div className="mx-auto max-w-7xl px-6 lg:py-32 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
 					<h1 className="headline max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 xl:col-auto">
 						Hey, I&apos;m Jacob Herper
@@ -74,7 +74,7 @@ export const HeroSection = () => {
 						alt="Photo of Jacob Herper"
 						height={300}
 						width={450}
-						className="mt-10 lg:ml-20 aspect-[6/5] max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+						className="mt-10 lg:ml-20 aspect-[6/5] max-w-full rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
 					/>
 				</div>
 			</div>
