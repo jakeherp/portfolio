@@ -6,6 +6,7 @@ import { sanityClient } from '@lib/sanity';
 
 import { postsQuery } from '@queries/posts';
 import { Post } from '@types';
+import { format } from 'date-fns';
 
 export const metadata = {
 	title: 'Software Engineering Blog by Jacob Herper',
@@ -35,7 +36,10 @@ const BlogPage = async () => {
 								<a href={`/blog/${post.slug}`}>{post.title}</a>
 							</h2>
 							<ContentBlock value={post.intro} />
-							<em className="block mt-2">Published on {post.publishedAt}</em>
+							<em className="block mt-2">
+								Published on{' '}
+								{format(new Date(post.publishedAt), 'do MMMM yyyy - HH:mm')}
+							</em>
 						</article>
 					);
 				})}
