@@ -2,11 +2,10 @@
 	"redirects": [
 		{ "source": "/portfolio", "destination": "/case-studies" },
 		{ "source": "/portfolio/:path", "destination": "/case-studies" },
-		{ "source": "/contact", "destination": "/" },
 		{
 			"source": "/",
 			"has": [{ "type": "host", "value": "cv.jacobherper.com" }],
-			"destination": "/cv-2022.pdf"
+			"destination": "/cv-2023.pdf"
 		}
 	]
 }

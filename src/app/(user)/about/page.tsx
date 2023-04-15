@@ -84,7 +84,7 @@ const AboutPage = async () => {
 
 				<div className="flex justify-center mt-8">
 					<Button
-						href="/cv-2022.pdf"
+						href="/cv-2023.pdf"
 						download={true}
 						className="group flex gap-2 whitespace-nowrap"
 					>
