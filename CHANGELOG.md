@@ -1,3 +1,9 @@
+# 4.3.1
+
+## fixes
+
+- **hero-section:** fixes mobile styling issue
+
 # 4.3.0
 
 ## features
