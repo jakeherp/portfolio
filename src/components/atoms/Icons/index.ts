@@ -5,3 +5,8 @@ export * from './IconInstagram';
 export * from './IconLinkedin';
 export * from './IconMenu';
 export * from './IconTwitter';
+export * from './IllustrationAccessibilityAudit';
+export * from './IllustrationCodeAudit';
+export * from './IllustrationConsulting';
+export * from './IllustrationEcommerce';
+export * from './IllustrationWebDevelopment';

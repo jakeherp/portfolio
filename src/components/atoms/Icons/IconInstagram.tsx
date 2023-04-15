@@ -29,6 +29,6 @@ export const IconInstagram = ({
 			fill="currentColor"
 			d="M32 16.1c-8.9 0-15.9 7.2-15.9 15.9 0 8.9 7.2 15.9 15.9 15.9s16-7 16-15.9-7.1-15.9-16-15.9zm0 26.3c-5.8 0-10.4-4.7-10.4-10.4S26.3 21.6 32 21.6c5.8 0 10.4 4.6 10.4 10.4S37.8 42.4 32 42.4z"
 		/>
-		<circle fill="currentColor" cx={48.7} cy={15.4} r={3.7} />
+		<circle cx={48.7} cy={15.4} r={3.7} fill="currentColor" />
 	</svg>
 );

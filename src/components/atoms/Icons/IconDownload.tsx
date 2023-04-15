@@ -30,11 +30,7 @@ export const IconDownload = ({
 		</g>
 		<defs>
 			<clipPath id="iconDownload_svg__a">
-				<path
-					fill="currentColor"
-					d="M0 0h29.333v32H0z"
-					transform="translate(1)"
-				/>
+				<path fill="currentColor" d="M1 0h29.333v32H1z" />
 			</clipPath>
 		</defs>
 	</svg>
