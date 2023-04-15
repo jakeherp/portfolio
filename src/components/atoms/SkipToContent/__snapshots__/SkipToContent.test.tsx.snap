@@ -3,7 +3,7 @@
 exports[`SkipToContent renders correctly 1`] = `
 <div>
   <a
-    class="sr-only focus:not-sr-only focus:absolute focus:z-10"
+    class="sr-only focus:not-sr-only focus:absolute top-2 left-2 focus:z-[1000]"
     href="#content"
   >
     Skip to content
