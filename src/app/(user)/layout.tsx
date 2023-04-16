@@ -1,5 +1,6 @@
 import LayoutClient from './layout-client';
 
+import { personJsonLd, websiteJsonLd } from '@lib/config/jsonLd';
 import { basierCircle } from '@lib/fonts';
 
 import '@styles/globals.css';
@@ -20,6 +21,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
 			</head>
 			<body className={`${basierCircle.variable} bg-off-white dark:bg-black`}>
 				<LayoutClient>{children}</LayoutClient>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+				/>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+				/>
 				<Analytics />
 			</body>
 		</html>
