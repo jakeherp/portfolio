@@ -87,7 +87,7 @@ exports[`HeroSection renders correctly 1`] = `
           data-nimg="1"
           decoding="async"
           height="300"
-          loading="lazy"
+          loading="eager"
           src="/_next/image?url=%2Fassets%2Fjacob.jpg&w=1080&q=75"
           srcset="/_next/image?url=%2Fassets%2Fjacob.jpg&w=640&q=75 1x, /_next/image?url=%2Fassets%2Fjacob.jpg&w=1080&q=75 2x"
           style="color: transparent;"
