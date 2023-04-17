@@ -1,3 +1,19 @@
+# 4.4.0
+
+## features
+
+- **sitemap:** adds dynamic sitemap
+- **seo:** improves on-site seo
+
+## fixes
+
+- **skip-to-content:** fixes z-index issue
+- **contact:** removes redirect
+
+## documentation
+
+- updates documentation in readme
+
 # 4.3.1
 
 ## fixes
