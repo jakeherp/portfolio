@@ -12,7 +12,7 @@ const ContactPage = () => {
 	return (
 		<AnimatePage>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
+				<h1 className="headline mt-8 text-3xl md:text-5xl lg:text-6xl">
 					Contact
 				</h1>
 

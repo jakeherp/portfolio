@@ -26,17 +26,17 @@ const BlogPage = async () => {
 	return (
 		<AnimatePage>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
+				<h1 className="headline mt-8 pb-8 text-3xl md:text-5xl lg:text-6xl">
 					Blog
 				</h1>
 				{posts.map((post) => {
 					return (
 						<article key={post.slug} className="mb-16">
-							<h2 className="text-xl font-bold md:text-2xl lg:text-3xl mb-2">
+							<h2 className="mb-2 text-xl font-bold md:text-2xl lg:text-3xl">
 								<a href={`/blog/${post.slug}`}>{post.title}</a>
 							</h2>
 							<ContentBlock value={post.intro} />
-							<em className="block mt-2">
+							<em className="mt-2 block">
 								Published on{' '}
 								{format(new Date(post.publishedAt), 'do MMMM yyyy - HH:mm')}
 							</em>

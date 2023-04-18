@@ -38,8 +38,8 @@ const BlogPostPage = async ({ params }: PageProps) => {
 		return (
 			<AnimatePage>
 				<Container>
-					<article className="lg:w-2/3 mx-auto">
-						<h1 className="headline text-3xl md:text-4xl lg:text-5xl pb-8 mt-8">
+					<article className="mx-auto lg:w-2/3">
+						<h1 className="headline mt-8 pb-8 text-3xl md:text-4xl lg:text-5xl">
 							{post.title}
 						</h1>
 						<ContentBlock value={post.body} />

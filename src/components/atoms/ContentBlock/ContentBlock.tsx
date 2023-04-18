@@ -18,7 +18,7 @@ export const urlFor = (source: SanityImageSource) => {
 const components: Partial<PortableTextReactComponents> = {
 	types: {
 		image: ({ value }) => (
-			<div className="relative w-[100vw] md:w-full lg:max-w-4xl aspect-video m-10 -mx-4 md:mx-auto">
+			<div className="relative m-10 -mx-4 aspect-video w-[100vw] md:mx-auto md:w-full lg:max-w-4xl">
 				<Image
 					src={urlFor(value).url()}
 					alt={value.alt}
@@ -37,7 +37,7 @@ const components: Partial<PortableTextReactComponents> = {
 
 	list: {
 		bullet: ({ children }) => (
-			<ul className="ml-10 py-4 list-disc space-y-2 text-lg">{children}</ul>
+			<ul className="ml-10 list-disc space-y-2 py-4 text-lg">{children}</ul>
 		),
 		number: ({ children }) => (
 			<ol className="mt-lg list-decimal text-lg">{children}</ol>
@@ -48,22 +48,22 @@ const components: Partial<PortableTextReactComponents> = {
 
 	block: {
 		h1: ({ children }) => (
-			<h1 className="text-5xl py-4 font-bold">{children}</h1>
+			<h1 className="py-4 text-5xl font-bold">{children}</h1>
 		),
 		h2: ({ children }) => (
-			<h2 className="text-4xl py-4 font-bold">{children}</h2>
+			<h2 className="py-4 text-4xl font-bold">{children}</h2>
 		),
 		h3: ({ children }) => (
-			<h3 className="text-3xl py-4 font-bold">{children}</h3>
+			<h3 className="py-4 text-3xl font-bold">{children}</h3>
 		),
 		h4: ({ children }) => (
-			<h4 className="text-2xl py-4 font-bold">{children}</h4>
+			<h4 className="py-4 text-2xl font-bold">{children}</h4>
 		),
 		normal: ({ children }) => (
 			<p className="py-2 text-lg leading-8">{children}</p>
 		),
 		blockquote: ({ children }) => (
-			<blockquote className="border-x-4 font-serif text-lg italic bg-grey-300 dark:bg-grey-700 border-x-grey-500 rounded-md dark:border-x-off-white mx-4 px-4 my-4 py-2">
+			<blockquote className="mx-4 my-4 rounded-md border-x-4 border-x-grey-500 bg-grey-300 px-4 py-2 font-serif text-lg italic dark:border-x-off-white dark:bg-grey-700">
 				{children}
 			</blockquote>
 		),

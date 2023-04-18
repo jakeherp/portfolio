@@ -69,7 +69,7 @@ export const Header = () => {
 		<Headroom style={{ zIndex: 50 }}>
 			<header className="relative z-50 py-8 backdrop-blur-md">
 				<Container>
-					<div className="flex justify-between items-center">
+					<div className="flex items-center justify-between">
 						<Logo />
 						<nav className="hidden md:block">
 							<ul className="flex gap-8 text-lg">
@@ -87,7 +87,7 @@ export const Header = () => {
 							</ul>
 						</nav>
 						<button
-							className="absolute z-50 top-8 right-4 md:hidden"
+							className="absolute right-4 top-8 z-50 md:hidden"
 							onClick={() => setIsOpen((prev) => !prev)}
 							aria-label="Menu"
 						>

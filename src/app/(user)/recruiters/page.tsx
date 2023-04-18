@@ -32,20 +32,20 @@ const RecruitersPage = async () => {
 	return (
 		<AnimatePage>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
+				<h1 className="headline mt-8 text-3xl md:text-5xl lg:text-6xl">
 					Hi, I&apos;m Jacob!
 				</h1>
-				<p className="headline text-xl md:text-2xl lg:text-3xl mb-16">
+				<p className="headline mb-16 text-xl md:text-2xl lg:text-3xl">
 					Nice to meet you.
 				</p>
 
-				<p className="text-lg mb-8">
+				<p className="mb-8 text-lg">
 					Thank you for your interest in me for software engineering roles you
 					are hiring for. ⁠I have created this page to save us both time and
 					tell you exactly what I am looking for in my next position.
 				</p>
 
-				<h2 className="text-4xl py-4 font-bold">First things first</h2>
+				<h2 className="py-4 text-4xl font-bold">First things first</h2>
 				<Salary salaryRange={salaryRange} />
 
 				<ContentBlock value={page.body} />

@@ -12,7 +12,7 @@ interface ErrorFallbackProps {
 export const ErrorFallback = ({ error, reset }: ErrorFallbackProps) => {
 	return (
 		<Container>
-			<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-4">
+			<h1 className="headline mt-8 pb-4 text-3xl md:text-4xl lg:text-5xl">
 				{error ? `Error ${error.status}` : 'Something went wrong'}
 			</h1>
 			<p className="text-lg">

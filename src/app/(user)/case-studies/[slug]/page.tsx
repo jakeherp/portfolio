@@ -45,13 +45,13 @@ const CaseStudyPage = async ({ params }: PageProps) => {
 		return (
 			<AnimatePage>
 				<Container>
-					<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8 pb-4">
+					<h1 className="headline mt-8 pb-4 text-3xl md:text-4xl lg:text-5xl">
 						{title}
 					</h1>
-					<div className="flex flex-col-reverse md:flex-row justify-between md:h-72 md:mb-12">
-						<div className="flex flex-col h-full justify-center">
+					<div className="flex flex-col-reverse justify-between md:mb-12 md:h-72 md:flex-row">
+						<div className="flex h-full flex-col justify-center">
 							<strong className="mb-2 text-sm">Client:</strong>
-							<div className="mb-4 flex gap-2 items-center">
+							<div className="mb-4 flex items-center gap-2">
 								<Image
 									src={client.logo}
 									alt={client.name}
@@ -59,14 +59,14 @@ const CaseStudyPage = async ({ params }: PageProps) => {
 									height={32}
 									className="rounded-md"
 								/>
-								<h2 className="font-bold text-xl">{client.name}</h2>
+								<h2 className="text-xl font-bold">{client.name}</h2>
 							</div>
-							<p className="text-sm w-80">
+							<p className="w-80 text-sm">
 								<strong>Tech used: </strong>
 								{skills.join(', ')}
 							</p>
 							{url && (
-								<div className="flex mt-8">
+								<div className="mt-8 flex">
 									<Button href={url} target="_blank">
 										Visit project
 									</Button>

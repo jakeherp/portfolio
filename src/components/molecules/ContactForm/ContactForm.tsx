@@ -107,13 +107,13 @@ export const ContactForm = () => {
 					<Form role="form" className="mt-4">
 						<Box>
 							{success && (
-								<div className="bg-green-100 px-4 py-2 text-green-600 ring-1 ring-green-600 font-bold rounded-md">
+								<div className="rounded-md bg-green-100 px-4 py-2 font-bold text-green-600 ring-1 ring-green-600">
 									Thanks for your message. I will get back to you as soon as I
 									can.
 								</div>
 							)}
 							{error && (
-								<div className="bg-red-100 px-4 py-2 text-red-600 ring-1 ring-red-600 font-bold rounded-md">
+								<div className="rounded-md bg-red-100 px-4 py-2 font-bold text-red-600 ring-1 ring-red-600">
 									Something went wrong, please try again!
 								</div>
 							)}

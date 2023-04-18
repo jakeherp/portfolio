@@ -25,7 +25,7 @@ const UsesPage = async () => {
 	return (
 		<AnimatePage>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">Uses</h1>
+				<h1 className="headline mt-8 text-3xl md:text-5xl lg:text-6xl">Uses</h1>
 				<ContentBlock value={page.body} />
 			</Container>
 		</AnimatePage>

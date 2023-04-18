@@ -22,7 +22,7 @@ const CaseStudy = ({
 	const isEven = index % 2 === 0;
 
 	return (
-		<article className="mt-24 first-of-type:mt-0 transition md:hover:scale-[1.01]">
+		<article className="mt-24 transition first-of-type:mt-0 md:hover:scale-[1.01]">
 			<Link href={`/case-studies/${slug}`} className="group">
 				<Box>
 					<div
@@ -31,9 +31,9 @@ const CaseStudy = ({
 							'md:flex-row-reverse': !isEven,
 						})}
 					>
-						<div className="flex flex-col md:w-1/2 h-full">
-							<h1 className="text-xl md:text-3xl font-bold mb-2">{title}</h1>
-							<div className="mb-4 flex gap-2 items-center">
+						<div className="flex h-full flex-col md:w-1/2">
+							<h1 className="mb-2 text-xl font-bold md:text-3xl">{title}</h1>
+							<div className="mb-4 flex items-center gap-2">
 								<Image
 									src={client.logo}
 									alt={client.name}
@@ -43,14 +43,14 @@ const CaseStudy = ({
 								/>
 								<h2 className="font-bold">{client.name}</h2>
 							</div>
-							<p className="text-sm max-w-xs">
+							<p className="max-w-xs text-sm">
 								<strong>Tech used: </strong>
 								{skills.join(', ')}
 							</p>
 						</div>
 						<div
 							className={classNames(
-								'-mb-12 -mx-10 md:mx-0 md:-mt-8 md:-mb-12',
+								'-mx-10 -mb-12 md:mx-0 md:-mb-12 md:-mt-8',
 								{
 									'md:-mr-20': isEven,
 									'md:-ml-20': !isEven,

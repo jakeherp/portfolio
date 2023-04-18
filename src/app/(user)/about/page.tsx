@@ -38,10 +38,10 @@ const AboutPage = async () => {
 	return (
 		<AnimatePage>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
+				<h1 className="headline mt-8 text-3xl md:text-5xl lg:text-6xl">
 					Hey, I&apos;m Jacob Herper
 				</h1>
-				<h2 className="font-bold text-xl md:text-2xl mt-2">
+				<h2 className="mt-2 text-xl font-bold md:text-2xl">
 					Senior Software Engineer from the UK
 				</h2>
 				<p className="mt-8">
@@ -66,15 +66,15 @@ const AboutPage = async () => {
 					others). Furthermore I enjoy cooking fresh food when I come home after
 					a long day at the office.
 				</p>
-				<h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
+				<h2 className="headline mb-4 mt-12 text-4xl">Podcasts I enjoy</h2>
 
 				<PodcastList podcasts={podcasts} />
 
-				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
+				<h2 className="headline mb-4 mt-12 text-4xl">Experience</h2>
 
 				<WorkExperience jobs={jobs} />
 
-				<h2 className="headline mt-12 mb-4 text-4xl">Education</h2>
+				<h2 className="headline mb-4 mt-12 text-4xl">Education</h2>
 				<p className="mb-6">
 					I am mostly self-taught, but here are some of the most relevant
 					certifications I have achieved:
@@ -82,7 +82,7 @@ const AboutPage = async () => {
 
 				<Education education={education} />
 
-				<div className="flex justify-center mt-8">
+				<div className="mt-8 flex justify-center">
 					<Button
 						href="/cv-2023.pdf"
 						download={true}

@@ -15,7 +15,7 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
 				({ company, jobTitle, fromDate, toDate, skills, description }) => (
 					<div
 						className={classNames(
-							'flex transition-all transform md:hover:scale-[1.01]'
+							'flex transform transition-all md:hover:scale-[1.01]'
 						)}
 						key={`${company} ${jobTitle}`}
 					>

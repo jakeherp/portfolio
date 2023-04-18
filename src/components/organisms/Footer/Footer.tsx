@@ -9,7 +9,7 @@ import { SocialIcons } from '@components/molecules/SocialIcons';
 
 const Footer = () => {
 	return (
-		<footer className="mt-8 md:mt-20 py-8">
+		<footer className="mt-8 py-8 md:mt-20">
 			<Container className="flex justify-between">
 				<span>&copy; {new Date().getFullYear()} Jacob Herper</span>
 				<SocialIcons

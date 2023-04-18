@@ -16,7 +16,7 @@ const CodeBlock = ({ code, language }: PropsWithChildren<CodeBlockProps>) => {
 			{({ className, style, tokens, getLineProps, getTokenProps }) => (
 				<pre
 					className={classNames(
-						'my-4 p-8 overflow-scroll rounded-lg',
+						'my-4 overflow-scroll rounded-lg p-8',
 						className
 					)}
 					style={style}

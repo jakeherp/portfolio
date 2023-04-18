@@ -37,8 +37,8 @@ const NavigationItem = ({
 				className={classNames(
 					isActive
 						? 'font-bold text-off-black dark:text-off-white'
-						: 'font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white',
-					'md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg'
+						: 'font-medium text-grey-700 hover:text-off-black dark:hover:text-off-white md:text-grey-500',
+					'md:underlined relative block whitespace-nowrap text-2xl transition md:text-lg'
 				)}
 			>
 				{title}

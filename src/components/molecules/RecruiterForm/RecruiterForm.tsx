@@ -80,13 +80,13 @@ export const RecruiterForm = () => {
 				<Form role="form" className="mt-8">
 					<Box>
 						{success && (
-							<div className="bg-green-100 px-4 py-2 text-green-600 ring-1 ring-green-600 font-bold rounded-md">
+							<div className="rounded-md bg-green-100 px-4 py-2 font-bold text-green-600 ring-1 ring-green-600">
 								Thanks for signing up to my mailing list! I&apos;ll reach out as
 								soon as I&apos;m ready for my next position.
 							</div>
 						)}
 						{error && (
-							<div className="bg-red-100 px-4 py-2 text-red-600 ring-1 ring-red-600 font-bold rounded-md">
+							<div className="rounded-md bg-red-100 px-4 py-2 font-bold text-red-600 ring-1 ring-red-600">
 								Something went wrong, please try again!
 							</div>
 						)}
@@ -107,7 +107,7 @@ export const RecruiterForm = () => {
 								onClick={(noop: unknown) => noop}
 								className="group"
 							>
-								<div className="block headline group-hover:text-off-white">
+								<div className="headline block group-hover:text-off-white">
 									{isSubmitting ? 'Loading ...' : 'Sign up'}
 								</div>
 							</Button>

@@ -19,7 +19,7 @@ const Job: FC<PropsWithChildren<JobProps>> = ({
 }) => {
 	return (
 		<Box>
-			<div className="flex gap-4 items-start md:items-center">
+			<div className="flex items-start gap-4 md:items-center">
 				{company.logo && (
 					<Image
 						src={company.logo}
@@ -29,8 +29,8 @@ const Job: FC<PropsWithChildren<JobProps>> = ({
 						className="rounded-md"
 					/>
 				)}
-				<div className="w-full mb-2">
-					<div className="flex flex-col-reverse md:flex-row justify-between">
+				<div className="mb-2 w-full">
+					<div className="flex flex-col-reverse justify-between md:flex-row">
 						<h3 className="font-bold">{jobTitle}</h3>
 						<span className="text-sm md:text-base">
 							{`${format(new Date(fromDate), 'MMM yyyy')} — ${
@@ -52,13 +52,13 @@ const Job: FC<PropsWithChildren<JobProps>> = ({
 							<>{company.name}</>
 						)}
 					</h4>
-					<p className="hidden md:block text-sm">
+					<p className="hidden text-sm md:block">
 						<strong>Technologies: </strong>
 						{skills.join(', ')}
 					</p>
 				</div>
 			</div>
-			<p className="md:hidden text-sm">
+			<p className="text-sm md:hidden">
 				<strong>Technologies: </strong>
 				{skills.join(', ')}
 			</p>

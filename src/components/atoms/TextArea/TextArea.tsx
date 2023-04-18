@@ -13,7 +13,7 @@ export const TextArea = ({ label, placeholder, id }: TextAreaProps) => {
 	const [_, meta] = useField(fieldProps);
 
 	return (
-		<label htmlFor="firstName" className="flex flex-col font-bold mb-2 mt-6">
+		<label htmlFor="firstName" className="mb-2 mt-6 flex flex-col font-bold">
 			{label}
 			<Field
 				as="textarea"
@@ -21,7 +21,7 @@ export const TextArea = ({ label, placeholder, id }: TextAreaProps) => {
 				name={id}
 				id={id}
 				className={classNames(
-					'px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent',
+					'my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent',
 					{
 						'ring-red-600': meta.touched && meta.error,
 						'ring-grey-400 dark:ring-slate-500': !meta.touched || !meta.error,

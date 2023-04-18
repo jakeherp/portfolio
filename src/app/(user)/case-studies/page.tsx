@@ -27,7 +27,7 @@ const CaseStudiesPage = async () => {
 	return (
 		<AnimatePage>
 			<Container>
-				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
+				<h1 className="headline mt-8 pb-8 text-3xl md:text-5xl lg:text-6xl">
 					Case Studies
 				</h1>
 				{caseStudies.map((caseStudy, i) => (

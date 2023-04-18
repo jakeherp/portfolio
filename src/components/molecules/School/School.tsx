@@ -14,7 +14,7 @@ export interface SchoolProps {
 const School = ({ institution, course, date, courseContents }: SchoolProps) => {
 	return (
 		<Box>
-			<div className="flex gap-4 items-center">
+			<div className="flex items-center gap-4">
 				{institution.logo && (
 					<Image
 						src={institution.logo}
@@ -24,7 +24,7 @@ const School = ({ institution, course, date, courseContents }: SchoolProps) => {
 						className="rounded-md"
 					/>
 				)}
-				<div className="w-full mb-2">
+				<div className="mb-2 w-full">
 					<div className="flex justify-between">
 						<h3 className="font-bold">{course}</h3>
 						<span>{format(new Date(date), 'MMM yyyy')}</span>
