@@ -36,12 +36,12 @@ jobs:
           npm i -g pnpm
           pnpm install
       - name: Generate release notes and update CHANGELOG
-        uses: JasonEtco/release-changelog-builder@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          change-type: 'minor'
-          path: 'CHANGELOG.md'
+        run: |
+          git fetch --unshallow || true
+          git-chglog -o CHANGELOG.md
+          git add CHANGELOG.md
+          git commit -m "chore(release): update changelog [skip ci]"
+          git push
       - name: Create a new release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/create-release@v1
