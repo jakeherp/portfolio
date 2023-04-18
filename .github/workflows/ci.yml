@@ -1,0 +1,64 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential
+          npm i -g pnpm
+          pnpm install
+      - name: Run tests
+        run: |
+          pnpm test
+
+  build:
+    runs-on: ubuntu-latest
+
+    needs: test
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential
+          npm i -g pnpm
+          pnpm install
+      - name: Generate release notes and update CHANGELOG
+        uses: JasonEtco/release-changelog-builder@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          change-type: 'minor'
+          path: 'CHANGELOG.md'
+      - name: Create a new release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: |
+            Release ${{ github.ref }}
+            $(cat CHANGELOG.md)
+          draft: false
+          prerelease: false
+
+  deploy:
+    steps:
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
