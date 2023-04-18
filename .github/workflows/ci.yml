@@ -35,7 +35,12 @@ jobs:
           sudo apt-get update && sudo apt-get install -y build-essential
           npm i -g pnpm
           pnpm install
+      - name: Install git-chglog
+        run: |
+          wget https://github.com/git-chglog/git-chglog/releases/download/v0.9.2/git-chglog_linux_amd64 -O /usr/local/bin/git-chglog
+          chmod +x /usr/local/bin/git-chglog
       - name: Generate release notes and update CHANGELOG
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
         run: |
           git fetch --unshallow || true
           git-chglog -o CHANGELOG.md
