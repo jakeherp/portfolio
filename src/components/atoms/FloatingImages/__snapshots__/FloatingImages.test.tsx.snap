@@ -17,7 +17,7 @@ exports[`FloatingImages renders correctly 1`] = `
       width="475"
     />
     <div
-      class="absolute w-1/2 top-0 left-12 md:left-20 z-30 animate-hover"
+      class="animate-hover absolute left-12 top-0 z-30 w-1/2 md:left-20"
     >
       <img
         alt="Some image"
@@ -33,7 +33,7 @@ exports[`FloatingImages renders correctly 1`] = `
       />
     </div>
     <div
-      class="absolute w-1/2 bottom-0 right-12 md:right-20 z-30 animate-hover animation-delay"
+      class="animate-hover animation-delay absolute bottom-0 right-12 z-30 w-1/2 md:right-20"
     >
       <img
         alt="Some image"

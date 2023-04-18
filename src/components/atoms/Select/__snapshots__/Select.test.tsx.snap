@@ -3,12 +3,12 @@
 exports[`Select renders correctly 1`] = `
 <div>
   <label
-    class="flex flex-col font-bold mb-2 mt-6"
+    class="mb-2 mt-6 flex flex-col font-bold"
     for="some-select"
   >
     Some select
     <select
-      class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+      class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
       id="some-select"
       name="some-select"
     >

@@ -3,10 +3,10 @@
 exports[`PodcastList renders correctly 1`] = `
 <div>
   <ul
-    class="relative px-4 md:px-0 -mx-4 md:mx-0 w-[100vw] md:w-full flex gap-4 snap-x scroll-mandatory overflow-x-auto pb-14"
+    class="scroll-mandatory relative -mx-4 flex w-[100vw] snap-x gap-4 overflow-x-auto px-4 pb-14 md:mx-0 md:w-full md:px-0"
   >
     <li
-      class="snap-center overflow-hidden shrink-0 p-1 rounded-lg w-[128px] h-[128px] transition-all bg-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-700"
+      class="h-[128px] w-[128px] shrink-0 snap-center overflow-hidden rounded-lg bg-transparent p-1 transition-all hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-700"
     >
       <a
         href="https://www.syntax.fm/"

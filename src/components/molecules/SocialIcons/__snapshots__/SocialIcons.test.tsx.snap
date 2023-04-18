@@ -6,7 +6,7 @@ exports[`SocialIcons renders correctly 1`] = `
     class="flex gap-6"
   >
     <li
-      class="text-2xl opacity-70 hover:opacity-100 transition"
+      class="text-2xl opacity-70 transition hover:opacity-100"
     >
       <a
         href="https://github.com"

@@ -3,10 +3,10 @@
 exports[`Job renders correctly 1`] = `
 <div>
   <div
-    class="md:w-10/12 px-8 py-6 rounded-3xl glass-light dark:glass-dark mb-6 drop-shadow-lg hover:drop-shadow-2xl transition-all"
+    class="glass-light dark:glass-dark mb-6 rounded-3xl px-8 py-6 drop-shadow-lg transition-all hover:drop-shadow-2xl md:w-10/12"
   >
     <div
-      class="flex gap-4 items-start md:items-center"
+      class="flex items-start gap-4 md:items-center"
     >
       <img
         alt="Holland & Barrett"
@@ -20,10 +20,10 @@ exports[`Job renders correctly 1`] = `
         width="64"
       />
       <div
-        class="w-full mb-2"
+        class="mb-2 w-full"
       >
         <div
-          class="flex flex-col-reverse md:flex-row justify-between"
+          class="flex flex-col-reverse justify-between md:flex-row"
         >
           <h3
             class="font-bold"
@@ -47,7 +47,7 @@ exports[`Job renders correctly 1`] = `
           </a>
         </h4>
         <p
-          class="hidden md:block text-sm"
+          class="hidden text-sm md:block"
         >
           <strong>
             Technologies: 
@@ -57,7 +57,7 @@ exports[`Job renders correctly 1`] = `
       </div>
     </div>
     <p
-      class="md:hidden text-sm"
+      class="text-sm md:hidden"
     >
       <strong>
         Technologies: 

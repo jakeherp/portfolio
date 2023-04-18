@@ -8,15 +8,15 @@ exports[`ContactForm renders correctly 1`] = `
     role="form"
   >
     <div
-      class="md:w-10/12 px-8 py-6 rounded-3xl glass-light dark:glass-dark mb-6 drop-shadow-lg hover:drop-shadow-2xl transition-all"
+      class="glass-light dark:glass-dark mb-6 rounded-3xl px-8 py-6 drop-shadow-lg transition-all hover:drop-shadow-2xl md:w-10/12"
     >
       <label
-        class="flex flex-col font-bold mb-2 mt-6"
+        class="mb-2 mt-6 flex flex-col font-bold"
         for="firstName"
       >
         First Name
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="firstName"
           name="firstName"
           placeholder="John"
@@ -28,12 +28,12 @@ exports[`ContactForm renders correctly 1`] = `
         />
       </label>
       <label
-        class="flex flex-col font-bold mb-2 mt-6"
+        class="mb-2 mt-6 flex flex-col font-bold"
         for="firstName"
       >
         Last Name
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="lastName"
           name="lastName"
           placeholder="Doe"
@@ -45,12 +45,12 @@ exports[`ContactForm renders correctly 1`] = `
         />
       </label>
       <label
-        class="flex flex-col font-bold mb-2 mt-6"
+        class="mb-2 mt-6 flex flex-col font-bold"
         for="firstName"
       >
         Company
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="company"
           name="company"
           type="text"
@@ -61,12 +61,12 @@ exports[`ContactForm renders correctly 1`] = `
         />
       </label>
       <label
-        class="flex flex-col font-bold mb-2 mt-6"
+        class="mb-2 mt-6 flex flex-col font-bold"
         for="firstName"
       >
         Email Address
         <input
-          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="email"
           name="email"
           placeholder="johndoe@gmail.com"
@@ -78,12 +78,12 @@ exports[`ContactForm renders correctly 1`] = `
         />
       </label>
       <label
-        class="flex flex-col font-bold mb-2 mt-6"
+        class="mb-2 mt-6 flex flex-col font-bold"
         for="subject"
       >
         Subject
         <select
-          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="subject"
           name="subject"
         >
@@ -123,12 +123,12 @@ exports[`ContactForm renders correctly 1`] = `
         />
       </label>
       <label
-        class="flex flex-col font-bold mb-2 mt-6"
+        class="mb-2 mt-6 flex flex-col font-bold"
         for="firstName"
       >
         Message
         <textarea
-          class="px-4 py-2 rounded-md my-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="message"
           name="message"
           rows="5"

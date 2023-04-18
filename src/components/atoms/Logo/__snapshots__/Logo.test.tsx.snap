@@ -6,12 +6,12 @@ exports[`Logo renders correctly 1`] = `
     href="/"
   >
     <div
-      class="group relative transition whitespace-nowrap hover:transition duration-300 text-2xl font-bold flex gap-4 items-center"
+      class="group relative flex items-center gap-4 whitespace-nowrap text-2xl font-bold transition duration-300 hover:transition"
       style="opacity: 0; transform: translateY(-10px) translateZ(0);"
     >
       <img
         alt="Vectorised image of Jacob Herper"
-        class="w-12 h-12"
+        class="h-12 w-12"
         data-nimg="1"
         decoding="async"
         height="48"
@@ -22,12 +22,12 @@ exports[`Logo renders correctly 1`] = `
         width="48"
       />
       <span
-        class="transition duration-300 opacity-100 group-hover:opacity-0"
+        class="opacity-100 transition duration-300 group-hover:opacity-0"
       >
         @jakeherp
       </span>
       <span
-        class="absolute transition duration-300 left-16 opacity-0 group-hover:opacity-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-400 to-blue-700"
+        class="absolute left-16 from-blue-400 to-blue-700 opacity-0 transition duration-300 group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:text-transparent group-hover:opacity-100"
       >
         Jacob Herper
       </span>

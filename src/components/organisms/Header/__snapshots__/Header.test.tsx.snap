@@ -16,7 +16,7 @@ exports[`Header renders correctly 1`] = `
           class="mx-auto w-full px-4 md:max-w-4xl lg:max-w-7xl"
         >
           <div
-            class="flex justify-between items-center"
+            class="flex items-center justify-between"
           >
             <nav
               class="hidden md:block"
@@ -27,7 +27,7 @@ exports[`Header renders correctly 1`] = `
             </nav>
             <button
               aria-label="Menu"
-              class="absolute z-50 top-8 right-4 md:hidden"
+              class="absolute right-4 top-8 z-50 md:hidden"
             >
               <div
                 class="burger-icon"
@@ -43,11 +43,11 @@ exports[`Header renders correctly 1`] = `
             >
               <button
                 aria-label="Toggle Dark Mode"
-                class="p-2 bg-transparent border-2 border-grey-300 dark:border-grey-700 rounded-full dark:bg-transparent flex items-center justify-center hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200 transition-all"
+                class="flex items-center justify-center rounded-full border-2 border-grey-300 bg-transparent p-2 ring-grey-300 transition-all hover:ring-2 hover:ring-offset-2 dark:border-grey-700 dark:bg-transparent dark:ring-grey-200 dark:hover:ring-2 dark:hover:ring-offset-2"
                 type="button"
               >
                 <svg
-                  class="w-5 h-5 text-grey-800 dark:text-grey-200"
+                  class="h-5 w-5 text-grey-800 dark:text-grey-200"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

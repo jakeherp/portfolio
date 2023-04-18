@@ -3,7 +3,7 @@
 exports[`Footer renders correctly 1`] = `
 <div>
   <footer
-    class="mt-8 md:mt-20 py-8"
+    class="mt-8 py-8 md:mt-20"
   >
     <div
       class="mx-auto w-full px-4 md:max-w-4xl lg:max-w-7xl flex justify-between"
@@ -17,7 +17,7 @@ exports[`Footer renders correctly 1`] = `
         class="flex gap-6"
       >
         <li
-          class="text-2xl opacity-70 hover:opacity-100 transition"
+          class="text-2xl opacity-70 transition hover:opacity-100"
         >
           <a
             href="https://www.github.com/jakeherp"
@@ -41,7 +41,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="text-2xl opacity-70 hover:opacity-100 transition"
+          class="text-2xl opacity-70 transition hover:opacity-100"
         >
           <a
             href="https://www.linkedin.com/in/jacobherper"
@@ -65,7 +65,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="text-2xl opacity-70 hover:opacity-100 transition"
+          class="text-2xl opacity-70 transition hover:opacity-100"
         >
           <a
             href="https://twitter.com/jakeherp"
@@ -89,7 +89,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="text-2xl opacity-70 hover:opacity-100 transition"
+          class="text-2xl opacity-70 transition hover:opacity-100"
         >
           <a
             href="https://www.instagram.com/jakeherp"

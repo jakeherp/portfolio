@@ -4,11 +4,11 @@ exports[`ThemeToggle renders correctly 1`] = `
 <div>
   <button
     aria-label="Toggle Dark Mode"
-    class="p-2 bg-transparent border-2 border-grey-300 dark:border-grey-700 rounded-full dark:bg-transparent flex items-center justify-center hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200 transition-all"
+    class="flex items-center justify-center rounded-full border-2 border-grey-300 bg-transparent p-2 ring-grey-300 transition-all hover:ring-2 hover:ring-offset-2 dark:border-grey-700 dark:bg-transparent dark:ring-grey-200 dark:hover:ring-2 dark:hover:ring-offset-2"
     type="button"
   >
     <svg
-      class="w-5 h-5 text-grey-800 dark:text-grey-200"
+      class="h-5 w-5 text-grey-800 dark:text-grey-200"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"

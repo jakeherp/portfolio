@@ -3,28 +3,28 @@
 exports[`CaseStudy renders correctly 1`] = `
 <div>
   <article
-    class="mt-24 first-of-type:mt-0 transition md:hover:scale-[1.01]"
+    class="mt-24 transition first-of-type:mt-0 md:hover:scale-[1.01]"
   >
     <a
       class="group"
       href="/case-studies/holland-and-barrett-subscriptions-service"
     >
       <div
-        class="md:w-10/12 px-8 py-6 rounded-3xl glass-light dark:glass-dark mb-6 drop-shadow-lg hover:drop-shadow-2xl transition-all"
+        class="glass-light dark:glass-dark mb-6 rounded-3xl px-8 py-6 drop-shadow-lg transition-all hover:drop-shadow-2xl md:w-10/12"
       >
         <div
           class="flex flex-col gap-4 md:flex-row"
         >
           <div
-            class="flex flex-col md:w-1/2 h-full"
+            class="flex h-full flex-col md:w-1/2"
           >
             <h1
-              class="text-xl md:text-3xl font-bold mb-2"
+              class="mb-2 text-xl font-bold md:text-3xl"
             >
               Subscriptions Service
             </h1>
             <div
-              class="mb-4 flex gap-2 items-center"
+              class="mb-4 flex items-center gap-2"
             >
               <img
                 alt="Holland & Barrett"
@@ -45,7 +45,7 @@ exports[`CaseStudy renders correctly 1`] = `
               </h2>
             </div>
             <p
-              class="text-sm max-w-xs"
+              class="max-w-xs text-sm"
             >
               <strong>
                 Tech used: 
@@ -54,7 +54,7 @@ exports[`CaseStudy renders correctly 1`] = `
             </p>
           </div>
           <div
-            class="-mb-12 -mx-10 md:mx-0 md:-mt-8 md:-mb-12 md:-mr-20"
+            class="-mx-10 -mb-12 md:mx-0 md:-mb-12 md:-mt-8 md:-mr-20"
           >
             <div
               class="relative inline-block w-auto"
@@ -71,7 +71,7 @@ exports[`CaseStudy renders correctly 1`] = `
                 width="475"
               />
               <div
-                class="absolute w-1/2 top-0 left-12 md:left-20 z-30 animate-hover"
+                class="animate-hover absolute left-12 top-0 z-30 w-1/2 md:left-20"
               >
                 <img
                   alt="Subscriptions Service"
@@ -87,7 +87,7 @@ exports[`CaseStudy renders correctly 1`] = `
                 />
               </div>
               <div
-                class="absolute w-1/2 bottom-0 right-12 md:right-20 z-30 animate-hover animation-delay"
+                class="animate-hover animation-delay absolute bottom-0 right-12 z-30 w-1/2 md:right-20"
               >
                 <img
                   alt="Subscriptions Service"

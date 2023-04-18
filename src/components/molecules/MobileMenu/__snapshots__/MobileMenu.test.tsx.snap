@@ -3,20 +3,20 @@
 exports[`MobileMenu renders correctly 1`] = `
 <div>
   <div
-    class="fixed md:hidden z-40 transition-all duration-700 delay-100 ease-in-out bg-gradient-to-b from-grey-200 dark:from-grey-900 to-transparent backdrop-blur-xl w-screen p-4 gap-12 top-0 h-screen"
+    class="fixed top-0 z-40 h-screen w-screen gap-12 bg-gradient-to-b from-grey-200 to-transparent p-4 backdrop-blur-xl transition-all delay-100 duration-700 ease-in-out dark:from-grey-900 md:hidden"
     style="opacity: 0; transform: translateX(0px) translateY(-50%) translateZ(0);"
   >
     <div
       id="focus-trap"
     >
       <ul
-        class="flex flex-col justify-center align-center text-center gap-4 h-full"
+        class="align-center flex h-full flex-col justify-center gap-4 text-center"
       >
         <li
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >
           <a
-            class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+            class="font-medium text-slate-700 hover:text-off-black dark:text-slate-400 dark:hover:text-off-white md:text-slate-500 md:dark:text-slate-400 md:underlined relative block whitespace-nowrap text-2xl transition md:text-lg"
             href="/about"
           >
             About
@@ -26,7 +26,7 @@ exports[`MobileMenu renders correctly 1`] = `
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >
           <a
-            class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+            class="font-medium text-slate-700 hover:text-off-black dark:text-slate-400 dark:hover:text-off-white md:text-slate-500 md:dark:text-slate-400 md:underlined relative block whitespace-nowrap text-2xl transition md:text-lg"
             href="/uses"
           >
             Uses
@@ -36,7 +36,7 @@ exports[`MobileMenu renders correctly 1`] = `
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >
           <a
-            class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+            class="font-medium text-slate-700 hover:text-off-black dark:text-slate-400 dark:hover:text-off-white md:text-slate-500 md:dark:text-slate-400 md:underlined relative block whitespace-nowrap text-2xl transition md:text-lg"
             href="/case-studies"
           >
             Case Studies
@@ -46,7 +46,7 @@ exports[`MobileMenu renders correctly 1`] = `
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >
           <a
-            class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+            class="font-medium text-slate-700 hover:text-off-black dark:text-slate-400 dark:hover:text-off-white md:text-slate-500 md:dark:text-slate-400 md:underlined relative block whitespace-nowrap text-2xl transition md:text-lg"
             href="/blog"
           >
             Blog
@@ -56,23 +56,23 @@ exports[`MobileMenu renders correctly 1`] = `
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >
           <a
-            class="font-medium text-grey-700 md:text-grey-500 hover:text-off-black dark:hover:text-off-white md:underlined transition relative block whitespace-nowrap text-2xl md:text-lg"
+            class="font-medium text-slate-700 hover:text-off-black dark:text-slate-400 dark:hover:text-off-white md:text-slate-500 md:dark:text-slate-400 md:underlined relative block whitespace-nowrap text-2xl transition md:text-lg"
             href="/contact"
           >
             Contact
           </a>
         </li>
         <li
-          class="flex justify-center mt-12"
+          class="mt-12 flex justify-center"
           style="opacity: 0; transform: translateX(-50px) translateZ(0);"
         >
           <button
             aria-label="Toggle Dark Mode"
-            class="p-2 bg-transparent border-2 border-grey-300 dark:border-grey-700 rounded-full dark:bg-transparent flex items-center justify-center hover:ring-2 hover:ring-offset-2 ring-grey-300 dark:hover:ring-2 dark:hover:ring-offset-2 dark:ring-grey-200 transition-all"
+            class="flex items-center justify-center rounded-full border-2 border-grey-300 bg-transparent p-2 ring-grey-300 transition-all hover:ring-2 hover:ring-offset-2 dark:border-grey-700 dark:bg-transparent dark:ring-grey-200 dark:hover:ring-2 dark:hover:ring-offset-2"
             type="button"
           >
             <svg
-              class="w-5 h-5 text-grey-800 dark:text-grey-200"
+              class="h-5 w-5 text-grey-800 dark:text-grey-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
