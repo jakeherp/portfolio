@@ -1,0 +1,80 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential
+          npm i -g pnpm
+          pnpm install
+      - name: Run tests
+        run: |
+          pnpm test
+
+  build:
+    runs-on: ubuntu-latest
+
+    needs: test
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential
+          npm i -g pnpm
+          pnpm install
+      - name: Install git-chglog
+        run: |
+          wget https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz -O /usr/local/bin/git-chglog
+          chmod +x /usr/local/bin/git-chglog
+      - name: Generate release notes and update CHANGELOG
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
+        run: |
+          git fetch --unshallow || true
+          git-chglog -o CHANGELOG.md
+          git add CHANGELOG.md
+          git commit -m "chore(release): update changelog [skip ci]"
+          git push
+      - name: Create a new release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: |
+            Release ${{ github.ref }}
+            $(cat CHANGELOG.md)
+          draft: false
+          prerelease: false
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential
+          npm i -g pnpm
+          pnpm install
+      - name: Deploy to Vercel
+        run: |
+          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
