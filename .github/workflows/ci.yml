@@ -61,17 +61,17 @@ jobs:
           git push origin HEAD:main
       - name: Get current version
         id: get_version
-        run: echo "::set-env name=PACKAGE_VERSION::$(node -p -e "require('./package.json').version")"
+        run: echo "PACKAGE_VERSION=$(node -p -e "require('./package.json').version")" >> $GITHUB_ENV
         shell: bash
       - name: Set previous version
         id: set_previous_version
-        run: echo "::set-env name=PREVIOUS_VERSION::$(git describe --tags --abbrev=0)"
+        run: echo "PREVIOUS_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
         shell: bash
       - name: Bump version
         id: bump_version
         run: |
           npx semver --increment ${{ env.BUMP_TYPE }} ${{ env.PACKAGE_VERSION }} --preid=beta.${{ github.run_number }} -i -f -p 'beta' > version.txt
-          echo "::set-env name=NEW_VERSION::$(cat version.txt)"
+          echo "NEW_VERSION=$(cat version.txt)" >> $GITHUB_ENV
         shell: bash
       - name: Update package.json
         run: |
