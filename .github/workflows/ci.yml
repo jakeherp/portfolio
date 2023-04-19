@@ -67,10 +67,12 @@ jobs:
         id: set_previous_version
         run: echo "PREVIOUS_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
         shell: bash
+      - name: Install SemVer
+        run: npm i -g semver
       - name: Bump version
         id: bump_version
         run: |
-          npx semver --increment ${{ env.BUMP_TYPE }} ${{ env.PACKAGE_VERSION }} --preid=beta.${{ github.run_number }} -i -f -p 'beta' > version.txt
+          semver --increment ${{ env.BUMP_TYPE }} ${{ env.PACKAGE_VERSION }} --preid=beta.${{ github.run_number }} -i -f -p 'beta' > version.txt
           echo "NEW_VERSION=$(cat version.txt)" >> $GITHUB_ENV
         shell: bash
       - name: Update package.json
