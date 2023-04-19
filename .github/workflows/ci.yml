@@ -17,94 +17,83 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y build-essential
-          npm i -g pnpm
+          npm install --global pnpm
           pnpm install
+
       - name: Run tests
-        run: |
-          pnpm test
+        run: pnpm test:ci
 
   build:
     runs-on: ubuntu-latest
-
     needs: test
-
     steps:
       - uses: actions/checkout@v3
+
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y build-essential
-          npm i -g pnpm
+          npm install --global pnpm
           pnpm install
-      - name: Install git-chglog
+
+      - name: Run build
+        run: pnpm build
+
+  release:
+    runs-on: ubuntu-latest
+
+    if: |
+      github.event_name == 'pull_request' &&
+      github.event.action == 'closed' &&
+      github.event.pull_request.merged == true ||
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
         run: |
-          wget https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz -O /usr/local/bin/git-chglog
-          chmod +x /usr/local/bin/git-chglog
+          sudo apt-get update && sudo apt-get install -y build-essential
+          npm install --global pnpm
+          pnpm install
+
+      - name: Install semver
+        run: npm install --global semver
+
+      - name: Bump version
+        id: version
+        run: |
+          current_version=$(jq -r '.version' package.json)
+          new_version=$(semver -i minor $current_version)
+          echo "New version: $new_version"
+          echo "VERSION=$new_version" >> $GITHUB_ENV
+
       - name: Generate release notes and update CHANGELOG
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
         run: |
           git fetch --unshallow || true
           git-chglog -o CHANGELOG.md
-          current_version=$(grep -Po '"version": "\K\d+\.\d+\.\d+' package.json)
+          git add CHANGELOG.md
+          git commit -m "chore(release): update changelog [skip ci]"
+          git push
 
-          if grep -qE "^\s*feat" CHANGELOG.md; then
-            new_version=$(semver --increment minor $current_version)
-          elif grep -qE "^\s*fix" CHANGELOG.md; then
-            new_version=$(semver --increment patch $current_version)
-          else
-            new_version=$current_version
-          fi
-
-          sed -i -E "s/\"version\": \"[0-9]+\.[0-9]+\.[0-9]+\"/\"version\": \"$new_version\"/" package.json
-
-          git add CHANGELOG.md package.json
-          git commit -m "chore(release): $new_version [skip ci]"
-          git push origin HEAD:main
-      - name: Get current version
-        id: get_version
-        run: echo "PACKAGE_VERSION=$(node -p -e "require('./package.json').version")" >> $GITHUB_ENV
-        shell: bash
-      - name: Set previous version
-        id: set_previous_version
-        run: echo "PREVIOUS_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-        shell: bash
-      - name: Install SemVer
-        run: npm i -g semver
-      - name: Bump version
-        id: bump_version
-        run: |
-          semver --increment ${{ env.BUMP_TYPE }} ${{ env.PACKAGE_VERSION }} --preid=beta.${{ github.run_number }} -i -f -p 'beta' > version.txt
-          echo "NEW_VERSION=$(cat version.txt)" >> $GITHUB_ENV
-        shell: bash
-      - name: Update package.json
-        run: |
-          npm version --no-git-tag-version $(cat version.txt)
-        shell: bash
-      - name: Create a new release
+      - name: Create release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          tag_name: ${{ env.NEW_VERSION }}
-          release_name: Release ${{ env.NEW_VERSION }}
+          tag_name: v${{ steps.version.outputs.VERSION }}
+          release_name: Release ${{ steps.version.outputs.VERSION }}
           body: |
-            ${{ steps.generate_release_notes.outputs.release_notes }}
+            Changes since the last release:
+            $(cat CHANGELOG.md)
           draft: false
           prerelease: false
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install dependencies
+      - name: Update package.json
         run: |
-          sudo apt-get update && sudo apt-get install -y build-essential
-          npm i -g pnpm
-          pnpm install
-      - name: Deploy to Vercel
-        run: |
-          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
+          jq '.version = env.VERSION' package.json > package.json.tmp
+          mv package.json.tmp package.json
+          git add package.json
+          git commit -m "chore(release): update version to ${{ steps.version.outputs.VERSION }} [skip ci]"
+          git push
