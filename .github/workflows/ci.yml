@@ -44,19 +44,35 @@ jobs:
         run: |
           git fetch --unshallow || true
           git-chglog -o CHANGELOG.md
-          git add CHANGELOG.md
-          git commit -m "chore(release): update changelog [skip ci]"
-          git push
+          current_version=$(grep -Po '"version": "\K\d+\.\d+\.\d+' package.json)
+
+          if grep -qE "^\s*feat" CHANGELOG.md; then
+            new_version=$(semver --increment minor $current_version)
+          elif grep -qE "^\s*fix" CHANGELOG.md; then
+            new_version=$(semver --increment patch $current_version)
+          else
+            new_version=$current_version
+          fi
+
+          sed -i -E "s/\"version\": \"[0-9]+\.[0-9]+\.[0-9]+\"/\"version\": \"$new_version\"/" package.json
+
+          git add CHANGELOG.md package.json
+          git commit -m "chore(release): $new_version [skip ci]"
+          git push origin HEAD:main
+      - name: Get current version number
+        run: |
+          version=$(grep '"version":' package.json | awk -F'"' '{print $4}')
+          echo "::set-output name=version::$version"
       - name: Create a new release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: v${{ steps.get_version.outputs.version }} # Construct the tag name based on the version number
+          release_name: Release ${{ steps.get_version.outputs.version }}
           body: |
-            Release ${{ github.ref }}
+            Release v${{ steps.get_version.outputs.version }}
             $(cat CHANGELOG.md)
           draft: false
           prerelease: false
