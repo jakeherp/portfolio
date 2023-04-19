@@ -44,20 +44,50 @@ jobs:
         run: |
           git fetch --unshallow || true
           git-chglog -o CHANGELOG.md
-          git add CHANGELOG.md
-          git commit -m "chore(release): update changelog [skip ci]"
-          git push
+          current_version=$(grep -Po '"version": "\K\d+\.\d+\.\d+' package.json)
+
+          if grep -qE "^\s*feat" CHANGELOG.md; then
+            new_version=$(semver --increment minor $current_version)
+          elif grep -qE "^\s*fix" CHANGELOG.md; then
+            new_version=$(semver --increment patch $current_version)
+          else
+            new_version=$current_version
+          fi
+
+          sed -i -E "s/\"version\": \"[0-9]+\.[0-9]+\.[0-9]+\"/\"version\": \"$new_version\"/" package.json
+
+          git add CHANGELOG.md package.json
+          git commit -m "chore(release): $new_version [skip ci]"
+          git push origin HEAD:main
+      - name: Get current version
+        id: get_version
+        run: echo "PACKAGE_VERSION=$(node -p -e "require('./package.json').version")" >> $GITHUB_ENV
+        shell: bash
+      - name: Set previous version
+        id: set_previous_version
+        run: echo "PREVIOUS_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+        shell: bash
+      - name: Install SemVer
+        run: npm i -g semver
+      - name: Bump version
+        id: bump_version
+        run: |
+          semver --increment ${{ env.BUMP_TYPE }} ${{ env.PACKAGE_VERSION }} --preid=beta.${{ github.run_number }} -i -f -p 'beta' > version.txt
+          echo "NEW_VERSION=$(cat version.txt)" >> $GITHUB_ENV
+        shell: bash
+      - name: Update package.json
+        run: |
+          npm version --no-git-tag-version $(cat version.txt)
+        shell: bash
       - name: Create a new release
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: ${{ env.NEW_VERSION }}
+          release_name: Release ${{ env.NEW_VERSION }}
           body: |
-            Release ${{ github.ref }}
-            $(cat CHANGELOG.md)
+            ${{ steps.generate_release_notes.outputs.release_notes }}
           draft: false
           prerelease: false
 
