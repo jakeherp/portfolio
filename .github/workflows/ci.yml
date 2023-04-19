@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  RELEASE_BRANCH: main
+
 jobs:
   test:
     runs-on: ubuntu-latest
