@@ -61,6 +61,11 @@ jobs:
           npm install --global pnpm
           pnpm install
 
+      - name: Install git-chglog
+        run: |
+          wget https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz -O /usr/local/bin/git-chglog
+          chmod +x /usr/local/bin/git-chglog
+
       - name: Install semver
         run: npm install --global semver
 
