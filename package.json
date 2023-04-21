@@ -58,6 +58,7 @@
 		"react-syntax-highlighter": "^15.5.0",
 		"react-typed": "^1.2.0",
 		"sanity": "^3.8.3",
+		"sanity-plugin-vercel-deploy": "^3.3.3",
 		"sharp": "^0.32.0",
 		"styled-components": "5.3.9",
 		"typescript": "5.0.4",
