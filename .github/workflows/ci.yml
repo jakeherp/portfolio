@@ -26,84 +26,84 @@ jobs:
       - name: Run tests
         run: pnpm test:ci
 
-  build:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - uses: actions/checkout@v3
+  # build:
+  #   runs-on: ubuntu-latest
+  #   needs: test
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install -y build-essential
-          npm install --global pnpm
-          pnpm install
+  #     - name: Install dependencies
+  #       run: |
+  #         sudo apt-get update && sudo apt-get install -y build-essential
+  #         npm install --global pnpm
+  #         pnpm install
 
-      - name: Run build
-        run: pnpm build
+  #     - name: Run build
+  #       run: pnpm build
 
-  release:
-    runs-on: ubuntu-latest
+  # release:
+  #   runs-on: ubuntu-latest
 
-    if: |
-      github.event_name == 'pull_request' &&
-      github.event.action == 'closed' &&
-      github.event.pull_request.merged == true ||
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/main'
+  #   if: |
+  #     github.event_name == 'pull_request' &&
+  #     github.event.action == 'closed' &&
+  #     github.event.pull_request.merged == true ||
+  #     github.event_name == 'push' &&
+  #     github.ref == 'refs/heads/main'
 
-    steps:
-      - uses: actions/checkout@v3
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install -y build-essential
-          npm install --global pnpm
-          pnpm install
+  #     - name: Install dependencies
+  #       run: |
+  #         sudo apt-get update && sudo apt-get install -y build-essential
+  #         npm install --global pnpm
+  #         pnpm install
 
-      - name: Install git-chglog
-        run: |
-          wget https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz -O /usr/local/bin/git-chglog
-          chmod +x /usr/local/bin/git-chglog
+  #     - name: Install git-chglog
+  #       run: |
+  #         wget https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz -O /usr/local/bin/git-chglog
+  #         chmod +x /usr/local/bin/git-chglog
 
-      - name: Check runner architecture
-        run: uname -a
+  #     - name: Check runner architecture
+  #       run: uname -a
 
-      - name: Install semver
-        run: npm install --global semver
+  #     - name: Install semver
+  #       run: npm install --global semver
 
-      - name: Bump version
-        id: version
-        run: |
-          current_version=$(jq -r '.version' package.json)
-          new_version=$(semver -i minor $current_version)
-          echo "New version: $new_version"
-          echo "VERSION=$new_version" >> $GITHUB_ENV
+  #     - name: Bump version
+  #       id: version
+  #       run: |
+  #         current_version=$(jq -r '.version' package.json)
+  #         new_version=$(semver -i minor $current_version)
+  #         echo "New version: $new_version"
+  #         echo "VERSION=$new_version" >> $GITHUB_ENV
 
-      - name: Generate release notes and update CHANGELOG
-        run: |
-          git fetch --unshallow || true
-          git-chglog -o CHANGELOG.md
-          git add CHANGELOG.md
-          git commit -m "chore(release): update changelog [skip ci]"
-          git push
+  #     - name: Generate release notes and update CHANGELOG
+  #       run: |
+  #         git fetch --unshallow || true
+  #         git-chglog -o CHANGELOG.md
+  #         git add CHANGELOG.md
+  #         git commit -m "chore(release): update changelog [skip ci]"
+  #         git push
 
-      - name: Create release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          tag_name: v${{ steps.version.outputs.VERSION }}
-          release_name: Release ${{ steps.version.outputs.VERSION }}
-          body: |
-            Changes since the last release:
-            $(cat CHANGELOG.md)
-          draft: false
-          prerelease: false
+  #     - name: Create release
+  #       uses: actions/create-release@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  #       with:
+  #         tag_name: v${{ steps.version.outputs.VERSION }}
+  #         release_name: Release ${{ steps.version.outputs.VERSION }}
+  #         body: |
+  #           Changes since the last release:
+  #           $(cat CHANGELOG.md)
+  #         draft: false
+  #         prerelease: false
 
-      - name: Update package.json
-        run: |
-          jq '.version = env.VERSION' package.json > package.json.tmp
-          mv package.json.tmp package.json
-          git add package.json
-          git commit -m "chore(release): update version to ${{ steps.version.outputs.VERSION }} [skip ci]"
-          git push
+  #     - name: Update package.json
+  #       run: |
+  #         jq '.version = env.VERSION' package.json > package.json.tmp
+  #         mv package.json.tmp package.json
+  #         git add package.json
+  #         git commit -m "chore(release): update version to ${{ steps.version.outputs.VERSION }} [skip ci]"
+  #         git push
