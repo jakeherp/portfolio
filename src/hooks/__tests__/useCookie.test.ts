@@ -1,6 +1,6 @@
 import { stringifyOptions, useCookie } from '../useCookie';
 
-import { act, renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from '@testing-library/react';
 
 describe('stringifyOptions', () => {
 	it('should exclude the days param', () => {
