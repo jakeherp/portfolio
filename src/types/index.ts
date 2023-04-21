@@ -9,3 +9,4 @@ export * from './page';
 export * from './podcast';
 export * from './post';
 export * from './salary';
+export * from './service';

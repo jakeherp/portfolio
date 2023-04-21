@@ -9,6 +9,7 @@ import page from './page';
 import podcast from './podcast';
 import post from './post';
 import salary from './salary';
+import service from './service';
 import skill from './skill';
 
 export const schemaTypes = [
@@ -23,5 +24,6 @@ export const schemaTypes = [
 	podcast,
 	post,
 	salary,
+	service,
 	skill,
 ];
