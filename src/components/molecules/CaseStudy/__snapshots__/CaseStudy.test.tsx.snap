@@ -3,7 +3,7 @@
 exports[`CaseStudy renders correctly 1`] = `
 <div>
   <article
-    class="mt-24 transition first-of-type:mt-0 md:hover:scale-[1.01]"
+    class="mt-24 transition first-of-type:mt-0 md:hover:scale-[1.01] lg:w-4/5"
   >
     <a
       class="group"
