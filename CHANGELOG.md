@@ -1,3 +1,28 @@
+# 4.5.0
+
+## features
+
+- services: adds service component
+- services: moves services into sanity
+- sanity: adds vercel deploy plugin
+- dependencies: updates all dependencies
+- work-experience: improves ui
+
+## fixes
+
+- a11y: improves color contract
+- content-block: updates link styling
+- case-study: reduces width after box component changes
+- hooks-tests: updates tests for hooks in react 18
+
+## ci/cd
+
+- implements pipeline to run unit tests on pull requests
+
+## refactors
+
+- tailwind: adds auto sorting off css classes with prettier
+
 # 4.4.0
 
 ## features
