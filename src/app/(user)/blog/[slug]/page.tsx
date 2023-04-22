@@ -6,6 +6,7 @@ import { ErrorFallback } from '@components/templates/ErrorFallback';
 import { sanityClient } from '@lib/sanity';
 
 import { postsQuery } from '@queries/posts';
+
 import { Post } from '@types';
 import { groq } from 'next-sanity';
 

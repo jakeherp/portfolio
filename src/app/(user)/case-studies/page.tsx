@@ -5,6 +5,7 @@ import { CaseStudy } from '@components/molecules/CaseStudy';
 import { sanityClient } from '@lib/sanity';
 
 import { caseStudiesQuery } from '@queries/caseStudies';
+
 import { CaseStudy as CaseStudyType } from '@types';
 
 export const metadata = {

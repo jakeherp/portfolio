@@ -11,6 +11,7 @@ import { sanityClient } from '@lib/sanity';
 import { educationQuery } from '@queries/education';
 import { jobsQuery } from '@queries/jobs';
 import { podcastsQuery } from '@queries/podcasts';
+
 import { Education as EducationType, Job, Podcast } from '@types';
 
 export const metadata = {

@@ -5,6 +5,7 @@ import { ContentBlock } from '@components/atoms/ContentBlock';
 import { sanityClient } from '@lib/sanity';
 
 import { pagesQuery } from '@queries/pages';
+
 import { Page } from '@types';
 
 const getData = async () => {

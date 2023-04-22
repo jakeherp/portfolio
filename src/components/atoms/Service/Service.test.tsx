@@ -1,5 +1,6 @@
-import { render } from '@testing-library/react';
 import { Service } from './Service';
+
+import { render } from '@testing-library/react';
 
 jest.mock('@lib/sanity', () => ({
 	sanityClient: {

@@ -8,6 +8,7 @@ import { sanityClient } from '@lib/sanity';
 
 import { pagesQuery } from '@queries/pages';
 import { salaryQuery } from '@queries/salary';
+
 import { Page, Salary as SalaryRange } from '@types';
 
 export const metadata = {

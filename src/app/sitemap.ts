@@ -1,6 +1,7 @@
 import { sanityClient } from '@lib/sanity';
 
 import { postsQuery } from '@queries/posts';
+
 import { caseStudiesQuery } from '@root/src/queries/caseStudies';
 import { CaseStudy, Post } from '@root/src/types';
 

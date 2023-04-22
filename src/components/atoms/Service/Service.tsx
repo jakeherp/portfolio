@@ -1,7 +1,8 @@
-import { BlockContent } from '@types';
-import Image from 'next/image';
 import { ContentBlock } from '../ContentBlock';
+
+import { BlockContent } from '@types';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 interface ServiceProps {
 	title: string;

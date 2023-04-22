@@ -5,6 +5,7 @@ import { ContentBlock } from '@components/atoms/ContentBlock';
 import { sanityClient } from '@lib/sanity';
 
 import { postsQuery } from '@queries/posts';
+
 import { Post } from '@types';
 import { format } from 'date-fns';
 
