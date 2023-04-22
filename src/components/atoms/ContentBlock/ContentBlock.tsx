@@ -76,11 +76,22 @@ const components: Partial<PortableTextReactComponents> = {
 				: undefined;
 
 			if (!rel) {
-				return <Link href={value.href}>{children}</Link>;
+				return (
+					<Link
+						href={value.href}
+						className="underlined relative border-b-2 border-grey-300 font-bold hover:border-b-0 dark:border-grey-700"
+					>
+						{children}
+					</Link>
+				);
 			}
 
 			return (
-				<a href={value.href} rel={rel}>
+				<a
+					href={value.href}
+					rel={rel}
+					className="underlined relative font-bold"
+				>
 					{children}
 				</a>
 			);
