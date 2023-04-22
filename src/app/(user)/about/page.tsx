@@ -58,10 +58,10 @@ const AboutPage = async () => {
 					solve everyday problems I come across.
 				</p>
 				<p>
-					When I am not writing code I love to spend time with my wife and 3
-					year old daughter at home in London or travelling around the world. We
-					are quite a multi-cultural family with me having grown up in Germany
-					🇩🇪 and my wife being from Mexico 🇲🇽, which is why we raise our
+					When I am not writing code I love to spend time with my wife and
+					five-year-old daughter at home in England or travelling around the
+					world. We are quite a multi-cultural family with me having grown up in
+					Germany 🇩🇪 and my wife being from Mexico 🇲🇽, which is why we raise our
 					daughter trilingual. I myself speak five languages (some better than
 					others). Furthermore I enjoy cooking fresh food when I come home after
 					a long day at the office.
