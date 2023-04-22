@@ -1,7 +1,8 @@
 import { sanityClient } from '@lib/sanity';
 
 import { pagesQuery } from '@queries/pages';
-import { Page } from '@types';
+
+import type { Page } from '@types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const singlePageApi = async (req: NextApiRequest, res: NextApiResponse) => {

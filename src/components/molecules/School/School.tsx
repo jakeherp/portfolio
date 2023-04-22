@@ -1,6 +1,6 @@
 import { Box } from '@components/atoms/Box';
 
-import { Company } from '@types';
+import type { Company } from '@types';
 import format from 'date-fns/format';
 import Image from 'next/image';
 

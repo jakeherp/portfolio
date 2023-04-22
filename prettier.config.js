@@ -1,7 +1,7 @@
 module.exports = {
 	plugins: [
-		require('@trivago/prettier-plugin-sort-imports'),
 		require('prettier-plugin-tailwindcss'),
+		require('@trivago/prettier-plugin-sort-imports'),
 	],
 	arrowParens: 'always',
 	bracketSpacing: true,
@@ -21,6 +21,7 @@ module.exports = {
 		'^@hooks/(.*)$',
 		'^@lib/(.*)$',
 		'^@mockdata/(.*)$',
+		'^@queries/(.*)$',
 		'^@schemas/(.*)$',
 		'^@styles/(.*)$',
 		'^@types/(.*)$',

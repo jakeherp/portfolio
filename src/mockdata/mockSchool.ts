@@ -1,6 +1,6 @@
 import { mockCompany } from './mockCompany';
 
-import { Education } from '@types';
+import type { Education } from '@types';
 
 export const mockSchool: Education = {
 	institution: mockCompany,

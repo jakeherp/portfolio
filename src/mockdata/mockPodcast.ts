@@ -1,4 +1,4 @@
-import { Podcast } from '@types';
+import type { Podcast } from '@types';
 
 export const mockPodcast: Podcast = {
 	name: 'Syntax.fm',

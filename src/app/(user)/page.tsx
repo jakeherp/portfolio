@@ -4,7 +4,7 @@ import { Service } from '@components/atoms/Service/Service';
 import { HeroSection } from '@components/molecules/HeroSection/HeroSection';
 
 import { sanityClient } from '@lib/sanity';
-import { Service as ServiceType } from '@types';
+
 import { servicesQuery } from '@queries/services';
 
 import LogoCypress from '@root/public/assets/tools/cypress.svg';
@@ -16,6 +16,7 @@ import LogoSanity from '@root/public/assets/tools/sanity.svg';
 import LogoStorybook from '@root/public/assets/tools/storybook.svg';
 import LogoSvelte from '@root/public/assets/tools/svelte.svg';
 import LogoVercel from '@root/public/assets/tools/vercel.svg';
+import type { Service as ServiceType } from '@types';
 
 const getData = async () => {
 	const services: ServiceType[] = await sanityClient.fetch(servicesQuery);

@@ -1,7 +1,8 @@
 import { sanityClient } from '@lib/sanity';
 
 import { authorsQuery } from '@queries/authors';
-import { Author } from '@types';
+
+import type { Author } from '@types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const singleAuthorApi = async (req: NextApiRequest, res: NextApiResponse) => {

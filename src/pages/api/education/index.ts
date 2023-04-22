@@ -1,7 +1,8 @@
 import { sanityClient } from '@lib/sanity';
 
 import { educationQuery } from '@queries/education';
-import { Education } from '@types';
+
+import type { Education } from '@types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const educationApi = async (req: NextApiRequest, res: NextApiResponse) => {

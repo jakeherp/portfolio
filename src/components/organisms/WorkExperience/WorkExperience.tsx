@@ -1,7 +1,7 @@
 import { ContentBlock } from '@components/atoms/ContentBlock';
 import { Job } from '@components/molecules/Job';
 
-import { Job as JobType } from '@types';
+import type { Job as JobType } from '@types';
 import classNames from 'classnames';
 
 export interface WorkExperienceProps {

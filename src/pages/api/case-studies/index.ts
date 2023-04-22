@@ -1,7 +1,8 @@
 import { sanityClient } from '@lib/sanity';
 
 import { caseStudiesQuery } from '@queries/caseStudies';
-import { CaseStudy } from '@types';
+
+import type { CaseStudy } from '@types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const caseStudiesApi = async (req: NextApiRequest, res: NextApiResponse) => {

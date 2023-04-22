@@ -1,4 +1,4 @@
-import { BlockContent, Company } from '@types';
+import type { BlockContent, Company } from '@types';
 
 export interface CaseStudy {
 	body: BlockContent[];

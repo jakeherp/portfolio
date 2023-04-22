@@ -1,4 +1,4 @@
-import { CaseStudy } from '@types';
+import type { CaseStudy } from '@types';
 
 export const mockCaseStudy: CaseStudy = {
 	title: 'Subscriptions Service',

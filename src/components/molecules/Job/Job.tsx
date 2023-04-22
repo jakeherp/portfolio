@@ -1,6 +1,6 @@
 import { Box } from '@components/atoms/Box';
 
-import { Job as JobType } from '@types';
+import type { Job as JobType } from '@types';
 import { format } from 'date-fns';
 import Image from 'next/image';
 import { FC, PropsWithChildren, ReactNode } from 'react';
