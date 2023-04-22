@@ -37,14 +37,16 @@ const components: Partial<PortableTextReactComponents> = {
 
 	list: {
 		bullet: ({ children }) => (
-			<ul className="ml-10 list-disc space-y-2 py-4 text-lg">{children}</ul>
+			<ul className="ml-6 list-disc space-y-2 py-4 text-lg">{children}</ul>
 		),
 		number: ({ children }) => (
 			<ol className="mt-lg list-decimal text-lg">{children}</ol>
 		),
 	},
 
-	listItem: ({ children }) => <li className="text-lg leading-8">{children}</li>,
+	listItem: ({ children }) => (
+		<li className="text-base leading-6">{children}</li>
+	),
 
 	block: {
 		h1: ({ children }) => (
@@ -76,11 +78,22 @@ const components: Partial<PortableTextReactComponents> = {
 				: undefined;
 
 			if (!rel) {
-				return <Link href={value.href}>{children}</Link>;
+				return (
+					<Link
+						href={value.href}
+						className="underlined relative border-b-2 border-grey-300 font-bold hover:border-b-0 dark:border-grey-700"
+					>
+						{children}
+					</Link>
+				);
 			}
 
 			return (
-				<a href={value.href} rel={rel}>
+				<a
+					href={value.href}
+					rel={rel}
+					className="underlined relative font-bold"
+				>
 					{children}
 				</a>
 			);

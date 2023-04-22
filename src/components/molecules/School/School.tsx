@@ -13,7 +13,7 @@ export interface SchoolProps {
 
 const School = ({ institution, course, date, courseContents }: SchoolProps) => {
 	return (
-		<Box>
+		<Box className="w-full">
 			<div className="flex items-center gap-4">
 				{institution.logo && (
 					<Image

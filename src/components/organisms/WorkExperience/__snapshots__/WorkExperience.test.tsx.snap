@@ -3,74 +3,86 @@
 exports[`WorkExperience renders correctly 1`] = `
 <div>
   <div
-    class="flex transform transition-all md:hover:scale-[1.01]"
+    class="w-[calc(100% + 2rem)] relative -mx-4 flex snap-x snap-center gap-6 overflow-hidden overflow-x-auto pb-14 lg:mx-0 lg:w-full"
   >
     <div
-      class="glass-light dark:glass-dark mb-6 rounded-3xl px-8 py-6 drop-shadow-lg transition-all hover:drop-shadow-2xl md:w-10/12"
+      class="md:w-1/8 w-12 shrink-0 grow-0"
+    />
+    <div
+      class="flex w-4/5 shrink-0 transform snap-center transition-all md:w-3/4 lg:w-1/3"
     >
       <div
-        class="flex items-start gap-4 md:items-center"
+        class="mt-12 w-full glass-light dark:glass-dark mb-6 rounded-xl px-8 py-6 drop-shadow-lg"
       >
-        <img
-          alt="Holland & Barrett"
-          class="rounded-md"
-          data-nimg="1"
-          decoding="async"
-          height="64"
-          loading="lazy"
-          src="/assets/companies/holland-and-barrett.svg"
-          style="color: transparent;"
-          width="64"
-        />
         <div
-          class="mb-2 w-full"
+          class="-mt-12 mb-4 flex w-full justify-center"
+        >
+          <img
+            alt="Holland & Barrett"
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="64"
+            loading="lazy"
+            src="/assets/companies/holland-and-barrett.svg"
+            style="color: transparent;"
+            width="64"
+          />
+        </div>
+        <div
+          class="flex items-start gap-4 md:items-center"
         >
           <div
-            class="flex flex-col-reverse justify-between md:flex-row"
+            class="mb-2 w-full"
           >
             <h3
-              class="font-bold"
+              class="text-center font-bold"
             >
               Senior Software Engineer
             </h3>
-            <span
-              class="text-sm md:text-base"
+            <h4
+              class="text-center"
+            >
+              <a
+                class="underlined relative"
+                href="https://www.hollandandbarrett.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Holland & Barrett
+              </a>
+            </h4>
+            <p
+              class="mb-4 text-center text-sm text-slate-500"
             >
               Aug 2020 — present
-            </span>
-          </div>
-          <h4>
-            <a
-              class="underlined relative"
-              href="https://www.hollandandbarrett.com/"
-              rel="noopener noreferrer"
-              target="_blank"
+            </p>
+            <p
+              class="hidden text-sm md:block md:text-base"
             >
-              Holland & Barrett
-            </a>
-          </h4>
-          <p
-            class="hidden text-sm md:block"
-          >
-            <strong>
-              Technologies: 
-            </strong>
-            TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
-          </p>
+              <strong>
+                Technologies: 
+              </strong>
+              TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
+            </p>
+          </div>
         </div>
+        <p
+          class="text-sm md:hidden"
+        >
+          <strong>
+            Technologies: 
+          </strong>
+          TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
+        </p>
+        <div
+          id="contentBlock"
+        />
       </div>
-      <p
-        class="text-sm md:hidden"
-      >
-        <strong>
-          Technologies: 
-        </strong>
-        TypeScript, React, Next.js, Redux, GraphQL, REST API, Jest, Cypress
-      </p>
-      <div
-        id="contentBlock"
-      />
     </div>
+    <div
+      class="md:w-1/8 w-12 shrink-0 grow-0"
+    />
   </div>
 </div>
 `;

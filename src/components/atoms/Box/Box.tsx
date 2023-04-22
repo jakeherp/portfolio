@@ -1,12 +1,18 @@
-import { FC, ReactNode } from 'react';
+import classNames from 'classnames';
+import { FC, PropsWithChildren } from 'react';
 
 interface BoxProps {
-	children: ReactNode;
+	className?: string;
 }
 
-const Box: FC<BoxProps> = ({ children }) => {
+const Box: FC<PropsWithChildren<BoxProps>> = ({ children, className }) => {
 	return (
-		<div className="glass-light dark:glass-dark mb-6 rounded-3xl px-8 py-6 drop-shadow-lg transition-all hover:drop-shadow-2xl md:w-10/12">
+		<div
+			className={classNames(
+				className,
+				'glass-light dark:glass-dark mb-6 rounded-xl px-8 py-6 drop-shadow-lg'
+			)}
+		>
 			{children}
 		</div>
 	);

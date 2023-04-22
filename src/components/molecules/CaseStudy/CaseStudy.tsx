@@ -22,7 +22,7 @@ const CaseStudy = ({
 	const isEven = index % 2 === 0;
 
 	return (
-		<article className="mt-24 transition first-of-type:mt-0 md:hover:scale-[1.01]">
+		<article className="mt-24 transition first-of-type:mt-0 md:hover:scale-[1.01] lg:w-4/5">
 			<Link href={`/case-studies/${slug}`} className="group">
 				<Box>
 					<div

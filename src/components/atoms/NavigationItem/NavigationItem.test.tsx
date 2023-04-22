@@ -8,14 +8,8 @@ jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),
 }));
 
-// jest.mock('next/link', () => {
-// 	return ({ children, href }: React.PropsWithChildren<{ href: string }>) =>
-// 		React.cloneElement(React.Children.only(children), { href });
-// });
-
 describe('NavigationItem', () => {
-	// eslint-disable-next-line jest/no-disabled-tests
-	it.skip('renders correctly', () => {
+	it('renders correctly', () => {
 		const { container } = render(
 			<NavigationItem
 				href="/"
