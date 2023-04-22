@@ -37,14 +37,16 @@ const components: Partial<PortableTextReactComponents> = {
 
 	list: {
 		bullet: ({ children }) => (
-			<ul className="ml-10 list-disc space-y-2 py-4 text-lg">{children}</ul>
+			<ul className="ml-6 list-disc space-y-2 py-4 text-lg">{children}</ul>
 		),
 		number: ({ children }) => (
 			<ol className="mt-lg list-decimal text-lg">{children}</ol>
 		),
 	},
 
-	listItem: ({ children }) => <li className="text-lg leading-8">{children}</li>,
+	listItem: ({ children }) => (
+		<li className="text-base leading-6">{children}</li>
+	),
 
 	block: {
 		h1: ({ children }) => (

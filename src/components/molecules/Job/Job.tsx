@@ -18,9 +18,9 @@ const Job: FC<PropsWithChildren<JobProps>> = ({
 	children,
 }) => {
 	return (
-		<Box>
-			<div className="flex items-start gap-4 md:items-center">
-				{company.logo && (
+		<Box className="mt-12 w-full">
+			{company.logo && (
+				<div className="-mt-12 mb-4 flex w-full justify-center">
 					<Image
 						src={company.logo}
 						alt={company.name}
@@ -28,17 +28,12 @@ const Job: FC<PropsWithChildren<JobProps>> = ({
 						height={64}
 						className="rounded-md"
 					/>
-				)}
+				</div>
+			)}
+			<div className="flex items-start gap-4 md:items-center">
 				<div className="mb-2 w-full">
-					<div className="flex flex-col-reverse justify-between md:flex-row">
-						<h3 className="font-bold">{jobTitle}</h3>
-						<span className="text-sm md:text-base">
-							{`${format(new Date(fromDate), 'MMM yyyy')} — ${
-								toDate ? format(new Date(toDate), 'MMM yyyy') : 'present'
-							}`}
-						</span>
-					</div>
-					<h4>
+					<h3 className="text-center font-bold">{jobTitle}</h3>
+					<h4 className="text-center">
 						{company.url ? (
 							<a
 								href={company.url}
@@ -52,7 +47,14 @@ const Job: FC<PropsWithChildren<JobProps>> = ({
 							<>{company.name}</>
 						)}
 					</h4>
-					<p className="hidden text-sm md:block">
+
+					<p className="mb-4 text-center text-sm text-slate-500">
+						{`${format(new Date(fromDate), 'MMM yyyy')} — ${
+							toDate ? format(new Date(toDate), 'MMM yyyy') : 'present'
+						}`}
+					</p>
+
+					<p className="hidden text-sm md:block md:text-base">
 						<strong>Technologies: </strong>
 						{skills.join(', ')}
 					</p>

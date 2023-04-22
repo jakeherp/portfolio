@@ -8,7 +8,7 @@ exports[`ContactForm renders correctly 1`] = `
     role="form"
   >
     <div
-      class="glass-light dark:glass-dark mb-6 rounded-3xl px-8 py-6 drop-shadow-lg transition-all hover:drop-shadow-2xl md:w-10/12"
+      class="glass-light dark:glass-dark mb-6 rounded-xl px-8 py-6 drop-shadow-lg"
     >
       <label
         class="mb-2 mt-6 flex flex-col font-bold"
