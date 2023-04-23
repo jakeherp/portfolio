@@ -107,9 +107,7 @@ export const RecruiterForm = () => {
 								onClick={(noop: unknown) => noop}
 								className="group"
 							>
-								<div className="headline block group-hover:text-off-white">
-									{isSubmitting ? 'Loading ...' : 'Sign up'}
-								</div>
+								{isSubmitting ? 'Loading ...' : 'Sign up'}
 							</Button>
 						</div>
 					</Box>

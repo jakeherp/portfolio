@@ -121,14 +121,10 @@ exports[`RecruiterForm renders correctly 1`] = `
         class="mt-6"
       >
         <button
-          class="rounded-md bg-blue-700 hover:bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 group"
+          class="rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all group"
           type="submit"
         >
-          <div
-            class="headline block group-hover:text-off-white"
-          >
-            Sign up
-          </div>
+          Sign up
         </button>
       </div>
     </div>
