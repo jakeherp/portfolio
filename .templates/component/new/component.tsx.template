@@ -1,0 +1,13 @@
+---
+to: <%= directoryPath %>/<%= filename %>.tsx
+unless_exists: true
+---
+
+export interface <%= className %>Props {}
+
+export const <%= className %> = ({}: <%= className %>Props) => {
+	return (
+		<<%= elementName %>>
+		</<%= elementName %>>
+	);
+};

@@ -1,0 +1,13 @@
+---
+to: <%= directoryPath %>/<%= filename %>.test.tsx
+unless_exists: true
+---
+import { <%= className %> } from '../<%= filename %>';
+import { render } from '@testing-library/react';
+
+describe('<%= className %>', () => {
+	it('renders correctly', () => {
+		const { container } = render(<<%= className %> />);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+});
