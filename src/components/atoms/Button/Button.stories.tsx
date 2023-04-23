@@ -11,6 +11,6 @@ export const ButtonStory = (args: ButtonProps) => <Button {...args} />;
 ButtonStory.storyName = 'Button';
 ButtonStory.args = {
 	href: '/',
-	text: 'Button',
+	children: 'Button',
 	target: '_self',
 };

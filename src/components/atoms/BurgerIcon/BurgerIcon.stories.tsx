@@ -6,9 +6,11 @@ export default {
 	component: BurgerIcon,
 };
 
-export const BurgerIconStory = (args: BurgerIconProps) => (
-	<BurgerIcon {...args} />
-);
+export const BurgerIconStory = (args: BurgerIconProps) => {
+	return <BurgerIcon {...args} />;
+};
 
 BurgerIconStory.storyName = 'BurgerIcon';
-BurgerIconStory.args = {};
+BurgerIconStory.args = {
+	isOpen: false,
+};

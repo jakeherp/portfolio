@@ -17,4 +17,5 @@ export const ContainerStory = ({ children }: Props) => (
 ContainerStory.storyName = 'Container';
 ContainerStory.args = {
 	children: 'Content',
+	className: '',
 };

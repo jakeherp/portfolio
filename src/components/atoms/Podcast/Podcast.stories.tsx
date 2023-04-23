@@ -9,7 +9,13 @@ export default {
 	component: Podcast,
 };
 
-export const PodcastStory = (args: PodcastType) => <Podcast {...args} />;
+export const PodcastStory = (args: PodcastType) => {
+	return (
+		<ul className="scroll-mandatory relative -mx-4 flex w-[100vw] snap-x gap-4 overflow-x-auto px-4 pb-14 md:mx-0 md:w-full md:px-0">
+			<Podcast {...args} />
+		</ul>
+	);
+};
 
 PodcastStory.storyName = 'Podcast';
 PodcastStory.args = mockPodcast;

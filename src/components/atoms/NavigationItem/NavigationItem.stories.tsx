@@ -7,7 +7,9 @@ export default {
 };
 
 export const NavigationItemStory = (args: NavigationItemProps) => (
-	<NavigationItem {...args} />
+	<ul className="flex gap-8 text-lg">
+		<NavigationItem {...args} />
+	</ul>
 );
 
 NavigationItemStory.storyName = 'NavigationItem';

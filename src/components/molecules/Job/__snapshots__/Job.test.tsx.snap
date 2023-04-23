@@ -15,7 +15,8 @@ exports[`Job renders correctly 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/assets/companies/holland-and-barrett.svg"
+        src="/_next/image?url=https%3A%2F%2Fjacobherper.com%2F_next%2Fimage%3Furl%3Dhttps%253A%252F%252Fcdn.sanity.io%252Fimages%252Fyq5nnpfd%252Fproduction%252F220cf610ee8a9bc6f821a5a3285ca7c224536cb8-128x128.jpg%26w%3D128%26q%3D75&w=128&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fjacobherper.com%2F_next%2Fimage%3Furl%3Dhttps%253A%252F%252Fcdn.sanity.io%252Fimages%252Fyq5nnpfd%252Fproduction%252F220cf610ee8a9bc6f821a5a3285ca7c224536cb8-128x128.jpg%26w%3D128%26q%3D75&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fjacobherper.com%2F_next%2Fimage%3Furl%3Dhttps%253A%252F%252Fcdn.sanity.io%252Fimages%252Fyq5nnpfd%252Fproduction%252F220cf610ee8a9bc6f821a5a3285ca7c224536cb8-128x128.jpg%26w%3D128%26q%3D75&w=128&q=75 2x"
         style="color: transparent;"
         width="64"
       />

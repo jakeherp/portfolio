@@ -15,4 +15,5 @@ export const BoxStory = ({ children }: Props) => <Box>{children}</Box>;
 BoxStory.storyName = 'Box';
 BoxStory.args = {
 	children: 'Hello Box',
+	className: '',
 };

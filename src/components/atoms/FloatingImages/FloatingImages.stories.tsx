@@ -12,8 +12,8 @@ export const FloatingImagesStory = (args: FloatingImagesProps) => (
 
 FloatingImagesStory.storyName = 'FloatingImages';
 FloatingImagesStory.args = {
-	mainImage: '/some-img.png',
-	topFloatingImage: '/top-image.png',
-	bottomFloatingImage: '/bottom-image.png',
+	mainImage: 'https://media.graphcms.com/1WO5SPTlRd2KnNrJH0hF',
+	topFloatingImage: 'https://media.graphcms.com/A925zBXITvGXd25ICydM',
+	bottomFloatingImage: 'https://media.graphcms.com/sVY8ZHnBSHiZeeVjFS3f',
 	altText: 'Some image',
 };
