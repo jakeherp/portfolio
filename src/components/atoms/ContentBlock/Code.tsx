@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import Highlight, { Language, defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/nightOwl';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 interface CodeBlockProps {
 	language: Language;

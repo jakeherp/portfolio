@@ -9,7 +9,7 @@ import { sanityClient } from '@lib/sanity';
 
 import { caseStudiesQuery } from '@queries/caseStudies';
 
-import { CaseStudy } from '@types';
+import type { CaseStudy } from '@types';
 import { groq } from 'next-sanity';
 import Image from 'next/image';
 import React from 'react';

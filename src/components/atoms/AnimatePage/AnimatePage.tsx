@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 const AnimatePage = ({ children }: PropsWithChildren) => {
 	const variants = {

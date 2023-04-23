@@ -1,6 +1,6 @@
 import { ContentBlock } from '../ContentBlock';
 
-import { BlockContent } from '@types';
+import type { BlockContent } from '@types';
 import classNames from 'classnames';
 import Image from 'next/image';
 

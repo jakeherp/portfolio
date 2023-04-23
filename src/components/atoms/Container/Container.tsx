@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 interface ContainerProps {
 	className?: string;

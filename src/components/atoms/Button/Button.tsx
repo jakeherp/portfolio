@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, PropsWithChildren, ReactNode } from 'react';
+import type { FC, PropsWithChildren, ReactNode } from 'react';
 
 type Button = {
 	onClick?: (...args: unknown[]) => void;

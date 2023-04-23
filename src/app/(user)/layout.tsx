@@ -6,7 +6,7 @@ import { basierCircle } from '@lib/fonts';
 import '@styles/globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 export default function RootLayout({ children }: PropsWithChildren) {
 	return (

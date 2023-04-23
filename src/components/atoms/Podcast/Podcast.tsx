@@ -1,4 +1,4 @@
-import { Podcast as PodcastType } from '@types';
+import type { Podcast as PodcastType } from '@types';
 import Image from 'next/image';
 
 const Podcast = ({ name, logo, url }: PodcastType) => {

@@ -2,7 +2,7 @@
 import { Podcast } from './Podcast';
 
 import { mockPodcast } from '@mockdata';
-import { Podcast as PodcastType } from '@types';
+import type { Podcast as PodcastType } from '@types';
 
 export default {
 	title: 'atoms/Podcast',

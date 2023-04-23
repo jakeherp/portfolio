@@ -9,7 +9,7 @@ import { sanityClient } from '@lib/sanity';
 import { pagesQuery } from '@queries/pages';
 import { salaryQuery } from '@queries/salary';
 
-import { Page, Salary as SalaryRange } from '@types';
+import type { Page, Salary as SalaryRange } from '@types';
 
 export const metadata = {
 	title: 'Recruiter Information about Jacob Herper',

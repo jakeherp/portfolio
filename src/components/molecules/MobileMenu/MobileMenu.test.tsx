@@ -1,7 +1,7 @@
 import { MobileMenu } from '../MobileMenu';
 
 import { render } from '@testing-library/react';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 jest.mock('next/router', () => ({
 	__esModule: true,

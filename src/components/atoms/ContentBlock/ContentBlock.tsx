@@ -5,7 +5,7 @@ import { sanityClient } from '@lib/sanity';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { BlockContent } from '@types';
+import type { BlockContent } from '@types';
 import Image from 'next/image';
 import Link from 'next/link';
 

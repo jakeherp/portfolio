@@ -6,7 +6,7 @@ import { sanityClient } from '@lib/sanity';
 
 import { caseStudiesQuery } from '@queries/caseStudies';
 
-import { CaseStudy as CaseStudyType } from '@types';
+import type { CaseStudy as CaseStudyType } from '@types';
 
 export const metadata = {
 	title: 'Software Engineering Case Studies – Jacob Herper',

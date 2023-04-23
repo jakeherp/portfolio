@@ -1,7 +1,7 @@
 import { Box } from '@components/atoms/Box';
 import { FloatingImages } from '@components/atoms/FloatingImages';
 
-import { CaseStudy as CaseStudyType } from '@types';
+import type { CaseStudy as CaseStudyType } from '@types';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';

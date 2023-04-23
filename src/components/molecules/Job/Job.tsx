@@ -3,7 +3,7 @@ import { Box } from '@components/atoms/Box';
 import type { Job as JobType } from '@types';
 import { format } from 'date-fns';
 import Image from 'next/image';
-import { FC, PropsWithChildren, ReactNode } from 'react';
+import type { FC, PropsWithChildren, ReactNode } from 'react';
 
 interface JobProps extends Omit<JobType, 'description'> {
 	children?: ReactNode;

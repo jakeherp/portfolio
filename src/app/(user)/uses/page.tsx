@@ -6,7 +6,7 @@ import { sanityClient } from '@lib/sanity';
 
 import { pagesQuery } from '@queries/pages';
 
-import { Page } from '@types';
+import type { Page } from '@types';
 
 const getData = async () => {
 	const page: [Page] = await sanityClient.fetch(pagesQuery('uses'));
