@@ -1,7 +1,6 @@
 import { Select } from '../Select';
 
 import { render } from '@testing-library/react';
-import { Formik } from 'formik';
 
 const mockField = {
 	value: '',
@@ -20,39 +19,10 @@ const mockMeta = {
 	value: '',
 };
 
-jest.mock('formik', () => ({
-	...jest.requireActual('formik'),
-	useField: jest.fn(() => {
-		return [mockField, mockMeta];
-	}),
-}));
-
 describe('Select', () => {
 	it('renders correctly', () => {
 		const { container } = render(
-			<Formik
-				initialValues={{
-					firstName: '',
-				}}
-				onSubmit={jest.fn()}
-				validate={(values) => {
-					const errors = {
-						firstName: '',
-					};
-
-					if (!values?.firstName) {
-						errors.firstName = 'Required.';
-					}
-
-					return errors;
-				}}
-			>
-				<Select
-					label="Some select"
-					id="some-select"
-					options={['1', '2', '3']}
-				/>
-			</Formik>
+			<Select label="Some select" id="some-select" options={['1', '2', '3']} />
 		);
 		expect(container).toMatchSnapshot();
 	});

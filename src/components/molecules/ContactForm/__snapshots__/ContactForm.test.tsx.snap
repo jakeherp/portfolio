@@ -2,95 +2,116 @@
 
 exports[`ContactForm renders correctly 1`] = `
 <div>
-  <form
-    action="#"
-    class="mt-4"
-    role="form"
+  <div
+    class="mt-8 glass-light dark:glass-dark mb-6 rounded-xl px-8 py-6 drop-shadow-lg"
   >
-    <div
-      class="glass-light dark:glass-dark mb-6 rounded-xl px-8 py-6 drop-shadow-lg"
+    <form
+      class="flex flex-col gap-4"
     >
-      <label
-        class="mb-2 mt-6 flex flex-col font-bold"
-        for="firstName"
+      <div
+        class="flex flex-col gap-1"
       >
-        First Name
+        <label
+          class="font-bold"
+          for="firstName"
+        >
+          First Name
+           
+          <span
+            class="text-red-700"
+          >
+            *
+          </span>
+        </label>
         <input
           class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="firstName"
           name="firstName"
-          placeholder="John"
-          type="text"
-          value=""
         />
-        <div
-          class="font-sm font-normal text-red-600"
-        />
-      </label>
-      <label
-        class="mb-2 mt-6 flex flex-col font-bold"
-        for="firstName"
+      </div>
+      <div
+        class="flex flex-col gap-1"
       >
-        Last Name
+        <label
+          class="font-bold"
+          for="lastName"
+        >
+          Last Name
+           
+          <span
+            class="text-red-700"
+          >
+            *
+          </span>
+        </label>
         <input
           class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="lastName"
           name="lastName"
-          placeholder="Doe"
-          type="text"
-          value=""
         />
-        <div
-          class="font-sm font-normal text-red-600"
-        />
-      </label>
-      <label
-        class="mb-2 mt-6 flex flex-col font-bold"
-        for="firstName"
+      </div>
+      <div
+        class="flex flex-col gap-1"
       >
-        Company
-        <input
-          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
-          id="company"
-          name="company"
-          type="text"
-          value=""
-        />
-        <div
-          class="font-sm font-normal text-red-600"
-        />
-      </label>
-      <label
-        class="mb-2 mt-6 flex flex-col font-bold"
-        for="firstName"
-      >
-        Email Address
+        <label
+          class="font-bold"
+          for="email"
+        >
+          Email
+           
+          <span
+            class="text-red-700"
+          >
+            *
+          </span>
+        </label>
         <input
           class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="email"
           name="email"
-          placeholder="johndoe@gmail.com"
-          type="email"
-          value=""
         />
-        <div
-          class="font-sm font-normal text-red-600"
-        />
-      </label>
-      <label
-        class="mb-2 mt-6 flex flex-col font-bold"
-        for="subject"
+      </div>
+      <div
+        class="flex flex-col gap-1"
       >
-        Subject
+        <label
+          class="font-bold"
+          for="company"
+        >
+          Company
+           
+        </label>
+        <input
+          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          id="company"
+          name="company"
+        />
+      </div>
+      <div
+        class="flex flex-col gap-1"
+      >
+        <label
+          class="font-bold"
+          for="subject"
+        >
+          Subject
+           
+          <span
+            class="text-red-700"
+          >
+            *
+          </span>
+        </label>
         <select
           class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="subject"
           name="subject"
         >
           <option
-            value="none"
+            disabled=""
+            value=""
           >
-            Please select
+            Please select a subject
           </option>
           <option
             value="I need a website / app developed"
@@ -118,36 +139,34 @@ exports[`ContactForm renders correctly 1`] = `
             Other
           </option>
         </select>
-        <div
-          class="font-sm font-normal text-red-600"
-        />
-      </label>
-      <label
-        class="mb-2 mt-6 flex flex-col font-bold"
-        for="firstName"
+      </div>
+      <div
+        class="relative w-full flex flex-col gap-1"
       >
-        Message
+        <label
+          class="font-bold"
+          for="message"
+        >
+          Message 
+          <span
+            class="text-red-700"
+          >
+            *
+          </span>
+        </label>
         <textarea
-          class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
+          class="my-2 rounded-md h-48 px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
           id="message"
           name="message"
-          rows="5"
         />
-        <div
-          class="font-sm font-normal text-red-600"
-        />
-      </label>
-      <div
-        class="mt-6"
-      >
-        <button
-          class="rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all group"
-          type="submit"
-        >
-          Send Message
-        </button>
       </div>
-    </div>
-  </form>
+      <button
+        class="rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-700 disabled:hover:active:bg-blue-700"
+        type="submit"
+      >
+        Send
+      </button>
+    </form>
+  </div>
 </div>
 `;

@@ -14,7 +14,6 @@ const config: StorybookConfig = {
 				postCss: true,
 			},
 		},
-		'@bbbtech/storybook-formik/register',
 	],
 	framework: {
 		name: '@storybook/nextjs',

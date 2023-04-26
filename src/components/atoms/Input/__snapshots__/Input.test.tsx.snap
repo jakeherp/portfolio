@@ -2,22 +2,21 @@
 
 exports[`Input renders correctly 1`] = `
 <div>
-  <label
-    class="mb-2 mt-6 flex flex-col font-bold"
-    for="firstName"
+  <div
+    class="flex flex-col gap-1"
   >
-    Some input
+    <label
+      class="font-bold"
+      for="some-input"
+    >
+      Some input
+       
+    </label>
     <input
       class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
       id="some-input"
-      name="some-input"
       placeholder="Some placeholder"
-      type="text"
-      value=""
     />
-    <div
-      class="font-sm font-normal text-red-600"
-    />
-  </label>
+  </div>
 </div>
 `;

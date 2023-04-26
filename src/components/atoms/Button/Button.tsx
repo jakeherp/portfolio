@@ -33,7 +33,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
 	const disabled = !isLink(props) ? props.disabled || false : undefined;
 
 	const classes =
-		'rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all';
+		'rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-700 disabled:hover:active:bg-blue-700';
 
 	if (isLink(props)) {
 		return (

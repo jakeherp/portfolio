@@ -4,18 +4,43 @@ import { Box } from '@components/atoms/Box';
 import { Button } from '@components/atoms/Button';
 import { Input } from '@components/atoms/Input';
 import { Select } from '@components/atoms/Select';
-import { TextArea } from '@components/atoms/TextArea';
 
 import { useCookie } from '@hooks/useCookie';
 
-import { Form, Formik } from 'formik';
-import Link from 'next/link';
-import { useState } from 'react';
-import * as Yup from 'yup';
+import classNames from 'classnames';
+import { FieldValues, useForm } from 'react-hook-form';
+import type { SubmitHandler } from 'react-hook-form';
+
+interface Inputs {
+	firstName: string;
+	lastName: string;
+	email: string;
+	company: string;
+	subject: string;
+	message: string;
+}
+
+const canSubmit = (cookie: string) => {
+	if (!cookie || cookie === '') return true;
+
+	const date = new Date(cookie);
+	const now = new Date();
+
+	if (date.getTime() + 60_000 * 60 * 60 * 24 > now.getTime()) {
+		return false;
+	}
+
+	return true;
+};
 
 export const ContactForm = () => {
-	const [success, setSuccess] = useState(false);
-	const [error, setError] = useState(false);
+	const {
+		formState: { errors, isLoading, isSubmitted, isSubmitSuccessful },
+		handleSubmit,
+		register,
+		reset,
+		watch,
+	} = useForm<Inputs>();
 	const [cookie, setCookie] = useCookie('contactFormSubmission', '');
 
 	const subjects = [
@@ -26,28 +51,8 @@ export const ContactForm = () => {
 		'Other',
 	];
 
-	const canSubmit = (cookie: string) => {
-		if (!cookie || cookie === '') {
-			return true;
-		}
-
-		const date = new Date(cookie);
-		const now = new Date();
-
-		if (date.getTime() + 60_000 * 60 * 60 * 24 > now.getTime()) {
-			return false;
-		}
-
-		return true;
-	};
-
-	const handleSubmit = async (
-		formValues: Record<string, string>,
-		setSubmitting: (arg: boolean) => void,
-		resetForm: () => void
-	) => {
-		setError(false);
-		setSuccess(false);
+	const onSubmit: SubmitHandler<FieldValues> = async (formValues) => {
+		if (!canSubmit(cookie)) return;
 
 		const res = await fetch('/api/contact/send', {
 			body: JSON.stringify(formValues),
@@ -59,104 +64,113 @@ export const ContactForm = () => {
 
 		const { error } = await res.json();
 
-		if (!canSubmit(cookie) || error) {
-			setError(true);
-			setSubmitting(false);
-			return;
-		}
-
-		setSubmitting(false);
-		setSuccess(true);
 		setCookie(new Date().toString());
-		resetForm();
+		reset();
 	};
 
-	const validationSchema = Yup.object({
-		firstName: Yup.string().required("Don't be a stranger!"),
-		lastName: Yup.string().required("Don't be a stranger!"),
-		email: Yup.string()
-			.email("That's not a valid email address")
-			.required('How am I supposed to reply to you?'),
-		company: Yup.string(),
-		subject: Yup.mixed()
-			.oneOf(subjects, 'Please select an option')
-			.required('Please select an option'),
-		message: Yup.string().required('Please enter a message'),
-	});
+	const message = watch('message');
 
 	return (
-		<Formik
-			initialValues={{
-				firstName: '',
-				lastName: '',
-				email: '',
-				company: '',
-				subject: '',
-				message: '',
-			}}
-			validationSchema={validationSchema}
-			onSubmit={(values, { setSubmitting, resetForm }) => {
-				handleSubmit(values, setSubmitting, resetForm);
-			}}
-		>
-			{({ isSubmitting, values }) => {
-				const isRecruiter =
-					values.subject === 'I am a recruiter and want to hire you';
+		<>
+			{isSubmitSuccessful && (
+				<div className="bg-emerald-200 border-emerald-500 text-emerald-900 p-4 my-4 rounded-lg">
+					Thank you for your message, I&apos;ll be in touch shortly!
+				</div>
+			)}
+			<Box className="mt-8">
+				<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+					<Input
+						id="firstName"
+						label="First Name"
+						isRequired
+						error={errors.firstName?.message}
+						{...register('firstName', { required: "Don't be a stranger!" })}
+					/>
+					<Input
+						id="lastName"
+						label="Last Name"
+						isRequired
+						error={errors.lastName?.message}
+						{...register('lastName', { required: "Don't be a stranger!" })}
+					/>
+					<Input
+						id="email"
+						label="Email"
+						isRequired
+						error={errors.email?.message}
+						{...register('email', {
+							required: 'Please enter an email address',
+							pattern: {
+								value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+								message: "That's not a valid email address",
+							},
+						})}
+					/>
+					<Input
+						id="company"
+						label="Company"
+						error={errors.company?.message}
+						{...register('company')}
+					/>
+					<Select
+						{...register('subject', {
+							required: 'Please select a subject',
+							value: '',
+						})}
+						id="subject"
+						label="Subject"
+						isRequired
+						error={errors.subject?.message}
+						options={subjects.map((subject) => ({
+							value: subject,
+							label: subject,
+						}))}
+						placeholder="Please choose a subject"
+					/>
 
-				return (
-					<Form role="form" className="mt-4">
-						<Box>
-							{success && (
-								<div className="rounded-md bg-green-100 px-4 py-2 font-bold text-green-600 ring-1 ring-green-600">
-									Thanks for your message. I will get back to you as soon as I
-									can.
-								</div>
+					<div className="relative w-full flex flex-col gap-1">
+						<label htmlFor="message" className="font-bold">
+							Message <span className="text-red-700">*</span>
+						</label>
+						<textarea
+							id="message"
+							{...register('message', {
+								required: 'Please enter a message',
+								minLength: {
+									value: 100,
+									message: 'Please enter at least 100 characters',
+								},
+							})}
+							className={classNames(
+								'my-2 rounded-md h-48 px-4 py-2 ring-1 dark:bg-transparent',
+								{
+									'ring-red-600': errors.message,
+									'ring-grey-400 dark:ring-slate-500': !errors.message,
+								}
 							)}
-							{error && (
-								<div className="rounded-md bg-red-100 px-4 py-2 font-bold text-red-600 ring-1 ring-red-600">
-									Something went wrong, please try again!
-								</div>
-							)}
-							{isRecruiter ? (
-								<p className="font-bold text-red-600">
-									Please visit the{' '}
-									<Link href="/recruiters" className="underline">
-										Recruiter Information page
-									</Link>{' '}
-									for more information and a sign up form.
-								</p>
-							) : (
-								<>
-									<Input label="First Name" placeholder="John" id="firstName" />
-									<Input label="Last Name" placeholder="Doe" id="lastName" />
-									<Input label="Company" id="company" />
-									<Input
-										label="Email Address"
-										placeholder="johndoe@gmail.com"
-										id="email"
-										type="email"
-									/>
-									<Select label="Subject" id="subject" options={subjects} />
-
-									<TextArea label="Message" id="message" />
-
-									<div className="mt-6">
-										<Button
-											type="submit"
-											disabled={
-												isSubmitting || isRecruiter || !canSubmit(cookie)
-											}
-											className="group"
-										>
-											{isSubmitting ? 'Loading ...' : 'Send Message'}
-										</Button>
-									</div>
-								</>
-							)}
-						</Box>
-					</Form>
-				);
-			}}
-		</Formik>
+						/>
+						{message && (
+							<div
+								className={classNames('absolute text-sm right-6 text-right', {
+									'text-red-600': message?.length < 100,
+									'bottom-10': errors.message,
+									'bottom-4': !errors.message,
+								})}
+							>
+								{message?.length}
+							</div>
+						)}
+						{errors.message && (
+							<div className="font-sm font-normal -mt-2 text-red-600">
+								{errors.message.message}
+							</div>
+						)}
+					</div>
+					<Button type="submit" disabled={isLoading || isSubmitted}>
+						{isLoading || isSubmitted ? 'Loading ...' : 'Send'}
+					</Button>
+				</form>
+			</Box>
+		</>
 	);
 };

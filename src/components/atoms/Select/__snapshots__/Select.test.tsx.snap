@@ -2,41 +2,24 @@
 
 exports[`Select renders correctly 1`] = `
 <div>
-  <label
-    class="mb-2 mt-6 flex flex-col font-bold"
-    for="some-select"
+  <div
+    class="flex flex-col gap-1"
   >
-    Some select
+    <label
+      class="font-bold"
+      for="some-select"
+    >
+      Some select
+       
+    </label>
     <select
       class="my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent ring-grey-400 dark:ring-slate-500"
-      id="some-select"
-      name="some-select"
+      id="subject"
     >
-      <option
-        selected=""
-        value="none"
-      >
-        Please select
-      </option>
-      <option
-        value="1"
-      >
-        1
-      </option>
-      <option
-        value="2"
-      >
-        2
-      </option>
-      <option
-        value="3"
-      >
-        3
-      </option>
+      <option />
+      <option />
+      <option />
     </select>
-    <div
-      class="font-sm font-normal text-red-600"
-    />
-  </label>
+  </div>
 </div>
 `;

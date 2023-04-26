@@ -45,7 +45,6 @@
 		"date-fns": "^2.29.3",
 		"eslint-config-next": "13.3.1",
 		"focus-trap-react": "^10.1.1",
-		"formik": "^2.2.9",
 		"framer-motion": "^10.12.4",
 		"md5": "^2.3.0",
 		"next": "^13.3.1",
@@ -56,17 +55,16 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-headroom": "^3.2.1",
+		"react-hook-form": "^7.43.9",
 		"react-syntax-highlighter": "^15.5.0",
 		"react-typed": "^1.2.0",
 		"sanity": "^3.9.0",
 		"sanity-plugin-vercel-deploy": "^3.3.3",
 		"sharp": "^0.32.0",
 		"styled-components": "5.3.9",
-		"typescript": "5.0.4",
-		"yup": "^1.1.1"
+		"typescript": "5.0.4"
 	},
 	"devDependencies": {
-		"@bbbtech/storybook-formik": "^2.6.0",
 		"@sanity/eslint-config-studio": "^2.0.1",
 		"@storybook/addon-a11y": "^7.0.6",
 		"@storybook/addon-essentials": "^7.0.6",

@@ -1,42 +1,39 @@
 import classNames from 'classnames';
-import { Field, useField } from 'formik';
 
 export interface InputProps {
 	label: string;
-	placeholder?: string;
 	id: string;
-	type?: 'text' | 'number' | 'password' | 'email' | 'tel';
+	isRequired?: boolean;
+	error?: string;
+	[rest: string]: unknown;
 }
 
 export const Input = ({
 	label,
-	placeholder,
 	id,
-	type = 'text',
+	isRequired,
+	error,
+	...rest
 }: InputProps) => {
-	const fieldProps = { label, id, name: id, placeholder, type };
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [_, meta] = useField(fieldProps);
-
 	return (
-		<label htmlFor="firstName" className="mb-2 mt-6 flex flex-col font-bold">
-			{label}
-			<Field
-				placeholder={placeholder}
-				name={id}
+		<div className="flex flex-col gap-1">
+			<label htmlFor={id} className="font-bold">
+				{label} {isRequired && <span className="text-red-700">*</span>}
+			</label>
+			<input
 				id={id}
-				type={type}
 				className={classNames(
 					'my-2 rounded-md px-4 py-2 ring-1 dark:bg-transparent',
 					{
-						'ring-red-600': meta.touched && meta.error,
-						'ring-grey-400 dark:ring-slate-500': !meta.touched || !meta.error,
+						'ring-red-600': !!error,
+						'ring-grey-400 dark:ring-slate-500': !error,
 					}
 				)}
+				{...rest}
 			/>
-			<div className="font-sm font-normal text-red-600">
-				{meta.touched && meta.error}
-			</div>
-		</label>
+			{error && (
+				<div className="font-sm font-normal -mt-2 text-red-600">{error}</div>
+			)}
+		</div>
 	);
 };
