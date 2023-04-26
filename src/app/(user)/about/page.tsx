@@ -13,6 +13,7 @@ import { jobsQuery } from '@queries/jobs';
 import { podcastsQuery } from '@queries/podcasts';
 
 import type { Education as EducationType, Job, Podcast } from '@types';
+import Link from 'next/link';
 
 export const metadata = {
 	title:
@@ -83,16 +84,47 @@ const AboutPage = async () => {
 
 				<Education education={education} />
 
-				<div className="mt-8 flex justify-center">
-					<Button
-						href="/cv-2023.pdf"
-						download={true}
-						className="group flex gap-2 whitespace-nowrap"
-					>
-						<IconDownload />
-						Download my CV
-					</Button>
-				</div>
+				<section id="cv-download">
+					<h2 className="headline mb-4 mt-12 text-4xl">
+						Interested in what I have to offer?
+					</h2>
+
+					<p>
+						I am happy to have a chat about relevant projects to work on. Below
+						you find a download link for my up-to-date CV. Are you a recruiter?
+						Have a read through my recruiters page, where I explain what I am
+						looking for in a job. This page is designed to save both of us time.
+					</p>
+					<p>
+						If you are interested in working with me, please contact me via{' '}
+						<Link
+							href="/contact"
+							className="underlined relative border-b-2 border-grey-300 font-bold hover:border-b-0 dark:border-grey-700"
+						>
+							the contact form
+						</Link>
+						. I do not appreciate cold calls and will not answer calls from
+						numbers I do not recognise.
+					</p>
+
+					<div className="mt-8 flex justify-start gap-6 items-baseline">
+						<Button
+							href="/cv-2023.pdf"
+							download={true}
+							className="group flex gap-2 whitespace-nowrap"
+						>
+							<IconDownload />
+							Download my CV
+						</Button>
+
+						<Link
+							href="/recruiters"
+							className="text-sm font-semibold leading-6 text-slate-900 transition-all hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200"
+						>
+							Information for recruiters <span aria-hidden="true">→</span>
+						</Link>
+					</div>
+				</section>
 			</Container>
 		</AnimatePage>
 	);
