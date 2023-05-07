@@ -1,18 +1,17 @@
 'use client';
 
 import classNames from 'classnames';
-import Highlight, { Language, defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import { Highlight, themes } from 'prism-react-renderer';
 import type { PropsWithChildren } from 'react';
 
 interface CodeBlockProps {
-	language: Language;
+	language: string;
 	code: string;
 }
 
 const CodeBlock = ({ code, language }: PropsWithChildren<CodeBlockProps>) => {
 	return (
-		<Highlight {...defaultProps} theme={theme} code={code} language={language}>
+		<Highlight theme={themes.nightOwl} code={code} language={language}>
 			{({ className, style, tokens, getLineProps, getTokenProps }) => (
 				<pre
 					className={classNames(
