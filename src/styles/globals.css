@@ -24,7 +24,7 @@ html.light .logo .jacob_svg__background {
 
 @layer components {
 	.headline {
-		@apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700;
+		@apply bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text font-bold text-transparent;
 	}
 
 	.underlined::after {
@@ -55,14 +55,14 @@ html.light .logo .jacob_svg__background {
 	}
 
 	.glass-light {
-		@apply bg-gradient-to-br from-slate-200 to-slate-100;
+		@apply bg-gradient-to-br from-slate-200/25 to-slate-100/25;
 		mix-blend-mode: normal;
 		backdrop-filter: blur(30px);
 		border: 1px solid rgba(255, 255, 255, 0.65);
 	}
 
 	.glass-dark {
-		@apply bg-gradient-to-br from-slate-900 to-slate-800;
+		@apply bg-gradient-to-br from-slate-900/25 to-slate-800/25;
 		mix-blend-mode: normal;
 		backdrop-filter: blur(30px);
 		border: 1px solid rgba(78, 75, 102, 0.78);

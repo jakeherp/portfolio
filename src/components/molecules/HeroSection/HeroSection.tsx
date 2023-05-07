@@ -21,7 +21,7 @@ export const HeroSection = () => {
 
 	return (
 		<section id="hero" className="relative isolate overflow-hidden pt-14">
-			<div className="bg-gradient-from-t absolute inset-x-0 bottom-0 -z-10 h-24 from-off-white dark:from-black sm:h-32" />
+			<div className="bg-gradient-from-t absolute inset-x-0 bottom-0 -z-10 h-24 from-off-white dark:from-slate-950 sm:h-32" />
 			<div
 				className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] dark:shadow-slate-700 sm:-mr-80 lg:-mr-96 lg:shadow-xl"
 				aria-hidden="true"
@@ -79,7 +79,7 @@ export const HeroSection = () => {
 					/>
 				</div>
 			</div>
-			<div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-off-white dark:from-black sm:h-32" />
+			<div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-off-white dark:from-slate-950 sm:h-32" />
 		</section>
 	);
 };

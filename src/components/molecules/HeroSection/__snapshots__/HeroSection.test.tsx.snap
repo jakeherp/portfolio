@@ -7,7 +7,7 @@ exports[`HeroSection renders correctly 1`] = `
     id="hero"
   >
     <div
-      class="bg-gradient-from-t absolute inset-x-0 bottom-0 -z-10 h-24 from-off-white dark:from-black sm:h-32"
+      class="bg-gradient-from-t absolute inset-x-0 bottom-0 -z-10 h-24 from-off-white dark:from-slate-950 sm:h-32"
     />
     <div
       aria-hidden="true"
@@ -96,7 +96,7 @@ exports[`HeroSection renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-off-white dark:from-black sm:h-32"
+      class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-off-white dark:from-slate-950 sm:h-32"
     />
   </section>
 </div>
