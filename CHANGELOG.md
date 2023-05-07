@@ -1,11 +1,22 @@
+# 4.7.0
+
+## features
+
+- **layout:** adds colour accent to background using blurred svg blob
+- **nextjs:** upgrades next to 13.4 + other dependencies to latest
+
+## fixes
+
+- **recruiter-form:** fixes styling of submit button
+
 # 4.6.0
 
-# features
+## features
 
 - **component-create-script:** re-adds hygen template for components
 - **storybook:** re-implements storybook
 
-# fixes
+## fixes
 
 - **linting:** fixes linting errors
 
