@@ -1,3 +1,4 @@
+export * from './IconBsky';
 export * from './IconClose';
 export * from './IconDownload';
 export * from './IconGithub';

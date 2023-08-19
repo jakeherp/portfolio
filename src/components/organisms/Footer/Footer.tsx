@@ -1,5 +1,6 @@
 import { Container } from '@components/atoms/Container';
 import {
+	IconBsky,
 	IconGithub,
 	IconInstagram,
 	IconLinkedin,
@@ -11,8 +12,10 @@ import { SocialIcons } from '@components/molecules/SocialIcons';
 const Footer = () => {
 	return (
 		<footer className="mt-8 py-8 md:mt-20">
-			<Container className="flex justify-between">
-				<span>&copy; {new Date().getFullYear()} Jacob Herper</span>
+			<Container className="flex flex-col-reverse md:flex-row gap-4 md:justify-between">
+				<span className="text-center md:text-left">
+					&copy; {new Date().getFullYear()} Jacob Herper
+				</span>
 				<SocialIcons
 					profiles={[
 						{
@@ -26,9 +29,9 @@ const Footer = () => {
 							icon: <IconLinkedin />,
 						},
 						{
-							name: 'Threads',
-							url: 'https://www.threads.net/@jakeherp',
-							icon: <IconThreads />,
+							name: 'Instagram',
+							url: 'https://www.instagram.com/jakeherp',
+							icon: <IconInstagram />,
 						},
 						{
 							name: 'X.com',
@@ -36,11 +39,17 @@ const Footer = () => {
 							icon: <IconX />,
 						},
 						{
-							name: 'Instagram',
-							url: 'https://www.instagram.com/jakeherp',
-							icon: <IconInstagram />,
+							name: 'Threads',
+							url: 'https://www.threads.net/@jakeherp',
+							icon: <IconThreads />,
+						},
+						{
+							name: 'Bluesky Social',
+							url: 'https://bsky.app/profile/jakeherp.com',
+							icon: <IconBsky />,
 						},
 					]}
+					className="justify-center md:justify-end"
 				/>
 			</Container>
 		</footer>

@@ -5,14 +5,14 @@ interface SVGRProps {
 	title?: string;
 	titleId?: string;
 }
-export const IconX = ({
+export const IconBsky = ({
 	title,
 	titleId,
 	...props
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 300 271"
+		viewBox="0 0 448 512"
 		width="1em"
 		height="1em"
 		focusable="false"
@@ -23,7 +23,7 @@ export const IconX = ({
 		{title ? <title id={titleId}>{title}</title> : null}
 		<path
 			fill="currentColor"
-			d="M236 0h46L181 115l118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123L-1.1 0h94.9l65.5 86.6zm-16.1 244h25.5L80.4 26H53z"
+			d="M0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
 		/>
 	</svg>
 );
