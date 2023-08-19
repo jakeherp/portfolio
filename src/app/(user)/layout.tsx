@@ -1,7 +1,5 @@
 import LayoutClient from './layout-client';
 
-import { Blob } from '@components/atoms/Blob';
-
 import { personJsonLd, websiteJsonLd } from '@lib/config/jsonLd';
 import { basierCircle } from '@lib/fonts';
 
@@ -24,9 +22,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
 			<body
 				className={`${basierCircle.variable} bg-off-white dark:bg-slate-950`}
 			>
-				<div className="absolute w-full max-w-[1920px] my-auto overflow-hidden pointer-events-none md:-top-[90%]">
-					<Blob />
-				</div>
 				<LayoutClient>{children}</LayoutClient>
 				<script
 					type="application/ld+json"

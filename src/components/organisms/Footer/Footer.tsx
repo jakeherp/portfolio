@@ -3,7 +3,8 @@ import {
 	IconGithub,
 	IconInstagram,
 	IconLinkedin,
-	IconTwitter,
+	IconThreads,
+	IconX,
 } from '@components/atoms/Icons';
 import { SocialIcons } from '@components/molecules/SocialIcons';
 
@@ -25,9 +26,14 @@ const Footer = () => {
 							icon: <IconLinkedin />,
 						},
 						{
-							name: 'Twitter',
+							name: 'Threads',
+							url: 'https://www.threads.net/@jakeherp',
+							icon: <IconThreads />,
+						},
+						{
+							name: 'X.com',
 							url: 'https://twitter.com/jakeherp',
-							icon: <IconTwitter />,
+							icon: <IconX />,
 						},
 						{
 							name: 'Instagram',
