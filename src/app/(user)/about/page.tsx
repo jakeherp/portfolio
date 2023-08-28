@@ -107,7 +107,7 @@ const AboutPage = async () => {
 						numbers I do not recognise.
 					</p>
 
-					<div className="mt-8 flex justify-start gap-6 items-baseline">
+					<div className="mt-8 flex items-baseline justify-start gap-6">
 						<Button
 							href="/cv-2023.pdf"
 							download={true}
