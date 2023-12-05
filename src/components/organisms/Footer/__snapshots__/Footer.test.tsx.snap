@@ -6,7 +6,7 @@ exports[`Footer renders correctly 1`] = `
     class="mt-8 py-8 md:mt-20"
   >
     <div
-      class="mx-auto w-full px-4 md:max-w-4xl lg:max-w-7xl flex flex-col-reverse md:flex-row gap-4 md:justify-between"
+      class="mx-auto w-full px-4 md:max-w-4xl lg:max-w-7xl flex flex-col-reverse gap-4 md:flex-row md:justify-between"
     >
       <span
         class="text-center md:text-left"
