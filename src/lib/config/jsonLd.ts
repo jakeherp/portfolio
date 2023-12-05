@@ -19,15 +19,15 @@ export const personJsonLd = {
 	alternateName: 'JakeHerp',
 	url: 'https://jacobherper.com/',
 	jobTitle: [
-		'Senior Software Engineer',
-		'Senior Software Consultant',
+		'Lead Software Engineer',
+		'Lead Software Consultant',
 		'Frontend Engineer',
 		'Front-End Developer',
 		'Web Developer',
 	],
 	hasOccupation: {
 		'@type': 'Occupation',
-		name: 'Senior Software Engineer',
+		name: 'Lead Software Engineer',
 		occupationLocation: { '@type': 'City', name: 'London' },
 		estimatedSalary: [
 			{

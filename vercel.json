@@ -5,7 +5,7 @@
 		{
 			"source": "/",
 			"has": [{ "type": "host", "value": "cv.jacobherper.com" }],
-			"destination": "/cv-2023.pdf"
+			"destination": "/cv-2024.pdf"
 		}
 	]
 }

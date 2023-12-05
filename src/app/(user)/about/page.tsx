@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 export const metadata = {
 	title:
-		'About Jacob Herper, a Senior Software Engineer and Consultant in the UK',
+		'About Jacob Herper, a Lead Software Engineer and Consultant in the UK',
 	description:
 		'As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place.',
 };
@@ -44,7 +44,7 @@ const AboutPage = async () => {
 					Hey, I&apos;m Jacob Herper
 				</h1>
 				<h2 className="mt-2 text-xl font-bold md:text-2xl">
-					Senior Software Engineer from the UK
+					Lead Software Engineer from the UK
 				</h2>
 				<p className="mt-8">
 					As a passionate front-end developer, I create amazing websites and web
@@ -109,9 +109,9 @@ const AboutPage = async () => {
 
 					<div className="mt-8 flex items-baseline justify-start gap-6">
 						<Button
-							href="/cv-2023.pdf"
-							download={true}
+							href="/cv-2024.pdf"
 							className="group flex gap-2 whitespace-nowrap"
+							download
 						>
 							<IconDownload />
 							Download my CV
